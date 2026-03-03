@@ -32,6 +32,10 @@ const row1Logos: LogoItem[] = [
     { id: 'juliocesar', name: 'Julio César Villavicencio', imageSrc: '/images/logos/juliocesar.webp', url: 'https://juliocesarvillavicencio.ec/', description: 'Marca Personal Profesional' },
     { id: 'mayra', name: 'Ing. Mayra Castillo', imageSrc: '/images/logos/mayracastillo.webp', url: 'https://www.ingmayracastillo.com/', description: 'Ingeniería y Consultoría' },
     { id: 'enloja', name: 'EnLoja / Hotel Puente Roto', imageSrc: '/images/logos/enloja.webp', url: 'https://www.enloja.net/', description: 'Hospitalidad y Turismo' },
+    { id: 'hotelcardenal', name: 'Hotel Cardenal', imageSrc: '/images/logos/hotelcardenal.webp', url: 'https://hotelelcardenalloja.com/', description: 'Alojamiento de Lujo en Loja' },
+    { id: 'henrycastillo', name: 'Team Henry Castillo', imageSrc: '/images/logos/henrycastillo.webp', url: 'https://www.teamhenrycastillo.com/', description: 'Entrenamiento y Bienestar' },
+    { id: 'franksimbana', name: 'Frank Simbaña', imageSrc: '/images/logos/franksimbaña.webp', url: 'https://www.franksimbana.com/', description: 'Asesoría y Consultoría' },
+    { id: 'vinadulce', name: 'La Viña Dulce', imageSrc: '/images/logos/viñadulce.webp', url: 'https://www.lavinadulce.com/', description: 'Gastronomía y Vinos' },
 ];
 
 const row2Logos: LogoItem[] = [
@@ -43,6 +47,11 @@ const row2Logos: LogoItem[] = [
     { id: 'corretec', name: 'Corretec', imageSrc: '/images/logos/corretec.webp', url: 'https://www.corretec.ec/', description: 'Servicios Corporativos' },
     { id: 'cajamedidor', name: 'Caja de Medidor', imageSrc: '/images/logos/cajamedidor.webp', url: 'https://www.cajademedidordeluz.com/', description: 'Soluciones Eléctricas' },
     { id: 'sastreria', name: 'Sastrería Carlos Poma', imageSrc: '/images/logos/sastreriapoma.webp', url: 'https://www.sastreriacarlospoma.com/', description: 'Alta Costura a Medida' },
+    { id: 'santapetrona', name: 'Hosteria Santa Petrona', imageSrc: '/images/logos/hosteriasantapetrona.webp', url: 'https://hosteriasantapetrona.com/', description: 'Turismo y Descanso' },
+    { id: 'colibrírojo', name: 'Atelier Colibrí Rojo', imageSrc: '/images/logos/ateliercolibrirojo.webp', url: 'https://ateliercolibrirojo.com/', description: 'Arte y Diseño' },
+    { id: 'naluz', name: 'Naluz', imageSrc: '/images/logos/naluz.webp', url: 'https://naluzloja.com/', description: 'Iluminación y Decoración' },
+    { id: 'calefonesloja', name: 'Calefones Loja', imageSrc: '/images/logos/calefonesloja.webp', url: 'https://calefonesloja.com/', description: 'Soluciones Térmicas' },
+    { id: 'activaqr', name: 'ActivaQR', imageSrc: '/images/logos/activaqr.webp', url: 'https://activaqr.com/', description: 'Menús Digitales y QR' },
 ];
 
 export function DualLogoCarousel() {
