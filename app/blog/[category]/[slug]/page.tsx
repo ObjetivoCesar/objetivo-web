@@ -208,7 +208,7 @@ export default async function BlogPostPage({
               {article.image && article.image !== '/placeholder.svg' && article.image !== '' ? (
                 <div className="relative h-64 md:h-96 w-full">
                   <Image 
-                    src={article.image.startsWith('http') ? article.image : `/images/blog/${article.image}`} 
+                    src={article.image.startsWith('http') || article.image.startsWith('/') ? article.image : `/images/articulos/${article.image}`} 
                     alt={article.title || 'Imagen del artículo'} 
                     fill 
                     className="object-cover"
