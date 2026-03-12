@@ -140,7 +140,16 @@ async function handleArticleRequest(req: NextRequest, isUpdate: boolean) {
       );
     }
 
-    const { markdown, id, originalSlug } = requestData;
+    const { 
+      markdown, 
+      id, 
+      originalSlug,
+      title: jsonTitle,
+      excerpt: jsonExcerpt,
+      category: jsonCategory,
+      image: jsonImage,
+      metaDescription: jsonMetaDesc
+    } = requestData;
 
     if (!markdown || typeof markdown !== 'string') {
       console.error('Error: El campo markdown es requerido y debe ser una cadena');
@@ -159,40 +168,58 @@ async function handleArticleRequest(req: NextRequest, isUpdate: boolean) {
     }
 
     console.log('Extrayendo frontmatter...');
-    const frontmatter = extractFrontmatter(markdown);
+    let frontmatter = extractFrontmatter(markdown);
+    
+    // Si no hay frontmatter estructurado en el markdown, pero tenemos el título (lo cual indica que viene del Cerebro),
+    // creamos un frontmatter vacío y procedemos a combinar con los datos JSON.
     if (!frontmatter) {
-      console.error('Error: Formato de frontmatter inválido');
-      console.log('Primeras 200 caracteres del markdown:', markdown.substring(0, 200));
-      return NextResponse.json(
-        { error: "Formato de frontmatter inválido. Asegúrate de incluir un bloque YAML válido entre ---" },
-        { status: 400 }
-      );
+      if (jsonTitle && jsonCategory) {
+        console.log('No se detecó frontmatter YAML, pero se recibieron campos JSON. Procediendo con markdown puro...');
+        frontmatter = {};
+      } else {
+        console.error('Error: Formato de frontmatter inválido y campos JSON insuficientes');
+        console.log('Primeras 200 caracteres del markdown:', markdown.substring(0, 200));
+        return NextResponse.json(
+          { error: "Formato de frontmatter inválido o faltan campos requeridos (title, category)" },
+          { status: 400 }
+        );
+      }
     }
 
     console.log('Frontmatter extraído:', JSON.stringify(frontmatter, null, 2));
 
-    console.log('Validando frontmatter...');
-    const validation = validateFrontmatter(frontmatter);
+    console.log('Validando frontmatter o campos JSON directos...');
+    // Fusionamos frontmatter extraído con los campos JSON directos (tienen prioridad los JSON para el Cerebro)
+    const combinedData: Frontmatter = {
+      ...frontmatter,
+      title: jsonTitle || frontmatter?.title,
+      category: jsonCategory || frontmatter?.category,
+      excerpt: jsonExcerpt || frontmatter?.excerpt,
+      image: jsonImage || frontmatter?.image,
+      metaDescription: jsonMetaDesc || frontmatter?.meta_description || frontmatter?.metaDescription
+    };
+
+    const validation = validateFrontmatter(combinedData);
     if (!validation.isValid) {
-      console.error('Error de validación del frontmatter:', validation.error);
+      console.error('Error de validación de datos:', validation.error);
       return NextResponse.json(
-        { error: validation.error || "Error de validación" },
+        { error: validation.error || "Error de validación de datos" },
         { status: 400 }
       );
     }
 
-    const category = frontmatter.category as string; // Safe to assert after validation
+    const category = combinedData.category as string; // Safe to assert after validation
 
     // Generar o validar slug
     let slug = '';
 
     // Si se proporciona un slug personalizado, usarlo
-    if (frontmatter.slug && frontmatter.slug.trim() !== '') {
-      slug = slugify(frontmatter.slug.trim());
+    if (combinedData.slug && combinedData.slug.trim() !== '') {
+      slug = slugify(combinedData.slug.trim());
       console.log('Usando slug personalizado:', slug);
     } else {
       // Si no hay slug personalizado, generarlo del título
-      slug = slugify(frontmatter.title || '');
+      slug = slugify(combinedData.title || '');
       console.log('Generando slug desde el título:', slug);
     }
 
@@ -297,17 +324,19 @@ async function handleArticleRequest(req: NextRequest, isUpdate: boolean) {
         );
       }
 
+      const rawContent = markdown.includes('---') ? markdown.split('---').slice(2).join('---').trim() : markdown.trim();
+      
       const articleData = {
-        title: frontmatter.title,
+        title: combinedData.title,
         slug: slug,
-        content: markdown.split('---').slice(2).join('---').trim(), // Extraer solo el contenido markdown
-        excerpt: frontmatter.excerpt || '',
-        cover_image: frontmatter.image || '',
+        content: rawContent,
+        excerpt: combinedData.excerpt || '',
+        cover_image: combinedData.image || '',
         category_id: safeCategory,
         published: true, // O podrías hacerlo configurable desde el frontend
         published_at: new Date().toISOString(),
-        meta_title: frontmatter.metaDescription?.slice(0, 60) || frontmatter.title,
-        meta_description: frontmatter.metaDescription || frontmatter.excerpt || ''
+        meta_title: combinedData.metaDescription?.slice(0, 60) || combinedData.title,
+        meta_description: combinedData.metaDescription || combinedData.excerpt || ''
       };
 
       let article;
@@ -405,9 +434,9 @@ async function handleArticleRequest(req: NextRequest, isUpdate: boolean) {
           console.log("Artículo nuevo detectado. Intentando enviar newsletter...");
           try {
             // Usamos variables disponibles en el ámbito superior por seguridad
-            const newsTitle = frontmatter.title || articleData.title || '';
-            const newsExcerpt = frontmatter.meta_description || frontmatter.excerpt || articleData.meta_description || '';
-            const newsImage = frontmatter.image || articleData.cover_image || '';
+            const newsTitle = combinedData.title || articleData.title || '';
+            const newsExcerpt = combinedData.metaDescription || combinedData.excerpt || articleData.meta_description || '';
+            const newsImage = combinedData.image || articleData.cover_image || '';
 
             // Ejecutamos en segundo plano para no bloquear
             const newsletterResult = await sendNewsletterForArticle({

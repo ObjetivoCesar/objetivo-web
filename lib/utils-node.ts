@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
+import { getSupabaseArticles, getSupabaseArticleBySlug } from "./supabase-blog";
 
 // Función para manejar fechas de forma segura
 function safeDate(dateString: string | undefined): string {
@@ -228,6 +229,20 @@ export async function getArticlesByCategory(category: string): Promise<BlogArtic
 
 export async function getAllArticles(includeHidden = false): Promise<BlogArticle[]> {
   console.log('Obteniendo artículos, includeHidden:', includeHidden);
+  
+  // 1. Obtener de Supabase primero
+  let supabaseArticles: BlogArticle[] = [];
+  try {
+    const fromDb = await getSupabaseArticles();
+    if (fromDb && fromDb.length > 0) {
+      supabaseArticles = fromDb;
+      console.log(`Cargados ${fromDb.length} artículos desde Supabase`);
+    }
+  } catch (err) {
+    console.error('Error cargando desde supabase-blog', err);
+  }
+
+  // 2. Obtener locales
   const articlesDir = path.join(process.cwd(), 'content/blog');
   
   // Verificar si el directorio existe
@@ -285,8 +300,18 @@ export async function getAllArticles(includeHidden = false): Promise<BlogArticle
     }
   }
 
-  // Ordenar artículos por fecha (más recientes primero)
-  return allArticles.sort((a, b) => {
+  // Combinar y deduplicar por slug (Supabase tiene prioridad)
+  const mergedArticles = [...supabaseArticles];
+  const supabaseSlugs = new Set(supabaseArticles.map(a => a.slug));
+
+  for (const localArticle of allArticles) {
+    if (!supabaseSlugs.has(localArticle.slug)) {
+      mergedArticles.push(localArticle);
+    }
+  }
+
+  // Ordenar artículos combinados por fecha (más recientes primero)
+  return mergedArticles.sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
 }
@@ -436,6 +461,19 @@ export async function getArticle(category: string, slug: string): Promise<BlogAr
   }
 
   try {
+    // 0. Intentar buscar en Supabase primero
+    console.log(`Buscando artículo en Supabase con slug: ${slug}`);
+    try {
+      const supabaseArticle = await getSupabaseArticleBySlug(slug);
+      if (supabaseArticle) {
+        console.log(`✅ Artículo encontrado en Supabase: ${supabaseArticle.title}`);
+        return supabaseArticle;
+      }
+    } catch (dbErr) {
+      console.error('Error al consultar artículo en Supabase:', dbErr);
+    }
+    
+    // Si no está en Supabase, continuar con la búsqueda local
     // Primero intentar con la estructura antigua
     const oldPath = path.join(process.cwd(), "articulos", "articulos_scrapeados_final");
     
