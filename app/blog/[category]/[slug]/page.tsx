@@ -7,6 +7,7 @@ import { getCachedArticles, getCachedArticle } from "@/lib/cache-utils"
 export const revalidate = 60;
 import { marked } from "marked"
 import { formatCategory } from "@/lib/format-utils"
+import IndustrySolutionsBoxes from "@/components/IndustrySolutionsBoxes"
 
 // Obtener artículos para generar rutas estáticas
 export async function generateStaticParams() {
@@ -204,52 +205,103 @@ export default async function BlogPostPage({
               </Link>
             </div>
             
-            <article className="bg-white rounded-lg shadow-lg overflow-hidden">
-              {article.image && article.image !== '/placeholder.svg' && article.image !== '' ? (
-                <div className="relative h-64 md:h-96 w-full">
-                  <Image 
+            <article className="bg-white rounded-lg shadow-lg overflow-hidden border-none">
+              {article.category === 'software-personalizado' ? (
+                /* Full Screen Premium Hero for Software Personalizado */
+                <div className="relative h-[80vh] w-full flex items-center justify-center overflow-hidden">
+                   <Image 
                     src={article.image.startsWith('http') || article.image.startsWith('/') ? article.image : `/images/articulos/${article.image}`} 
                     alt={article.title || 'Imagen del artículo'} 
                     fill 
                     className="object-cover"
                     priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                    sizes="100vw"
                   />
+                  {/* Overlay for readability */}
+                  <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
+                  
+                  <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8 }}
+                    >
+                      <span className="inline-block text-[#FF6B00] font-bold tracking-widest uppercase text-sm mb-6 bg-white/10 px-4 py-2 rounded-full backdrop-blur-md">
+                        {formatCategory(article.category)}
+                      </span>
+                      <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-tight" style={{ fontFamily: 'var(--font-poiret-one, inherit)' }}>
+                        {article.title}
+                      </h1>
+                      <div className="flex items-center justify-center gap-6 text-gray-300 font-medium">
+                        <span className="flex items-center gap-2">
+                          <span className="w-2 h-2 bg-[#FF6B00] rounded-full"></span>
+                          {formatDate(article.date || new Date().toISOString())}
+                        </span>
+                        <span className="flex items-center gap-2">
+                          <span className="w-2 h-2 bg-[#FF6B00] rounded-full"></span>
+                          {article.author || "César Reyes Jaramillo"}
+                        </span>
+                      </div>
+                    </motion.div>
+                  </div>
                 </div>
               ) : (
-                <div className="h-64 bg-gradient-to-r from-primary to-primary/80 flex items-center justify-center">
-                  <h1 className="text-3xl md:text-4xl font-bold text-white text-center px-4">
-                    {article.title || 'Artículo sin título'}
-                  </h1>
-                </div>
+                /* Standard Hero for other categories */
+                <>
+                  {article.image && article.image !== '/placeholder.svg' && article.image !== '' ? (
+                    <div className="relative h-64 md:h-96 w-full">
+                      <Image 
+                        src={article.image.startsWith('http') || article.image.startsWith('/') ? article.image : `/images/articulos/${article.image}`} 
+                        alt={article.title || 'Imagen del artículo'} 
+                        fill 
+                        className="object-cover"
+                        priority
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                      />
+                    </div>
+                  ) : (
+                    <div className="h-64 bg-gradient-to-r from-primary to-primary/80 flex items-center justify-center">
+                      <h1 className="text-3xl md:text-4xl font-bold text-white text-center px-4">
+                        {article.title || 'Artículo sin título'}
+                      </h1>
+                    </div>
+                  )}
+                  
+                  <div className="p-6 md:p-8">
+                    {/* Categoría y fecha */}
+                    <div className="flex flex-wrap items-center gap-3 mb-6">
+                      <span className="text-sm text-white bg-primary/90 px-3 py-1 rounded-full">
+                        {formatCategory(article.category) || "Sin categoría"}
+                      </span>
+                      <span className="text-sm text-gray-500">
+                        {formatDate(article.date || new Date().toISOString())}
+                      </span>
+                      <span className="text-sm text-gray-500">
+                        Por {article.author || "César Reyes Jaramillo"}
+                      </span>
+                    </div>
+                    
+                    {/* Título */}
+                    {(!article.image || article.image === '' || article.image === '/placeholder.svg') ? null : (
+                      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        {article.title || 'Artículo sin título'}
+                      </h1>
+                    )}
+                </>
               )}
-              
-              <div className="p-6 md:p-8">
-                {/* Categoría y fecha */}
-                <div className="flex flex-wrap items-center gap-3 mb-6">
-                  <span className="text-sm text-white bg-primary/90 px-3 py-1 rounded-full">
-                    {formatCategory(article.category) || "Sin categoría"}
-                  </span>
-                  <span className="text-sm text-gray-500">
-                    {formatDate(article.date || new Date().toISOString())}
-                  </span>
-                  <span className="text-sm text-gray-500">
-                    Por {article.author || "César Reyes Jaramillo"}
-                  </span>
-                </div>
-                
-                {/* Título */}
-                {(!article.image || article.image === '' || article.image === '/placeholder.svg') ? null : (
-                  <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                    {article.title || 'Artículo sin título'}
-                  </h1>
-                )}
                 
                 {/* Extracto */}
                 {article.excerpt && (
                   <p className="text-xl text-gray-600 mb-8">
                     {article.excerpt}
                   </p>
+                )}
+
+                {/* Industry Solutions Section (Specific for crm-turismo) */}
+                {article.slug === 'crm-turismo' && article.category === 'software-personalizado' && (
+                  <div className="mb-12 -mx-4 md:-mx-8">
+                    <IndustrySolutionsBoxes />
+                  </div>
                 )}
                 
                 {/* Contenido del artículo */}
