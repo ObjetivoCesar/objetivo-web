@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { getCachedArticles, getCachedArticle } from "@/lib/cache-utils"
+import * as motion from "framer-motion/client"
 
 // Revalidar la página cada 60 segundos
 export const revalidate = 60;
@@ -24,98 +25,27 @@ export async function generateStaticParams() {
   }));
 }
 
-// Tipos para TypeScript
-type BlogPost = {
-  id?: string
-  title: string
-  content: string
-  category: string
-  date: string
-  author: string
-  slug: string
-  image: string
-  excerpt: string
-  rawContent?: string
-  [key: string]: any // Para propiedades adicionales
+// Función para manejar fechas
+const formatDate = (dateString: string) => {
+  try {
+    const options: Intl.DateTimeFormatOptions = { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    };
+    return new Date(dateString).toLocaleDateString('es-ES', options);
+  } catch (error) {
+    return dateString;
+  }
 }
 
-// Función para validar la estructura de un artículo
-type ValidArticle = {
-  title: string;
-  slug: string;
-  category: string;
-  image: string;
-  excerpt: string;
-  date: string;
-  content: string;
-  author?: string;
-  [key: string]: any;
-};
-
-function isValidArticle(article: any): article is ValidArticle {
-  return (
-    article &&
-    typeof article.title === 'string' &&
-    typeof article.slug === 'string' &&
-    typeof article.category === 'string' &&
-    typeof article.image === 'string' &&
-    typeof article.excerpt === 'string' &&
-    typeof article.date === 'string' &&
-    typeof article.content === 'string'
-  );
-}
-
-// Función auxiliar para validar y obtener el artículo
 async function getArticleData(category: string, slug: string) {
   try {
     const article = await getCachedArticle(category, slug);
-    if (!article) {
-      throw new Error('Artículo no encontrado');
-    }
     return article;
   } catch (error) {
     console.error('Error al cargar el artículo:', error);
     return null;
-  }
-}
-
-export async function generateMetadata({ params }: { params: Promise<{ category: string; slug: string }> }) {
-  const { category, slug } = await params;
-  if (!category || !slug) {
-    return {
-      title: 'Artículo no encontrado',
-      description: 'El artículo solicitado no existe o ha sido eliminado',
-    };
-  }
-
-  try {
-    const article = await getCachedArticle(category, slug);
-    if (!article) {
-      return {
-        title: 'Artículo no encontrado',
-        description: 'El artículo solicitado no existe o ha sido eliminado',
-      };
-    }
-
-    return {
-      title: article.title,
-      description: article.excerpt,
-      openGraph: {
-        title: article.title,
-        description: article.excerpt,
-        images: [{
-          url: article.image || '/images/placeholder.jpg',
-          width: 1200,
-          height: 630,
-          alt: article.title,
-        }],
-      },
-    };
-  } catch (error) {
-    return {
-      title: 'Error al cargar el artículo',
-      description: 'Ocurrió un error al cargar el artículo solicitado',
-    };
   }
 }
 
@@ -128,55 +58,22 @@ export default async function BlogPostPage({
   }> 
 }) {
   const { category, slug } = await params;
-  // Validar parámetros
-  if (!category || !slug) {
-    notFound();
-  }
+  if (!category || !slug) notFound();
 
-  // Obtener el artículo específico
   const article = await getArticleData(category, slug);
+  if (!article) notFound();
   
-  if (!article) {
-    notFound();
-  }
-  
-  // Obtener todos los artículos para los relacionados
   const allArticles = await getCachedArticles();
-  
-  // Convertir el contenido Markdown a HTML y limpiar frontmatter
   const cleanContent = (article.content || '').toString()
-    // Eliminar frontmatter si está incluido en el contenido
     .replace(/^---[\s\S]*?---\s*/, '')
-    // Limpiar cualquier frontmatter YAML restante
-    .replace(/^[\s\n]*[a-zA-Z0-9_-]+:.*$/gm, '')
     .trim();
     
   const contentHtml = marked(cleanContent);
-  
-  // Formatear la fecha
-  const formatDate = (dateString: string) => {
-    try {
-      const options: Intl.DateTimeFormatOptions = { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
-      };
-      return new Date(dateString).toLocaleDateString('es-ES', options);
-    } catch (error) {
-      return dateString;
-    }
-  }
-  // Asegurarse de que allArticles sea un array y tenga la estructura correcta
   const safeArticles = Array.isArray(allArticles) ? allArticles : [];
   
   const relatedArticles = safeArticles
-    .filter((a: any) => a && typeof a === 'object' && 'category' in a && 'slug' in a && 
-      a.category === article.category && a.slug !== article.slug)
-    .sort((a: any, b: any) => {
-      const dateA = a.date ? new Date(a.date).getTime() : 0;
-      const dateB = b.date ? new Date(b.date).getTime() : 0;
-      return dateB - dateA;
-    })
+    .filter((a: any) => a && a.category === article.category && a.slug !== article.slug)
+    .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
 
   return (
@@ -185,132 +82,81 @@ export default async function BlogPostPage({
         <div className="container px-4 md:px-6 mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-8">
-              <Link 
-                href="/blog" 
-                className="inline-flex items-center text-primary font-medium hover:underline transition-colors px-4 py-2 rounded-lg hover:bg-primary/10"
-              >
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="h-5 w-5 mr-1" 
-                viewBox="0 0 20 20" 
-                fill="currentColor"
-              >
-                <path 
-                  fillRule="evenodd" 
-                  d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" 
-                  clipRule="evenodd" 
-                />
-              </svg>
+              <Link href="/blog" className="inline-flex items-center text-primary font-medium hover:underline transition-colors px-4 py-2 rounded-lg hover:bg-primary/10">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
+                </svg>
                 Volver al blog
               </Link>
             </div>
             
             <article className="bg-white rounded-lg shadow-lg overflow-hidden border-none">
               {article.category === 'software-personalizado' ? (
-                /* Full Screen Premium Hero for Software Personalizado */
+                /* Full Screen Premium Hero */
                 <div className="relative h-[80vh] w-full flex items-center justify-center overflow-hidden">
                    <Image 
                     src={article.image.startsWith('http') || article.image.startsWith('/') ? article.image : `/images/articulos/${article.image}`} 
-                    alt={article.title || 'Imagen del artículo'} 
+                    alt={article.title} 
                     fill 
                     className="object-cover"
                     priority
-                    sizes="100vw"
                   />
-                  {/* Overlay for readability */}
                   <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
-                  
                   <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-                    <motion.div
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8 }}
-                    >
+                    <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                       <span className="inline-block text-[#FF6B00] font-bold tracking-widest uppercase text-sm mb-6 bg-white/10 px-4 py-2 rounded-full backdrop-blur-md">
                         {formatCategory(article.category)}
                       </span>
-                      <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-tight" style={{ fontFamily: 'var(--font-poiret-one, inherit)' }}>
+                      <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-tight">
                         {article.title}
                       </h1>
                       <div className="flex items-center justify-center gap-6 text-gray-300 font-medium">
-                        <span className="flex items-center gap-2">
-                          <span className="w-2 h-2 bg-[#FF6B00] rounded-full"></span>
-                          {formatDate(article.date || new Date().toISOString())}
-                        </span>
-                        <span className="flex items-center gap-2">
-                          <span className="w-2 h-2 bg-[#FF6B00] rounded-full"></span>
-                          {article.author || "César Reyes Jaramillo"}
-                        </span>
+                        <span>{formatDate(article.date)}</span>
+                        <span>{article.author || "César Reyes Jaramillo"}</span>
                       </div>
                     </motion.div>
                   </div>
                 </div>
               ) : (
-                /* Standard Hero for other categories */
+                /* Standard Hero */
                 <>
-                  {article.image && article.image !== '/placeholder.svg' && article.image !== '' ? (
-                    <div className="relative h-64 md:h-96 w-full">
-                      <Image 
-                        src={article.image.startsWith('http') || article.image.startsWith('/') ? article.image : `/images/articulos/${article.image}`} 
-                        alt={article.title || 'Imagen del artículo'} 
-                        fill 
-                        className="object-cover"
-                        priority
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-                      />
+                  <div className="relative h-64 md:h-96 w-full">
+                    <Image 
+                      src={article.image.startsWith('http') || article.image.startsWith('/') ? article.image : `/images/articulos/${article.image}`} 
+                      alt={article.title} 
+                      fill 
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                  <div className="p-8">
+                    <div className="flex items-center gap-3 mb-6">
+                      <span className="text-sm text-white bg-primary px-3 py-1 rounded-full">{formatCategory(article.category)}</span>
+                      <span className="text-sm text-gray-500">{formatDate(article.date)}</span>
                     </div>
-                  ) : (
-                    <div className="h-64 bg-gradient-to-r from-primary to-primary/80 flex items-center justify-center">
-                      <h1 className="text-3xl md:text-4xl font-bold text-white text-center px-4">
-                        {article.title || 'Artículo sin título'}
-                      </h1>
-                    </div>
-                  )}
-                  
-                  <div className="p-6 md:p-8">
-                    {/* Categoría y fecha */}
-                    <div className="flex flex-wrap items-center gap-3 mb-6">
-                      <span className="text-sm text-white bg-primary/90 px-3 py-1 rounded-full">
-                        {formatCategory(article.category) || "Sin categoría"}
-                      </span>
-                      <span className="text-sm text-gray-500">
-                        {formatDate(article.date || new Date().toISOString())}
-                      </span>
-                      <span className="text-sm text-gray-500">
-                        Por {article.author || "César Reyes Jaramillo"}
-                      </span>
-                    </div>
-                    
-                    {/* Título */}
-                    {(!article.image || article.image === '' || article.image === '/placeholder.svg') ? null : (
-                      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                        {article.title || 'Artículo sin título'}
-                      </h1>
-                    )}
+                    <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{article.title}</h1>
+                  </div>
                 </>
               )}
-                
-                {/* Extracto */}
+              
+              <div className="p-8 pt-0">
                 {article.excerpt && (
-                  <p className="text-xl text-gray-600 mb-8">
+                  <p className="text-xl text-gray-600 mb-8 font-medium">
                     {article.excerpt}
                   </p>
                 )}
 
-                {/* Industry Solutions Section (Specific for crm-turismo) */}
                 {article.slug === 'crm-turismo' && article.category === 'software-personalizado' && (
                   <div className="mb-12 -mx-4 md:-mx-8">
                     <IndustrySolutionsBoxes />
                   </div>
                 )}
                 
-                {/* Contenido del artículo */}
                 <div 
-                  className="prose max-w-none prose-lg text-gray-700"
+                  className="prose max-w-none prose-lg text-gray-700 prose-headings:text-gray-900 prose-orange"
                   dangerouslySetInnerHTML={{ __html: contentHtml }}
                 />
                 
-                {/* Compartir en redes sociales */}
                 <div className="mt-12 pt-8 border-t border-gray-200">
                   <h3 className="text-xl font-bold mb-4">Sígueme en mis redes</h3>
                   <div className="flex space-x-4">
@@ -359,43 +205,21 @@ export default async function BlogPostPage({
               </div>
             </article>
             
-            {/* Artículos relacionados */}
-            {relatedArticles && relatedArticles.length > 0 && Array.isArray(relatedArticles) && (
+            {relatedArticles.length > 0 && (
               <div className="mt-16">
                 <h2 className="text-2xl font-bold text-gray-900 mb-8">Artículos relacionados</h2>
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-8 md:grid-cols-3">
                   {relatedArticles.map((relatedArticle: any) => (
-                    <div key={relatedArticle.slug} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <div key={relatedArticle.slug} className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all">
                       <Link href={`/blog/${relatedArticle.category?.toLowerCase()?.replace(/\s+/g, '-') || 'blog'}/${relatedArticle.slug}`} className="block h-full">
-                        <div className="h-48 bg-gray-100 relative">
-                          {relatedArticle.image && relatedArticle.image !== '/placeholder.svg' ? (
-                            <Image 
-                              src={relatedArticle.image}
-                              alt={relatedArticle.title || 'Artículo relacionado'}
-                              fill
-                              className="object-cover"
-                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            />
-                          ) : (
-                            <div className="h-full flex items-center justify-center bg-gray-200">
-                              <span className="text-gray-600">Sin imagen</span>
-                            </div>
-                          )}
+                        <div className="h-40 relative bg-gray-100">
+                          <Image src={relatedArticle.image} alt={relatedArticle.title} fill className="object-cover" />
                         </div>
-                        <div className="p-5">
-                          <h3 className="font-semibold text-lg mb-2 line-clamp-2 text-gray-900">
-                            {relatedArticle.title || 'Sin título'}
-                          </h3>
-                          <p className="text-sm text-gray-700 line-clamp-3 mb-3">
-                            {relatedArticle.excerpt || ''}
-                          </p>
-                          <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
-                            <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
-                              {relatedArticle.category ? formatCategory(relatedArticle.category) : 'Sin categoría'}
-                            </span>
-                            <span className="text-xs text-gray-500">
-                              {formatDate(relatedArticle.date)}
-                            </span>
+                        <div className="p-4">
+                          <h3 className="font-bold text-sm mb-2 line-clamp-2">{relatedArticle.title}</h3>
+                          <div className="flex items-center justify-between mt-4">
+                            <span className="text-[10px] font-bold text-primary uppercase">{formatCategory(relatedArticle.category)}</span>
+                            <span className="text-[10px] text-gray-400">{formatDate(relatedArticle.date)}</span>
                           </div>
                         </div>
                       </Link>
