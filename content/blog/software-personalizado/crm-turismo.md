@@ -31,26 +31,3 @@ Este artículo está optimizado para captar tráfico de dueños de negocios tur�
 
 **Keywords:** CRM para turismo, CRM para hoteles, software para agencias de viajes, CRM para restaurantes.
 
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "CRM para Turismo: La Guía Definitiva para Agencias, Hoteles y Restaurantes",
-  "description": "Cómo implementar un CRM en el sector turístico para maximizar ventas en agencias de viajes, hoteles y restaurantes.",
-  "author": {
-    "@type": "Person",
-    "name": "César Reyes Jaramillo",
-    "jobTitle": "Estratega de Software Turístico"
-  },
-  "about": [
-    {"@type": "Service", "name": "CRM para Hoteles"},
-    {"@type": "Service", "name": "Software para Agencias de Viajes"},
-    {"@type": "Service", "name": "Gestión de Reservas Restaurantes"}
-  ],
-  "keywords": "CRM turismo, CRM hoteles, CRM agencias viajes, CRM restaurantes",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://cesarreyesjaramillo.com/blog/software-personalizado/crm-turismo"
-  }
-}
-```

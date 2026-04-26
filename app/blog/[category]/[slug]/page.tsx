@@ -49,6 +49,46 @@ async function getArticleData(category: string, slug: string) {
   }
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ category: string; slug: string }> }) {
+  const { category, slug } = await params;
+  if (!category || !slug) {
+    return {
+      title: 'Artículo no encontrado',
+      description: 'El artículo solicitado no existe o ha sido eliminado',
+    };
+  }
+
+  try {
+    const article = await getCachedArticle(category, slug);
+    if (!article) {
+      return {
+        title: 'Artículo no encontrado',
+        description: 'El artículo solicitado no existe o ha sido eliminado',
+      };
+    }
+
+    return {
+      title: article.title,
+      description: article.excerpt,
+      openGraph: {
+        title: article.title,
+        description: article.excerpt,
+        images: [{
+          url: article.image || '/images/placeholder.jpg',
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        }],
+      },
+    };
+  } catch (error) {
+    return {
+      title: 'Error al cargar el artículo',
+      description: 'Ocurrió un error al cargar el artículo solicitado',
+    };
+  }
+}
+
 export default async function BlogPostPage({ 
   params 
 }: { 
@@ -76,9 +116,40 @@ export default async function BlogPostPage({
     .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
 
+  // Generate JSON-LD schema dynamically
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "description": article.excerpt,
+    "author": {
+      "@type": "Person",
+      "name": article.author || "César Reyes Jaramillo",
+      "jobTitle": "Estratega de Software"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://cesarreyesjaramillo.com/blog/${category}/${slug}`
+    },
+    // Añadimos metadata específica si es el CRM de turismo
+    ...(slug === 'crm-turismo' && {
+      "about": [
+        {"@type": "Service", "name": "CRM para Hoteles"},
+        {"@type": "Service", "name": "Software para Agencias de Viajes"},
+        {"@type": "Service", "name": "Gestión de Reservas Restaurantes"}
+      ],
+      "keywords": "CRM turismo, CRM hoteles, CRM agencias viajes, CRM restaurantes"
+    })
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <section className="py-12 md:py-16 bg-white">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="min-h-screen bg-gray-50">
+        <section className="py-12 md:py-16 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-8">
@@ -232,5 +303,6 @@ export default async function BlogPostPage({
         </div>
       </section>
     </div>
+    </>
   )
 }

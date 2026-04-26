@@ -1,6 +1,6 @@
 {
-  "totalVisitas": 1933,
-  "visitasHoy": 1933,
+  "totalVisitas": 1935,
+  "visitasHoy": 1935,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
@@ -11,6 +11,16 @@
     },
     {
       "fecha": "2026-04-26",
+      "pagina": "/blog/software-personalizado/crm-turismo",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-04-26",
+      "pagina": "/blog/software-personalizado/crm-turismo",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-04-26",
       "pagina": "/software-gestion-servicios",
       "visitas": 1
     },
@@ -42,16 +52,6 @@
     {
       "fecha": "2026-04-26",
       "pagina": "/software-gestion-servicios",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-04-26",
-      "pagina": "/software-gestion-servicios",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-04-26",
-      "pagina": "/crm-turismo",
       "visitas": 1
     }
   ],
@@ -106,6 +106,6 @@
     "2026-04-23": 19,
     "2026-04-24": 42,
     "2026-04-25": 14,
-    "2026-04-26": 31
+    "2026-04-26": 33
   }
 }
