@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta — Clínica Abendaño</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --navy: #0a1628;
+    --navy2: #112240;
+    --gold: #c9a84c;
+    --gold-light: #e8d5a3;
+    --white: #ffffff;
+    --gray: #8892a4;
+    --light: #f8f9fb;
+    --border: #e2e8f0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--light);
+    color: var(--navy);
+    line-height: 1.6;
+  }
+
+  /* COVER */
+  .cover {
+    background: linear-gradient(145deg, var(--navy) 0%, var(--navy2) 100%);
+    color: white;
+    padding: 70px 60px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.08);
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -40px;
+    width: 250px; height: 250px;
+    border-radius: 50%;
+    background: rgba(201,168,76,0.05);
+  }
+  .cover-tag {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 28px;
+  }
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    max-width: 580px;
+  }
+  .cover h1 span { color: var(--gold); }
+  .cover-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 48px;
+    max-width: 480px;
+  }
+  .cover-meta {
+    display: flex;
+    gap: 48px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 32px;
+  }
+  .cover-meta-item label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .cover-meta-item span {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+  }
+
+  /* CONTAINER */
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  /* SECTION */
+  .section { padding: 56px 60px; background: white; margin-bottom: 2px; }
+  .section-alt { background: var(--light); }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+  .section-body {
+    font-size: 14.5px;
+    color: #3d4f6b;
+    line-height: 1.75;
+    max-width: 680px;
+  }
+
+  /* DIVIDER */
+  .divider {
+    width: 48px; height: 3px;
+    background: var(--gold);
+    margin: 16px 0 24px;
+    border-radius: 2px;
+  }
+
+  /* ETAPAS */
+  .etapas { padding: 0 60px 60px; background: white; }
+
+  .etapa {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    transition: box-shadow .2s;
+  }
+  .etapa:hover { box-shadow: 0 8px 32px rgba(10,22,40,0.08); }
+
+  .etapa-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 28px 32px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .etapa-num {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .e0 .etapa-num { background: #EEF2FF; color: #4F46E5; }
+  .e1 .etapa-num { background: #F0FDF4; color: #16A34A; }
+  .e2 .etapa-num { background: #FFFBEB; color: #D97706; }
+  .e3 .etapa-num { background: #FFF1F2; color: #E11D48; }
+
+  .etapa-header-text { flex: 1; }
+  .etapa-tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .e0 .etapa-tag { color: #4F46E5; }
+  .e1 .etapa-tag { color: #16A34A; }
+  .e2 .etapa-tag { color: #D97706; }
+  .e3 .etapa-tag { color: #E11D48; }
+
+  .etapa-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .etapa-tagline {
+    font-size: 13px;
+    color: var(--gray);
+    font-style: italic;
+  }
+  .etapa-price-badge {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .etapa-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .etapa-price-sub {
+    font-size: 11px;
+    color: var(--gray);
+    margin-top: 2px;
+  }
+  .etapa-toggle {
+    font-size: 20px;
+    color: var(--gray);
+    margin-left: 12px;
+    align-self: center;
+    transition: transform .3s;
+  }
+  .etapa.open .etapa-toggle { transform: rotate(180deg); }
+
+  .etapa-body {
+    display: none;
+    padding: 0 32px 32px;
+    border-top: 1px solid var(--border);
+  }
+  .etapa.open .etapa-body { display: block; }
+
+  .etapa-desc {
+    font-size: 14px;
+    color: #3d4f6b;
+    line-height: 1.75;
+    margin: 20px 0 24px;
+  }
+
+  .deliverables-title {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .deliverables {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 24px;
+  }
+  .deliverables li {
+    font-size: 13.5px;
+    color: #3d4f6b;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .deliverables li::before {
+    content: '→';
+    color: var(--gold);
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .etapa-footer {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .etapa-footer-item {
+    font-size: 12px;
+    color: var(--gray);
+  }
+  .etapa-footer-item strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  .note-box {
+    background: var(--light);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #3d4f6b;
+    font-style: italic;
+  }
+
+  /* MODALIDADES */
+  .modalidades {
+    padding: 56px 60px;
+    background: var(--navy);
+    color: white;
+  }
+  .modalidades .section-label { color: var(--gold); }
+  .modalidades .section-title { color: white; }
+  .modalidades .divider { background: var(--gold); }
+
+  .modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .modal-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 28px;
+  }
+  .modal-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .modal-card p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+  }
+  .modal-card .modal-total {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .modal-total-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 4px;
+  }
+  .modal-total-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: white;
+    font-weight: 700;
+  }
+  .modal-total-sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+  }
+
+  /* RESUMEN */
+  .resumen {
+    padding: 56px 60px;
+    background: white;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    font-size: 14px;
+  }
+  th {
+    background: var(--navy);
+    color: white;
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  td {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    color: #3d4f6b;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr.total-row td {
+    background: var(--light);
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 15px;
+    border-top: 2px solid var(--gold);
+  }
+  .price-col { text-align: right; font-weight: 600; color: var(--navy); }
+
+  /* CIERRE */
+  .cierre {
+    padding: 56px 60px;
+    background: var(--light);
+    text-align: center;
+  }
+  .cierre .section-title { text-align: center; }
+  .cierre .section-body { margin: 0 auto; text-align: center; }
+  .cierre-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--navy);
+    font-style: italic;
+    max-width: 560px;
+    margin: 32px auto;
+    line-height: 1.6;
+  }
+  .cierre-quote span { color: var(--gold); }
+
+  /* FOOTER */
+  .footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    padding: 32px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer strong { color: white; }
+  .footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 680px) {
+    .cover, .section, .etapas, .modalidades, .resumen, .cierre, .footer { padding: 36px 24px; }
+    .cover h1 { font-size: 26px; }
+    .cover-meta { flex-wrap: wrap; gap: 24px; }
+    .deliverables { grid-template-columns: 1fr; }
+    .modal-grid { grid-template-columns: 1fr; }
+    .etapa-header { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-tag">Propuesta de Transformación Digital</div>
+  <h1>Su clínica merece una presencia digital<br><span>a la altura de su nombre.</span></h1>
+  <p class="cover-sub">Una propuesta construida específicamente para la Clínica Abendaño — con etapas claras, resultados medibles y usted siempre al mando.</p>
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <label>Preparado para</label>
+      <span>Dr. Claudio Abendaño</span>
+    </div>
+    <div class="cover-meta-item">
+      <label>Preparado por</label>
+      <span>Ing. César Augusto Reyes Jaramillo</span>
+    </div>
+    <div class="cover-meta-item">
+      <label>Fecha</label>
+      <span>Marzo 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<div class="section">
+  <div class="section-label">El punto de partida</div>
+  <div class="section-title">Usted ya ganó en el mundo real.<br>Este es el momento de ganar en el digital.</div>
+  <div class="divider"></div>
+  <div class="section-body">
+    La Clínica Abendaño tiene lo que ninguna campaña de marketing puede fabricar: años de trayectoria, una subespecialidad única en la región y una comunidad de pacientes que confía en usted. Lo que existe hoy en internet no refleja eso — y eso tiene solución.<br><br>
+    Esta propuesta está diseñada en etapas progresivas. Usted decide hasta dónde llegar, cuándo avanzar y quién ejecuta cada fase. Mi rol es asegurar que cada paso sea técnicamente correcto, estratégicamente coherente y medible en resultados reales.
+  </div>
+</div>
+
+<!-- ETAPAS -->
+<div class="etapas">
+  <div class="section-label" style="padding-top:8px;">Estructura del proyecto</div>
+  <div class="section-title" style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:var(--navy);margin-bottom:8px;">Las cuatro etapas</div>
+  <div class="divider"></div>
+  <p style="font-size:14px;color:var(--gray);margin-bottom:32px;max-width:600px;">Cada etapa es independiente y tiene valor por sí sola. Puede contratarlas en conjunto o avanzar una a la vez según sus tiempos y prioridades.</p>
+
+  <!-- ETAPA 0 -->
+  <div class="etapa e0 open">
+    <div class="etapa-header" onclick="toggle(this)">
+      <div class="etapa-num">0</div>
+      <div class="etapa-header-text">
+        <div class="etapa-tag">Etapa Cero · 4–5 semanas</div>
+        <div class="etapa-name">Consultoría Estratégica de Marketing Digital</div>
+        <div class="etapa-tagline">"El diagnóstico completo. La hoja de ruta es suya."</div>
+      </div>
+      <div class="etapa-price-badge">
+        <div class="etapa-price">$3.500</div>
+        <div class="etapa-price-sub">servicio completo</div>
+      </div>
+      <div class="etapa-toggle">▾</div>
+    </div>
+    <div class="etapa-body">
+      <div class="etapa-desc">
+        Este es el trabajo más exigente y el más valioso. Durante cuatro a cinco semanas realizamos un estudio profundo del ecosistema digital y competitivo de su clínica: investigamos a cada competidor como si fuéramos sus pacientes, mapeamos sus debilidades, analizamos cómo se comunican en internet y lo que dicen de ellos, y construimos su FODA digital completo. Al final usted tiene en sus manos la hoja de ruta estratégica total — con datos reales, no suposiciones.
+      </div>
+      <div class="deliverables-title">Entregables incluidos</div>
+      <ul class="deliverables">
+        <li>Estudio de competencia directa (análisis de campo + digital)</li>
+        <li>FODA digital de cada competidor clave</li>
+        <li>Análisis de palabras clave y brechas de posicionamiento</li>
+        <li>Perfil de la paciente ideal: cómo busca, qué lee, qué decide</li>
+        <li>Mapa de oportunidades digitales sin explotar</li>
+        <li>Plan estratégico de posicionamiento por fases</li>
+        <li>Hoja de ruta ejecutable por su equipo o por nosotros</li>
+        <li>Presentación ejecutiva presencial (45 min)</li>
+      </ul>
+      <div class="note-box">
+        Esta etapa es completamente independiente. Si decide ejecutar el plan con su propio equipo, el entregable es suyo. Si decide contratarnos para las etapas siguientes, este costo se integra al proyecto total.
+      </div>
+      <div class="etapa-footer">
+        <div class="etapa-footer-item">⏱ <strong>Duración:</strong> 4–5 semanas</div>
+        <div class="etapa-footer-item">📄 <strong>Facturación:</strong> Ing. César Reyes Jaramillo / RUC 1103421531001</div>
+        <div class="etapa-footer-item">✅ <strong>Modalidad:</strong> Servicio completo o solo honorarios (ver sección de modalidades)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ETAPA 1 -->
+  <div class="etapa e1">
+    <div class="etapa-header" onclick="toggle(this)">
+      <div class="etapa-num">1</div>
+      <div class="etapa-header-text">
+        <div class="etapa-tag">Etapa Uno · 4–5 semanas</div>
+        <div class="etapa-name">Arquitectura Web Profesional</div>
+        <div class="etapa-tagline">"Su sitio construido para posicionarse, no solo para verse bien."</div>
+      </div>
+      <div class="etapa-price-badge">
+        <div class="etapa-price">$1.000</div>
+        <div class="etapa-price-sub">hasta 40 páginas</div>
+      </div>
+      <div class="etapa-toggle">▾</div>
+    </div>
+    <div class="etapa-body">
+      <div class="etapa-desc">
+        Un sitio web construido sobre la estrategia de la Etapa 0, optimizado para buscadores desde la primera línea de código. No es una página bonita — es una herramienta de captación de pacientes que trabaja las 24 horas. Cada página está diseñada para posicionar una búsqueda específica de su mercado en Loja.
+      </div>
+      <div class="deliverables-title">Entregables incluidos</div>
+      <ul class="deliverables">
+        <li>Sitio web de hasta 40 páginas estructuradas</li>
+        <li>SEO técnico en cada página desde el desarrollo</li>
+        <li>Página dedicada a Medicina Materno Fetal (subespecialidad única en Loja)</li>
+        <li>Subpáginas por especialidad y servicio</li>
+        <li>Blog configurado para publicación de contenido SEO</li>
+        <li>Integración WhatsApp Business + formulario de citas</li>
+        <li>Google Business Profile conectado y optimizado</li>
+        <li>Diseño adaptado a móvil y carga rápida</li>
+      </ul>
+      <div class="note-box">
+        Artículos adicionales de blog: <strong>$25 por artículo</strong>, según el plan de contenido definido en la Etapa 0. Este es el motor de posicionamiento a largo plazo.
+      </div>
+      <div class="etapa-footer">
+        <div class="etapa-footer-item">⏱ <strong>Duración:</strong> 4–5 semanas</div>
+        <div class="etapa-footer-item">📄 <strong>Facturación:</strong> Ing. César Reyes Jaramillo / RUC 1103421531001</div>
+        <div class="etapa-footer-item">✅ <strong>Modalidad:</strong> Servicio completo o solo honorarios</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ETAPA 2 -->
+  <div class="etapa e2">
+    <div class="etapa-header" onclick="toggle(this)">
+      <div class="etapa-num">2</div>
+      <div class="etapa-header-text">
+        <div class="etapa-tag">Etapa Dos · Entrega inmediata post Etapa 1</div>
+        <div class="etapa-name">Sistema de Automatización de Contenido</div>
+        <div class="etapa-tagline">"Contenido estratégico publicándose solo. Su equipo supervisa, el sistema ejecuta."</div>
+      </div>
+      <div class="etapa-price-badge">
+        <div class="etapa-price">$2.500</div>
+        <div class="etapa-price-sub">licencia + configuración</div>
+      </div>
+      <div class="etapa-toggle">▾</div>
+    </div>
+    <div class="etapa-body">
+      <div class="etapa-desc">
+        Software configurado específicamente para la Clínica Abendaño que genera, programa y publica contenido orientado a posicionar el sitio web — no posts decorativos ni reels del momento. Todo el contenido escrito responde a una intención de búsqueda real de sus pacientes. El sistema reduce entre 50 y 60% el tiempo humano en la gestión de contenido. El contenido visual continúa siendo producido por personas; el sistema lo organiza y distribuye.
+      </div>
+      <div class="deliverables-title">Entregables incluidos</div>
+      <ul class="deliverables">
+        <li>Software de automatización configurado para la clínica</li>
+        <li>10 artículos de posicionamiento incluidos en el lanzamiento</li>
+        <li>Primer mes de gestión de redes sociales orientada a SEO</li>
+        <li>10 pilares de contenido + estructura de 50 clusters temáticos</li>
+        <li>Publicación automática en Facebook e Instagram</li>
+        <li>Panel de aprobación para su equipo antes de publicar</li>
+        <li>Capacitación completa al equipo (2 sesiones presenciales)</li>
+        <li>Manual de operación del sistema</li>
+      </ul>
+      <div class="note-box">
+        El primer mes de redes sociales incluido tiene un valor de <strong>$500</strong> y está diseñado para activar el posicionamiento del sitio desde el día del lanzamiento. No es gestión de comunidad — es distribución estratégica de contenido.
+      </div>
+      <div class="etapa-footer">
+        <div class="etapa-footer-item">💰 <strong>Ahorro estimado:</strong> $4.000–$5.000 anuales en gestión de contenido</div>
+        <div class="etapa-footer-item">📄 <strong>Facturación:</strong> Ing. César Reyes Jaramillo / RUC 1103421531001</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ETAPA 3 -->
+  <div class="etapa e3">
+    <div class="etapa-header" onclick="toggle(this)">
+      <div class="etapa-num">3</div>
+      <div class="etapa-header-text">
+        <div class="etapa-tag">Etapa Tres · Opcional · Desde el inicio o en cualquier fase</div>
+        <div class="etapa-name">Arquitecto Digital del Proyecto</div>
+        <div class="etapa-tagline">"Usted dirige. Yo ejecuto. Los resultados son suyos."</div>
+      </div>
+      <div class="etapa-price-badge">
+        <div class="etapa-price">$650</div>
+        <div class="etapa-price-sub">por mes</div>
+      </div>
+      <div class="etapa-toggle">▾</div>
+    </div>
+    <div class="etapa-body">
+      <div class="etapa-desc">
+        Si prefiere que su equipo interno ejecute el proyecto — o si desea mantener el control total de cada decisión — esta modalidad le permite contratarme como director técnico del proceso: orquesto cada etapa, instruyo a su personal, superviso la ejecución y le rindo cuentas a usted directamente. Usted sigue siendo el jefe. Yo soy el arquitecto que garantiza que todo se construya bien.
+      </div>
+      <div class="deliverables-title">Incluye mensualmente</div>
+      <ul class="deliverables">
+        <li>Dirección técnica semipresencial del proyecto</li>
+        <li>Instrucción y supervisión del equipo interno de la clínica</li>
+        <li>Monitoreo de posicionamiento y ajustes de estrategia</li>
+        <li>Revisión técnica del sitio web y contenidos</li>
+        <li>Reporte ejecutivo mensual con métricas clave</li>
+        <li>Sesión estratégica mensual con el Dr. Abendaño (45 min)</li>
+      </ul>
+      <div class="note-box">
+        Esta etapa es completamente opcional. Puede activarla desde el día uno si prefiere que su equipo ejecute con mi dirección, o contratarla en cualquier momento del proyecto. El compromiso mínimo es de 6 meses para garantizar resultados medibles.
+      </div>
+      <div class="etapa-footer">
+        <div class="etapa-footer-item">⏱ <strong>Compromiso mínimo:</strong> 6 meses</div>
+        <div class="etapa-footer-item">📍 <strong>Modalidad:</strong> Semipresencial en Loja</div>
+        <div class="etapa-footer-item">📄 <strong>Facturación:</strong> Honorarios profesionales / RUC 1103421531001</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODALIDADES -->
+<div class="modalidades">
+  <div class="section-label">Flexibilidad total</div>
+  <div class="section-title" style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:white;margin-bottom:8px;">Dos formas de trabajar juntos</div>
+  <div class="divider"></div>
+  <p style="font-size:14px;color:rgba(255,255,255,0.55);max-width:580px;margin-bottom:8px;">Cada etapa puede contratarse de dos maneras. Usted elige el nivel de involucramiento que más le conviene.</p>
+  <div class="modal-grid">
+    <div class="modal-card">
+      <h3>Servicio Completo</h3>
+      <p>Ing. César Reyes Jaramillo ejecuta la etapa de inicio a fin. Usted recibe el entregable terminado, revisado y listo para operar. Sin gestión interna, sin intermediarios, sin excusas.</p>
+      <div class="modal-total">
+        <div class="modal-total-label">Precio por etapa</div>
+        <div class="modal-total-value">Precio publicado</div>
+        <div class="modal-total-sub">Facturado a nombre de Ing. César A. Reyes Jaramillo · RUC 1103421531001</div>
+      </div>
+    </div>
+    <div class="modal-card">
+      <h3>Honorarios Profesionales</h3>
+      <p>Su equipo ejecuta bajo mi dirección técnica. Yo diseño el proceso, instruyo a su personal, superviso cada paso y garantizo que el resultado sea correcto. La responsabilidad de la ejecución recae en su equipo; la responsabilidad técnica, en mí.</p>
+      <div class="modal-total">
+        <div class="modal-total-label">Tarifa de dirección</div>
+        <div class="modal-total-value">$650 / mes</div>
+        <div class="modal-total-sub">Honorarios profesionales · Etapa 3 activada desde el inicio</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RESUMEN INVERSIÓN -->
+<div class="resumen">
+  <div class="section-label">Resumen de inversión</div>
+  <div class="section-title" style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:var(--navy);margin-bottom:8px;">El panorama completo</div>
+  <div class="divider"></div>
+  <table>
+    <thead>
+      <tr>
+        <th>Etapa</th>
+        <th>Descripción</th>
+        <th>Duración</th>
+        <th class="price-col">Inversión</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Etapa 0</strong></td>
+        <td>Consultoría Estratégica de Marketing Digital</td>
+        <td>4–5 semanas</td>
+        <td class="price-col">$3.500</td>
+      </tr>
+      <tr>
+        <td><strong>Etapa 1</strong></td>
+        <td>Arquitectura Web Profesional (hasta 40 páginas)</td>
+        <td>4–5 semanas</td>
+        <td class="price-col">$1.000</td>
+      </tr>
+      <tr>
+        <td><strong>Etapa 2</strong></td>
+        <td>Sistema de Automatización de Contenido</td>
+        <td>Post Etapa 1</td>
+        <td class="price-col">$2.500</td>
+      </tr>
+      <tr>
+        <td><strong>Etapa 3</strong></td>
+        <td>Arquitecto Digital del Proyecto (opcional, mensual)</td>
+        <td>Mín. 6 meses</td>
+        <td class="price-col">$650/mes</td>
+      </tr>
+      <tr>
+        <td colspan="4" style="padding:8px;"></td>
+      </tr>
+      <tr>
+        <td><em style="font-size:12px;color:var(--gray);">Adicional</em></td>
+        <td>Artículos de blog adicionales (según plan de contenido)</td>
+        <td>—</td>
+        <td class="price-col">$25/u</td>
+      </tr>
+      <tr class="total-row">
+        <td colspan="3">Inversión total Etapas 0 + 1 + 2</td>
+        <td class="price-col">$7.000</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- CIERRE -->
+<div class="cierre">
+  <div class="section-label" style="text-align:center;">El siguiente paso</div>
+  <div class="section-title" style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:var(--navy);margin-bottom:8px;">Una reunión. Sin tecnicismos. Sin rodeos.</div>
+  <div class="divider" style="margin:16px auto 24px;"></div>
+  <div class="section-body" style="text-align:center;margin:0 auto;max-width:560px;font-size:14.5px;color:#3d4f6b;">
+    Le propongo 45 minutos para revisar juntos esta propuesta, resolver cualquier duda y definir por dónde empezamos. No hay presión ni compromisos — solo la claridad de saber exactamente qué implica cada paso y qué puede esperar a cambio.
+  </div>
+  <div class="cierre-quote">
+    "Usted no necesita una página web.<br>Necesita que <span>su nombre aparezca primero</span><br>cuando su próxima paciente lo busque."
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div>
+    <strong>Ing. César Augusto Reyes Jaramillo</strong><br>
+    RUC: 1103421531001
+  </div>
+  <div style="text-align:center;">
+    <a href="mailto:negocios@cesarreyesjaramillo.com">negocios@cesarreyesjaramillo.com</a><br>
+    <a href="https://www.cesarreyesjaramillo.com">www.cesarreyesjaramillo.com</a>
+  </div>
+  <div style="text-align:right;">
+    Loja, Ecuador · Marzo 2026
+  </div>
+</div>
+
+<script>
+  function toggle(header) {
+    const etapa = header.parentElement;
+    etapa.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
