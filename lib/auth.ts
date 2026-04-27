@@ -1,4 +1,5 @@
 import NextAuth from "next-auth"
+import CredentialsProvider from "next-auth/providers/credentials"
 
 // Import shared types
 import 'next-auth'
@@ -19,10 +20,9 @@ export const {
   signOut,
 } = NextAuth({
   providers: [
-    {
+    CredentialsProvider({
       id: 'credentials',
       name: 'Credentials',
-      type: 'credentials',
       credentials: {
         email: { label: "Usuario", type: "text" },
         password: { label: "Contraseña", type: "password" }
@@ -56,7 +56,7 @@ export const {
           return null
         }
       }
-    }
+    })
   ],
   session: {
     strategy: "jwt",

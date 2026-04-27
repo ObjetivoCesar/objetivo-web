@@ -317,7 +317,8 @@ export async function getAllArticles(includeHidden = false): Promise<BlogArticle
       'posicionamiento-en-google',
       'activaqr-gastronomia',
       'activaqr-networking',
-      'casos-de-exito'
+      'casos-de-exito',
+      'software-personalizado'
     ];
     
     // If already correct, return

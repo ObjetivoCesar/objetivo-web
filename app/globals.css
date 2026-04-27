@@ -280,4 +280,24 @@ body {
   .section-title {
     font-size: 2.5rem;
   }
+
+  /* Custom Scrollbar for Premium Feel */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #FF6B00;
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #e66000;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
 }

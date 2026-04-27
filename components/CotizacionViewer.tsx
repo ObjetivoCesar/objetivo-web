@@ -140,12 +140,12 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
             </div>
             
             <h1 className="font-outfit text-4xl md:text-6xl lg:text-7xl font-light text-white leading-[1.1] mb-6 max-w-4xl tracking-tight">
-              {data.portada.titulo_principal} <br className="hidden md:block"/>
-              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-amber-200" dangerouslySetInnerHTML={{ __html: data.portada.titulo_destacado }}></span>
+              {data?.portada?.titulo_principal || ""} <br className="hidden md:block"/>
+              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-amber-200" dangerouslySetInnerHTML={{ __html: data?.portada?.titulo_destacado || "" }}></span>
             </h1>
             
             <p className="font-montserrat text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed mb-16 font-light">
-              {data.portada.subtitulo}
+              {data?.portada?.subtitulo || ""}
             </p>
           </motion.div>
 
@@ -431,7 +431,7 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
             </p>
           )}
           
-          <div className="quote-box" dangerouslySetInnerHTML={{ __html: data.cierre.frase_final.replace(/<span>(.*?)<\/span>/g, '<span class="text-gold font-bold">$1</span>') }}>
+          <div className="quote-box" dangerouslySetInnerHTML={{ __html: (data?.cierre?.frase_final || "").replace(/<span>(.*?)<\/span>/g, '<span class="text-gold font-bold">$1</span>') }}>
           </div>
         </motion.div>
       </section>

@@ -1,4 +1,4 @@
-﻿import { cache } from 'react';
+import { cache } from 'react';
 
 // Caché deshabilitada para forzar recarga
 interface CacheEntry {
@@ -41,12 +41,22 @@ export const revalidate = 0; // Revalidar siempre
 
 // Función para obtener artículos con caché forzando recarga
 export const getCachedArticles = cache(async () => {
-  const { getAllArticles } = await import('./utils-node');
-  return await getAllArticles();
+  try {
+    const { getAllArticles } = await import('./utils-node');
+    return await getAllArticles();
+  } catch (error) {
+    console.error('Error in getCachedArticles:', error);
+    return [];
+  }
 });
 
 // Función para obtener un artículo específico forzando recarga
 export const getCachedArticle = cache(async (category: string, slug: string) => {
-  const { getArticle } = await import('./utils-node');
-  return await getArticle(category, slug);
+  try {
+    const { getArticle } = await import('./utils-node');
+    return await getArticle(category, slug);
+  } catch (error) {
+    console.error('Error in getCachedArticle:', error);
+    return null;
+  }
 });

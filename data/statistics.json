@@ -1,57 +1,57 @@
 {
-  "totalVisitas": 1935,
-  "visitasHoy": 1935,
+  "totalVisitas": 2002,
+  "visitasHoy": 2002,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
     {
-      "fecha": "2026-04-26",
-      "pagina": "/blog/software-personalizado/crm-turismo",
+      "fecha": "2026-04-27",
+      "pagina": "/software-personalizado/crm-turismo",
       "visitas": 1
     },
     {
-      "fecha": "2026-04-26",
-      "pagina": "/blog/software-personalizado/crm-turismo",
+      "fecha": "2026-04-27",
+      "pagina": "/software-personalizado/crm-turismo",
       "visitas": 1
     },
     {
-      "fecha": "2026-04-26",
-      "pagina": "/blog/software-personalizado/crm-turismo",
+      "fecha": "2026-04-27",
+      "pagina": "/software-personalizado/crm-turismo",
       "visitas": 1
     },
     {
-      "fecha": "2026-04-26",
-      "pagina": "/software-gestion-servicios",
+      "fecha": "2026-04-27",
+      "pagina": "/software-personalizado/crm-turismo",
       "visitas": 1
     },
     {
-      "fecha": "2026-04-26",
-      "pagina": "/software-gestion-servicios",
+      "fecha": "2026-04-27",
+      "pagina": "/software-personalizado/crm-turismo",
       "visitas": 1
     },
     {
-      "fecha": "2026-04-26",
-      "pagina": "/software-gestion-servicios",
+      "fecha": "2026-04-27",
+      "pagina": "/software-personalizado/crm-turismo",
       "visitas": 1
     },
     {
-      "fecha": "2026-04-26",
-      "pagina": "/blog/software-personalizado/crm-turismo",
+      "fecha": "2026-04-27",
+      "pagina": "/software-personalizado/crm-turismo",
       "visitas": 1
     },
     {
-      "fecha": "2026-04-26",
-      "pagina": "/blog/software-personalizado/crm-turismo",
+      "fecha": "2026-04-27",
+      "pagina": "/software-personalizado/crm-turismo",
       "visitas": 1
     },
     {
-      "fecha": "2026-04-26",
-      "pagina": "/software-gestion-servicios",
+      "fecha": "2026-04-27",
+      "pagina": "/software-personalizado/crm-turismo",
       "visitas": 1
     },
     {
-      "fecha": "2026-04-26",
-      "pagina": "/software-gestion-servicios",
+      "fecha": "2026-04-27",
+      "pagina": "/software-personalizado/crm-turismo",
       "visitas": 1
     }
   ],
@@ -106,6 +106,7 @@
     "2026-04-23": 19,
     "2026-04-24": 42,
     "2026-04-25": 14,
-    "2026-04-26": 33
+    "2026-04-26": 87,
+    "2026-04-27": 13
   }
 }

@@ -11,13 +11,13 @@ export async function generateMetadata(
   if (!quote) return { title: "Cotización no encontrada" };
 
   return {
-    title: `Propuesta — ${quote.portada.preparado_para}`,
-    description: quote.portada.subtitulo,
+    title: `Propuesta — ${quote?.portada?.preparado_para || "César Reyes"}`,
+    description: quote?.portada?.subtitulo || "",
     openGraph: {
-      title: quote.portada.titulo_principal,
-      description: quote.portada.subtitulo,
+      title: quote?.portada?.titulo_principal || "",
+      description: quote?.portada?.subtitulo || "",
       images: [
-        quote.portada.imagen_url || quote.portada.url_logo_cliente || ""
+        quote?.portada?.imagen_url || quote?.portada?.url_logo_cliente || ""
       ].filter(Boolean),
     }
   };

@@ -162,3 +162,50 @@ export async function getMySQLArticlesByCategory(category: string, limit = 3): P
     return null;
   }
 }
+
+export async function saveArticleMySQL(articleData: any) {
+  try {
+    const db = getPool();
+    const query = `
+      INSERT INTO articles (
+        id, title, slug, content, excerpt, cover_image, 
+        published, published_at, category_id, meta_description,
+        hub_url, parent_silo
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      ON DUPLICATE KEY UPDATE 
+        title = VALUES(title),
+        slug = VALUES(slug),
+        content = VALUES(content),
+        excerpt = VALUES(excerpt),
+        cover_image = VALUES(cover_image),
+        published = VALUES(published),
+        published_at = VALUES(published_at),
+        category_id = VALUES(category_id),
+        meta_description = VALUES(meta_description),
+        hub_url = VALUES(hub_url),
+        parent_silo = VALUES(parent_silo)
+    `;
+    
+    const id = articleData.id || articleData.slug;
+    const values = [
+      id,
+      articleData.title,
+      articleData.slug,
+      articleData.content,
+      articleData.excerpt || '',
+      articleData.cover_image || articleData.image || '',
+      1, // published
+      articleData.published_at || new Date().toISOString(),
+      articleData.category_id || articleData.category || 'marketing-para-pymes',
+      articleData.meta_description || articleData.excerpt || '',
+      articleData.hub_url || null,
+      articleData.parent_silo || null
+    ];
+
+    await db.execute(query, values);
+    return true;
+  } catch (error) {
+    console.error('Error saving article to MySQL:', error);
+    throw error;
+  }
+}

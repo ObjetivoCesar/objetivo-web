@@ -2,13 +2,15 @@ import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { getCachedArticles, getCachedArticle } from "@/lib/cache-utils"
-import * as motion from "framer-motion/client"
+
 
 // Revalidar la página cada 60 segundos
 export const revalidate = 60;
 import { marked } from "marked"
 import { formatCategory } from "@/lib/format-utils"
-import IndustrySolutionsBoxes from "@/components/IndustrySolutionsBoxes"
+import ArticleIndustryCarousel from "@/components/ArticleIndustryCarousel"
+import CrmPricingSection from "@/components/CrmPricingSection"
+import BlogFaqAccordion from "@/components/BlogFaqAccordion"
 
 // Obtener artículos para generar rutas estáticas
 export async function generateStaticParams() {
@@ -103,18 +105,37 @@ export default async function BlogPostPage({
   const article = await getArticleData(category, slug);
   if (!article) notFound();
   
-  const allArticles = await getCachedArticles();
-  const cleanContent = (article.content || '').toString()
-    .replace(/^---[\s\S]*?---\s*/, '')
-    .trim();
-    
-  const contentHtml = marked(cleanContent);
-  const safeArticles = Array.isArray(allArticles) ? allArticles : [];
+  const rawArticlesData = await getCachedArticles();
+  const safeArticles = Array.isArray(rawArticlesData) ? rawArticlesData : [];
   
   const relatedArticles = safeArticles
     .filter((a: any) => a && a.category === article.category && a.slug !== article.slug)
     .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3);
+
+  const cleanContent = (article.content || '').toString()
+    .replace(/^---[\s\S]*?---\s*/, '')
+    .replace(/═══════════════════════════════════[\s\S]*?═══════════════════════════════════/g, '') // Hide visual component blocks
+    .replace(/## FICHA SEO FINAL[\s\S]*/g, '') // Hide SEO metadata section from rendered HTML
+    .trim();
+    
+  const contentHtml = await marked(cleanContent);
+
+  // Extract FAQs for accordion - More robust version
+  const faqSection = (article.content || '').toString().match(/## Preguntas Frecuentes \(FAQ\)([\s\S]*?)(##|\n---|$)/)?.[1] || '';
+  const faqBlocks = faqSection.split(/\n(?=\*\*\d+\.)/).filter(block => block.trim());
+  
+  const faqs = faqBlocks.map(block => {
+    const questionMatch = block.match(/\*\*\d+\.\s*(.*?)\*\*/);
+    const question = questionMatch ? questionMatch[1].trim() : '';
+    const answer = block.replace(/\*\*\d+\.\s*.*?\*\*/, '').trim();
+    return { question, answer };
+  }).filter(faq => faq.question && faq.answer);
+
+  // Hide the raw FAQ text from the main content if we're showing the accordion
+  const finalHtml = faqs.length > 0 
+    ? contentHtml.replace(/<h2[^>]*>Preguntas Frecuentes \(FAQ\)<\/h2>[\s\S]*/g, '') 
+    : contentHtml;
 
   // Generate JSON-LD schema dynamically
   const jsonLd = {
@@ -163,8 +184,8 @@ export default async function BlogPostPage({
             
             <article className="bg-white rounded-lg shadow-lg overflow-hidden border-none">
               {article.category === 'software-personalizado' ? (
-                /* Full Screen Premium Hero */
-                <div className="relative h-[80vh] w-full flex items-center justify-center overflow-hidden">
+                /* Cinematic Hero for Software Personalizado (16:9 ratio) */
+                <div className="relative aspect-video max-h-[600px] w-full flex items-center justify-center overflow-hidden rounded-t-2xl">
                    <Image 
                     src={article.image.startsWith('http') || article.image.startsWith('/') ? article.image : `/images/articulos/${article.image}`} 
                     alt={article.title} 
@@ -172,20 +193,21 @@ export default async function BlogPostPage({
                     className="object-cover"
                     priority
                   />
-                  <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
-                  <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-                    <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-                      <span className="inline-block text-[#FF6B00] font-bold tracking-widest uppercase text-sm mb-6 bg-white/10 px-4 py-2 rounded-full backdrop-blur-md">
+                  <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]" />
+                    <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+                    <div>
+                      <span className="inline-block text-[#FF6B00] font-bold tracking-widest uppercase text-sm mb-4 bg-white/10 px-4 py-2 rounded-full backdrop-blur-md">
                         {formatCategory(article.category)}
                       </span>
-                      <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-tight">
+                      <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight" style={{ fontFamily: 'var(--font-poiret-one, inherit)' }}>
                         {article.title}
                       </h1>
-                      <div className="flex items-center justify-center gap-6 text-gray-300 font-medium">
+                      <div className="flex items-center justify-center gap-6 text-gray-200 font-medium text-sm md:text-base">
                         <span>{formatDate(article.date)}</span>
+                        <span className="hidden md:inline">•</span>
                         <span>{article.author || "César Reyes Jaramillo"}</span>
                       </div>
-                    </motion.div>
+                    </div>
                   </div>
                 </div>
               ) : (
@@ -218,15 +240,21 @@ export default async function BlogPostPage({
                 )}
 
                 {article.slug === 'crm-turismo' && article.category === 'software-personalizado' && (
-                  <div className="mb-12 -mx-4 md:-mx-8">
-                    <IndustrySolutionsBoxes />
+                  <div className="mb-20 mt-10 relative w-[100vw] left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-4 md:px-8">
+                      <ArticleIndustryCarousel />
+                    </div>
                   </div>
                 )}
                 
                 <div 
-                  className="prose max-w-none prose-lg text-gray-700 prose-headings:text-gray-900 prose-orange"
-                  dangerouslySetInnerHTML={{ __html: contentHtml }}
+                  className="prose max-w-none prose-lg text-gray-700 prose-headings:text-gray-900 prose-orange mb-12"
+                  dangerouslySetInnerHTML={{ __html: finalHtml }}
                 />
+
+                {faqs.length > 0 && (
+                  <BlogFaqAccordion faqs={faqs} />
+                )}
                 
                 <div className="mt-12 pt-8 border-t border-gray-200">
                   <h3 className="text-xl font-bold mb-4">Sígueme en mis redes</h3>
@@ -275,6 +303,12 @@ export default async function BlogPostPage({
                 </div>
               </div>
             </article>
+            
+            {article.category === 'software-personalizado' && (
+              <div className="mt-16 -mx-4 md:mx-0 rounded-2xl overflow-hidden shadow-2xl">
+                <CrmPricingSection />
+              </div>
+            )}
             
             {relatedArticles.length > 0 && (
               <div className="mt-16">
