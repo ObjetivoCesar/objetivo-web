@@ -26,7 +26,7 @@ const menuItems = [
         image: "/images/hotel-objetivo/hero.png",
         subtitle: "Soluciones de alta eficiencia",
         subitems: [
-            { title: "Software de Gestión (Servicios)", href: "/crm" },
+            { title: "Software de Gestión (Servicios)", href: "https://www.cesarreyesjaramillo.com/software-gestion-servicios" },
             { title: "Motor de Reservas (Hoteles)", href: "/motor-reservas-hotel" },
             { title: "Menú Digital (Restaurantes)", href: "/menu-digital" },
             { title: "Mensajería", href: "/mensajeria" },
