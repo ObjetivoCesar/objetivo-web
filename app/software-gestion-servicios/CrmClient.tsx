@@ -214,7 +214,7 @@ const CrmClient = () => {
                                     Agendar reunión en oficinas
                                 </a>
                                 <a
-                                    href="https://software-orcin-eight.vercel.app/"
+                                    href="https://software-orcin-eight.vercel.app/admin"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 text-base"
