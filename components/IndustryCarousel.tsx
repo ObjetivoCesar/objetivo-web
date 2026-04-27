@@ -28,7 +28,7 @@ const sectors: Sector[] = [
         description: 'Gestión de reservas, check-ins y experiencias personalizadas.',
         imageSrc: '/images/hotel-objetivo/hero.png',
         benefit: 'Automatiza tu recepción y mejora la ocupación.',
-        slug: '/software-personalizado/crm-turismo'
+        slug: 'https://www.cesarreyesjaramillo.com/software-personalizado/crm-turismo'
     },
     {
         id: 'industria',
