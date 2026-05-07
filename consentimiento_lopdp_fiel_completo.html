@@ -1,0 +1,259 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.hu{background:var(--color-background-primary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-lg);font-size:14px;color:var(--color-text-primary);overflow:hidden;max-width:700px;margin:0 auto}
+.hu-top{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:0.5px solid var(--color-border-tertiary);background:var(--color-background-secondary)}
+.hu-site{font-size:12px;font-weight:500;color:var(--color-text-secondary);display:flex;align-items:center;gap:6px}
+.brand-sq{width:8px;height:8px;background:#121212;border-radius:2px}
+.hu-tools{display:flex;gap:4px}
+.icon-btn{background:none;border:none;cursor:pointer;color:var(--color-text-tertiary);padding:4px 6px;border-radius:var(--border-radius-md);font-size:15px}
+.icon-btn:hover{color:var(--color-text-primary);background:var(--color-background-tertiary)}
+.hu-notice{padding:16px 20px;border-bottom:0.5px solid var(--color-border-tertiary)}
+.hu-notice-head{font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;line-height:1.5;text-align:center}
+.hu-notice-sub{font-size:13px;color:var(--color-text-secondary);line-height:1.6;text-align:center}
+.hu-dur{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px}
+.hu-dur select{font-size:12px;padding:5px 10px;border:0.5px solid var(--color-border-secondary);border-radius:99px;background:var(--color-background-primary);color:var(--color-text-primary)}
+.hu-prefs{padding:16px 20px;border-bottom:0.5px solid var(--color-border-tertiary)}
+.hu-prefs-title{font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px;text-align:center}
+.hu-prefs-sub{font-size:13px;color:var(--color-text-secondary);margin-bottom:14px;line-height:1.5;text-align:center}
+.cats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px}
+.cat{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:12px}
+.cat-head{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:8px}
+.cat-name{font-size:12px;font-weight:500;color:var(--color-text-primary);line-height:1.4}
+.cat-desc{font-size:11px;color:var(--color-text-secondary);line-height:1.5;margin-bottom:8px}
+.datos-label{font-size:11px;font-weight:500;color:var(--color-text-primary);margin-bottom:5px}
+.dato-item{display:flex;align-items:flex-start;gap:5px;margin-bottom:5px}
+.dato-icon{font-size:13px;color:var(--color-text-tertiary);margin-top:1px;flex-shrink:0}
+.dato-icon-mid{font-size:13px;color:var(--color-text-secondary);margin-top:1px;flex-shrink:0}
+.dato-icon-full{font-size:13px;color:var(--color-text-primary);margin-top:1px;flex-shrink:0}
+.dato-text{font-size:11px;color:var(--color-text-secondary);line-height:1.4}
+.toggle-sw{position:relative;width:34px;height:19px;flex-shrink:0}
+.toggle-sw input{opacity:0;width:0;height:0;position:absolute}
+.sl{position:absolute;inset:0;border-radius:99px;background:var(--color-border-secondary);cursor:pointer;transition:background 0.2s}
+.sl:before{content:'';position:absolute;width:13px;height:13px;left:3px;top:3px;background:#fff;border-radius:50%;transition:transform 0.2s}
+input:checked+.sl{background:#121212}
+input:checked+.sl:before{transform:translateX(15px)}
+input:disabled+.sl{cursor:not-allowed;opacity:0.6}
+.hu-metrics{padding:16px 20px;border-bottom:0.5px solid var(--color-border-tertiary)}
+.hu-metrics-title{font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px;text-align:center}
+.hu-metrics-sub{font-size:13px;color:var(--color-text-secondary);margin-bottom:12px;text-align:center;line-height:1.5}
+.metrics-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.met-box{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px}
+.met-title{font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.met-table{width:100%;font-size:11px;border-collapse:collapse}
+.met-table td{padding:4px 0;color:var(--color-text-secondary);vertical-align:top;border-bottom:0.5px solid var(--color-border-tertiary)}
+.met-table td:last-child{color:var(--color-text-primary);font-weight:500;text-align:right;padding-left:8px}
+.met-table tr:last-child td{border-bottom:none}
+.met-list{list-style:none;padding:0}
+.met-list li{font-size:11px;color:var(--color-text-secondary);padding:3px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.met-list li:last-child{border-bottom:none}
+.met-sub{font-size:11px;font-weight:500;color:var(--color-text-secondary);margin:8px 0 4px}
+.hu-footer{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:var(--color-background-secondary);flex-wrap:wrap;gap:8px;border-top:0.5px solid var(--color-border-tertiary)}
+.footer-link{background:none;border:none;font-size:12px;color:var(--color-text-info);cursor:pointer;display:flex;align-items:center;gap:4px}
+.btn-save{background:#121212;color:#fff;border:none;border-radius:99px;padding:10px 24px;font-size:13px;font-weight:500;cursor:pointer}
+.btn-save:hover{opacity:0.85}
+.privacy-link{font-size:12px;color:var(--color-text-info);background:none;border:none;cursor:pointer}
+.saved-banner{display:none;background:var(--color-background-success);border:0.5px solid var(--color-border-success);border-radius:var(--border-radius-md);padding:10px 14px;margin:0 20px 12px;font-size:12px;color:var(--color-text-success);align-items:center;gap:8px}
+.revoke-link{font-size:11px;color:var(--color-text-danger);background:none;border:none;cursor:pointer;text-decoration:underline;margin-left:auto}
+.form-wrap{display:none;border-top:0.5px solid var(--color-border-tertiary);padding:16px 20px}
+.form-title{font-size:14px;font-weight:500;margin-bottom:4px}
+.form-sub{font-size:12px;color:var(--color-text-secondary);margin-bottom:14px;line-height:1.5}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.field{margin-bottom:10px}
+.field label{display:block;font-size:11px;color:var(--color-text-secondary);margin-bottom:4px}
+.field label span{color:var(--color-text-danger)}
+.field input,.field select{width:100%;font-size:13px;padding:7px 10px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-primary);color:var(--color-text-primary)}
+.btn-send{background:#121212;color:#fff;border:none;border-radius:var(--border-radius-md);padding:9px 20px;font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:6px}
+.form-note{font-size:11px;color:var(--color-text-tertiary);margin-top:8px}
+</style>
+
+<h2 class="sr-only">Widget de consentimiento LOPDP fiel al spdp.gob.ec — cesarreyesjaramillo.com</h2>
+
+<div class="hu" id="huWidget">
+
+  <div class="hu-top">
+    <div class="hu-site">
+      <div class="brand-sq"></div>
+      cesarreyesjaramillo.com
+    </div>
+    <div class="hu-tools">
+      <button class="icon-btn" title="Expandir"><i class="ti ti-arrows-maximize"></i></button>
+      <button class="icon-btn" title="Descargar consentimiento"><i class="ti ti-download"></i></button>
+      <button class="icon-btn" title="Estado de protección"><i class="ti ti-shield"></i></button>
+      <button class="icon-btn" title="Cerrar" onclick="document.getElementById('huWidget').style.opacity='0.4'"><i class="ti ti-x"></i></button>
+    </div>
+  </div>
+
+  <div class="hu-notice">
+    <div class="hu-notice-head">Creemos que sus datos son de su propiedad y respaldamos su derecho a la privacidad y a la transparencia.</div>
+    <div class="hu-notice-sub">Elija los propósitos para los que nos autoriza a usar sus datos y por cuánto tiempo desea otorgar ese consentimiento.</div>
+    <div class="hu-dur">
+      <select id="duracion">
+        <option value="1">1 mes</option>
+        <option value="6" selected>6 meses</option>
+        <option value="12">12 meses</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="hu-prefs">
+    <div class="hu-prefs-title">Preferencias de consentimiento</div>
+    <div class="hu-prefs-sub">Use los siguientes botones para especificar los propósitos de intercambio de datos para este sitio web.</div>
+
+    <div class="cats-grid">
+
+      <div class="cat">
+        <div class="cat-head">
+          <div class="cat-name">Operaciones básicas</div>
+          <label class="toggle-sw"><input type="checkbox" checked disabled><span class="sl"></span></label>
+        </div>
+        <div class="cat-desc">Este tipo de intercambio es necesario para acceder a los datos que necesitamos para garantizar que el sitio web sea seguro y funcione correctamente.</div>
+        <div class="datos-label">Datos Utilizados:</div>
+        <div class="dato-item"><i class="ti ti-eye-off dato-icon"></i><span class="dato-text">Datos anónimos como el nombre y la versión del navegador</span></div>
+        <div class="dato-item"><i class="ti ti-eye dato-icon-mid"></i><span class="dato-text">Datos seudónimos como el token de autenticación</span></div>
+      </div>
+
+      <div class="cat">
+        <div class="cat-head">
+          <div class="cat-name">Personalización del contenido</div>
+          <label class="toggle-sw"><input type="checkbox" id="togPersonalizacion"><span class="sl"></span></label>
+        </div>
+        <div class="cat-desc">Cuando se habilita, nos permite guardar sus preferencias y crear un perfil sobre usted para ofrecerle contenidos personalizados.</div>
+        <div class="datos-label">Datos Utilizados:</div>
+        <div class="dato-item"><i class="ti ti-eye-off dato-icon"></i><span class="dato-text">Datos anónimos como el tipo de dispositivo, el modelo y el sistema operativo</span></div>
+        <div class="dato-item"><i class="ti ti-eye dato-icon-mid"></i><span class="dato-text">Datos seudónimos como las preferencias de navegación del sitio</span></div>
+        <div class="dato-item"><i class="ti ti-eye dato-icon-full"></i><span class="dato-text">Datos personales como su dirección IP y localización</span></div>
+      </div>
+
+      <div class="cat">
+        <div class="cat-head">
+          <div class="cat-name">Optimización del sitio</div>
+          <label class="toggle-sw"><input type="checkbox" id="togOptimizacion"><span class="sl"></span></label>
+        </div>
+        <div class="cat-desc">Cuando se habilita, nos permite controlar su comportamiento para analizar y mejorar los servicios de nuestro sitio web para todos los visitantes.</div>
+        <div class="datos-label">Datos Utilizados:</div>
+        <div class="dato-item"><i class="ti ti-eye-off dato-icon"></i><span class="dato-text">Datos anónimos como la dirección del sitio web visitado anteriormente (HTTP Referer)</span></div>
+        <div class="dato-item"><i class="ti ti-eye dato-icon-mid"></i><span class="dato-text">Datos seudónimos como los identificadores de actividad del sitio web</span></div>
+        <div class="dato-item"><i class="ti ti-eye dato-icon-full"></i><span class="dato-text">Datos personales como el contenido, la búsqueda y el historial de compras</span></div>
+      </div>
+
+      <div class="cat">
+        <div class="cat-head">
+          <div class="cat-name">Personalización de anuncios</div>
+          <label class="toggle-sw"><input type="checkbox" id="togAnuncios"><span class="sl"></span></label>
+        </div>
+        <div class="cat-desc">Cuando se habilita, nos permite compartir datos con nuestros socios publicitarios que crean perfiles sobre usted en numerosos sitios web.</div>
+        <div class="datos-label">Datos Utilizados:</div>
+        <div class="dato-item"><i class="ti ti-eye-off dato-icon"></i><span class="dato-text">Datos anónimos como los vínculos de referencia de los afiliados</span></div>
+        <div class="dato-item"><i class="ti ti-eye dato-icon-mid"></i><span class="dato-text">Datos seudónimos como los identificadores usados para el seguimiento y el perfil de los usuarios</span></div>
+        <div class="dato-item"><i class="ti ti-eye dato-icon-full"></i><span class="dato-text">Datos personales como su edad, sexo y datos demográficos</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hu-metrics">
+    <div class="hu-metrics-title">Protección y métricas</div>
+    <div class="hu-metrics-sub">Consulte su registro de consentimiento y la lista de terceros bloqueados y permitidos según sus ajustes.</div>
+    <div class="metrics-cols">
+      <div class="met-box">
+        <div class="met-title"><i class="ti ti-user" style="font-size:13px"></i> Sus métricas de consentimiento</div>
+        <table class="met-table">
+          <tr><td>ID de consentimiento</td><td id="mId">—</td></tr>
+          <tr><td>Fecha de consentimiento</td><td id="mFecha">—</td></tr>
+          <tr><td>Nivel de acceso a datos</td><td id="mNivel">—</td></tr>
+          <tr><td>Categorías de propósitos</td><td id="mProp">—</td></tr>
+          <tr><td>Duración del consentimiento</td><td id="mDur">—</td></tr>
+        </table>
+      </div>
+      <div class="met-box">
+        <div class="met-title"><i class="ti ti-shield" style="font-size:13px"></i> Protección de privacidad</div>
+        <div class="met-sub">Servicios bloqueados</div>
+        <ul class="met-list" id="listBloq"><li>—</li></ul>
+        <div class="met-sub">Servicios permitidos</div>
+        <ul class="met-list" id="listPerm"><li>—</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="saved-banner" id="savedBanner">
+    <i class="ti ti-circle-check" style="font-size:16px"></i>
+    <span>Preferencias guardadas correctamente.</span>
+    <button class="revoke-link" onclick="revocar()">Revocar consentimiento</button>
+  </div>
+
+  <div class="hu-footer">
+    <div class="footer-links">
+      <button class="footer-link" onclick="document.querySelector('.hu-prefs').scrollIntoView({behavior:'smooth'})">
+        <i class="ti ti-adjustments-horizontal" style="font-size:13px"></i> Personalice
+      </button>
+    </div>
+    <button class="btn-save" onclick="guardar()">Guardar mis preferencias</button>
+    <button class="privacy-link">Política de privacidad</button>
+  </div>
+
+  <div class="form-wrap" id="formWrap">
+    <div class="form-title">Cuéntame sobre tu negocio</div>
+    <div class="form-sub">Tus datos están protegidos según el consentimiento que acabas de otorgar. Solo uso interno — no compartimos con terceros.</div>
+    <div class="field-row">
+      <div class="field"><label>Nombre completo <span>*</span></label><input type="text" placeholder="Juan Pérez"></div>
+      <div class="field"><label>WhatsApp <span>*</span></label><input type="tel" placeholder="+593 99 000 0000"></div>
+    </div>
+    <div class="field"><label>Email <span>*</span></label><input type="email" placeholder="juan@minegocio.com"></div>
+    <div class="field-row">
+      <div class="field"><label>Ciudad</label><input type="text" placeholder="Loja, Quito, Guayaquil..."></div>
+      <div class="field"><label>Sector / tipo de negocio</label>
+        <select><option value="">Selecciona...</option><option>Clínica / salud</option><option>Restaurante / hostelería</option><option>Hotel / turismo</option><option>Servicios profesionales</option><option>Comercio / retail</option><option>Otro</option></select>
+      </div>
+    </div>
+    <div class="field"><label>¿Cuál es tu mayor problema hoy?</label>
+      <select><option value="">Selecciona...</option><option>Pierdo tiempo en procesos manuales</option><option>Hago publicidad pero no atraigo clientes</option><option>Mis clientes compran y no vuelven</option><option>Quiero usar IA pero no sé por dónde empezar</option></select>
+    </div>
+    <button class="btn-send">Enviar mensaje <i class="ti ti-arrow-right" style="font-size:13px"></i></button>
+    <div class="form-note">Solo uso interno · No compartimos tus datos con terceros · cesarreyesjaramillo.com</div>
+  </div>
+
+</div>
+
+<script>
+function guardar(){
+  const p=document.getElementById('togPersonalizacion').checked;
+  const o=document.getElementById('togOptimizacion').checked;
+  const a=document.getElementById('togAnuncios').checked;
+  const dur=parseInt(document.getElementById('duracion').value);
+  const durMap={1:'1 mes',6:'6 meses',12:'12 meses'};
+  const now=new Date();
+  const id='CR-'+Math.random().toString(36).substr(2,9).toUpperCase();
+  const nivel=a?'Platino':o?'Oro':p?'Plata':'Básico';
+  document.getElementById('mId').textContent=id;
+  document.getElementById('mFecha').textContent=now.toLocaleDateString('es-EC');
+  document.getElementById('mNivel').textContent=nivel;
+  document.getElementById('mDur').textContent=durMap[dur];
+  const props=['Básicas'];
+  if(p)props.push('Personalización');
+  if(o)props.push('Optimización');
+  if(a)props.push('Anuncios');
+  document.getElementById('mProp').textContent=props.join(', ');
+  const perm=['Operaciones básicas'];
+  const bloq=[];
+  if(p)perm.push('Personalización del contenido'); else bloq.push('Personalización del contenido');
+  if(o)perm.push('Optimización del sitio'); else bloq.push('Optimización del sitio');
+  if(a)perm.push('Personalización de anuncios'); else bloq.push('Personalización de anuncios');
+  document.getElementById('listPerm').innerHTML=perm.map(s=>'<li>'+s+'</li>').join('');
+  document.getElementById('listBloq').innerHTML=(bloq.length?bloq.map(s=>'<li>'+s+'</li>').join(''):'<li>Ninguno</li>');
+  document.getElementById('savedBanner').style.display='flex';
+  document.getElementById('formWrap').style.display='block';
+}
+function revocar(){
+  ['togPersonalizacion','togOptimizacion','togAnuncios'].forEach(id=>document.getElementById(id).checked=false);
+  document.getElementById('mId').textContent='—';
+  document.getElementById('mFecha').textContent='—';
+  document.getElementById('mNivel').textContent='—';
+  document.getElementById('mProp').textContent='—';
+  document.getElementById('mDur').textContent='—';
+  document.getElementById('listPerm').innerHTML='<li>—</li>';
+  document.getElementById('listBloq').innerHTML='<li>—</li>';
+  document.getElementById('savedBanner').style.display='none';
+  document.getElementById('formWrap').style.display='none';
+}
+</script>
