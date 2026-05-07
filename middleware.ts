@@ -25,6 +25,7 @@ const publicPaths = [
   '/menu-digital',
   '/mensajeria',
   '/motor-reservas-hotel',
+  '/gestion-consentimiento',
   '/auth/signin',
   '/auth/error',
   '/api/auth',

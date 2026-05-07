@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { pool } from '@/lib/db';
+import { sendConsentConfirmationEmail } from '@/lib/consentEmail';
 
 export async function POST(request: Request) {
   try {
@@ -19,7 +20,8 @@ export async function POST(request: Request) {
       duracion_meses
     } = data;
 
-    const [result] = await pool.execute(
+    // 1. Guardar o actualizar en la base de datos
+    await pool.execute(
       `INSERT INTO clientes_consentimiento 
       (consent_uuid, nombre, whatsapp, email, ciudad, sector, problema, consent_whatsapp, consent_email, consent_media, duracion_meses) 
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
@@ -45,9 +47,23 @@ export async function POST(request: Request) {
         consent_whatsapp ? 1 : 0, 
         consent_email ? 1 : 0, 
         consent_media ? 1 : 0, 
-        Number(duracion_meses)
+        Number(duracion_meses || 6)
       ]
     );
+
+    // 2. Si hay email, enviar confirmación con links de gestión
+    if (email && email.includes('@')) {
+      await sendConsentConfirmationEmail({
+        email,
+        nombre: nombre || 'Usuario',
+        uuid: consent_uuid,
+        consentimientos: {
+            whatsapp: Boolean(consent_whatsapp),
+            email: Boolean(consent_email),
+            media: Boolean(consent_media)
+        }
+      });
+    }
 
     return NextResponse.json({ success: true });
   } catch (error: any) {
