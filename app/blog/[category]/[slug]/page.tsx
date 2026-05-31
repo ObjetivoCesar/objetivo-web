@@ -115,6 +115,7 @@ export default async function BlogPostPage({
 
   const cleanContent = (article.content || '').toString()
     .replace(/^---[\s\S]*?---\s*/, '')
+    .replace(/^#\s+.+$/m, '') // Quita el primer encabezado H1 (# Titulo) del cuerpo
     .replace(/═══════════════════════════════════[\s\S]*?═══════════════════════════════════/g, '') // Hide visual component blocks
     .replace(/## FICHA SEO FINAL[\s\S]*/g, '') // Hide SEO metadata section from rendered HTML
     .trim();
