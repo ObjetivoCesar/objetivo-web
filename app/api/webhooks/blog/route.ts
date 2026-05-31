@@ -12,6 +12,11 @@ export async function POST(req: NextRequest) {
 
     const data = await req.json();
     
+    // Normalizar compatibilidad de imágenes
+    if (data.image_url && !data.image) {
+      data.image = data.image_url;
+    }
+    
     // Validaciones básicas
     if (!data.title) return NextResponse.json({ error: "Título requerido" }, { status: 400 });
     if (!data.slug) return NextResponse.json({ error: "Slug requerido" }, { status: 400 });
