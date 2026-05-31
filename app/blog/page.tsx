@@ -27,7 +27,8 @@ const categoryMapping: Record<string, string> = {
   'posicionamiento-en-google': 'Posicionamiento en Google',
   'activaqr-gastronomia': 'ActivaQR Gastronomía',
   'activaqr-networking': 'ActivaQR Networking',
-  'casos-de-exito': 'Casos de Éxito'
+  'casos-de-exito': 'Casos de Éxito',
+  'negocios-locales': 'Negocios Locales'
 };
 
 const getDisplayCategory = (category: string): string => {

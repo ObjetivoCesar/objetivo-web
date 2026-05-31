@@ -59,7 +59,8 @@ export default function BlogFilters() {
         'posicionamiento-en-google': 'Posicionamiento en Google',
         'activaqr-gastronomia': 'ActivaQR Gastronomía',
         'activaqr-networking': 'ActivaQR Networking',
-        'casos-de-exito': 'Casos de Éxito'
+        'casos-de-exito': 'Casos de Éxito',
+        'negocios-locales': 'Negocios Locales'
     };
 
     const categoriesList = Array.from(new Set(Object.values(categoryMapping)));

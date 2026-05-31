@@ -210,7 +210,8 @@ function ArticleEditor({ articleToEdit, onSave }: ArticleEditorProps) {
     { id: "posicionamiento-en-google", label: "Posicionamiento en Google" },
     { id: "activaqr-gastronomia", label: "ActivaQR Gastronomía" },
     { id: "activaqr-networking", label: "ActivaQR Networking" },
-    { id: "casos-de-exito", label: "Casos de Éxito" }
+    { id: "casos-de-exito", label: "Casos de Éxito" },
+    { id: "negocios-locales", label: "Negocios Locales" }
   ];
   const [title, setTitle] = useState(articleToEdit?.title || "");
   const [date, setDate] = useState(articleToEdit?.date || "");
