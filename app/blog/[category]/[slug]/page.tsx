@@ -69,19 +69,36 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
       };
     }
 
+    const articleUrl = `https://www.cesarreyesjaramillo.com/blog/${category}/${slug}`;
+    const imageUrl = article.image.startsWith('http') || article.image.startsWith('/') 
+      ? article.image 
+      : `https://www.cesarreyesjaramillo.com/images/articulos/${article.image}`;
+
     return {
       title: article.title,
       description: article.excerpt,
+      alternates: {
+        canonical: articleUrl,
+      },
       openGraph: {
         title: article.title,
         description: article.excerpt,
+        url: articleUrl,
+        type: 'article',
+        siteName: 'César Reyes Jaramillo',
         images: [{
-          url: article.image || '/images/placeholder.jpg',
+          url: imageUrl,
           width: 1200,
           height: 630,
           alt: article.title,
         }],
       },
+      twitter: {
+        card: 'summary_large_image',
+        title: article.title,
+        description: article.excerpt,
+        images: [imageUrl],
+      }
     };
   } catch (error) {
     return {
