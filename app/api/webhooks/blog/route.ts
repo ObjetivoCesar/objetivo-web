@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { saveArticleMySQL } from "@/lib/mysql-blog";
+import { revalidatePath } from "next/cache";
 
 export async function POST(req: NextRequest) {
   try {
@@ -25,10 +26,16 @@ export async function POST(req: NextRequest) {
     // Guardar en MySQL
     await saveArticleMySQL(data);
 
+    // Revalidar caché estática del blog para actualizar el artículo en vivo
+    const categoryPath = data.category || 'software-personalizado';
+    revalidatePath('/blog');
+    revalidatePath(`/blog/${categoryPath}`);
+    revalidatePath(`/blog/${categoryPath}/${data.slug}`);
+
     return NextResponse.json({ 
       success: true, 
-      message: "Artículo recibido y guardado en MySQL",
-      url: `/blog/${data.category || 'software-personalizado'}/${data.slug}` 
+      message: "Artículo recibido, guardado en MySQL y caché revalidada",
+      url: `/blog/${categoryPath}/${data.slug}` 
     });
   } catch (error: any) {
     console.error('Webhook Blog Error:', error);
