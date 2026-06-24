@@ -181,8 +181,8 @@ export default function DepartamentoDigitalPosicionamientoClient() {
             </div>
             <div className="hidden md:block">
               <img 
-                src="/images/categorias/desarrollo-web/empresa-online-hero.webp" 
-                alt="Departamento Digital" 
+                src="/images/cesar_reyes_bn.png" 
+                alt="César Reyes" 
                 className="rounded-2xl shadow-2xl"
               />
             </div>
