@@ -2,58 +2,30 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, ChevronRight, DollarSign, TrendingUp, BarChart3, Users, Rocket, Target, Zap, Brain, FileText, Headphones, Calendar, MessageCircle, Eye, Search, Globe, Smartphone, Megaphone, Award, Building2, Handshake, X } from 'lucide-react';
+import { ArrowRight, CheckCircle, ChevronRight, TrendingUp, BarChart3, Users, Rocket, Target, Zap, Brain, FileText, Headphones, Calendar, MessageCircle, Search, Globe, Award, X, Lightbulb, Layers, Gauge } from 'lucide-react';
 import { ExpandableText } from '@/components/ui/expandable-text';
 
 // --- DATA --- //
 
-const heroVideoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ"; // Placeholder - replace with actual video
+// Video real de César - reemplazar ID si es diferente
+const heroVideoUrl = "https://www.youtube.com/embed/YOUR_VIDEO_ID";
 
-const servicios = [
+// 3 Cards de servicios agrupados
+const servicioCards = [
   {
-    icon: Search,
-    title: "Diagnóstico de su empresa en digital",
-    description: "Antes de mover nada, analizamos dónde está hoy: en Google, en redes, frente a su competencia directa. Le decimos la verdad aunque no sea cómoda."
+    icon: Lightbulb,
+    title: "Estrategia",
+    items: ["Diagnóstico de su empresa en digital", "Estrategia de posicionamiento a medida", "Reportes ejecutivos mensuales"]
   },
   {
-    icon: Target,
-    title: "Estrategia de posicionamiento a medida",
-    description: "No usamos plantillas. Construimos un plan específico para su mercado, su ciudad y su tipo de cliente. Con objetivos reales y plazos honestos."
+    icon: Layers,
+    title: "Ejecución",
+    items: ["Contenido que posiciona", "Presencia digital construida", "Automatización que trabaja 24/7"]
   },
   {
-    icon: Globe,
-    title: "Presencia digital construida para convertir",
-    description: "Si necesita sitio web, lo construimos. Si necesita optimizar el que tiene, lo hacemos. Si necesita aparecer en Google antes que su competencia, trabajamos para eso."
-  },
-  {
-    icon: FileText,
-    title: "Contenido que posiciona, no que rellena",
-    description: "Cada publicación, cada artículo, cada pieza tiene un propósito estratégico. Su equipo nos provee las imágenes y videos — nosotros transformamos en contenido que genera posición."
-  },
-  {
-    icon: Zap,
-    title: "Automatización que trabaja mientras usted duerme",
-    description: "WhatsApp automatizado, seguimiento de prospectos, respuestas inmediatas, captación de leads. Su empresa atiende y convierte sin que usted esté detrás de cada mensaje."
-  },
-  {
-    icon: TrendingUp,
-    title: "Un solo objetivo que nos une: sus ventas",
-    description: "Todo lo que hacemos tiene un único destino: que su empresa venda más. No trabajamos para tener bonitas métricas. Trabajamos para que al final del mes usted vea más clientes."
-  },
-  {
-    icon: Brain,
-    title: "Inteligencia artificial aplicada a su negocio",
-    description: "Las empresas que adopten estas herramientas ahora tendrán una ventaja que sus competidores no podrán alcanzar en años. Le mostramos exactamente cómo reducir costos y multiplicar alcance."
-  },
-  {
-    icon: BarChart3,
-    title: "Reportes ejecutivos mensuales",
-    description: "Un informe claro cada mes. No métricas de vanidad — resultados reales: visibilidad ganada, leads generados, posición frente a la competencia."
-  },
-  {
-    icon: Headphones,
-    title: "Un estratega en su mesa",
-    description: "Disponibles. Respondemos. Cuando surge una idea, la evaluamos. Cuando hay un problema, lo resolvemos. Somos parte de su equipo directivo."
+    icon: Gauge,
+    title: "Crecimiento",
+    items: ["Un solo objetivo: sus ventas", "Inteligencia artificial aplicada", "Un estratega permanente en su equipo"]
   }
 ];
 
@@ -86,15 +58,14 @@ const casosExito = [
   }
 ];
 
-const whatsappUrl = "https://wa.me/593999999999?text=Hola%2C%20me%20interesa%20el%20Departamento%20Digital%20de%20Posicionamiento";
+const whatsappUrl = "https://wa.me/593963410409?text=Hola%20C%C3%A9sar,%20me%20interesa%20el%20Departamento%20Digital%20de%20Posicionamiento";
 
 export default function DepartamentoDigitalPosicionamientoClient() {
-  const [videoLoaded, setVideoLoaded] = useState(false);
-  const [currentServicio, setCurrentServicio] = useState(0);
+  const [currentCard, setCurrentCard] = useState(0);
   const [currentCaso, setCurrentCaso] = useState(0);
 
-  const nextServicio = () => setCurrentServicio((prev) => (prev + 1) % servicios.length);
-  const prevServicio = () => setCurrentServicio((prev) => (prev - 1 + servicios.length) % servicios.length);
+  const nextCard = () => setCurrentCard((prev) => (prev + 1) % servicioCards.length);
+  const prevCard = () => setCurrentCard((prev) => (prev - 1 + servicioCards.length) % servicioCards.length);
   const nextCaso = () => setCurrentCaso((prev) => (prev + 1) % casosExito.length);
   const prevCaso = () => setCurrentCaso((prev) => (prev - 1 + casosExito.length) % casosExito.length);
 
@@ -110,19 +81,19 @@ export default function DepartamentoDigitalPosicionamientoClient() {
             Su empresa merece ocupar el primer lugar.
           </h1>
           <h2 className="text-xl md:text-2xl text-blue-400 mb-8">
-            Nosotros nos encargamos de que eso ocurra.
+            Usted ya sabe lo que necesita. El problema siempre fue encontrar a alguien que realmente lo ejecute.
           </h2>
           
-          {/* VIDEO PLACEHOLDER - Replace with actual video embed */}
-          <div className="max-w-3xl mx-auto mb-8 rounded-2xl overflow-hidden border border-gray-700 bg-gray-900 aspect-video flex items-center justify-center">
-            <div className="text-center p-8">
-              <div className="w-20 h-20 mx-auto mb-4 bg-blue-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-700 transition-colors">
-                <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </div>
-              <p className="text-gray-400">Video de César - Haz clic para reproducir</p>
-            </div>
+          {/* Video embed real de César */}
+          <div className="max-w-3xl mx-auto mb-8 rounded-2xl overflow-hidden border border-gray-700 bg-gray-900 aspect-video">
+            <iframe
+              src={heroVideoUrl + "?autoplay=1&mute=1"}
+              title="Video de César"
+              className="w-full h-full"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
           
           <Link 
@@ -137,42 +108,37 @@ export default function DepartamentoDigitalPosicionamientoClient() {
         </div>
       </section>
 
-      {/* SECCIÓN 1 - EL PROBLEMA */}
+      {/* SECCIÓN 1 - EL PROBLEMA - NUEVA REDACCIÓN */}
       <section className="py-16 md:py-24 px-4 bg-gray-900/50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-            ¿Cuándo fue la última vez que alguien se hizo cargo de verdad?
+            ¿Cuántas veces pensó: necesito a alguien que se haga cargo de esto, no que me deje el trabajo a mí?
           </h2>
           
-          <div className="space-y-4 text-lg">
-            <div className="flex items-center gap-3 text-gray-300 bg-gray-800/50 p-4 rounded-xl">
-              <span className="text-2xl">➡️</span>
+          <p className="text-center text-xl text-gray-400 mb-8">
+            Si esa pregunta le suena familiar, esta página es para usted.
+          </p>
+          
+          <div className="space-y-4 text-lg text-gray-300">
+            <div className="bg-gray-800/50 p-4 rounded-xl border-l-4 border-blue-500">
               <p>Ha contratado personas que publican, pero no posicionan.</p>
             </div>
-            <div className="flex items-center gap-3 text-gray-300 bg-gray-800/50 p-4 rounded-xl">
-              <span className="text-2xl">➡️</span>
+            <div className="bg-gray-800/50 p-4 rounded-xl border-l-4 border-blue-500">
               <p>Ha pagado por presencia digital que nadie encuentra.</p>
             </div>
-            <div className="flex items-center gap-3 text-gray-300 bg-gray-800/50 p-4 rounded-xl">
-              <span className="text-2xl">➡️</span>
+            <div className="bg-gray-800/50 p-4 rounded-xl border-l-4 border-blue-500">
               <p>Ha escuchado propuestas que suenan bien y desaparecen al mes siguiente.</p>
             </div>
           </div>
           
           <div className="mt-12 p-8 rounded-2xl bg-gray-800 border border-gray-700">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                <ArrowRight className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Un community manager publica contenido. Nosotros construimos posición.</h3>
-                <ExpandableText 
-                  shortText="La diferencia es esta: publicar es aparecer. Posicionarse es que cuando su cliente ideal busca lo que usted ofrece, lo encuentra a usted primero — y confía en lo que ve."
-                  fullText="La diferencia es esta: publicar es aparecer. Posicionarse es que cuando su cliente ideal busca lo que usted ofrece, lo encuentra a usted primero — y confianza en lo que ve. Para llegar ahí se necesita estrategia, tecnología, contenido, análisis y ejecución constante. No una persona con un celular. <strong>Un departamento completo.</strong>"
-                  className="text-gray-300"
-                />
-              </div>
-            </div>
+            <h3 className="text-xl font-bold mb-4">Un community manager publica contenido. Nosotros construimos posición.</h3>
+            <p className="text-gray-300">
+              La diferencia es esta: publicar es aparecer. Posicionarse es que cuando su cliente ideal busca lo que usted ofrece, lo encuentra a usted primero - y confía en lo que ve.
+            </p>
+            <p className="text-gray-300 mt-4">
+              Para llegar ahí se necesita estrategia, tecnología, contenido, análisis y ejecución constante. No una persona con un celular. <strong className="text-white">Un departamento completo.</strong>
+            </p>
           </div>
         </div>
       </section>
@@ -185,18 +151,31 @@ export default function DepartamentoDigitalPosicionamientoClient() {
             <span className="text-blue-400">Sin el costo de tenerlo adentro.</span>
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-8 items-center mt-8">
+          {/* Párrafo puente */}
+          <div className="text-lg text-gray-300 mb-8 leading-relaxed">
+            <p className="mb-4">
+              En algún momento usted consideró contratar a alguien para manejar su presencia digital. Quizás pensó en una agencia. Quizás en un empleado interno. Quizás en darle esa responsabilidad a alguien de confianza.
+            </p>
+            <p className="mb-4">
+              Ninguna de esas opciones le dio lo que realmente necesitaba: alguien que entienda su negocio, diseñe la estrategia y la ejecute sin que usted tenga que supervisar cada paso.
+            </p>
+            <p>
+              Eso es exactamente lo que hacemos.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6 text-lg text-gray-300">
               <div className="flex items-start gap-3">
-                <span className="text-2xl">🚀</span>
+                <ArrowRight className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
                 <p>Llegamos a su empresa, entendemos su mercado, su competencia y sus objetivos. Diseñamos la estrategia. Y la ejecutamos todos los días.</p>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-2xl">⚡</span>
+                <ArrowRight className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
                 <p>Sin que usted tenga que explicarnos cómo funciona internet. Sin perseguirnos. Sin aprender herramientas que no son su negocio.</p>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-2xl">💼</span>
+                <ArrowRight className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
                 <p><strong className="text-white">Usted dirige su empresa.</strong> Nosotros nos encargamos de que el mundo digital trabaje para ella.</p>
               </div>
             </div>
@@ -211,25 +190,32 @@ export default function DepartamentoDigitalPosicionamientoClient() {
         </div>
       </section>
 
-      {/* SECCIÓN 3 - QUÉ INCLUYE - CAROUSEL */}
+      {/* SECCIÓN 3 - QUÉ INCLUYE - 3 CARDS */}
       <section className="py-16 md:py-24 px-4 bg-gray-900/50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Lo que hace su Departamento Digital de Posicionamiento y Ejecución
           </h2>
           
-          {/* Desktop: Grid | Mobile: Carousel */}
+          {/* Desktop: 3 cards | Mobile: Carousel */}
           <div className="mt-12">
-            {/* Desktop Grid */}
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {servicios.map((servicio, index) => (
+            {/* Desktop: 3 Cards Grid */}
+            <div className="hidden md:grid md:grid-cols-3 gap-6">
+              {servicioCards.map((card, index) => (
                 <div 
                   key={index}
-                  className="p-6 rounded-2xl bg-gray-800/50 border border-gray-700 hover:border-blue-500/50 transition-all duration-300"
+                  className="p-8 rounded-2xl bg-gray-800/50 border border-gray-700 hover:border-blue-500/50 transition-all duration-300"
                 >
-                  <servicio.icon className="w-10 h-10 text-blue-400 mb-4" />
-                  <h3 className="text-lg font-bold mb-2">{servicio.title}</h3>
-                  <p className="text-gray-400 text-sm">{servicio.description}</p>
+                  <card.icon className="w-12 h-12 text-blue-400 mb-4" />
+                  <h3 className="text-2xl font-bold mb-4">{card.title}</h3>
+                  <ul className="space-y-3">
+                    {card.items.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -240,17 +226,24 @@ export default function DepartamentoDigitalPosicionamientoClient() {
                 <div className="overflow-hidden">
                   <div 
                     className="flex transition-transform duration-300"
-                    style={{ transform: `translateX(-${currentServicio * 100}%)` }}
+                    style={{ transform: `translateX(-${currentCard * 100}%)` }}
                   >
-                    {servicios.map((servicio, index) => (
+                    {servicioCards.map((card, index) => (
                       <div 
                         key={index}
                         className="w-full flex-shrink-0 px-2"
                       >
-                        <div className="p-6 rounded-2xl bg-gray-800/50 border border-gray-700">
-                          <servicio.icon className="w-10 h-10 text-blue-400 mb-4" />
-                          <h3 className="text-lg font-bold mb-2">{servicio.title}</h3>
-                          <p className="text-gray-400 text-sm">{servicio.description}</p>
+                        <div className="p-8 rounded-2xl bg-gray-800/50 border border-gray-700">
+                          <card.icon className="w-12 h-12 text-blue-400 mb-4" />
+                          <h3 className="text-2xl font-bold mb-4">{card.title}</h3>
+                          <ul className="space-y-3">
+                            {card.items.map((item, i) => (
+                              <li key={i} className="flex items-start gap-2 text-gray-300">
+                                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
                         </div>
                       </div>
                     ))}
@@ -260,24 +253,24 @@ export default function DepartamentoDigitalPosicionamientoClient() {
                 {/* Carousel Controls */}
                 <div className="flex items-center justify-between mt-4">
                   <button 
-                    onClick={prevServicio}
+                    onClick={prevCard}
                     className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600"
                   >
                     <ChevronRight className="w-6 h-6 rotate-180" />
                   </button>
                   <div className="flex gap-2">
-                    {servicios.map((_, index) => (
+                    {servicioCards.map((_, index) => (
                       <button
                         key={index}
-                        onClick={() => setCurrentServicio(index)}
+                        onClick={() => setCurrentCard(index)}
                         className={`w-3 h-3 rounded-full transition-all ${
-                          index === currentServicio ? 'bg-blue-500 w-6' : 'bg-gray-600'
+                          index === currentCard ? 'bg-blue-500 w-6' : 'bg-gray-600'
                         }`}
                       />
                     ))}
                   </div>
                   <button 
-                    onClick={nextServicio}
+                    onClick={nextCard}
                     className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600"
                   >
                     <ChevronRight className="w-6 h-6" />
@@ -285,7 +278,7 @@ export default function DepartamentoDigitalPosicionamientoClient() {
                 </div>
                 
                 <p className="text-center text-gray-500 text-sm mt-2">
-                  {currentServicio + 1} / {servicios.length}
+                  {currentCard + 1} / {servicioCards.length}
                 </p>
               </div>
             </div>
@@ -299,6 +292,14 @@ export default function DepartamentoDigitalPosicionamientoClient() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
             ¿Cuánto le cuesta no tener este departamento?
           </h2>
+          
+          {/* Técnica de anticipación */}
+          <div className="text-lg text-gray-300 mb-8 text-center italic">
+            <p className="mb-4">Hay tres formas en que las empresas suelen resolver esto.</p>
+            <p className="mb-2">La primera es contratar internamente - costosa y lenta.</p>
+            <p className="mb-2">La segunda es contratar una agencia - cara y genérica.</p>
+            <p>La tercera... es la que usted está leyendo ahora.</p>
+          </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* Costos Internos */}
@@ -460,7 +461,42 @@ export default function DepartamentoDigitalPosicionamientoClient() {
         </div>
       </section>
 
-      {/* SECCIÓN 6 - FILTRO Y CTA - NEW FORMAT */}
+      {/* SECCIÓN 5B - FOTO DE CESAR */}
+      <section className="py-16 px-4 bg-gray-900">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="order-2 md:order-1">
+              <img 
+                src="/images/cesar_trabajando.png" 
+                alt="César Reyes" 
+                className="rounded-2xl shadow-2xl"
+              />
+            </div>
+            <div className="order-1 md:order-2 text-center md:text-left">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                El que le está hablando ya hizo esto antes.
+              </h2>
+              <p className="text-lg text-gray-300 mb-4">
+                He construido presencia digital para empresas en Ecuador. Las he visto posicionarse, crecer y captar clientes que antes no sabían que existían.
+              </p>
+              <p className="text-lg text-gray-300">
+                No le vendo humo. Le muestro resultados. Y si no los hay, se lo digo antes de que gaste un centavo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECCIÓN 5C - ECUADOR */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-xl text-gray-400 italic">
+            Trabajamos con empresas en todo Ecuador. La estrategia no tiene fronteras geográficas. Imagínelo en su ciudad.
+          </p>
+        </div>
+      </section>
+
+      {/* SECCIÓN 6 - FILTRO Y CTA */}
       <section className="py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Filtro */}
@@ -491,9 +527,9 @@ export default function DepartamentoDigitalPosicionamientoClient() {
             </h2>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <span className="px-4 py-2 bg-green-900/30 text-green-400 rounded-full">✅ Sin costo</span>
-              <span className="px-4 py-2 bg-blue-900/30 text-blue-400 rounded-full">✅ Sin compromiso</span>
-              <span className="px-4 py-2 bg-purple-900/30 text-purple-400 rounded-full">✅ Sin propuesta genérica</span>
+              <span className="px-4 py-2 bg-green-900/30 text-green-400 rounded-full">Sin costo</span>
+              <span className="px-4 py-2 bg-blue-900/30 text-blue-400 rounded-full">Sin compromiso</span>
+              <span className="px-4 py-2 bg-purple-900/30 text-purple-400 rounded-full">Sin propuesta genérica</span>
             </div>
             
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -524,6 +560,19 @@ export default function DepartamentoDigitalPosicionamientoClient() {
           {/* Footer vacío */}
         </div>
       </footer>
+
+      {/* CTA FLOTANTE MOBILE */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-gray-950/95 border-t border-gray-800 z-50">
+        <Link 
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300"
+        >
+          <MessageCircle className="w-5 h-5" />
+          Quiero mi sesión de diagnóstico
+        </Link>
+      </div>
     </div>
   );
 }
