@@ -7,8 +7,8 @@ import { ExpandableText } from '@/components/ui/expandable-text';
 
 // --- DATA --- //
 
-// Video real de César - reemplazar ID si es diferente
-const heroVideoUrl = "https://www.youtube.com/embed/YOUR_VIDEO_ID";
+// Video real de César
+const heroVideoUrl = "https://www.youtube.com/embed/7N0J7sBhABw";
 
 // 3 Cards de servicios agrupados
 const servicioCards = [
