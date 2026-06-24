@@ -63,6 +63,18 @@ const whatsappUrl = "https://wa.me/593963410409?text=Hola%20C%C3%A9sar,%20me%20i
 export default function DepartamentoDigitalPosicionamientoClient() {
   const [currentCard, setCurrentCard] = useState(0);
   const [currentCaso, setCurrentCaso] = useState(0);
+  const [showFloatingCta, setShowFloatingCta] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      // Mostrar CTA después de 500px Y antes de llegar al final (200px del bottom)
+      setShowFloatingCta(scrollTop > 500 && scrollTop < docHeight - 200);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const nextCard = () => setCurrentCard((prev) => (prev + 1) % servicioCards.length);
   const prevCard = () => setCurrentCard((prev) => (prev - 1 + servicioCards.length) % servicioCards.length);
@@ -561,18 +573,20 @@ export default function DepartamentoDigitalPosicionamientoClient() {
         </div>
       </footer>
 
-      {/* CTA FLOTANTE MOBILE */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-gray-950/95 border-t border-gray-800 z-50">
-        <Link 
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300"
-        >
-          <MessageCircle className="w-5 h-5" />
-          Quiero mi sesión de diagnóstico
-        </Link>
-      </div>
+      {/* CTA FLOTANTE MOBILE - Solo después del hero */}
+      {showFloatingCta && (
+        <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-gray-950/95 border-t border-gray-800 z-50">
+          <Link 
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300"
+          >
+            <MessageCircle className="w-5 h-5" />
+            Quiero mi sesión de diagnóstico
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

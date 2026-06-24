@@ -1,9 +1,14 @@
 {
-  "totalVisitas": 2057,
-  "visitasHoy": 2057,
+  "totalVisitas": 2058,
+  "visitasHoy": 2058,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
+    {
+      "fecha": "2026-06-24",
+      "pagina": "/departamento-digital-posicionamiento",
+      "visitas": 1
+    },
     {
       "fecha": "2026-06-24",
       "pagina": "/departamento-digital-posicionamiento",
@@ -47,11 +52,6 @@
     {
       "fecha": "2026-05-07",
       "pagina": "/admin",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-05-07",
-      "pagina": "/",
       "visitas": 1
     }
   ],
@@ -110,6 +110,6 @@
     "2026-04-27": 13,
     "2026-05-06": 35,
     "2026-05-07": 13,
-    "2026-06-24": 7
+    "2026-06-24": 8
   }
 }
