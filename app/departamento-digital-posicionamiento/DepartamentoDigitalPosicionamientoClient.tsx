@@ -90,10 +90,14 @@ export default function DepartamentoDigitalPosicionamientoClient() {
         
         <div className="relative max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-            Su empresa merece ocupar el primer lugar.
+            Su empresa merece ocupar el primer lugar en Google.
           </h1>
-          <h2 className="text-xl md:text-2xl text-blue-400 mb-8">
-            Usted ya sabe lo que necesita. El problema siempre fue encontrar a alguien que realmente lo ejecute.
+          <h2 className="text-lg md:text-2xl text-blue-400 mb-8">
+            <ExpandableText 
+              shortText="Usted ya sabe lo que necesita. El problema siempre fue"
+              fullText="Usted ya sabe lo que necesita. El problema siempre fue encontrar a alguien que realmente lo ejecute."
+              className="text-lg md:text-2xl text-blue-400"
+            />
           </h2>
           
           {/* Video embed real de César */}
