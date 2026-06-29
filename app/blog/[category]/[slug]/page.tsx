@@ -70,9 +70,13 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     }
 
     const articleUrl = `https://www.cesarreyesjaramillo.com/blog/${category}/${slug}`;
-    const imageUrl = article.image.startsWith('http') || article.image.startsWith('/') 
-      ? article.image 
-      : `https://www.cesarreyesjaramillo.com/images/articulos/${article.image}`;
+    // Asegurar que la URL de imagen sea absoluta para OG/Twitter
+    let imageUrl = article.image;
+    if (!imageUrl.startsWith('http')) {
+      imageUrl = imageUrl.startsWith('/') 
+        ? `https://www.cesarreyesjaramillo.com${imageUrl}`
+        : `https://www.cesarreyesjaramillo.com/images/articulos/${imageUrl}`;
+    }
 
     return {
       title: article.title,
