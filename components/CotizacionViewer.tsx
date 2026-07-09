@@ -60,6 +60,7 @@ interface CotizacionData {
 
 export default function CotizacionViewer({ data }: { data: CotizacionData }) {
   const [openEtapas, setOpenEtapas] = useState<Record<string, boolean>>({ "01": true });
+  const [showFullIntro, setShowFullIntro] = useState(false);
 
   const toggleEtapa = (num: string) => {
     setOpenEtapas(prev => ({
@@ -193,9 +194,42 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
           <h2 className="font-serif-elegant text-4xl md:text-5xl text-slate-900 mb-10 leading-tight" dangerouslySetInnerHTML={{ __html: data.introduccion.titulo.replace('\\n', '<br/>') }}></h2>
           
           <div className="space-y-6 font-montserrat text-lg text-slate-600 leading-relaxed max-w-3xl">
-            {data.introduccion.parrafos.map((p, i) => (
-              <p key={i} className="first-letter:text-5xl first-letter:font-serif-elegant first-letter:text-slate-900 first-letter:float-left first-letter:mr-3 first-letter:-mt-1 first-letter:font-medium">{p}</p>
-            ))}
+            {/* Primer párrafo siempre visible */}
+            {data.introduccion.parrafos.length > 0 && (
+              <p className="first-letter:text-5xl first-letter:font-serif-elegant first-letter:text-slate-900 first-letter:float-left first-letter:mr-3 first-letter:-mt-1 first-letter:font-medium">
+                {data.introduccion.parrafos[0]}
+              </p>
+            )}
+
+            {/* Párrafos restantes colapsables */}
+            {data.introduccion.parrafos.length > 1 && (
+              <>
+                <AnimatePresence>
+                  {showFullIntro && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                      className="space-y-6 overflow-hidden"
+                    >
+                      {data.introduccion.parrafos.slice(1).map((p, i) => (
+                        <p key={i + 1} className="first-letter:text-5xl first-letter:font-serif-elegant first-letter:text-slate-900 first-letter:float-left first-letter:mr-3 first-letter:-mt-1 first-letter:font-medium">{p}</p>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                <button
+                  onClick={() => setShowFullIntro(!showFullIntro)}
+                  className="group flex items-center gap-2 font-outfit text-sm tracking-widest uppercase text-gold hover:text-amber-600 font-bold transition-colors duration-300 mt-4"
+                >
+                  <span className="w-8 h-px bg-gold group-hover:w-12 transition-all duration-300"></span>
+                  {showFullIntro ? 'Leer menos' : 'Seguir leyendo'}
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showFullIntro ? 'rotate-180' : ''}`} />
+                </button>
+              </>
+            )}
           </div>
         </motion.div>
       </section>

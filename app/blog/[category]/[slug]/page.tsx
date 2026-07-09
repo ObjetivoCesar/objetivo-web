@@ -70,10 +70,16 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     }
 
     const articleUrl = `https://www.cesarreyesjaramillo.com/blog/${category}/${slug}`;
-    // Asegurar que la URL de imagen sea absoluta para OG/Twitter
-    let imageUrl = article.image;
-    if (!imageUrl.startsWith('http')) {
-      imageUrl = imageUrl.startsWith('/') 
+
+    // Imagen OG: asegurar URL absoluta y válida
+    // Si la imagen es vacía o es el placeholder genérico, usar fallback del sitio
+    const FALLBACK_OG_IMAGE = 'https://www.cesarreyesjaramillo.com/cesar-reyes-og.jpg';
+    let imageUrl = (article.image || '').trim();
+
+    if (!imageUrl || imageUrl === '/images/placeholder-blog.jpg') {
+      imageUrl = FALLBACK_OG_IMAGE;
+    } else if (!imageUrl.startsWith('http')) {
+      imageUrl = imageUrl.startsWith('/')
         ? `https://www.cesarreyesjaramillo.com${imageUrl}`
         : `https://www.cesarreyesjaramillo.com/images/articulos/${imageUrl}`;
     }

@@ -18,6 +18,7 @@ const tabs = [
   { id: "videos", label: "Videos" },
   { id: "articulos", label: "Artículos" },
   { id: "gestion", label: "Editar/Eliminar" },
+  { id: "cotizaciones", label: "Cotizaciones" },
   { id: "estadisticas", label: "Estadísticas" },
   { id: "clientes", label: "Clientes / Consentimiento" },
 ];
@@ -1397,6 +1398,148 @@ function ClientesPanel() {
   );
 }
 
+function QuotesManager() {
+  const [quotes, setQuotes] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  const fetchQuotes = async () => {
+    try {
+      setLoading(true);
+      setError("");
+      const res = await fetch("/api/admin/quotes");
+      if (!res.ok) throw new Error("Error al cargar las cotizaciones");
+      const data = await res.json();
+      setQuotes(data);
+    } catch (e) {
+      console.error(e);
+      setError("No se pudieron cargar las cotizaciones");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchQuotes();
+  }, []);
+
+  const toggleVisibility = async (id: string, currentPublic: boolean) => {
+    try {
+      setLoading(true);
+      const res = await fetch("/api/admin/quotes", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, isPublic: !currentPublic }),
+      });
+      if (!res.ok) throw new Error("Error al actualizar la visibilidad");
+      await fetchQuotes();
+    } catch (e: any) {
+      alert(e.message || "Error al actualizar");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getStatus = (quote: any) => {
+    // Si is_public es 0, está archivada manualmente
+    if (quote.is_public === 0 || quote.is_public === false) {
+      return { label: "Archivada (Oculta)", color: "bg-red-500/20 text-red-400 border-red-500/30" };
+    }
+
+    // Calcular días desde su creación
+    if (quote.created_at) {
+      const createdDate = new Date(quote.created_at);
+      const diffTime = Math.abs(new Date().getTime() - createdDate.getTime());
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      
+      if (diffDays > 15) {
+        return { label: "Expirada (Oculta)", color: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30" };
+      }
+      
+      const daysLeft = 15 - diffDays;
+      return { 
+        label: `Pública (${daysLeft === 0 ? 'Expira hoy' : `Quedan ${daysLeft} días`})`, 
+        color: "bg-green-500/20 text-green-400 border-green-500/30" 
+      };
+    }
+
+    return { label: "Pública", color: "bg-green-500/20 text-green-400 border-green-500/30" };
+  };
+
+  if (loading && quotes.length === 0) return <div className="text-gray-400">Cargando cotizaciones...</div>;
+  if (error) return <div className="text-red-400">{error}</div>;
+
+  return (
+    <div className="overflow-x-auto">
+      <table className="min-w-full text-sm">
+        <thead>
+          <tr className="bg-[#111111]">
+            <th className="p-3 text-left">ID / Cliente</th>
+            <th className="p-3 text-left">Título de Propuesta</th>
+            <th className="p-3 text-left">Creado el</th>
+            <th className="p-3 text-left">Estado</th>
+            <th className="p-3 text-left">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {quotes.length === 0 ? (
+            <tr>
+              <td colSpan={5} className="p-4 text-center text-gray-500">No se encontraron cotizaciones.</td>
+            </tr>
+          ) : (
+            quotes.map((quote) => {
+              const status = getStatus(quote);
+              return (
+                <tr key={quote.id} className="border-b border-[#4a3b33]">
+                  <td className="p-3">
+                    <div className="font-semibold text-white">{quote.clientName}</div>
+                    <div className="text-xs text-gray-400">{quote.id}</div>
+                  </td>
+                  <td className="p-3 text-gray-300">{quote.title}</td>
+                  <td className="p-3 text-gray-400">
+                    {quote.created_at ? new Date(quote.created_at).toLocaleDateString("es-ES", {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    }) : "-"}
+                  </td>
+                  <td className="p-3">
+                    <span className={`px-2 py-1 rounded-full text-xs font-semibold border ${status.color}`}>
+                      {status.label}
+                    </span>
+                  </td>
+                  <td className="p-3 flex gap-3 items-center">
+                    <a
+                      href={`/cotizaciones/${quote.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:text-blue-300 transition-colors"
+                    >
+                      Ver
+                    </a>
+                    <button
+                      onClick={() => toggleVisibility(quote.id, quote.is_public)}
+                      className={`text-xs font-bold py-1 px-3 rounded-full border transition-all ${
+                        quote.is_public === 0 || quote.is_public === false
+                          ? "bg-green-600 hover:bg-green-700 text-white border-transparent"
+                          : "bg-[#2d2420] text-gray-300 hover:bg-[#3a2f29] border-[#4a3b33]"
+                      }`}
+                      disabled={loading}
+                    >
+                      {quote.is_public === 0 || quote.is_public === false ? "Hacer Pública" : "Archivar"}
+                    </button>
+                  </td>
+                </tr>
+              );
+            })
+          )}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+
 // Componente que usa useSearchParams, envuelto en un Suspense boundary
 function AdminPanelContentWrapper() {
   const searchParams = useSearchParams();
@@ -1550,6 +1693,16 @@ function AdminPanelContent({ activeTab, setActiveTab }: { activeTab: string, set
                 Aquí podrás ver, editar o eliminar artículos ya publicados.
               </p>
               <ArticleManager />
+            </div>
+          )}
+
+          {activeTab === "cotizaciones" && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">Gestión de Cotizaciones (Propuestas)</h2>
+              <p className="text-gray-300 mb-6">
+                Administra la visibilidad pública de las propuestas comerciales. Las propuestas expiran automáticamente a los 15 días.
+              </p>
+              <QuotesManager />
             </div>
           )}
 

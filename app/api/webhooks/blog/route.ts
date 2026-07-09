@@ -13,10 +13,18 @@ export async function POST(req: NextRequest) {
 
     const data = await req.json();
     
-    // Normalizar compatibilidad de imágenes
-    if (data.image_url && !data.image) {
-      data.image = data.image_url;
-    }
+    // Normalizar compatibilidad de imágenes — aceptar todos los campos posibles
+    // que el programador externo puede enviar (portada_url_banner, image_url, etc.)
+    const imageValue =
+      data.cover_image ||
+      data.portada_url_banner ||
+      data.image_url ||
+      data.featured_image ||
+      data.thumbnail ||
+      data.image ||
+      '';
+    data.cover_image = imageValue;
+    data.image = imageValue;
     
     // Validaciones básicas
     if (!data.title) return NextResponse.json({ error: "Título requerido" }, { status: 400 });
