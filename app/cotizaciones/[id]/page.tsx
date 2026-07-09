@@ -45,7 +45,7 @@ export async function generateMetadata(
       title: quote?.portada?.titulo_principal || "",
       description: quote?.portada?.subtitulo || "",
       images: [
-        quote?.portada?.imagen_url || quote?.portada?.url_logo_cliente || ""
+        quote?.og_image_url || quote?.portada?.imagen_url || quote?.portada?.url_logo_cliente || ""
       ].filter(Boolean),
     }
   };
