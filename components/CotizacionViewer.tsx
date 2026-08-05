@@ -127,15 +127,13 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
 
       {/* PORTADA FULL SCREEN */}
       <section className="relative flex items-center min-h-[100svh] w-full overflow-hidden bg-[#111111]">
-        {(data.portada.url_fondo || data.portada.imagen_url) && (
-            <motion.div 
-              initial={{ scale: 1.1 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 1.5, ease: 'easeOut' }}
-              className="absolute inset-0 bg-cover bg-center z-0" 
-              style={{ backgroundImage: `url(${data.portada.url_fondo || data.portada.imagen_url})` }}
-            />
-        )}
+        <motion.div 
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.5, ease: 'easeOut' }}
+          className="absolute inset-0 bg-cover bg-center z-0" 
+          style={{ backgroundImage: `url('${data.portada.url_fondo || data.portada.imagen_url || '/images/categorias/analisis-estrategico/analisis-financiero.webp'}')` }}
+        />
         <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#111111]/95 via-[#111111]/80 to-transparent"></div>
         
         <div className="container mx-auto px-6 relative z-20 pt-20 pb-16 h-full flex flex-col justify-center">
@@ -311,8 +309,8 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
 
       {/* ETAPAS (GLASSMORPHISM SOBRE IMAGEN) */}
       <section className="py-24 px-6 relative overflow-hidden">
-        {/* Imagen de fondo solicitada */}
-        <div className="absolute inset-0 bg-cover bg-fixed bg-center z-0" style={{ backgroundImage: "url('/images/categorias/analisis-estrategico/analisis-financiero.webp')" }}></div>
+        {/* Imagen de fondo dinámica */}
+        <div className="absolute inset-0 bg-cover bg-fixed bg-center z-0" style={{ backgroundImage: `url('${data.portada.url_fondo || data.portada.imagen_url || '/images/categorias/analisis-estrategico/analisis-financiero.webp'}')` }}></div>
         <div className="absolute inset-0 bg-[#111111]/80 z-10 backdrop-blur-sm"></div>
 
         <motion.div 
