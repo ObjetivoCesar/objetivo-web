@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles, Brain, Search, LayoutGrid, CheckCircle, Smartphone, Rocket } from 'lucide-react'
 import ModernSidebarMenu from '@/components/navigation/ModernSidebarMenu'
+import HeroNarrativeScroll from '@/components/home/HeroNarrativeScroll'
 import { DualLogoCarousel } from '@/components/DualLogoCarousel'
 import GoogleReviews from '@/components/home/GoogleReviews'
 import CasesTabs from '@/components/home/CasesTabs'
@@ -33,149 +34,8 @@ export default function HomePersonalClient() {
     <div className="min-h-screen bg-[#121212] text-white selection:bg-cyan-500 selection:text-white">
       <ModernSidebarMenu />
       
-      {/* Hero Section - Full Screen & Limbic Focus */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden px-6 pt-20">
-        
-        {/* Background Images for Hero - True High-Tech Fusion */}
-        <div className="absolute inset-0 w-full h-full z-0 pointer-events-none select-none bg-[#121212]">
-          
-          {/* Desktop Slider */}
-          <div className="hidden md:block h-full w-full">
-            <Swiper
-              modules={[Autoplay, EffectFade]}
-              effect="fade"
-              loop={true}
-              autoplay={{
-                delay: 6000,
-                disableOnInteraction: false,
-              }}
-              fadeEffect={{
-                crossFade: true
-              }}
-              className="w-full h-full"
-            >
-              {heroImagesDesktop.map((src, index) => (
-                <SwiperSlide key={index}>
-                  <div className="relative w-full h-full">
-                    <Image 
-                      src={src} 
-                      alt={`César Reyes - Hero Desktop ${index + 1}`} 
-                      fill 
-                      className="object-cover brightness-[0.6] contrast-[1.1]" 
-                      priority={index === 0}
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-
-          {/* Mobile Slider */}
-          <div className="block md:hidden h-full w-full">
-            <Swiper
-              modules={[Autoplay, EffectFade]}
-              effect="fade"
-              loop={true}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
-              fadeEffect={{
-                crossFade: true
-              }}
-              className="w-full h-full"
-            >
-              {heroImagesMobile.map((src, index) => (
-                <SwiperSlide key={index}>
-                  <div className="relative w-full h-full">
-                    <Image 
-                      src={src} 
-                      alt={`César Reyes - Hero Mobile ${index + 1}`} 
-                      fill 
-                      className="object-cover brightness-[0.7] contrast-[1.1]" 
-                      priority={index === 0}
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-
-          {/* Precision Polish Overlay for Text Readability & Professional Contrast over the slider */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#121212]/50 via-[#121212]/20 to-[#121212] z-20"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#121212]/80 via-[#121212]/10 to-transparent z-20"></div>
-        </div>
-
-        {/* Global Accent Glow */}
-        <div className="absolute inset-0 pointer-events-none z-0">
-           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 blur-[150px] rounded-full"></div>
-        </div>
-
-          {/* Focal Content */}
-          <div className="relative z-30 max-w-4xl mx-auto">
-            {/* Subtle Tech Accents */}
-            <div className="absolute -top-20 -left-20 w-40 h-40 bg-cyan-500/10 blur-[80px] rounded-full animate-pulse pointer-events-none"></div>
-
-            <motion.div 
-              initial={{ y: 20 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-            >
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-bold mb-6 uppercase tracking-widest bg-black/40 backdrop-blur-md">
-                <Sparkles size={16} /> Negocios Ecuador
-              </span>
-              
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 bg-gradient-to-b from-white via-white to-white/40 bg-clip-text text-transparent">
-                Evoluciona tu negocio con IA o quédate en el ayer.
-              </h1>
-              
-              <h2 className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-snug font-medium">
-                <span className="hidden md:inline">
-                  Soy César Reyes. Construyo los sistemas que venden por ti mientras el resto sigue peleando por "likes" en redes sociales.
-                </span>
-                <span className="md:hidden">
-                  {isExpanded ? (
-                    <>
-                      Soy César Reyes. Construyo los sistemas que venden por ti mientras el resto sigue peleando por "likes" en redes sociales.
-                    </>
-                  ) : (
-                    <>
-                      Soy César Reyes. Construyo los sistemas que...{' '}
-                      <button 
-                        onClick={() => setIsExpanded(true)}
-                        className="text-cyan-400 font-bold ml-1"
-                      >
-                        seguir leyendo
-                      </button>
-                    </>
-                  )}
-                </span>
-              </h2>
-              
-              <div className="flex flex-col md:flex-row items-center justify-center gap-5">
-                <button 
-                  onClick={() => document.getElementById('auditoria-form')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full md:w-auto px-10 py-4 bg-white text-black font-extrabold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all flex items-center justify-center gap-3 shadow-2xl shadow-white/5 active:scale-95"
-                >
-                  Revisa mi negocio <ArrowRight size={20} />
-                </button>
-                <button 
-                  onClick={() => document.getElementById('proyectos-actuales')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full md:w-auto px-10 py-4 bg-gray-900/50 border border-white/10 text-white font-bold text-lg rounded-2xl hover:bg-gray-800 transition-all backdrop-blur-md active:scale-95"
-                >
-                  Proyectos Actuales
-                </button>
-              </div>
-            </motion.div>
-          </div>
-          
-        {/* Subtle scroll indicator for people 30+ */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-20 hidden md:block animate-bounce z-20">
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center p-1">
-            <div className="w-1 h-3 bg-white rounded-full animate-scroll-dot"></div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Narrative Scroll-Driven Section (6 Pantallas Continuas) */}
+      <HeroNarrativeScroll />
 
       {/* Google My Business Reviews Section */}
       <GoogleReviews />

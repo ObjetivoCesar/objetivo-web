@@ -200,6 +200,32 @@ const nextConfig = {
         destination: '/menu-digital/spot-corporativo',
         permanent: true,
       },
+      // Redirecciones 301 para corregir URLs 404 históricas de Servicios OBJETIVO
+      {
+        source: '/consultoria-empresarial',
+        destination: '/analisis-estrategico',
+        permanent: true,
+      },
+      {
+        source: '/estrategia-para-ganar-clientes',
+        destination: '/analisis-estrategico',
+        permanent: true,
+      },
+      {
+        source: '/estudio-de-factibilidad',
+        destination: '/analisis-estrategico',
+        permanent: true,
+      },
+      {
+        source: '/desarrollo-web/tarjeta-digital-simple',
+        destination: '/desarrollo-web',
+        permanent: true,
+      },
+      {
+        source: '/desarrollo-web/tarjeta-digital-profesional',
+        destination: '/desarrollo-web',
+        permanent: true,
+      },
     ];
   },
 

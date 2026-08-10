@@ -22,9 +22,80 @@ export const metadata: Metadata = {
   },
 };
 
+const posicionamientoSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Posicionamiento Web y SEO en Ecuador",
+      "description": "Auditoría SEO profesional y posicionamiento en primera página de Google para PYMEs y empresas en Ecuador.",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "César Reyes Jaramillo",
+        "url": "https://www.cesarreyesjaramillo.com"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Ecuador"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planes de Posicionamiento SEO",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Auditoría SEO y Rediseño Web",
+            "price": "1250.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Alianza Exclusiva Cero Inversión",
+            "price": "500.00",
+            "priceCurrency": "USD"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto dinero pierdo cada mes sin aparecer en Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si tu sector tiene 1,000 búsquedas mensuales en Google y no apareces en primera página, pierdes el 90% de esos clientes potenciales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué mi competencia aparece primero si yo tengo mejores productos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google lee código, contenido optimizado y velocidad de carga. Tu competencia invirtió en SEO técnico para cumplir con los +200 factores que Google mide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En cuánto tiempo veo resultados reales en posiciones y ventas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Primeras mejoras técnicas en 2-4 semanas, subidas de posiciones en 1-3 meses, y tráfico significativo en 3-6 meses."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 export default function PosicionamientoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(posicionamientoSchema) }}
+      />
       <PosicionamientoClient />
       
       <RelatedArticles 

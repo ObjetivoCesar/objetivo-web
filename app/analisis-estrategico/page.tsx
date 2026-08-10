@@ -22,9 +22,63 @@ export const metadata: Metadata = {
   },
 };
 
+const analisisEstrategicoSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Análisis Estratégico y Consultoría Empresarial en Ecuador",
+      "description": "Estudios de mercado, consultoría empresarial, reingeniería de procesos y estrategia de posicionamiento para PYMEs en Ecuador.",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "César Reyes Jaramillo",
+        "url": "https://www.cesarreyesjaramillo.com"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Ecuador"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Análisis Estratégico",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Consultoría Empresarial (Fundamentos)",
+            "price": "250.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Análisis de Competencia",
+            "price": "350.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Estrategia para Ganar Clientes",
+            "price": "1550.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Estudio de Factibilidad y Viabilidad",
+            "price": "3500.00",
+            "priceCurrency": "USD"
+          }
+        ]
+      }
+    }
+  ]
+};
+
 export default function AnalisisEstrategicoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(analisisEstrategicoSchema) }}
+      />
       <AnalisisEstrategicoClient />
       
       <RelatedArticles 

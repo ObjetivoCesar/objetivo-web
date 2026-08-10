@@ -22,9 +22,63 @@ export const metadata: Metadata = {
   },
 };
 
+const desarrolloWebSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Desarrollo Web Profesional en Ecuador",
+      "description": "Desarrollo de páginas web profesionales con inversión única y sin mensualidades. Desde tarjetas digitales hasta e-commerce en Ecuador.",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "César Reyes Jaramillo",
+        "url": "https://www.cesarreyesjaramillo.com"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Ecuador"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planes de Desarrollo Web",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Primera Web Estática",
+            "price": "250.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Web Profesional",
+            "price": "500.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Plataforma Empresarial",
+            "price": "700.00",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "E-commerce / Tienda Online",
+            "price": "950.00",
+            "priceCurrency": "USD"
+          }
+        ]
+      }
+    }
+  ]
+};
+
 export default function DesarrolloWebPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(desarrolloWebSchema) }}
+      />
       <DesarrolloWebClient />
       
       <RelatedArticles 
