@@ -16,47 +16,47 @@ interface SceneData {
 
 const scenes: SceneData[] = [
   {
-    number: "01/06",
+    number: "01 / 06",
     image: "/images/hero-scroll/scene1.png",
     eyebrow: "Diagnóstico Límbico",
     heading: "Tu negocio puede estar vendiendo bien...",
     subheading: "Y aun así estar perdiendo dinero todos los días.",
   },
   {
-    number: "02/06",
+    number: "02 / 06",
     image: "/images/hero-scroll/scene2.png",
     eyebrow: "La Verdad del Margen",
     heading: "El problema no es vender.",
-    subheading: "Es no saber cuánto de lo que vendés realmente queda.",
+    subheading: "Es no saber cuánto de lo que vendes realmente queda.",
   },
   {
-    number: "03/06",
+    number: "03 / 06",
     image: "/images/hero-scroll/scene3.png",
     eyebrow: "Retención vs Fricción",
-    heading: "¿Sabés cuántos clientes tenés?",
+    heading: "¿Sabes cuántos clientes tienes?",
     subheading: "¿Y cuántos de ellos vuelven?\nPorque no es lo mismo.",
   },
   {
-    number: "04/06",
+    number: "04 / 06",
     image: "/images/hero-scroll/scene4.png",
     eyebrow: "El Costo Oculto",
-    heading: "Pagás para que alguien responda tus mensajes.",
+    heading: "Pagas para que alguien responda tus mensajes.",
     subheading: "Pero responder no es vender.\nY si solo convierte el 5%...",
     badge: "95% de pérdida silenciosa en atención manual",
   },
   {
-    number: "05/06",
+    number: "05 / 06",
     image: "/images/hero-scroll/scene5.png",
     eyebrow: "Cuello de Botella",
-    heading: "Tenés equipo. Tenés clientes. Tenés un negocio.",
-    subheading: "Entonces, ¿por qué todo sigue pasando por vos?",
+    heading: "Tienes equipo. Tienes clientes. Tienes un negocio.",
+    subheading: "Entonces, ¿por qué todo sigue pasando por ti?",
   },
   {
-    number: "06/06",
+    number: "06 / 06",
     image: "/images/hero-scroll/scene6.png",
     eyebrow: "Ahí Empieza Objetivo",
-    heading: "No necesitás otra herramienta.",
-    subheading: "Necesitás saber dónde está el problema. Eso es un diagnóstico.",
+    heading: "No necesitas otra herramienta.",
+    subheading: "Necesitas saber dónde está el problema. Eso es un diagnóstico.",
     isCta: true,
   },
 ];
@@ -230,22 +230,12 @@ export default function HeroNarrativeScroll() {
 
   const scene = scenes[currentIdx];
 
-  const skipHero = () => {
-    setHeroCompleted(true);
-    setCurrentIdx(scenes.length - 1);
-    setTimeout(() => {
-      document.getElementById('auditoria-form')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  };
-
   return (
     <div
       ref={containerRef}
       className="relative w-full h-screen overflow-hidden bg-[#121212] text-white select-none"
       style={{ touchAction: heroCompleted ? 'auto' : 'none' }}
     >
-
-
       {/* Fondo con Transición entre Escenas */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -259,15 +249,16 @@ export default function HeroNarrativeScroll() {
           <img
             src={scene.image}
             alt={scene.eyebrow}
-            className="w-full h-full object-cover brightness-[0.4] contrast-[1.15]"
+            className="w-full h-full object-cover brightness-[0.38] contrast-[1.15]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/40 to-[#121212]/80" />
-          <div className="absolute inset-0 bg-cyan-500/5 blur-[120px] pointer-events-none" />
+          {/* Sombra inferior degradada para destacar el texto de la izquierda */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#121212]/80 via-transparent to-transparent" />
         </motion.div>
       </AnimatePresence>
 
-      {/* Indicador de Progreso 01/06 ... 06/06 */}
-      <div className="absolute top-24 right-4 sm:right-8 z-40 flex items-center gap-1.5 sm:gap-2 bg-black/50 backdrop-blur-md px-3 sm:px-4 py-2 rounded-full border border-cyan-500/20">
+      {/* Indicador de Progreso 01 / 06 (Superior Derecha) */}
+      <div className="absolute top-24 right-6 sm:right-10 z-40 flex items-center gap-2 bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-cyan-500/20">
         {scenes.map((s, idx) => (
           <button
             key={idx}
@@ -275,7 +266,7 @@ export default function HeroNarrativeScroll() {
               setCurrentIdx(idx);
               if (idx === scenes.length - 1) setHeroCompleted(true);
             }}
-            className={`font-mono text-[10px] sm:text-xs font-bold transition-all px-1 sm:px-1.5 py-0.5 rounded ${
+            className={`font-mono text-xs font-bold transition-all px-1.5 py-0.5 rounded ${
               idx === currentIdx
                 ? 'text-cyan-400 bg-cyan-500/20 border border-cyan-500/40'
                 : 'text-slate-500 hover:text-slate-300'
@@ -286,36 +277,41 @@ export default function HeroNarrativeScroll() {
         ))}
       </div>
 
-      {/* Contenido de Texto Principal - Posicionado en la parte inferior */}
-      <div className="absolute inset-0 z-30 flex flex-col items-center justify-end text-center px-6 pb-20 sm:pb-24 max-w-4xl mx-auto pointer-events-auto">
+      {/* Contenido de Texto - ALINEADO ABAJO A LA IZQUIERDA */}
+      <div className="absolute inset-x-0 bottom-0 z-30 flex flex-col items-start text-left px-6 sm:px-16 pb-16 sm:pb-20 max-w-5xl pointer-events-auto">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIdx}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col items-center bg-black/40 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-white/5"
+            className="flex flex-col items-start"
           >
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold mb-4 uppercase tracking-[0.2em] backdrop-blur-md">
-              <Sparkles className="w-3.5 h-3.5" />
+            {/* Numerador (01 / 06) */}
+            <div className="font-mono text-sm sm:text-base font-bold text-cyan-400/90 tracking-[0.25em] uppercase mb-2">
+              {scene.number}
+            </div>
+
+            {/* Eyebrow / Categoría */}
+            <div className="font-mono text-xs sm:text-sm font-semibold text-slate-400 tracking-[0.2em] uppercase mb-4 flex items-center gap-2">
+              <span className="w-6 h-px bg-cyan-400/60 inline-block"></span>
               {scene.eyebrow}
             </div>
 
-            {/* Título */}
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-[1.15] mb-4 max-w-3xl">
+            {/* Título Principal */}
+            <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.15] mb-4 max-w-3xl">
               {scene.heading}
             </h1>
 
             {/* Subtítulo */}
-            <p className="text-base sm:text-xl text-slate-300 font-light leading-relaxed max-w-2xl whitespace-pre-line mb-6">
+            <p className="font-sans text-base sm:text-xl text-slate-300 font-light leading-relaxed max-w-2xl whitespace-pre-line mb-6">
               {scene.subheading}
             </p>
 
             {/* Badge dato (Pantalla 4) */}
             {scene.badge && (
-              <div className="inline-block px-5 py-2 rounded-2xl bg-cyan-500/10 border border-cyan-500/40 text-cyan-300 text-sm font-semibold tracking-wide backdrop-blur-md animate-pulse mb-4">
+              <div className="inline-block px-4 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-semibold tracking-wide backdrop-blur-md animate-pulse mb-4">
                 💡 {scene.badge}
               </div>
             )}
@@ -326,7 +322,7 @@ export default function HeroNarrativeScroll() {
                 initial={{ scale: 0.95 }}
                 animate={{ scale: 1 }}
                 transition={{ repeat: Infinity, repeatType: "reverse", duration: 1.5 }}
-                className="mt-4"
+                className="mt-2"
               >
                 <button
                   onClick={() => {
@@ -335,13 +331,13 @@ export default function HeroNarrativeScroll() {
                       document.getElementById('auditoria-form')?.scrollIntoView({ behavior: 'smooth' });
                     }, 50);
                   }}
-                  className="group relative inline-flex items-center gap-4 px-10 py-5 bg-cyan-400 hover:bg-cyan-300 text-black text-xl font-extrabold rounded-2xl shadow-2xl shadow-cyan-400/30 transition-all duration-300 hover:scale-105 active:scale-95"
+                  className="group relative inline-flex items-center gap-4 px-8 py-4 sm:px-10 sm:py-5 bg-cyan-400 hover:bg-cyan-300 text-black text-base sm:text-lg font-extrabold rounded-2xl shadow-2xl shadow-cyan-400/30 transition-all duration-300 hover:scale-105 active:scale-95"
                 >
                   <span>Solicitar Evaluación de Eficiencia Operativa</span>
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <p className="text-xs text-slate-400 mt-4 tracking-wider uppercase font-mono">
-                  Sin compromisos • Diagnóstico de rentabilidad real
+                <p className="text-xs text-slate-400 mt-3 tracking-wider uppercase font-mono">
+                  Sin compromiso • Análisis de viabilidad y rentabilidad real
                 </p>
               </motion.div>
             )}
