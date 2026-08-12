@@ -36,6 +36,22 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'scontent.floh2-1.fna.fbcdn.net',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.mecanicaautomotrizloja.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.titanusfitness.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.barberosplus.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.jorgereyesjaramillo.com',
+      },
     ],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],

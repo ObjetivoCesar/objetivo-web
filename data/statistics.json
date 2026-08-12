@@ -1,57 +1,57 @@
 {
-  "totalVisitas": 2090,
-  "visitasHoy": 2090,
+  "totalVisitas": 2106,
+  "visitasHoy": 2106,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
     {
-      "fecha": "2026-08-10",
+      "fecha": "2026-08-12",
+      "pagina": "/casos-de-exito",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-08-12",
+      "pagina": "/casos-de-exito/200-millas-camarones-reventados-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-08-12",
+      "pagina": "/casos-de-exito",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-08-12",
+      "pagina": "/casos-de-exito",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-08-11",
+      "pagina": "/casos-de-exito",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-08-11",
+      "pagina": "/casos-de-exito",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-08-11",
+      "pagina": "/casos-de-exito",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-08-11",
+      "pagina": "/casos-de-exito",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-08-11",
       "pagina": "/",
       "visitas": 1
     },
     {
-      "fecha": "2026-08-10",
-      "pagina": "/",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-10",
-      "pagina": "/",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-10",
-      "pagina": "/",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-10",
-      "pagina": "/",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-10",
-      "pagina": "/",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-10",
-      "pagina": "/",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-10",
-      "pagina": "/",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-10",
-      "pagina": "/",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-10",
-      "pagina": "/",
+      "fecha": "2026-08-11",
+      "pagina": "/casos-de-exito",
       "visitas": 1
     }
   ],
@@ -113,6 +113,8 @@
     "2026-06-24": 8,
     "2026-06-25": 8,
     "2026-07-09": 9,
-    "2026-08-10": 15
+    "2026-08-10": 15,
+    "2026-08-11": 12,
+    "2026-08-12": 4
   }
 }

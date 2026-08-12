@@ -267,6 +267,19 @@ export default function NavigationHeader({ currentPath }: NavigationHeaderProps)
             />
 
             <Link
+              href="/casos-de-exito"
+              className={`font-medium px-3 py-2 rounded-md hover:opacity-80 transition-opacity ${isActive('/casos-de-exito') ? 'text-cyan-400' : textColor}`}
+              style={{
+                minHeight: '40px',
+                display: 'flex',
+                alignItems: 'center',
+                textShadow: textShadow,
+              }}
+            >
+              Casos de Éxito
+            </Link>
+
+            <Link
               href="/blog"
               className={`font-medium px-3 py-2 rounded-md hover:opacity-80 transition-opacity ${isActive('/blog') ? 'text-cyan-400' : textColor}`}
               style={{

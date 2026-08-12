@@ -308,6 +308,19 @@ export default function MobileMenu({
           </div>
 
           <Link
+            href="/casos-de-exito"
+            className="block py-4 px-4 text-gray-800 active:bg-gray-50 rounded-lg font-medium border border-gray-100 transition-colors touch-manipulation"
+            onClick={onClose}
+            style={{
+              minHeight: '48px',
+              display: 'flex',
+              alignItems: 'center'
+            }}
+          >
+            Casos de Éxito
+          </Link>
+
+          <Link
             href="/blog"
             className="block py-4 px-4 text-gray-800 active:bg-gray-50 rounded-lg font-medium border border-gray-100 transition-colors touch-manipulation"
             onClick={onClose}

@@ -56,6 +56,12 @@ const menuItems = [
             }))
     },
     {
+        title: "Casos de Éxito",
+        href: "/casos-de-exito",
+        image: "/images/200millas-preview.webp",
+        subtitle: "Resultados verificables en Google e IA"
+    },
+    {
         title: "Blog",
         href: "/blog",
         image: "/images/portada_cesarbn.webp",
