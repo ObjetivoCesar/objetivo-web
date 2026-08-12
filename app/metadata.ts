@@ -19,25 +19,21 @@ export const preloadConfig = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Motor Reservas Hotel & Menú Digital | 0% Comisión Ecuador",
+    default: "César Reyes Jaramillo | SEO y Posicionamiento Web en Ecuador",
     template: "%s | César Reyes Jaramillo"
   },
-  description: "Solución todo en uno para hoteles y restaurantes en Ecuador. Motor de reservas y menú digital con 0% de comisión. Aumenta tus reservas y ventas sin pagar comisiones altas.",
+  description: "Posiciono negocios en Google, Maps y buscadores de IA en Ecuador. SEO, posicionamiento web y estrategias con resultados verificables. +50 negocios transformados en Loja y Ecuador.",
   keywords: [
-    "motor reservas hotel",
-    "menú digital restaurante",
-    "sistema de reservas sin comisión",
-    "restaurantes Ecuador",
-    "hoteles Ecuador",
-    "reservas en línea",
-    "sistema reservas hotel Ecuador",
-    "software restaurante Ecuador",
-    "booking sin comisiones",
-    "menú QR restaurantes",
-    "motor de reservas para hoteles",
-    "menú digital para restaurantes",
-    "app para restaurantes ecuador",
-    "carta digital qr"
+    "posicionamiento web",
+    "SEO Loja",
+    "SEO Ecuador",
+    "agencia SEO",
+    "consultor SEO",
+    "posicionamiento web Ecuador",
+    "SEO local",
+    "experto SEO",
+    "Google Maps posicionamiento",
+    "SEO ChatGPT"
   ],
   authors: [{ name: "César Reyes Jaramillo" }],
   creator: "César Reyes Jaramillo",
@@ -48,16 +44,16 @@ export const metadata: Metadata = {
     telephone: true,
   },
   openGraph: {
-    title: "Motor Reservas Hotel & Menú Digital | 0% Comisión Ecuador",
-    description: "Solución todo en uno para hoteles y restaurantes en Ecuador. Motor de reservas y menú digital con 0% de comisión. Aumenta tus reservas y ventas sin pagar comisiones altas.",
+    title: "César Reyes Jaramillo | SEO y Posicionamiento Web en Ecuador",
+    description: "Posiciono negocios en Google, Maps y buscadores de IA en Ecuador. SEO, posicionamiento web y estrategias con resultados verificables.",
     url: SITE_URL,
     siteName: "César Reyes Jaramillo",
     images: [
       {
         url: DEFAULT_OG_IMAGE,
-        width: 1080,
-        height: 1920,
-        alt: 'César Reyes Jaramillo - Consultor Estratégico'
+        width: 1200,
+        height: 630,
+        alt: 'César Reyes Jaramillo - SEO y Posicionamiento Web en Ecuador'
       }
     ],
     locale: 'es_EC',
@@ -65,8 +61,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "César Reyes Jaramillo - Consultor Estratégico y Experto en Automatización",
-    description: "Transforma tu negocio con estrategias de automatización y marketing digital. Soluciones personalizadas para hacer crecer tu empresa.",
+    title: "César Reyes Jaramillo | SEO y Posicionamiento Web en Ecuador",
+    description: "Posiciono negocios en Google, Maps y buscadores de IA en Ecuador. SEO, posicionamiento web y estrategias con resultados verificables.",
     images: [DEFAULT_OG_IMAGE],
     creator: '@cesarreyesj',
   },

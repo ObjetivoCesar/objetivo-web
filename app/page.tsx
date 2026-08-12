@@ -5,15 +5,30 @@ import WebsiteSchema from '@/components/schema/WebsiteSchema'
 import CookieBannerSPDP from '@/components/CookieBannerSPDP'
 
 export const metadata: Metadata = {
-  title: 'César Reyes Jaramillo | Ingeniería de Eficiencia e Inteligencia Artificial',
-  description: 'Consultoría estratégica en IA y desarrollo de sistemas de alta eficiencia en Ecuador. Soluciones personalizadas para optimizar negocios y eliminar procesos manuales.',
+  title: 'César Reyes Jaramillo | SEO y Posicionamiento Web en Ecuador',
+  description: 'Posiciono negocios en Google, Maps y buscadores de IA en Ecuador. SEO, posicionamiento web y estrategias con resultados verificables. +50 negocios transformados en Loja y Ecuador.',
+  keywords: [
+    "posicionamiento web",
+    "SEO Loja",
+    "SEO Ecuador",
+    "agencia SEO",
+    "consultor SEO",
+    "posicionamiento web Ecuador",
+    "SEO local",
+    "experto SEO"
+  ],
   openGraph: {
-    title: 'César Reyes Jaramillo | Ingeniería de Eficiencia e Inteligencia Artificial',
-    description: 'Transformamos la operatividad en rentabilidad mediante IA y automatización estratégica.',
+    title: 'César Reyes Jaramillo | SEO y Posicionamiento Web en Ecuador',
+    description: 'Posiciono negocios en Google, Maps y buscadores de IA en Ecuador. SEO, posicionamiento web y estrategias con resultados verificables.',
     url: 'https://www.cesarreyesjaramillo.com',
-    siteName: 'César Reyes',
+    siteName: 'César Reyes Jaramillo',
     locale: 'es_EC',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'César Reyes Jaramillo | SEO y Posicionamiento Web en Ecuador',
+    description: 'Posiciono negocios en Google, Maps y buscadores de IA en Ecuador. SEO, posicionamiento web y estrategias con resultados verificables.',
   },
   alternates: {
     canonical: 'https://www.cesarreyesjaramillo.com'

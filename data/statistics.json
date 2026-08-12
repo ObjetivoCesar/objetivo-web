@@ -1,9 +1,14 @@
 {
-  "totalVisitas": 2106,
-  "visitasHoy": 2106,
+  "totalVisitas": 2107,
+  "visitasHoy": 2107,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
+    {
+      "fecha": "2026-08-12",
+      "pagina": "/",
+      "visitas": 1
+    },
     {
       "fecha": "2026-08-12",
       "pagina": "/casos-de-exito",
@@ -47,11 +52,6 @@
     {
       "fecha": "2026-08-11",
       "pagina": "/",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-11",
-      "pagina": "/casos-de-exito",
       "visitas": 1
     }
   ],
@@ -115,6 +115,6 @@
     "2026-07-09": 9,
     "2026-08-10": 15,
     "2026-08-11": 12,
-    "2026-08-12": 4
+    "2026-08-12": 5
   }
 }

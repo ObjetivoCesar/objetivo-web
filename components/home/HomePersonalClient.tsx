@@ -46,37 +46,82 @@ export default function HomePersonalClient() {
       </section>
 
       <main className="max-w-7xl mx-auto px-6">
-        {/* The new "Bento Grid Start" - Now contains ActivaQR and Anti-Reels */}
-        {/* Nueva Era: Visibilidad IA & Optimización */}
+        {/* ═══ BLOQUE EXPLICATIVO SEO / POSICIONAMIENTO WEB ═══ */}
+        <section className="mb-24 scroll-mt-24" id="que-es-posicionamiento-web">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-cyan-500/10 border border-cyan-500/30 rounded-xl flex items-center justify-center text-cyan-400">
+                <Search size={20} />
+              </div>
+              <span className="text-cyan-400 text-sm font-bold uppercase tracking-widest">Posicionamiento Web en Ecuador</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+              ¿Qué es el <span className="text-cyan-400">posicionamiento web</span> y por qué tu negocio lo necesita?
+            </h2>
+            <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
+              <p>
+                El <strong className="text-white">posicionamiento web (SEO)</strong> es el conjunto de estrategias técnicas y de contenido que permiten que tu sitio web aparezca en los primeros resultados de Google cuando un potencial cliente busca tus servicios. No se trata de pagar publicidad: se trata de <strong className="text-white">construir autoridad digital</strong> para que Google te recomiende orgánicamente.
+              </p>
+              <p>
+                En Ecuador, el <strong className="text-white">95% de las decisiones de compra</strong> comienzan con una búsqueda en Google o en asistentes de inteligencia artificial como ChatGPT. Si tu negocio no aparece cuando alguien busca <em>"mejor dentista en Loja"</em>, <em>"restaurante de mariscos cerca de mí"</em> o <em>"mecánica automotriz confiable"</em>, estás cediendo esos clientes a tu competencia.
+              </p>
+              <p>
+                Mi enfoque de <strong className="text-white">SEO técnico + local</strong> combina optimización on-page, estructura de datos (Schema Markup), velocidad de carga, y estrategia de contenido para que Google y la IA entiendan exactamente qué ofreces, dónde lo ofreces, y por qué eres la mejor opción.
+              </p>
+            </div>
+            {/* Mini métricas SEO */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+              {[
+                { metric: '27+', label: 'Sitios posicionados' },
+                { metric: '11+', label: 'Industrias cubiertas' },
+                { metric: 'Top 3', label: 'Rankings en Google' },
+                { metric: '0', label: 'Publicidad pagada' },
+              ].map((item, i) => (
+                <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:border-cyan-500/30 transition-all">
+                  <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-1">{item.metric}</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wider">{item.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ POSICIONAMIENTO EN LA ERA IA: Extensión natural del SEO ═══ */}
         <div className="mb-24 relative">
           <div className="bg-[#121212] border border-cyan-500/20 rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden group">
             {/* Background Effects */}
             <div className="absolute top-0 right-0 w-[500px] h-full bg-cyan-900/10 blur-[120px] pointer-events-none group-hover:bg-cyan-800/20 transition-colors duration-1000"></div>
             
             <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-center">
-              {/* Columna Izquierda: El Mensaje (80/20 Focus) */}
+              {/* Columna Izquierda: El Mensaje */}
               <div className="lg:w-1/2 text-left">
                 <span className="inline-block px-4 py-2 bg-cyan-500/10 text-cyan-400 font-bold rounded-full text-sm mb-6 border border-cyan-500/20 uppercase tracking-widest">
-                  Visibilidad 2.0: La Era de la Inteligencia artificial
+                  SEO + Inteligencia Artificial
                 </span>
                 <h2 className="text-3xl md:text-5xl font-bold font-poppins text-white leading-tight mb-8">
-                  ¿Qué dice <span className="text-cyan-400">ChatGPT</span> de tu negocio cuando un cliente le pregunta?
+                  El posicionamiento web ya no es solo Google: <span className="text-cyan-400">la IA también decide</span> a quién recomendar
                 </h2>
                 <p className="text-lg md:text-xl text-gray-400 font-medium leading-relaxed mb-6">
-                  Tus clientes ya no solo "Googlean". Usan Inteligencia Artificial para decidir dónde comprar o a quién contratar.
+                  Tus clientes ya no solo buscan en Google. Usan ChatGPT, Gemini y asistentes de IA para decidir dónde comprar o a quién contratar. <strong className="text-white">Si tu web no está optimizada para ambos canales, pierdes visibilidad.</strong>
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="mt-1 bg-cyan-500/20 p-1 rounded-full text-cyan-400">
                       <CheckCircle size={18} />
                     </div>
-                    <p className="text-gray-300 font-medium">Si no hablas el lenguaje de la IA, eres invisible para el consumidor moderno.</p>
+                    <p className="text-gray-300 font-medium">Un sitio bien posicionado en Google también es citado por ChatGPT y asistentes de IA.</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="mt-1 bg-cyan-500/20 p-1 rounded-full text-cyan-400">
                       <CheckCircle size={18} />
                     </div>
-                    <p className="text-gray-300 font-medium">La optimización hoy no es solo SEO, es relevancia ante mentes artificiales.</p>
+                    <p className="text-gray-300 font-medium">Optimizamos contenido, Schema Markup y estructura técnica para que la IA entienda y recomiende tu negocio.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 bg-cyan-500/20 p-1 rounded-full text-cyan-400">
+                      <CheckCircle size={18} />
+                    </div>
+                    <p className="text-gray-300 font-medium">Posicionamiento web integral: Google Search + Google Maps + ChatGPT + Gemini.</p>
                   </div>
                 </div>
               </div>
@@ -184,15 +229,17 @@ export default function HomePersonalClient() {
           </div>
         </section>
 
-        {/* FAQ / Objections Section */}
-        <section className="mb-24">
-          <h2 className="text-3xl font-bold mb-12 text-center">Preguntas Frecuentes</h2>
+        {/* FAQ / Objections Section — SEO-optimized */}
+        <section className="mb-24" id="preguntas-frecuentes">
+          <h2 className="text-3xl font-bold mb-12 text-center">Preguntas Frecuentes sobre Posicionamiento Web</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {[
-              { q: "¿Por qué no haces redes sociales?", a: "Porque mi enfoque es la rentabilidad técnica, no el entretenimiento. Las redes atraen curiosos; los sistemas de ingeniería capturan clientes." },
-              { q: "¿Qué tan difícil es usar la IA?", a: "Para ti, nada. Yo configuro el asistente para que trabaje por ti. Tú solo recibes los resultados en tu WhatsApp o panel de control." },
-              { q: "¿Cuánto tiempo toma ver resultados?", a: "El posicionamiento SEO toma semanas, pero las herramientas de fidelización como ActivaQR funcionan desde el primer día." },
-              { q: "¿Aceptas pagos diferidos?", a: "Sí, puedes financiar tu arquitectura hasta 12 meses con cualquier tarjeta de crédito." }
+              { q: "¿Cuánto tarda el posicionamiento web en dar resultados?", a: "El SEO técnico y local empieza a mostrar mejoras en 4-8 semanas. Los primeros rankings consistentes en Google suelen consolidarse entre 2 y 4 meses, dependiendo de la competencia del sector." },
+              { q: "¿Por qué SEO y no publicidad pagada?", a: "La publicidad pagada desaparece cuando dejas de pagar. El posicionamiento web orgánico genera tráfico constante y gratuito que se mantiene en el tiempo. Es una inversión, no un gasto recurrente." },
+              { q: "¿Optimizas para ChatGPT y otros asistentes de IA?", a: "Sí. Un sitio bien posicionado en Google con Schema Markup y contenido estructurado también es citado por ChatGPT, Gemini y otros asistentes. Optimizamos para ambos canales." },
+              { q: "¿Funciona el SEO para negocios pequeños en Ecuador?", a: "Absolutamente. De hecho, es donde más impacto tiene. Un negocio local con buen posicionamiento puede superar a cadenas grandes en búsquedas como 'cerca de mí'. Tenemos 27+ casos reales." },
+              { q: "¿Qué incluye tu servicio de posicionamiento web?", a: "SEO técnico (velocidad, estructura, Core Web Vitals), SEO local (Google Maps, fichas GMB), contenido optimizado, Schema Markup, y monitoreo continuo de rankings." },
+              { q: "¿Aceptas pagos diferidos?", a: "Sí, puedes financiar tu proyecto hasta 12 meses con cualquier tarjeta de crédito. Sin comisiones extra." }
             ].map((faq, i) => (
               <div key={i} className="p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-white/20 transition-all">
                 <h3 className="font-bold text-lg mb-3 flex items-center gap-2">

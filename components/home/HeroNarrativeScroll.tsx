@@ -18,9 +18,9 @@ const scenes: SceneData[] = [
   {
     number: "01 / 06",
     image: "/images/hero-scroll/scene1.png",
-    eyebrow: "Diagnóstico Límbico",
-    heading: "Tu negocio puede estar vendiendo bien...",
-    subheading: "Y aun así estar perdiendo dinero todos los días.",
+    eyebrow: "Posicionamiento Web & SEO Local",
+    heading: "Posicionamiento Web y SEO en Ecuador",
+    subheading: "Tu negocio puede estar vendiendo bien... y aun así estar perdiendo clientes por no aparecer donde te están buscando.",
   },
   {
     number: "02 / 06",
@@ -299,10 +299,16 @@ export default function HeroNarrativeScroll() {
               {scene.eyebrow}
             </div>
 
-            {/* Título Principal */}
-            <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.15] mb-4 max-w-3xl">
-              {scene.heading}
-            </h1>
+            {/* Título Principal: H1 solo para la primera escena, H2 para las demás */}
+            {currentIdx === 0 ? (
+              <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.15] mb-4 max-w-3xl">
+                {scene.heading}
+              </h1>
+            ) : (
+              <h2 className="font-sans text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.15] mb-4 max-w-3xl">
+                {scene.heading}
+              </h2>
+            )}
 
             {/* Subtítulo */}
             <p className="font-sans text-base sm:text-xl text-slate-300 font-light leading-relaxed max-w-2xl whitespace-pre-line mb-6">
