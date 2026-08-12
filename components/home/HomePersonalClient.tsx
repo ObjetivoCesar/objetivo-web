@@ -60,22 +60,22 @@ export default function HomePersonalClient() {
             </h2>
             <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
               <p>
-                El <strong className="text-white">posicionamiento web (SEO)</strong> es el conjunto de estrategias técnicas y de contenido que permiten que tu sitio web aparezca en los primeros resultados de Google cuando un potencial cliente busca tus servicios. No se trata de pagar publicidad: se trata de <strong className="text-white">construir autoridad digital</strong> para que Google te recomiende orgánicamente.
+                El <strong className="text-white">posicionamiento web (SEO)</strong> es el conjunto de estrategias técnicas y de contenido que permiten que tu sitio web aparezca en Google cuando un potencial cliente busca tus productos o servicios en su ciudad. No se trata de comprar anuncios temporales: se trata de <strong className="text-white">construir autoridad digital real</strong>.
               </p>
               <p>
-                En Ecuador, el <strong className="text-white">95% de las decisiones de compra</strong> comienzan con una búsqueda en Google o en asistentes de inteligencia artificial como ChatGPT. Si tu negocio no aparece cuando alguien busca <em>"mejor dentista en Loja"</em>, <em>"restaurante de mariscos cerca de mí"</em> o <em>"mecánica automotriz confiable"</em>, estás cediendo esos clientes a tu competencia.
+                En el mercado ecuatoriano, cuando una persona necesita contratar una notaría, buscar una clínica dental o encontrar un restaurante especializado, su primer impulso es buscar en Google o consultar asistentes de inteligencia artificial. Si tu negocio no aparece en esas búsquedas específicas (ejemplo: <em>"notaria en loja"</em>, <em>"restaurante de mariscos"</em> o <em>"mecánica automotriz"</em>), esos clientes terminan en la competencia.
               </p>
               <p>
-                Mi enfoque de <strong className="text-white">SEO técnico + local</strong> combina optimización on-page, estructura de datos (Schema Markup), velocidad de carga, y estrategia de contenido para que Google y la IA entiendan exactamente qué ofreces, dónde lo ofreces, y por qué eres la mejor opción.
+                Nuestra metodología de <strong className="text-white">SEO técnico y de intención primaria</strong> optimiza la arquitectura de tu sitio web, su velocidad y los datos estructurados (Schema Markup) para que Google y la IA reconozcan tu negocio como la respuesta exacta a lo que busca el usuario.
               </p>
             </div>
-            {/* Mini métricas SEO */}
+            {/* Mini métricas comprobables */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
               {[
-                { metric: '27+', label: 'Sitios posicionados' },
-                { metric: '11+', label: 'Industrias cubiertas' },
-                { metric: 'Top 3', label: 'Rankings en Google' },
-                { metric: '0', label: 'Publicidad pagada' },
+                { metric: '27+', label: 'Proyectos Reales' },
+                { metric: '11+', label: 'Industrias Atendidas' },
+                { metric: 'SEO Local', label: 'Enfoque de Intención' },
+                { metric: '100%', label: 'Tráfico Orgánico Directo' },
               ].map((item, i) => (
                 <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:border-cyan-500/30 transition-all">
                   <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-1">{item.metric}</div>
