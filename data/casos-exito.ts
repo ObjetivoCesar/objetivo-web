@@ -505,5 +505,35 @@ export const CASOS_EXITO: CasoExito[] = [
       tipo: 'Web',
       detalles: 'Presencia web moderna con sistema de agendamiento visual.'
     }
+  },
+  {
+    id: 'dr-guido-diaz',
+    slug: 'dr-guido-diaz-ortega-medicina',
+    cliente: 'Dr. Guido Díaz Ortega',
+    sitioWeb: 'https://drguidodiazortega.com/',
+    categoria: 'Consulta Médica Especializada',
+    industria: 'Salud & Medicina',
+    ciudad: 'Loja, Ecuador',
+    intencionPrimaria: 'Posicionar al especialista médico en búsquedas de consulta y tratamiento profesional',
+    busquedaClave: 'médico especialista Loja Dr Guido Díaz',
+    territorioSemantico: ['médico en Loja', 'consulta médica especialista', 'salud y tratamiento Loja'],
+    posicion: 'Presencia Profesional + SEO Médico',
+    resultadoDestacado: true,
+    logoCliente: '/images/testimonios/dr_guifo_diaz_ortega.png',
+
+    orillaA: 'Un médico especialista de vasta trayectoria ofreciendo atención de salud de alta calidad.',
+    elProblema: 'Pacientes buscando consulta médica en internet no encontraban un portal oficial con la información de servicios y contacto directos.',
+    elPuente: [
+      'Sitio web médico institucional con diseño limpio y confiable.',
+      'Optimización SEO para especialidades médicas y ubicación del consultorio.',
+      'Canales de contacto inmediato para agendamiento de citas.'
+    ],
+    orillaB: 'El Dr. Guido Díaz Ortega cuenta con un portal institucional que brinda tranquilidad y facilita el agendamiento a sus pacientes.',
+    loQueAprendimos: 'En el sector salud, la claridad y la seriedad del sitio web son determinantes para la confianza del paciente.',
+
+    evidenciaGoogle: {
+      tipo: 'Search',
+      detalles: 'Portal médico posicionado para agendamiento directo de consulta.'
+    }
   }
 ];
