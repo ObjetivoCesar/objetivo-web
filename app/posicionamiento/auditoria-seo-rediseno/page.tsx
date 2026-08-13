@@ -2,30 +2,30 @@ import { Metadata } from 'next';
 import AuditoriaSeoRedisenoClient from './AuditoriaSeoRedisenoClient';
 
 export const metadata: Metadata = {
-  title: 'Auditoría SEO y Rediseño Web - Descubre Por Qué No Vendes | César Reyes',
-  description: 'Auditoría SEO completa desde $1,250 USD. Análisis técnico exhaustivo, rediseño UX optimizado, estrategia de contenido. Descubre exactamente qué te impide vender online.',
-  keywords: ['auditoría seo', 'rediseño web', 'optimización seo', 'análisis técnico', 'estrategia contenido'],
+  title: 'Beneficios de una Auditoría SEO Profesional | César Reyes',
+  description: 'Conoce los beneficios de una auditoría SEO: diagnóstico técnico, resolución de errores en Google, mayor visibilidad y captación de clientes cualificados.',
+  keywords: ['beneficios auditoría seo', 'auditoría seo', 'rediseño web', 'optimización seo', 'análisis técnico', 'estrategia contenido'],
   alternates: {
     canonical: 'https://www.cesarreyesjaramillo.com/posicionamiento/auditoria-seo-rediseno',
   },
   openGraph: {
-    title: 'Auditoría SEO y Rediseño Web | César Reyes',
-    description: 'Descubre por qué tu competencia vende online y tú no. Diagnóstico profesional con plan de acción.',
+    title: 'Beneficios de una Auditoría SEO Profesional | César Reyes',
+    description: 'Conoce los beneficios de una auditoría SEO: diagnóstico técnico, resolución de errores en Google, mayor visibilidad y captación de clientes cualificados.',
     url: 'https://www.cesarreyesjaramillo.com/posicionamiento/auditoria-seo-rediseno',
     siteName: 'César Reyes Jaramillo',
     images: [{
       url: 'https://www.cesarreyesjaramillo.com/images/categorias/posicionamiento-web/auditoria-seo-hero.webp',
       width: 1200,
       height: 630,
-      alt: 'Auditoría SEO y Rediseño',
+      alt: 'Beneficios de una Auditoría SEO',
     }],
     locale: 'es_EC',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Auditoría SEO y Rediseño Web | César Reyes',
-    description: 'Descubre por qué tu competencia vende online y tú no. Diagnóstico profesional con plan de acción.',
+    title: 'Beneficios de una Auditoría SEO Profesional | César Reyes',
+    description: 'Conoce los beneficios de una auditoría SEO: diagnóstico técnico, resolución de errores en Google, mayor visibilidad y captación de clientes cualificados.',
     images: ['https://www.cesarreyesjaramillo.com/images/categorias/posicionamiento-web/auditoria-seo-hero.webp'],
   },
 };

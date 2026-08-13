@@ -62,8 +62,8 @@ export default function AuditoriaSEORediseno() {
       subtitle: 'Evaluación Profesional de tu Sitio Web',
       image: '/images/categorias/posicionamiento/sin-inversion.webp',
       content: {
-        intro: '¿Sabías que el 75% de los usuarios no pasa de la primera página de resultados de búsqueda?',
-        description: 'Nuestro análisis SEO exhaustivo identifica las oportunidades clave para mejorar el posicionamiento de tu sitio web. Evaluamos más de 200 factores técnicos y de contenido para detectar problemas que puedan estar afectando tu visibilidad en buscadores como Google.',
+        intro: 'La gran mayoría de los usuarios no pasa de la primera página de resultados de búsqueda.',
+        description: 'Nuestro análisis SEO exhaustivo identifica las oportunidades clave para mejorar el posicionamiento de tu sitio web. Evaluamos decenas de factores técnicos y de contenido para detectar problemas que puedan estar afectando tu visibilidad en buscadores como Google.',
         listTitle: 'Beneficios del Análisis SEO',
         items: [
           'Identificación de errores técnicos que afectan el rastreo e indexación',
