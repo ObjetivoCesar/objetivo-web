@@ -20,7 +20,7 @@ const tabData = [
     badge2: '$1,250 USD',
     h3: 'Auditoría SEO y Rediseño Web: Descubre Por Qué No Vendes Online',
     subtitle: 'Para PYMEs con sitio web existente que no genera tráfico ni ventas, necesitan diagnóstico técnico profesional y estrategia de contenido efectiva.',
-    description: '¿Por qué tu competencia vende online y tú no, aunque tengas mejor producto? Porque ellos aparecen en Google y tú no. Esta auditoría analiza +200 factores técnicos y de contenido que Google evalúa, identificando exactamente qué te impide aparecer en la primera página. Incluye rediseño UX optimizado para conversión. El 81% de compradores buscan en Google: si no estás ahí, no existes.',
+    description: '¿Por qué tu competencia vende online y tú no, aunque tengas mejor producto? Porque ellos aparecen en Google y tú no. Esta auditoría analiza decenas de factores técnicos y de contenido que Google evalúa, identificando exactamente qué te impide aparecer en la primera página. Incluye rediseño UX optimizado para conversión. La mayoría de compradores buscan en Google: si no estás ahí, pierdes oportunidades reales.',
     benefits: [
       { text: 'Mayor Visibilidad: Aparece en primeros resultados cuando clientes buscan tu servicio' },
       { text: 'Tráfico Calificado: Visitantes interesados que buscan exactamente lo que vendes' },
@@ -30,7 +30,7 @@ const tabData = [
     ],
     includes: {
         'Análisis Técnico Exhaustivo': [
-            'Auditoría completa de +200 factores SEO on-page y off-page',
+            'Auditoría completa de factores SEO on-page y off-page',
             'Análisis de velocidad de carga y Core Web Vitals (Google ranking)',
             'Revisión estructura URLs, metadatos, headers, enlaces internos',
             'Identificación errores rastreo, indexación y penalizaciones Google'
@@ -45,7 +45,7 @@ const tabData = [
             'Rediseño de páginas clave orientado a acción del usuario',
             'Optimización formularios de contacto y CTAs estratégicos',
             'Mejora navegación y arquitectura de información',
-            'Diseño responsive optimizado para móviles (60% tráfico)'
+            'Diseño responsive optimizado para móviles (pantallas pequeñas y smartphones)'
         ],
         'Entregables y Soporte': [
             'Documento ejecutivo PDF con hallazgos y plan priorizado',
@@ -67,7 +67,7 @@ const tabData = [
     badge2: '$500 USD/mes x 24 meses',
     h3: 'Alianza Exclusiva: Tu E-commerce Completo Sin Riesgo Financiero',
     subtitle: 'Para artesanos, independientes y PYMEs que quieren vender online pero no tienen capital inicial para e-commerce profesional ni conocimientos técnicos.',
-    description: '¿Te frena no tener $5,000-$10,000 USD para invertir en e-commerce profesional? Imagina tener tu tienda online completa, posicionada en Google y generando ventas, sin desembolsar NADA inicial. Asumimos desarrollo valorado en $1,550 USD: sitio e-commerce 30 productos, fotos profesionales, hosting 24 meses, estudio mercado y SEO continuo. Solo pagas $500 mensuales mientras vendemos juntos. ¿Mereces menos que las grandes empresas?',
+    description: '¿Te frena no tener el capital inicial para invertir en e-commerce profesional? Imagina tener tu tienda online completa, posicionada en Google y generando ventas, sin desembolsar una inversión alta de entrada. Asumimos desarrollo valorado en $1,550 USD: sitio e-commerce 30 productos, fotos profesionales, hosting 24 meses, estudio mercado y SEO continuo. Solo pagas $500 mensuales mientras vendemos juntos. ¿Mereces menos que las grandes empresas?',
     benefits: [
       { text: 'Inversión Inicial Cero: Sin riesgos financieros upfront, comenzamos nosotros' },
       { text: 'E-commerce Listo 30 Días: Tienda profesional con 30 productos y fotos incluidas' },
@@ -127,9 +127,6 @@ interface HeroTextProps {
 const HeroText = ({ fullText, shortText, className = '' }: HeroTextProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
-  // Contar palabras en el texto corto
-  const wordCount = shortText ? shortText.split(' ').length : 0;
-  
   return (
     <div className={className}>
       <p className="text-lg md:text-xl max-w-2xl text-gray-200 leading-relaxed">
@@ -150,12 +147,12 @@ const HeroText = ({ fullText, shortText, className = '' }: HeroTextProps) => {
 };
 
 const faqData = [
-    { q: '¿Cuánto dinero pierdo cada mes sin aparecer en Google?', a: 'Si tu sector tiene 1,000 búsquedas mensuales en Google (ej: \'abogado Quito\') y no apareces en primera página, pierdes el 90% de esos clientes potenciales. Con tasa conversión promedio 5% y ticket $100, son $4,500 USD mensuales que regalas a la competencia. El costo de NO estar es enorme.' },
-    { q: '¿Por qué mi competencia aparece primero si yo tengo mejores productos?', a: 'Porque Google no sabe que tu producto es mejor; lee código, contenido optimizado y velocidad de carga. Tu competencia invirtió en SEO técnico para cumplir con los +200 factores que Google mide, mientras tú dependes de redes sociales donde nadie te busca activamente.' },
-    { q: '¿Cuánto cuesta posicionamiento vs. seguir pagando anuncios eternamente?', a: 'Anuncios: $300-$1,000 mensual PARA SIEMPRE. Dejas de pagar, desapareces. SEO: Inversión inicial con beneficio permanente. Sigues apareciendo orgánicamente SIN pagar por clic años después. Los clientes confían más en resultados orgánicos (70%) que en anuncios (30%).' },
-    { q: '¿Puedo hacer SEO yo mismo con tutoriales de YouTube?', a: 'Claro, como puedes operarte la apéndice viendo videos. SEO requiere dominar +200 factores, herramientas profesionales ($200-$500/mes), análisis técnico y creación de contenido constante. Tu tiempo vale dinero. ¿Prefieres invertirlo en aprender o en VENDER?' },
-    { q: '¿En cuánto tiempo veo resultados reales en posiciones y ventas?', a: 'SEO NO es instantáneo. Realidad: Primeras mejoras técnicas en 2-4 semanas, subidas de posiciones en 1-3 meses, y tráfico significativo en 3-6 meses. Cada día sin empezar es un mes más tarde en ver resultados. Tu competencia ya te lleva meses de ventaja.' },
-    { q: '¿El SEO funciona para negocios locales pequeños?', a: 'Funciona MEJOR. Es más fácil y barato competir por \'abogado divorcios Quito\' que por \'abogado\'. Google prioriza resultados locales, y el 46% de las búsquedas tienen intención local. Con SEO local, compites de igual a igual con las grandes cadenas.' },
+    { q: '¿Cuánto dinero pierdo cada mes sin aparecer en Google?', a: 'Si tu sector tiene búsquedas mensuales en Google (ej: \'abogado Quito\') y no apareces en primera página, pierdes la oportunidad de conectar con la mayoría de esos clientes potenciales. Como estimación ilustrativa, perder decenas de clientes al mes equivale a miles de dólares en ingresos cedidos directamente a la competencia.' },
+    { q: '¿Por qué mi competencia aparece primero si yo tengo mejores productos?', a: 'Porque Google no sabe que tu producto es mejor; lee código, contenido optimizado y velocidad de carga. Tu competencia invirtió en SEO técnico para cumplir con los factores que Google mide, mientras tú dependes de redes sociales donde no siempre te buscan activamente.' },
+    { q: '¿Cuánto cuesta posicionamiento vs. seguir pagando anuncios eternamente?', a: 'Anuncios: requieren pago mensual continuo; al dejar de pagar, desapareces. SEO: Inversión en un activo permanente. Sigues apareciendo orgánicamente sin pagar por clic. Generalmente, los usuarios tienden a confiar más en resultados orgánicos que en anuncios pagados.' },
+    { q: '¿Puedo hacer SEO yo mismo con tutoriales de YouTube?', a: 'SEO requiere dominar múltiples factores técnicos, herramientas profesionales, análisis y creación de contenido constante. Tu tiempo vale dinero: es cuestión de evaluar si prefieres invertirlo en aprender la técnica o en atender tu negocio.' },
+    { q: '¿En cuánto tiempo veo resultados reales en posiciones y ventas?', a: 'El SEO es progresivo: primeras mejoras técnicas en 2-4 semanas, subidas de posiciones en 1-3 meses, y tráfico significativo en 3-6 meses.' },
+    { q: '¿El SEO funciona para negocios locales pequeños?', a: 'Funciona muy bien. Es más accesible competir por términos específicos locales como \'abogado divorcios Quito\' que por palabras genéricas. Google prioriza búsquedas de intención local para que compitas de igual a igual en tu zona.' },
 ];
 
 const HeroSlider = () => {
@@ -299,14 +296,14 @@ export default function PosicionamientoPage() {
                 <h1 className="text-4xl md:text-5xl font-bold leading-tight shadow-text">¿Tu Competencia Aparece en Google y Tú No? Róbales el Tráfico.</h1>
                 <div className="mt-6">
                   <HeroText 
-                    fullText="El 81% de tus clientes potenciales buscan en Google antes de comprar. Si no estás en la primera página, eres invisible. Con nuestra estrategia SEO, te posicionamos para capturar ese tráfico y convertirlo en ventas reales."
-                    shortText="El 81% de tus clientes potenciales buscan en Google antes de comprar..."
+                    fullText="La gran mayoría de tus clientes potenciales buscan en Google antes de comprar. Si no estás en la primera página, eres invisible. Con nuestra estrategia SEO, te posicionamos para capturar ese tráfico y convertirlo en ventas reales."
+                    shortText="La gran mayoría de tus clientes potenciales buscan en Google antes de comprar..."
                   />
                 </div>
                 <a href="#servicios" className="mt-8 inline-block bg-blue-600 text-white font-bold py-4 px-10 rounded-lg text-xl hover:bg-blue-700 transition-transform transform hover:scale-105">
                     Descubre Cómo
                 </a>
-                <p className="mt-4 text-sm font-semibold text-gray-300">81% Compradores Usan Google · Resultados Medibles · PYMEs Ecuador</p>
+                <p className="mt-4 text-sm font-semibold text-gray-300">Búsquedas de Intención Directa · Resultados Medibles · PYMEs Ecuador</p>
             </div>
         </div>
       </section>
@@ -316,14 +313,14 @@ export default function PosicionamientoPage() {
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Por Qué Estar en Google No Es Opcional (Es Supervivencia)</h2>
             <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
-              ¿Cuántos clientes pierdes cada día porque tu competencia aparece primero en Google y tú no existes? El 81% de compradores buscan en Google antes de comprar. Si no apareces en la primera página, NO existes para el 90% de tu mercado potencial.
+              ¿Cuántos clientes pierdes cada día porque tu competencia aparece primero en Google y tú no existes? La gran mayoría de compradores buscan en Google antes de tomar decisiones de compra. Si no apareces en la primera página, pierdes la oportunidad de captar a tu mercado potencial.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-md text-center">
                   <Search className="h-10 w-10 text-blue-600 mb-3 mx-auto"/>
                   <h3 className="font-bold text-lg">Diagnóstico</h3>
-                  <p className="text-gray-600 text-sm mt-1">Auditoría de +200 factores que afectan tu posición en Google hoy.</p>
+                  <p className="text-gray-600 text-sm mt-1">Auditoría de factores técnicos y de contenido que afectan tu posición hoy.</p>
               </div>
               <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-md text-center">
                   <Target className="h-10 w-10 text-blue-600 mb-3 mx-auto"/>
