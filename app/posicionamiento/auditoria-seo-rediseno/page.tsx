@@ -3,19 +3,30 @@ import AuditoriaSeoRedisenoClient from './AuditoriaSeoRedisenoClient';
 
 export const metadata: Metadata = {
   title: 'Auditoría SEO y Rediseño Web - Descubre Por Qué No Vendes | César Reyes',
-  description: 'Auditoría SEO completa desde $1,250 USD. Análisis de +200 factores, rediseño UX optimizado, estrategia de contenido. Descubre exactamente qué te impide vender online.',
+  description: 'Auditoría SEO completa desde $1,250 USD. Análisis técnico exhaustivo, rediseño UX optimizado, estrategia de contenido. Descubre exactamente qué te impide vender online.',
   keywords: ['auditoría seo', 'rediseño web', 'optimización seo', 'análisis técnico', 'estrategia contenido'],
+  alternates: {
+    canonical: 'https://www.cesarreyesjaramillo.com/posicionamiento/auditoria-seo-rediseno',
+  },
   openGraph: {
     title: 'Auditoría SEO y Rediseño Web | César Reyes',
     description: 'Descubre por qué tu competencia vende online y tú no. Diagnóstico profesional con plan de acción.',
+    url: 'https://www.cesarreyesjaramillo.com/posicionamiento/auditoria-seo-rediseno',
+    siteName: 'César Reyes Jaramillo',
     images: [{
-      url: '/images/categorias/posicionamiento-web/auditoria-seo-hero.webp',
+      url: 'https://www.cesarreyesjaramillo.com/images/categorias/posicionamiento-web/auditoria-seo-hero.webp',
       width: 1200,
       height: 630,
       alt: 'Auditoría SEO y Rediseño',
     }],
     locale: 'es_EC',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Auditoría SEO y Rediseño Web | César Reyes',
+    description: 'Descubre por qué tu competencia vende online y tú no. Diagnóstico profesional con plan de acción.',
+    images: ['https://www.cesarreyesjaramillo.com/images/categorias/posicionamiento-web/auditoria-seo-hero.webp'],
   },
 };
 
@@ -24,10 +35,10 @@ export default function AuditoriaSeoRedisenoPage() {
     <>
       <AuditoriaSeoRedisenoClient />
       <div style={{ position: 'absolute', left: '-10000px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
-        <h1>Auditoría SEO y Rediseño Web - Inversión desde $1,250 USD</h1>
+        <h2>Auditoría SEO y Rediseño Web - Inversión desde $1,250 USD</h2>
         <p>Descubre Por Qué No Vendes Online. Para PYMEs con sitio web existente que no genera tráfico ni ventas, necesitan diagnóstico técnico profesional y estrategia de contenido efectiva.</p>
-        <p>¿Por qué tu competencia vende online y tú no, aunque tengas mejor producto? Porque ellos aparecen en Google y tú no. Esta auditoría analiza +200 factores técnicos y de contenido que Google evalúa, identificando exactamente qué te impide aparecer en la primera página. Incluye rediseño UX optimizado para conversión.</p>
-        <h2>Beneficios Clave:</h2>
+        <p>¿Por qué tu competencia vende online y tú no, aunque tengas mejor producto? Porque ellos aparecen en Google y tú no. Esta auditoría analiza decenas de factores técnicos y de contenido que Google evalúa, identificando exactamente qué te impide aparecer en la primera página. Incluye rediseño UX optimizado para conversión.</p>
+        <h3>Beneficios Clave:</h3>
         <ul>
           <li>Mayor Visibilidad: Aparece en primeros resultados cuando clientes buscan tu servicio</li>
           <li>Tráfico Calificado: Visitantes interesados que buscan exactamente lo que vendes</li>
@@ -35,10 +46,10 @@ export default function AuditoriaSeoRedisenoPage() {
           <li>Errores Técnicos Resueltos: Identifica problemas de rastreo, velocidad, indexación</li>
           <li>ROI Medible: Reportes mensuales con posiciones, tráfico y conversiones reales</li>
         </ul>
-        <h2>Incluye:</h2>
-        <h3>Análisis Técnico Exhaustivo:</h3>
+        <h3>Incluye:</h3>
+        <h4>Análisis Técnico Exhaustivo:</h4>
         <ul>
-          <li>Auditoría completa de +200 factores SEO on-page y off-page</li>
+          <li>Auditoría completa de factores SEO on-page y off-page</li>
           <li>Análisis de velocidad de carga y Core Web Vitals</li>
           <li>Revisión estructura URLs, metadatos, headers, enlaces internos</li>
           <li>Identificación errores rastreo, indexación y penalizaciones Google</li>

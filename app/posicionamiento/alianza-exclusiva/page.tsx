@@ -5,16 +5,28 @@ export const metadata: Metadata = {
   title: 'Alianza Exclusiva - E-commerce Sin Inversión Inicial | César Reyes',
   description: 'E-commerce completo sin inversión inicial. $500/mes x 24 meses. Incluye desarrollo, fotos profesionales, SEO continuo y marketing. Propiedad 100% tuya al finalizar.',
   keywords: ['ecommerce sin inversión', 'alianza exclusiva', 'tienda online financiada', 'seo continuo', 'marketing digital'],
+  alternates: {
+    canonical: 'https://www.cesarreyesjaramillo.com/posicionamiento/alianza-exclusiva',
+  },
   openGraph: {
     title: 'Alianza Exclusiva - E-commerce $0 Inicial | César Reyes',
     description: 'Tu tienda online completa sin riesgo financiero. Solo $500/mes x 24 meses.',
+    url: 'https://www.cesarreyesjaramillo.com/posicionamiento/alianza-exclusiva',
+    siteName: 'César Reyes Jaramillo',
     images: [{
-      url: '/images/categorias/posicionamiento-web/alianza-exclusiva-hero.webp',
+      url: 'https://www.cesarreyesjaramillo.com/images/categorias/posicionamiento-web/alianza-exclusiva-hero.webp',
       width: 1200,
       height: 630,
       alt: 'Alianza Exclusiva',
     }],
-    locale: 'es_EC', type: 'website',
+    locale: 'es_EC',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Alianza Exclusiva - E-commerce $0 Inicial | César Reyes',
+    description: 'Tu tienda online completa sin riesgo financiero. Solo $500/mes x 24 meses.',
+    images: ['https://www.cesarreyesjaramillo.com/images/categorias/posicionamiento-web/alianza-exclusiva-hero.webp'],
   },
 };
 
@@ -23,9 +35,9 @@ export default function AlianzaExclusivaPage() {
     <>
       <AlianzaExclusivaClient />
       <div style={{ position: 'absolute', left: '-10000px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
-        <h1>Alianza Exclusiva - E-commerce Sin Inversión Inicial</h1>
+        <h2>Alianza Exclusiva - E-commerce Sin Inversión Inicial</h2>
         <p>$500/mes x 24 meses - Inversión Inicial $0. Tu E-commerce Completo Sin Riesgo Financiero.</p>
-        <p>Para artesanos, independientes y PYMEs que quieren vender online pero no tienen capital inicial para e-commerce profesional ni conocimientos técnicos.</p>
+        <p>Para artesanos, independientes y PYMEs que quieren vender online sin desembolsar una inversión alta de entrada.</p>
         <p>¿Te frena no tener $5,000-$10,000 USD para invertir en e-commerce profesional? Imagina tener tu tienda online completa, posicionada en Google y generando ventas, sin desembolsar NADA inicial. Asumimos desarrollo valorado en $1,550 USD: sitio e-commerce 30 productos, fotos profesionales, hosting 24 meses, estudio mercado y SEO continuo. Solo pagas $500 mensuales mientras vendemos juntos.</p>
         <h2>Beneficios Clave:</h2>
         <ul>
