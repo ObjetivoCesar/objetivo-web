@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: Props) {
     title: `${caso.cliente} | Caso de Éxito en Google y ChatGPT`,
     description: `${caso.intencionPrimaria}. Descubre cómo posicionamos a ${caso.cliente} en ${caso.ciudad} para "${caso.busquedaClave}".`,
     alternates: {
-      canonical: `https://cesarreyesjaramillo.com/casos-de-exito/${caso.slug}`,
+      canonical: `https://www.cesarreyesjaramillo.com/casos-de-exito/${caso.slug}`,
     },
     openGraph: {
       title: `${caso.cliente} | Caso de Éxito & Resultados SEO/IA`,
       description: caso.orillaA,
-      url: `https://cesarreyesjaramillo.com/casos-de-exito/${caso.slug}`,
+      url: `https://www.cesarreyesjaramillo.com/casos-de-exito/${caso.slug}`,
       siteName: 'César Reyes Jaramillo',
       type: 'article',
     },
@@ -54,7 +54,7 @@ export default async function CasoDetallePage({ params }: Props) {
     '@type': 'WebPage',
     name: `Caso de Éxito: ${caso.cliente}`,
     description: caso.orillaA,
-    url: `https://cesarreyesjaramillo.com/casos-de-exito/${caso.slug}`,
+    url: `https://www.cesarreyesjaramillo.com/casos-de-exito/${caso.slug}`,
     about: {
       '@type': 'Organization',
       name: caso.cliente,
