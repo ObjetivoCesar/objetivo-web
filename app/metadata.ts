@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next"
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://cesarreyesjaramillo.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.cesarreyesjaramillo.com';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/images/bn.webp`;
 
 // Preload configuration for critical resources
@@ -89,6 +89,7 @@ export const metadata: Metadata = {
     google: 'google-site-verification-code', // Reemplaza con tu código de verificación de Google Search Console
   },
   alternates: {
+    canonical: 'https://www.cesarreyesjaramillo.com',
     languages: {
       'es-EC': '/es-EC',
     },
