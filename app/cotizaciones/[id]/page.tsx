@@ -38,15 +38,34 @@ export async function generateMetadata(
     };
   }
 
+  const rawImageUrl = quote?.og_image_url || quote?.portada?.url_fondo || quote?.portada?.imagen_url || quote?.portada?.url_logo_cliente || "";
+  const ogTitle = `${quote?.portada?.titulo_principal || "Propuesta Comercial"} — ${quote?.portada?.preparado_para || "César Reyes"}`;
+  const ogDesc = quote?.portada?.subtitulo || "Propuesta comercial personalizada y confidencial.";
+  const canonicalUrl = `https://www.cesarreyesjaramillo.com/cotizaciones/${id}`;
+
   return {
     title: `Propuesta — ${quote?.portada?.preparado_para || "César Reyes"}`,
-    description: quote?.portada?.subtitulo || "",
+    description: ogDesc,
     openGraph: {
-      title: quote?.portada?.titulo_principal || "",
-      description: quote?.portada?.subtitulo || "",
-      images: [
-        quote?.og_image_url || quote?.portada?.imagen_url || quote?.portada?.url_logo_cliente || ""
-      ].filter(Boolean),
+      title: ogTitle,
+      description: ogDesc,
+      url: canonicalUrl,
+      siteName: "César Reyes Jaramillo",
+      type: "website",
+      images: rawImageUrl ? [
+        {
+          url: rawImageUrl,
+          width: 1200,
+          height: 630,
+          alt: ogTitle
+        }
+      ] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: ogTitle,
+      description: ogDesc,
+      images: rawImageUrl ? [rawImageUrl] : [],
     }
   };
 }
