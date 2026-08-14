@@ -2,7 +2,10 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, CheckCircle2, ChevronRight, Target, CalendarDays, Award, ArrowRight, Zap, Clock, Shield } from 'lucide-react';
+import { 
+  ChevronDown, CheckCircle2, ChevronRight, Target, CalendarDays, Award, ArrowRight, Zap, Clock, Shield,
+  Camera, Utensils, Film, ShoppingBag, MessageCircle, Star, MapPin, Sparkles, ShieldCheck, RefreshCw, Gem, Crown, Rocket, Infinity as InfinityIcon, Layers, FileText
+} from 'lucide-react';
 
 interface CotizacionData {
   id: string;
@@ -30,7 +33,15 @@ interface CotizacionData {
     precio: string;
     precio_subtitulo: string;
     descripcion: string;
-    entregables: string[];
+    entregables: (string | {
+      titulo?: string;
+      nombre?: string;
+      descripcion?: string;
+      icono?: string;
+      imagen?: string;
+      subtitulo?: string;
+      enlace_texto?: string;
+    })[];
     nota_especial?: string;
     detalles_pie: string[];
   }[];
@@ -384,13 +395,73 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
 
                           <div className="mb-6">
                             <span className="font-outfit text-[10px] tracking-widest uppercase text-slate-400 font-bold mb-4 block">Entregables Inclusos</span>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                              {etapa.entregables.map((item, i) => (
-                                <div key={i} className="flex items-start gap-3 bg-white/5 p-4 rounded-2xl border border-white/5 shadow-sm">
-                                  <CheckCircle2 className="w-5 h-5 text-gold shrink-0 mt-0.5" />
-                                  <span className="font-montserrat text-sm text-slate-200 leading-snug">{item}</span>
-                                </div>
-                              ))}
+                            <div className={`grid gap-4 ${
+                              etapa.entregables.length === 4 
+                                ? 'grid-cols-1 md:grid-cols-2' 
+                                : etapa.entregables.length <= 2 
+                                ? 'grid-cols-1 md:grid-cols-2' 
+                                : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+                            }`}>
+                              {etapa.entregables.map((item: any, i) => {
+                                const isRichCard = typeof item === 'object' && item !== null;
+                                if (isRichCard) {
+                                  const getDeliverableIcon = (icono?: string) => {
+                                    if (!icono) return Sparkles;
+                                    const lower = icono.toLowerCase().trim();
+                                    if (lower.includes('camera') || lower.includes('foto') || lower.includes('portada') || icono.includes('📸')) return Camera;
+                                    if (lower.includes('utensil') || lower.includes('menu') || lower.includes('carta') || icono.includes('📝') || icono.includes('🍽️')) return Utensils;
+                                    if (lower.includes('film') || lower.includes('video') || lower.includes('catalogo') || icono.includes('🎬')) return Film;
+                                    if (lower.includes('cart') || lower.includes('pedido') || lower.includes('shop') || icono.includes('🛒')) return ShoppingBag;
+                                    if (lower.includes('whatsapp') || lower.includes('chat') || lower.includes('mensaje') || icono.includes('💬')) return MessageCircle;
+                                    if (lower.includes('star') || lower.includes('reseña') || lower.includes('rating') || icono.includes('⭐')) return Star;
+                                    if (lower.includes('map') || lower.includes('pin') || lower.includes('ubicacion') || icono.includes('📍')) return MapPin;
+                                    if (lower.includes('rocket') || lower.includes('inicio') || icono.includes('🚀')) return Rocket;
+                                    if (lower.includes('shield') || lower.includes('soporte') || lower.includes('seguridad') || icono.includes('🛡️')) return ShieldCheck;
+                                    if (lower.includes('refresh') || lower.includes('actualiza') || lower.includes('update') || icono.includes('⚡')) return RefreshCw;
+                                    if (lower.includes('gem') || lower.includes('diamond') || lower.includes('lifetime') || lower.includes('pago') || icono.includes('💎')) return Gem;
+                                    if (lower.includes('infinity') || lower.includes('ilimitado') || icono.includes('♾️')) return InfinityIcon;
+                                    if (lower.includes('crown') || lower.includes('pro') || icono.includes('👑')) return Crown;
+                                    if (lower.includes('file') || lower.includes('documento')) return FileText;
+                                    if (lower.includes('layer')) return Layers;
+                                    return Sparkles;
+                                  };
+
+                                  const IconComponent = getDeliverableIcon(item.icono);
+
+                                  return (
+                                    <div 
+                                      key={i} 
+                                      className="group relative rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] backdrop-blur-xl border border-white/10 hover:border-gold/50 p-5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/5"
+                                    >
+                                      <div>
+                                        <div className="w-11 h-11 rounded-xl bg-gold/10 border border-gold/25 flex items-center justify-center text-gold group-hover:scale-110 group-hover:bg-gold/20 group-hover:border-gold/50 group-hover:text-amber-300 transition-all duration-300 mb-3 shadow-inner">
+                                          <IconComponent className="w-5 h-5 text-gold group-hover:text-amber-300 transition-colors" />
+                                        </div>
+                                        <h4 className="font-outfit text-sm md:text-base font-bold text-white tracking-wide uppercase group-hover:text-gold transition-colors duration-300 leading-snug">
+                                          {item.titulo || item.nombre}
+                                        </h4>
+                                        {item.descripcion && (
+                                          <p className="font-montserrat text-xs md:text-sm text-slate-300 font-light mt-1.5 leading-relaxed">
+                                            {item.descripcion}
+                                          </p>
+                                        )}
+                                      </div>
+                                      {item.subtitulo && (
+                                        <div className="mt-3 pt-2.5 border-t border-white/10 flex items-center justify-between font-outfit text-xs font-bold text-white tracking-wider uppercase group-hover:text-amber-200 transition-colors">
+                                          <span>{item.subtitulo}</span>
+                                          <span className="group-hover:translate-x-1.5 transition-transform duration-300 font-bold text-gold">→</span>
+                                        </div>
+                                      )}
+                                    </div>
+                                  );
+                                }
+                                return (
+                                  <div key={i} className="flex items-start gap-3 bg-white/5 p-4 rounded-2xl border border-white/5 shadow-sm hover:bg-white/10 transition-colors">
+                                    <CheckCircle2 className="w-5 h-5 text-gold shrink-0 mt-0.5" />
+                                    <span className="font-montserrat text-sm text-slate-200 leading-snug">{item}</span>
+                                  </div>
+                                );
+                              })}
                             </div>
                           </div>
 

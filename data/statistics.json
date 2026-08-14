@@ -1,9 +1,39 @@
 {
-  "totalVisitas": 2107,
-  "visitasHoy": 2107,
+  "totalVisitas": 2113,
+  "visitasHoy": 2113,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
+    {
+      "fecha": "2026-08-14",
+      "pagina": "/cotizaciones/propuesta-lilys-peruvian-chicken-menu-2026",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-08-14",
+      "pagina": "/cotizaciones/propuesta-lilys-peruvian-chicken-menu-2026",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-08-14",
+      "pagina": "/cotizaciones/propuesta-lilys-peruvian-chicken-menu-2026",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-08-14",
+      "pagina": "/cotizaciones/propuesta-lilys-peruvian-chicken-menu-2026",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-08-14",
+      "pagina": "/propuesta-lilys-peruvian-chicken-menu-2026",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-08-14",
+      "pagina": "/propuesta-lilys-peruvian-chicken-menu-2026",
+      "visitas": 1
+    },
     {
       "fecha": "2026-08-12",
       "pagina": "/",
@@ -22,36 +52,6 @@
     {
       "fecha": "2026-08-12",
       "pagina": "/casos-de-exito",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-12",
-      "pagina": "/casos-de-exito",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-11",
-      "pagina": "/casos-de-exito",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-11",
-      "pagina": "/casos-de-exito",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-11",
-      "pagina": "/casos-de-exito",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-11",
-      "pagina": "/casos-de-exito",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-11",
-      "pagina": "/",
       "visitas": 1
     }
   ],
@@ -115,6 +115,7 @@
     "2026-07-09": 9,
     "2026-08-10": 15,
     "2026-08-11": 12,
-    "2026-08-12": 5
+    "2026-08-12": 5,
+    "2026-08-14": 6
   }
 }
