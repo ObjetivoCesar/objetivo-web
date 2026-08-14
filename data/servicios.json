@@ -118,6 +118,13 @@
           "descripcionCorta": "Mejora el rendimiento y posicionamiento de tu sitio",
           "slug": "auditoria-seo-rediseno",
           "imagen": "/images/posicionamiento_slide_seo_objetivo.webp"
+        },
+        {
+          "id": "seo-loja",
+          "titulo": "SEO en Loja (Local)",
+          "descripcionCorta": "Posicionamiento web y Google Maps para Loja y la región",
+          "slug": "loja",
+          "imagen": "/images/posicionamiento_slide_seo_objetivo.webp"
         }
       ]
     },

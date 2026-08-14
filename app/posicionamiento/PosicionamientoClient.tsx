@@ -407,6 +407,29 @@ export default function PosicionamientoPage() {
         </div>
       </section>
 
+      <section className="py-12 bg-gray-900 border-t border-b border-gray-800">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-3xl mx-auto bg-gray-800/60 border border-blue-500/30 rounded-2xl p-6 sm:p-8">
+            <span className="inline-block px-3 py-1 bg-blue-500/10 text-blue-400 font-semibold text-xs rounded-full uppercase tracking-wider mb-3">
+              Enfoque Local
+            </span>
+            <h3 className="text-2xl font-bold text-white mb-2">
+              ¿Tu negocio está ubicado en Loja o la región sur de Ecuador?
+            </h3>
+            <p className="text-gray-300 text-sm sm:text-base mb-6">
+              Descubre nuestra estrategia especializada de SEO local y optimización de Google Maps con casos de éxito 100% reales en Loja, Catamayo, Vilcabamba y cantones cercanos.
+            </p>
+            <Link
+              href="/posicionamiento/loja"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all"
+            >
+              <span>Ver Posicionamiento Web y SEO en Loja</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section id="servicios" className="py-16 md:py-24 bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">Soluciones de Posicionamiento: Desde Auditoría hasta Alianza Completa</h2>
