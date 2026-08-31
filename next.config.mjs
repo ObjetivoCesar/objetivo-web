@@ -26,6 +26,55 @@ const nextConfig = {
     ],
   },
   trailingSlash: true,
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Vary',
+            value: 'Accept, Accept-Encoding',
+          },
+        ],
+      },
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/about/',
+        destination: '/sobre-mi/',
+      },
+      {
+        source: '/about',
+        destination: '/sobre-mi/',
+      },
+      {
+        source: '/contact/',
+        destination: '/contacto/',
+      },
+      {
+        source: '/contact',
+        destination: '/contacto/',
+      },
+      {
+        source: '/privacy/',
+        destination: '/politicas/',
+      },
+      {
+        source: '/privacy',
+        destination: '/politicas/',
+      },
+      {
+        source: '/terms/',
+        destination: '/terminos/',
+      },
+      {
+        source: '/terms',
+        destination: '/terminos/',
+      },
+    ];
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },

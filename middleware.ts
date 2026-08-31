@@ -37,16 +37,29 @@ export async function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const { pathname } = url;
 
+  // Handle Markdown Content Negotiation (acceptmarkdown.com)
+  const acceptHeader = request.headers.get('accept') || '';
+  if (acceptHeader.includes('text/markdown')) {
+    const markdownResponse = NextResponse.rewrite(new URL('/llms.txt', request.url));
+    markdownResponse.headers.set('Content-Type', 'text/markdown; charset=utf-8');
+    markdownResponse.headers.set('Vary', 'Accept, Accept-Encoding');
+    return markdownResponse;
+  }
+
   // Skip middleware for public paths
   if (publicPaths.some(path => pathname.startsWith(path))) {
     logDebug(`Skipping auth check for public path: ${pathname}`);
-    return NextResponse.next();
+    const res = NextResponse.next();
+    res.headers.set('Vary', 'Accept, Accept-Encoding');
+    return res;
   }
 
   // Skip for static files and API routes
   if (pathname.includes('.') || pathname.startsWith('/api/')) {
     logDebug(`Skipping auth check for static/API path: ${pathname}`);
-    return NextResponse.next();
+    const res = NextResponse.next();
+    res.headers.set('Vary', 'Accept, Accept-Encoding');
+    return res;
   }
 
   // Debug info
@@ -93,7 +106,9 @@ export async function middleware(request: NextRequest) {
     return response;
   }
 
-  return NextResponse.next();
+  const response = NextResponse.next();
+  response.headers.set('Vary', 'Accept, Accept-Encoding');
+  return response;
 }
 
 export const config = {

@@ -32,10 +32,22 @@ export default async function OrganizationSchema() {
         "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Loja, Ecuador",
             "addressLocality": "Loja",
             "addressRegion": "Loja",
+            "postalCode": "110101",
             "addressCountry": "EC"
         },
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "telephone": "+593963410409",
+                "contactType": "customer service",
+                "email": "contacto@cesarreyesjaramillo.com",
+                "areaServed": "EC",
+                "availableLanguage": ["Spanish", "English"]
+            }
+        ],
         "geo": {
             "@type": "GeoCoordinates",
             "latitude": -3.99313,
