@@ -570,13 +570,6 @@ export default function DepartamentoDigitalPosicionamientoClient() {
         </div>
       </section>
 
-      {/* Footer - vacío */}
-      <footer className="py-8 px-4 border-t border-gray-800">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Footer vacío */}
-        </div>
-      </footer>
-
       {/* CTA FLOTANTE MOBILE - Solo después del hero */}
       {showFloatingCta && (
         <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-gray-950/95 border-t border-gray-800 z-50">

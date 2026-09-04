@@ -44,6 +44,12 @@ export interface CasoExito {
     respuestaObtenida: string;
     conclusion: string;
   };
+  agendaTuristicaLoja?: {
+    titulo: string;
+    descripcion: string;
+    enlaceAgenda: string;
+    puntosClave: string[];
+  };
 }
 
 export const INDUSTRIAS: Industria[] = [
@@ -83,7 +89,7 @@ export const CASOS_EXITO: CasoExito[] = [
     elProblema: 'Toda esa autoridad tradicional no existía cuando un turista o lojano buscaba específicamente donde comer el plato estrella desde su teléfono.',
     elPuente: [
       'Estructuramos la presencia digital en torno a las intenciones de búsqueda de sus platos insignia.',
-      'Optimizamos el perfil de Google Business y marcamos datos Schema.org para gastronomía marítima.',
+      'Optimizamos el perfil de Google Business y la categorización especializada para gastronomía marítima.',
       'Generamos contenido original basado en la experiencia real del restaurante.'
     ],
     orillaB: 'Hoy 200 Millas ocupa el puesto #1 orgánico y en mapas cuando alguien busca "camarones reventados Loja" o consulta a asistentes de IA.',
@@ -96,7 +102,17 @@ export const CASOS_EXITO: CasoExito[] = [
     experimentoChatGPT: {
       preguntaPrompt: '¿Dónde comer los mejores camarones reventados en Loja?',
       respuestaObtenida: 'ChatGPT recomienda como primera opción a Restaurant 200 Millas destacando su tradición.',
-      conclusion: 'Los motores de IA no inventan recomendaciones; respaldan marcas con autoridad técnica estructurada.'
+      conclusion: 'Los motores de IA no inventan recomendaciones; respaldan marcas con autoridad técnica comprobable.'
+    },
+    agendaTuristicaLoja: {
+      titulo: 'Integración en la Agenda Turística y Cultural de Loja',
+      descripcion: 'Restaurant 200 Millas forma parte del circuito gastronómico y turístico oficial promovido a través de Agenda Cultural Loja. Esta interconexión estratégica posiciona la marca frente a turistas nacionales y extranjeros que planifican su itinerario en la capital cultural del Ecuador.',
+      enlaceAgenda: 'https://agendaculturalloja.com/',
+      puntosClave: [
+        'Parada culinaria sugerida en la guía de experiencias gastronómicas de Loja.',
+        'Enlace semántico y de autoridad local con el portal de eventos y turismo de la ciudad.',
+        'Mayor visibilidad orgánica para viajeros que buscan qué hacer y dónde comer en Loja.'
+      ]
     }
   },
   {
@@ -114,19 +130,19 @@ export const CASOS_EXITO: CasoExito[] = [
     resultadoDestacado: true,
     logoCliente: '/images/logos/lossartenes.webp',
     
-    orillaA: 'Un restaurante con excelente flujo céntrico que preparaba diariamente menús de alta calidad para ejecutivos y trabajadores del sector.',
-    elProblema: 'Cada mañana cientos de personas en oficinas cercanas buscaban "dónde almorzar cerca" en Google Maps y el restaurante no aparecía en el radar digital.',
+    orillaA: 'Un restaurante de almuerzos diarios con clientela fiel de oficinas del centro de Loja pero con mesas vacías en horas no pico.',
+    elProblema: 'Personas que trabajan a 3 cuadras no sabían qué menú ofrecían cada día ni el horario exacto.',
     elPuente: [
-      'Geolocalización quirúrgica en Google Maps asociada al sector comercial de la 24 de Mayo.',
-      'Desarrollo de un sitio web ultrarrápido con el menú ejecutivo optimizado para móviles.',
-      'Optimización de señales de interacción diaria y horarios de atención.'
+      'Optimización de Google Business para búsquedas directas de almuerzos.',
+      'Publicación estratégica del menú diario con fotos reales y precios claros.',
+      'Geolocalización optimizada para la zona de la 24 de Mayo y alrededores.'
     ],
-    orillaB: 'Los Sartenes es el resultado destacado prioritario en Google Maps cuando los ejecutivos buscan almuerzo en la zona céntrica.',
-    loQueAprendimos: 'No compites por la palabra genérica "restaurante"; ganas dominando la necesidad del cliente en su hora y ubicación exacta.',
+    orillaB: 'Aparece como opción recomendada en Google Maps para cualquier persona que busque dónde almorzar en el centro de Loja.',
+    loQueAprendimos: 'La comida diaria se decide por conveniencia y visibilidad inmediata; quien aparece primero con fotos y menú se queda con el cliente.',
     
     evidenciaGoogle: {
       tipo: 'Maps',
-      detalles: 'Primer resultado recomendado en el paquete de mapas para búsquedas de almuerzo céntrico en Loja.'
+      detalles: 'Ficha destacada en el mapa local para "almuerzos 24 de mayo Loja".'
     }
   },
 
@@ -135,13 +151,13 @@ export const CASOS_EXITO: CasoExito[] = [
   // ═══════════════════════════════════════════
   {
     id: 'impermeabiliza',
-    slug: 'impermeabiliza-productos-impermeabilizacion-loja',
+    slug: 'impermeabiliza-humedad-goteras-loja',
     cliente: 'Impermeabiliza',
-    sitioWeb: 'https://impermeabilisa.com/',
-    categoria: 'Soluciones de Construcción',
+    sitioWeb: 'https://impermeabiliza.com/',
+    categoria: 'Materiales & Soluciones para la Construcción',
     industria: 'Construcción',
     ciudad: 'Loja, Ecuador',
-    intencionPrimaria: 'Posicionar productos y soluciones técnicas específicas de construcción',
+    intencionPrimaria: 'Captar búsquedas de soluciones definitivas para humedad, goteras y filtraciones',
     busquedaClave: 'productos de impermeabilización en Loja',
     territorioSemantico: ['impermeabilizantes Loja', 'humedad en paredes', 'aditivos construcción', 'soluciones filtración de agua'],
     posicion: '#1 en Google Search',
@@ -152,7 +168,7 @@ export const CASOS_EXITO: CasoExito[] = [
     elProblema: 'Los clientes con urgencias de filtraciones buscaban soluciones en internet y solo encontraban artículos genéricos sin opción de compra local.',
     elPuente: [
       'Arquitectura web por tipo de problema físico de humedad y solución técnica.',
-      'SEO de alta velocidad con marcado Schema.org de producto e ingeniería.',
+      'SEO de alta velocidad optimizado para catálogo de productos e ingeniería.',
       'Contenido basado en la experiencia práctica de aplicación en el clima local.'
     ],
     orillaB: 'Impermeabiliza es el resultado #1 en Google cuando propietarios o arquitectos buscan materiales de impermeabilización en Loja.',

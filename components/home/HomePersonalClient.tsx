@@ -66,7 +66,7 @@ export default function HomePersonalClient() {
                 En el mercado ecuatoriano, cuando una persona necesita contratar una notaría, buscar una clínica dental o encontrar un restaurante especializado, su primer impulso es buscar en Google o consultar asistentes de inteligencia artificial. Si tu negocio no aparece en esas búsquedas específicas (ejemplo: <em>"notaria en loja"</em>, <em>"restaurante de mariscos"</em> o <em>"mecánica automotriz"</em>), esos clientes terminan en la competencia.
               </p>
               <p>
-                Nuestra metodología de <strong className="text-white">SEO técnico y de intención primaria</strong> optimiza la arquitectura de tu sitio web, su velocidad y los datos estructurados (Schema Markup) para que Google y la IA reconozcan tu negocio como la respuesta exacta a lo que busca el usuario.
+                Nuestra metodología de <strong className="text-white">SEO técnico y de intención primaria</strong> optimiza la arquitectura de tu sitio web, su velocidad y la relevancia técnica de tu contenido para que Google y la IA reconozcan tu negocio como la respuesta exacta a lo que busca el usuario.
               </p>
             </div>
             {/* Mini métricas comprobables */}
@@ -102,26 +102,26 @@ export default function HomePersonalClient() {
                   El posicionamiento web ya no es solo Google: <span className="text-cyan-400">la IA también decide</span> a quién recomendar
                 </h2>
                 <p className="text-lg md:text-xl text-gray-400 font-medium leading-relaxed mb-6">
-                  Tus clientes ya no solo buscan en Google. Usan ChatGPT, Gemini y asistentes de IA para decidir dónde comprar o a quién contratar. <strong className="text-white">Si tu web no está optimizada para ambos canales, pierdes visibilidad.</strong>
+                  En 2026 y 2027 las respuestas a nuestras búsquedas serán generadas por IA LO ENTENDAMOS O NO, una presencia a tiempo les permitirá:
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="mt-1 bg-cyan-500/20 p-1 rounded-full text-cyan-400">
                       <CheckCircle size={18} />
                     </div>
-                    <p className="text-gray-300 font-medium">Un sitio bien posicionado en Google también es citado por ChatGPT y asistentes de IA.</p>
+                    <p className="text-gray-300 font-medium">Ser recomendado por CHATGPT, GEMINI, ETC.</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="mt-1 bg-cyan-500/20 p-1 rounded-full text-cyan-400">
                       <CheckCircle size={18} />
                     </div>
-                    <p className="text-gray-300 font-medium">Optimizamos contenido, Schema Markup y estructura técnica para que la IA entienda y recomiende tu negocio.</p>
+                    <p className="text-gray-300 font-medium">Mostrar tus productos y servicios a quien los este buscando.</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="mt-1 bg-cyan-500/20 p-1 rounded-full text-cyan-400">
                       <CheckCircle size={18} />
                     </div>
-                    <p className="text-gray-300 font-medium">Posicionamiento web integral: Google Search + Google Maps + ChatGPT + Gemini.</p>
+                    <p className="text-gray-300 font-medium">Posicionar tu marca como referente en el sector.</p>
                   </div>
                 </div>
               </div>
@@ -179,8 +179,8 @@ export default function HomePersonalClient() {
         <section id="auditoria-form" className="mb-24 scroll-mt-24">
           <div className="max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-[3rem] p-8 md:p-16 backdrop-blur-xl">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">Todo cambiará hasta el 2028</h2>
-              <p className="text-gray-400 text-lg">Una pregunta.. ¿Estas decidido a modernizar? contesta estas preguntas 👇</p>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">Todo cambiara hasta el 2027</h2>
+              <p className="text-gray-400 text-lg">Si tu prioridad es cuidar de tu fuente de ingresos, contesta lo siguiente</p>
             </div>
 
             <DynamicQualifyingForm />
@@ -210,19 +210,23 @@ export default function HomePersonalClient() {
             <div>
               <h2 className="text-3xl md:text-5xl font-bold mb-8">Menos "Likes". Más Ventas.</h2>
               <p className="text-xl text-gray-400 mb-6 leading-relaxed">
-                Durante años he visto a empresas ecuatorianas ahogarse pagando campañas inútiles en redes sociales porque nadie les enseñó a <span className="text-white font-bold">retener a sus propios clientes</span>.
+                Durante años he trabajado con empresas en Ecuador invertir en campañas en redes sociales buscando nuevos clientes porque nadie les enseñó a <span className="text-white font-bold">retener a sus propios clientes</span>.
               </p>
               <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                Mi misión es democratizar el software de alta gama para que cualquier profesional independiente o pequeña empresa pueda usar la tecnología (y la Inteligencia Artificial) a su favor, compitiendo de tú a tú con los más grandes.
+                Mi misión es llegar a los dueños de empresas, profesionales independientes, artesanos, escucharlos y juntos diseñar herramientas tecnológicas que resuelvan sus problemas, de una forma sencilla y fácil generando una experiencia para el cliente que les ayude a fidelizarlos.
               </p>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-3 gap-4">
                 <div>
-                  <div className="text-3xl font-bold text-white mb-1">6+ Años</div>
-                  <div className="text-sm text-gray-400 uppercase tracking-wider">Experiencia Real</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-white mb-1">+31 Años</div>
+                  <div className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">EMPRENDIENDO</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-white mb-1">+50</div>
-                  <div className="text-sm text-gray-400 uppercase tracking-wider">Sistemas Entregados</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-white mb-1">+25 Años</div>
+                  <div className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">PROFESIONAL</div>
+                </div>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-bold text-white mb-1">+50</div>
+                  <div className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">SISTEMAS INSTALADOS</div>
                 </div>
               </div>
             </div>
@@ -236,9 +240,9 @@ export default function HomePersonalClient() {
             {[
               { q: "¿Cuánto tarda el posicionamiento web en dar resultados?", a: "El SEO técnico y local empieza a mostrar mejoras en 4-8 semanas. Los primeros rankings consistentes en Google suelen consolidarse entre 2 y 4 meses, dependiendo de la competencia del sector." },
               { q: "¿Por qué SEO y no publicidad pagada?", a: "La publicidad pagada desaparece cuando dejas de pagar. El posicionamiento web orgánico genera tráfico constante y gratuito que se mantiene en el tiempo. Es una inversión, no un gasto recurrente." },
-              { q: "¿Optimizas para ChatGPT y otros asistentes de IA?", a: "Sí. Un sitio bien posicionado en Google con Schema Markup y contenido estructurado también es citado por ChatGPT, Gemini y otros asistentes. Optimizamos para ambos canales." },
+              { q: "¿Optimizas para ChatGPT y otros asistentes de IA?", a: "Sí. Un sitio web bien optimizado con código limpio y contenido de alta autoridad es citado por ChatGPT, Gemini y otros asistentes. Optimizamos para ambos canales." },
               { q: "¿Funciona el SEO para negocios pequeños en Ecuador?", a: "Absolutamente. De hecho, es donde más impacto tiene. Un negocio local con buen posicionamiento puede superar a cadenas grandes en búsquedas como 'cerca de mí'. Tenemos 27+ casos reales." },
-              { q: "¿Qué incluye tu servicio de posicionamiento web?", a: "SEO técnico (velocidad, estructura, Core Web Vitals), SEO local (Google Maps, fichas GMB), contenido optimizado, Schema Markup, y monitoreo continuo de rankings." },
+              { q: "¿Qué incluye tu servicio de posicionamiento web?", a: "SEO técnico (velocidad, estructura limpia, Core Web Vitals), SEO local (Google Maps, fichas GMB), contenido optimizado y monitoreo continuo de rankings." },
               { q: "¿Aceptas pagos diferidos?", a: "Sí, puedes financiar tu proyecto hasta 12 meses con cualquier tarjeta de crédito. Sin comisiones extra." }
             ].map((faq, i) => (
               <div key={i} className="p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-white/20 transition-all">

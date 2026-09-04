@@ -25,14 +25,14 @@ const scenes: SceneData[] = [
   {
     number: "02 / 06",
     image: "/images/hero-scroll/scene2.png",
-    eyebrow: "La Verdad del Margen",
+    eyebrow: "La verdad sobre tu utilidad",
     heading: "El problema no es vender.",
     subheading: "Es no saber cuánto de lo que vendes realmente queda.",
   },
   {
     number: "03 / 06",
     image: "/images/hero-scroll/scene3.png",
-    eyebrow: "Retención vs Fricción",
+    eyebrow: "Clientes fijos y fidelizacion",
     heading: "¿Sabes cuántos clientes tienes?",
     subheading: "¿Y cuántos de ellos vuelven?\nPorque no es lo mismo.",
   },
@@ -41,8 +41,8 @@ const scenes: SceneData[] = [
     image: "/images/hero-scroll/scene4.png",
     eyebrow: "El Costo Oculto",
     heading: "Pagas para que alguien responda tus mensajes.",
-    subheading: "Pero responder no es vender.\nY si solo convierte el 5%...",
-    badge: "95% de pérdida silenciosa en atención manual",
+    subheading: "Pero responder no es vender si solo conviertes el 5%",
+    badge: "95% Tiempo | +6000 anuales | Por informar",
   },
   {
     number: "05 / 06",

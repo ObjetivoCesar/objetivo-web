@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles, Brain, Search, LayoutGrid, CheckCircle, Smartphone, Rocket } from 'lucide-react'
 import ModernSidebarMenu from '@/components/navigation/ModernSidebarMenu'
-import Footer from '@/components/footer'
 import { DualLogoCarousel } from '@/components/DualLogoCarousel'
 import CasesTabs from '@/components/home/CasesTabs'
 

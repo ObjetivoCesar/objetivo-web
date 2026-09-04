@@ -88,7 +88,7 @@ export default function AuditoriaSEORediseno() {
         listTitle: 'Mejoras Técnicas Incluidas',
         items: [
           'Optimización de velocidad y rendimiento',
-          'Implementación de schema markup para rich snippets',
+          'Optimización de código y etiquetas avanzadas para buscadores',
           'Corrección de errores de rastreo e indexación',
           'Optimización de imágenes y recursos multimedia',
           'Implementación de SSL y protocolo HTTPS',

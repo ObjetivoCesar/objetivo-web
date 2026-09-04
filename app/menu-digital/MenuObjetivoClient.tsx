@@ -200,7 +200,7 @@ const MenuObjetivoClient = () => {
                             title="59% de tus nuevos clientes te buscan primero en Google."
                             shortDesc="Si tu menú es una"
                             fullDesc="Si tu menú es una imagen o un PDF, Google no lo puede leer. Y ese 59% simplemente no te encuentra."
-                            justification="En 2024, un estudio en Guayaquil mostró que 6 de cada 10 personas revisan Internet antes de elegir dónde comer. Si tu negocio no tiene presencia optimizada —menú indexado, datos estructurados y precios actualizados— quedas fuera del proceso de decisión sin darte cuenta."
+                            justification="En 2024, un estudio en Guayaquil mostró que 6 de cada 10 personas revisan Internet antes de elegir dónde comer. Si tu negocio no tiene presencia optimizada —menú indexado, contenido claro y precios actualizados— quedas fuera del proceso de decisión sin darte cuenta."
                             icon={Search}
                         />
                         <CompactCard

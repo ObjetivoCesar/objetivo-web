@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CASOS_EXITO, INDUSTRIAS, Industria } from '@/data/casos-exito';
 import ModernSidebarMenu from '@/components/navigation/ModernSidebarMenu';
-import Footer from '@/components/footer';
 import { Search, Trophy, Bot, CheckCircle2, ArrowRight, Sparkles, Globe, ExternalLink, Filter } from 'lucide-react';
 
 export default function CasosExitoClientPage() {
@@ -198,8 +197,6 @@ export default function CasosExitoClientPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }

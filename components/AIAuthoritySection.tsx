@@ -288,7 +288,7 @@ export default function AIAuthoritySection({ sector = 'hoteles' }: AIAuthoritySe
 
                                         <div className="grid md:grid-cols-2 gap-6 mb-10">
                                             {[
-                                                { title: 'Schema Markup Avanzado', desc: 'Tu hotel hablado en el idioma nativo de la IA.' },
+                                                { title: 'Arquitectura Web Inteligente', desc: 'Tu hotel preparado para el lenguaje de los nuevos buscadores de IA.' },
                                                 { title: 'Conectividad API en Tiempo Real', desc: 'Disponibilidad instantánea para agentes inteligentes.' },
                                                 { title: 'Optimización de Entidades', desc: 'Maximizamos la autoridad semántica de tu marca.' },
                                                 { title: 'Monitor de Recomendación IA', desc: 'Sabrás exactamente cómo te ven los algoritmos.' }

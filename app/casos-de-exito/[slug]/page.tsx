@@ -3,8 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CASOS_EXITO } from '@/data/casos-exito';
 import ModernSidebarMenu from '@/components/navigation/ModernSidebarMenu';
-import Footer from '@/components/footer';
-import { ArrowLeft, CheckCircle, Search, Bot, MapPin, Target, Sparkles, Trophy, ArrowUpRight, Globe, ExternalLink, ArrowRight, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Search, Bot, MapPin, Target, Sparkles, Trophy, ArrowUpRight, Globe, ExternalLink, ArrowRight, ShieldCheck, Compass, Calendar } from 'lucide-react';
 
 interface Props {
   params: Promise<{
@@ -234,6 +233,47 @@ export default async function CasoDetallePage({ params }: Props) {
           </section>
         )}
 
+        {/* Sección Agenda Turística de Loja (Enlace de Autoridad Local & Turismo) */}
+        {caso.agendaTuristicaLoja && (
+          <section className="bg-gradient-to-br from-blue-950/40 via-[#181818] to-[#181818] border border-blue-500/30 rounded-3xl p-6 sm:p-8 space-y-5">
+            <div className="flex items-center justify-between flex-wrap gap-3">
+              <div className="flex items-center gap-2 text-cyan-300 text-base font-bold">
+                <Compass className="w-5 h-5 text-cyan-400" /> {caso.agendaTuristicaLoja.titulo}
+              </div>
+              <span className="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 font-semibold flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5" /> Agenda Cultural & Turística
+              </span>
+            </div>
+
+            <p className="text-sm text-gray-300 leading-relaxed font-medium">
+              {caso.agendaTuristicaLoja.descripcion}
+            </p>
+
+            <div className="space-y-2 pt-2">
+              {caso.agendaTuristicaLoja.puntosClave.map((punto, idx) => (
+                <div key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-gray-300">
+                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 flex-shrink-0" />
+                  <span>{punto}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-4 border-t border-blue-900/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <span className="text-xs text-gray-400 font-medium text-center sm:text-left">
+                Ecosistema digital impulsado por <strong className="text-white">César Reyes Jaramillo</strong> vinculando cultura, turismo y comercio.
+              </span>
+              <a
+                href={caso.agendaTuristicaLoja.enlaceAgenda}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-xs font-bold transition-colors"
+              >
+                Conocer Agenda Cultural Loja <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </section>
+        )}
+
         {/* Atribución de Autoría de César Reyes Jaramillo */}
         <div className="p-4 rounded-2xl bg-[#121212] border border-slate-800 text-center text-xs text-gray-400">
           Proyecto y arquitectura web desarrollados por{' '}
@@ -267,8 +307,6 @@ export default async function CasoDetallePage({ params }: Props) {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

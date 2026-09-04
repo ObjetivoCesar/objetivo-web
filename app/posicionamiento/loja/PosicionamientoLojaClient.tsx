@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CASOS_EXITO } from '@/data/casos-exito';
 import ModernSidebarMenu from '@/components/navigation/ModernSidebarMenu';
-import Footer from '@/components/footer';
 import { 
   MapPin, 
   Search, 
@@ -42,7 +41,7 @@ export default function PosicionamientoLojaClient() {
     },
     {
       q: '¿Por qué es indispensable optimizar Google Maps además del sitio web?',
-      a: 'Porque la mayoría de usuarios que buscan en su teléfono celular un servicio en Loja ven primero los resultados del mapa local. Al unir una web ultrarrápida con una ficha de Google Maps optimizada y datos estructurados, tu negocio lidera tanto en Google Search como en mapas y buscadores de inteligencia artificial.'
+      a: 'Porque la mayoría de usuarios que buscan en su teléfono celular un servicio en Loja ven primero los resultados del mapa local. Al unir una web ultrarrápida con una ficha de Google Maps optimizada y arquitectura de alta relevancia, tu negocio lidera tanto en Google Search como en mapas y buscadores de inteligencia artificial.'
     }
   ];
 
@@ -212,9 +211,9 @@ export default function PosicionamientoLojaClient() {
               <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
                 <Sparkles className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold text-white">Schema Markup & Respuestas IA</h3>
+              <h3 className="text-lg font-bold text-white">Relevancia para Respuestas IA</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Marcado semántico estructurado (Schema.org) para que Google y asistentes de IA (ChatGPT, Gemini) reconozcan la ubicación, especialidad y teléfono de tu negocio en Loja.
+                Optimización técnica y de contenido para que Google y asistentes de IA (ChatGPT, Gemini) reconozcan de inmediato la ubicación, especialidad y teléfono de tu negocio en Loja.
               </p>
             </div>
           </div>
@@ -271,8 +270,6 @@ export default function PosicionamientoLojaClient() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }
