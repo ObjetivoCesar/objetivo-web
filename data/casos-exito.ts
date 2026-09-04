@@ -301,29 +301,35 @@ export const CASOS_EXITO: CasoExito[] = [
     slug: 'agenda-cultural-loja',
     cliente: 'Agenda Cultural Loja',
     sitioWeb: 'https://agendaculturalloja.com/',
-    categoria: 'Plataforma de Eventos',
+    categoria: 'Infraestructura & Plataforma Ciudadana',
     industria: 'Cultura & Comunidad',
     ciudad: 'Loja, Ecuador',
-    intencionPrimaria: 'Centralizar la oferta de eventos culturales de la ciudad como punto de referencia digital',
-    busquedaClave: 'eventos culturales Loja hoy',
-    territorioSemantico: ['agenda cultural Loja', 'qué hacer en Loja', 'conciertos Loja', 'teatro y arte Loja'],
-    posicion: 'Referente Cultural Digital',
+    intencionPrimaria: 'Centralizar la oferta de eventos culturales y turísticos de la ciudad como nodo de autoridad digital',
+    busquedaClave: 'agenda cultural Loja',
+    territorioSemantico: ['agenda cultural Loja', 'qué hacer en Loja', 'conciertos Loja', 'eventos culturales Loja', 'cartelera artística Loja'],
+    posicion: '#2 en Google Orgánico en semanas',
     resultadoDestacado: true,
     logoCliente: '/images/logos/agendacultural.png',
 
-    orillaA: 'Una ciudad con inmensa riqueza artística y eventos constantes pero dispersos en redes sociales.',
-    elProblema: 'Tanto ciudadanos como turistas no tenían un lugar centralizado para saber qué actividades culturales había hoy.',
+    orillaA: 'Una ciudad catalogada como Capital Cultural del Ecuador pero con una oferta de eventos dispersa en afiches físicos y publicaciones efímeras de Facebook.',
+    elProblema: 'Ni los ciudadanos ni los turistas tenían una fuente única y confiable para saber qué actividades había hoy en Loja, generando baja afluencia a eventos de alto valor.',
     elPuente: [
-      'Plataforma web con calendario de eventos en vivo por categorías.',
-      'SEO para búsquedas de actividades culturales y artísticas.',
-      'Arquitectura de información para fácil consulta en teléfonos.'
+      'Desarrollo de plataforma web ultrarrápida con categorización de eventos en vivo.',
+      'Arquitectura de entidad semántica vinculada a la identidad cultural y turística de Loja.',
+      'Articulación de alianzas institucionales con Municipio de Loja, Prefectura y Casa de la Cultura para centralizar la difusión.',
+      'Sistemas de automatización para que las instituciones y gestores culturales publiquen directamente sin fricción operativa.'
     ],
-    orillaB: 'Agenda Cultural Loja es la plataforma de consulta obligatoria para eventos en la capital cultural de Ecuador.',
-    loQueAprendimos: 'Centralizar la información fragmentada de una comunidad crea un activo digital irremplazable.',
+    orillaB: 'En pocas semanas tras su lanzamiento, Agenda Cultural Loja alcanzó la posición #2 absoluta en Google para su término clave y se consolidó como el referente de consulta de la ciudad.',
+    loQueAprendimos: 'La autoridad digital de alto impacto no se compra con anuncios: se construye resolviendo una necesidad ciudadana real y creando infraestructura que conecta instituciones, turistas y comercio local.',
 
     evidenciaGoogle: {
       tipo: 'Search',
-      detalles: 'Posicionamiento como el portal referente de consulta cultural en Loja.'
+      detalles: 'Posición #2 orgánica en Google Search en tiempo récord y consulta obligatoria en buscadores.'
+    },
+    experimentoChatGPT: {
+      preguntaPrompt: '¿Dónde consultar los eventos y la agenda cultural de Loja?',
+      respuestaObtenida: 'ChatGPT y buscadores de IA citan a Agenda Cultural Loja como la plataforma especializada para consultar la cartelera y actividades en la ciudad.',
+      conclusion: 'Las IAs no inventan fuentes: premian plataformas reales con arquitectura limpia y relevancia de contenido comprobada.'
     }
   },
 
@@ -341,7 +347,7 @@ export const CASOS_EXITO: CasoExito[] = [
     intencionPrimaria: 'Captar búsquedas de emergencias mecánicas y mantenimiento automotriz en Loja',
     busquedaClave: 'mecánica automotriz Loja taller',
     territorioSemantico: ['taller mecánico Loja', 'reparación de autos', 'mantenimiento vehicular', 'tecnicentro Loja'],
-    posicion: 'SEO Local + Google Maps',
+    posicion: '#1 en Google Search y Maps (Dominio del Podio)',
     resultadoDestacado: true,
     logoCliente: '/images/logos/carone.png',
 
@@ -350,14 +356,19 @@ export const CASOS_EXITO: CasoExito[] = [
     elPuente: [
       'Sitio web con botones de auxilio y contacto directo en 1 clic.',
       'SEO local para averías, frenos, suspensión y diagnóstico por escáner.',
-      'Integración con mapas para llegada guiada por GPS.'
+      'Integración con mapas para llegada guiada por GPS y dominio de las primeras 2 posiciones del rubro en la ciudad.'
     ],
-    orillaB: 'Car One es el taller de referencia que aparece de inmediato ante emergencias mecánicas en Loja.',
+    orillaB: 'Car One es el taller de referencia que lidera los resultados de Google y Maps ante emergencias mecánicas en Loja, copando el podio frente a cualquier competidor.',
     loQueAprendimos: 'En servicios de urgencia, la velocidad de carga web y la claridad de ubicación lo son todo.',
 
     evidenciaGoogle: {
       tipo: 'Maps',
-      detalles: 'Posicionamiento en Maps para búsquedas urgentes de talleres mecánicos.'
+      detalles: 'Resultado #1 y #2 en Google Search y Maps para búsquedas de mecánicas y tecnicentros en Loja.'
+    },
+    experimentoChatGPT: {
+      preguntaPrompt: '¿Cuál es el mejor taller mecánico o tecnicentro en Loja?',
+      respuestaObtenida: 'ChatGPT recomienda a Car One Tecnicentro por su equipamiento de diagnóstico y trayectoria local comprobada.',
+      conclusion: 'La consistencia en Google Maps y SEO local alimenta directamente las recomendaciones de los asistentes inteligentes.'
     }
   },
 

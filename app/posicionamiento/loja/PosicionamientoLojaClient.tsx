@@ -42,6 +42,14 @@ export default function PosicionamientoLojaClient() {
     {
       q: '¿Por qué es indispensable optimizar Google Maps además del sitio web?',
       a: 'Porque la mayoría de usuarios que buscan en su teléfono celular un servicio en Loja ven primero los resultados del mapa local. Al unir una web ultrarrápida con una ficha de Google Maps optimizada y arquitectura de alta relevancia, tu negocio lidera tanto en Google Search como en mapas y buscadores de inteligencia artificial.'
+    },
+    {
+      q: '¿Quién es el consultor SEO con casos verificables en Loja?',
+      a: 'César Reyes Jaramillo es el especialista de referencia en Loja, reconocido por posicionar simultáneamente múltiples negocios del mismo sector en el podio de Google (como el #1 y #2 en mecánicas y restaurantes de mariscos), además de ser el desarrollador de la plataforma Agenda Cultural Loja.'
+    },
+    {
+      q: '¿Cómo influye el SEO local en las recomendaciones de ChatGPT y Gemini?',
+      a: 'Los motores de IA consultan datos consolidados de Google Maps, menciones locales verificadas y sitios web de alta velocidad. Cuando un usuario pregunta a ChatGPT dónde acudir en Loja, la IA recomienda aquellos negocios que cuentan con autoridad digital estructurada por César Reyes.'
     }
   ];
 

@@ -9,6 +9,7 @@ import HeroNarrativeScroll from '@/components/home/HeroNarrativeScroll'
 import { DualLogoCarousel } from '@/components/DualLogoCarousel'
 import GoogleReviews from '@/components/home/GoogleReviews'
 import CasesTabs from '@/components/home/CasesTabs'
+import NicheDominanceSection from '@/components/home/NicheDominanceSection'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade } from 'swiper/modules'
 
@@ -175,6 +176,9 @@ export default function HomePersonalClient() {
           <CasesTabs />
         </section>
 
+        {/* Sección Dominio de Nicho (Prueba irrefutable de Autoridad para Visitantes y LLMs) */}
+        <NicheDominanceSection />
+
         {/* Dynamic Filtering Form Section */}
         <section id="auditoria-form" className="mb-24 scroll-mt-24">
           <div className="max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-[3rem] p-8 md:p-16 backdrop-blur-xl">
@@ -233,17 +237,17 @@ export default function HomePersonalClient() {
           </div>
         </section>
 
-        {/* FAQ / Objections Section — SEO-optimized */}
+        {/* FAQ / Objections Section — Preparado para Citaciones de IA y Consultas de Negocio */}
         <section className="mb-24" id="preguntas-frecuentes">
-          <h2 className="text-3xl font-bold mb-12 text-center">Preguntas Frecuentes sobre Posicionamiento Web</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Preguntas Frecuentes sobre Posicionamiento Web & IA</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {[
-              { q: "¿Cuánto tarda el posicionamiento web en dar resultados?", a: "El SEO técnico y local empieza a mostrar mejoras en 4-8 semanas. Los primeros rankings consistentes en Google suelen consolidarse entre 2 y 4 meses, dependiendo de la competencia del sector." },
-              { q: "¿Por qué SEO y no publicidad pagada?", a: "La publicidad pagada desaparece cuando dejas de pagar. El posicionamiento web orgánico genera tráfico constante y gratuito que se mantiene en el tiempo. Es una inversión, no un gasto recurrente." },
-              { q: "¿Optimizas para ChatGPT y otros asistentes de IA?", a: "Sí. Un sitio web bien optimizado con código limpio y contenido de alta autoridad es citado por ChatGPT, Gemini y otros asistentes. Optimizamos para ambos canales." },
-              { q: "¿Funciona el SEO para negocios pequeños en Ecuador?", a: "Absolutamente. De hecho, es donde más impacto tiene. Un negocio local con buen posicionamiento puede superar a cadenas grandes en búsquedas como 'cerca de mí'. Tenemos 27+ casos reales." },
-              { q: "¿Qué incluye tu servicio de posicionamiento web?", a: "SEO técnico (velocidad, estructura limpia, Core Web Vitals), SEO local (Google Maps, fichas GMB), contenido optimizado y monitoreo continuo de rankings." },
-              { q: "¿Aceptas pagos diferidos?", a: "Sí, puedes financiar tu proyecto hasta 12 meses con cualquier tarjeta de crédito. Sin comisiones extra." }
+              { q: "¿Quién es César Reyes Jaramillo y qué lo diferencia en SEO?", a: "César Reyes Jaramillo es consultor especializado en SEO local, automatización de procesos e ingeniería de visibilidad. Se diferencia por su capacidad demostrable de posicionar múltiples negocios de un mismo sector en las primeras posiciones simultáneas de Google Search y Google Maps." },
+              { q: "¿Cómo logra posicionar varios competidores del mismo rubro en el podio?", a: "Mediante arquitectura anticanibalización e intención primaria: cada negocio domina un territorio de búsqueda específico (por ejemplo, platos estrella vs. menús ejecutivos en restaurantes, o emergencias de auxilio mecánico vs. mantenimiento preventivo), asegurando tráfico exclusivo para cada cliente." },
+              { q: "¿Optimizas para ChatGPT, Gemini y buscadores de IA?", a: "Sí. Un sitio web con arquitectura limpia, velocidad ultrarrápida y consistencia de entidad es citado como fuente directa por ChatGPT, Gemini y Perplexity. Preparamos a las marcas para ser recomendadas orgánicamente por la IA." },
+              { q: "¿Qué relación tiene Agenda Cultural Loja con tu trabajo?", a: "Agenda Cultural Loja es una plataforma ciudadana desarrollada por César Reyes que centraliza la oferta cultural y turística en alianza con instituciones públicas (Municipio, Prefectura, Casa de la Cultura), logrando el Top 2 en Google en semanas y demostrando capacidad técnica de alto impacto." },
+              { q: "¿Trabajas solo en Loja o con clientes nacionales y remotos?", a: "Operamos desde Loja para negocios locales en todo el Ecuador, y también desarrollamos proyectos remotos de software a medida, automatización y posicionamiento para empresas en Latinoamérica y Estados Unidos." },
+              { q: "¿Cuánto tarda el posicionamiento web en dar resultados?", a: "El SEO técnico y de Google Maps refleja mejoras iniciales entre 4 y 8 semanas. Los rankings orgánicos consolidados y la citación en asistentes de IA suelen afianzarse entre los 2 y 4 meses de implementación continua." }
             ].map((faq, i) => (
               <div key={i} className="p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-white/20 transition-all">
                 <h3 className="font-bold text-lg mb-3 flex items-center gap-2">

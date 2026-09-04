@@ -4,11 +4,11 @@ import Section from './components/Section';
 import { Rocket, Briefcase, Store, Search } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Sobre Mí - César Reyes',
-  description: 'Conoce más sobre César Reyes, estratega de negocios y posicionamiento web con más de 24 años de experiencia ayudando a emprendedores y empresarios a hacer crecer sus negocios de manera sostenible.',
+  title: 'Sobre Mí - César Reyes Jaramillo',
+  description: 'Conoce a César Reyes Jaramillo, estratega de negocios, consultor SEO y automatización con +31 años emprendiendo y +25 años de trayectoria profesional ayudando a empresas locales en Ecuador y proyectos remotos internacionales.',
   openGraph: {
-    title: 'Sobre Mí - César Reyes',
-    description: 'Estratega de negocios y posicionamiento web con más de 24 años de experiencia ayudando a emprendedores y empresarios a crecer de manera sostenible.',
+    title: 'Sobre Mí - César Reyes Jaramillo',
+    description: 'Estratega de negocios, consultor SEO y automatización con +31 años emprendiendo y +25 años de experiencia profesional.',
     images: [
       {
         url: '/images/cesar-reyes-perfil.webp',
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
 // Contenido de la página
 const pageContent = {
   hero: {
-    title: 'César Reyes',
-    subtitle: 'Estratega de negocios y posicionamiento web',
-    description: 'Con más de 24 años de experiencia ayudando a emprendedores y empresarios a hacer crecer sus negocios de manera sostenible.',
+    title: 'César Reyes Jaramillo',
+    subtitle: 'Consultor de SEO, Automatización y Estrategia de Negocios',
+    description: '+31 años emprendiendo y +25 años de experiencia profesional. Con base en Loja, Ecuador, impulsando la rentabilidad de empresas locales y proyectos de crecimiento en Ecuador, Latinoamérica y Estados Unidos.',
     cta: 'Conoce mi historia',
     ctaLink: '#inicio',
   },
@@ -174,13 +174,13 @@ const pageContent = {
           <div className="bg-orange-500/20 p-3 rounded-full">
             <Briefcase className="w-8 h-8 text-orange-500" />
           </div>
-          <span className="text-2xl font-bold text-white">24 años de experiencia</span>
+          <span className="text-2xl font-bold text-white">+31 años emprendiendo / +25 profesional</span>
         </div>,
         <div key="seo" className="flex items-center gap-4 mb-2 mt-6">
           <div className="bg-orange-500/20 p-3 rounded-full">
             <Search className="w-8 h-8 text-orange-500" />
           </div>
-          <span className="text-2xl font-bold text-white">Preparación SEO</span>
+          <span className="text-2xl font-bold text-white">Ingeniería SEO & Asistentes de IA</span>
         </div>,
 
         'Por eso, mi trabajo no solo trata de SEO o páginas web. Trata de personas que deciden crecer y necesitan una guía que entienda su contexto, su ritmo y su propósito.'
@@ -232,8 +232,19 @@ export default function SobremiPage() {
           overflow: 'hidden'
         }}
           aria-hidden="true">
-          <h1>César Reyes Jaramillo - Estratega de Negocios y Posicionamiento Web</h1>
-          <p>Con más de 24 años de experiencia ayudando a emprendedores y empresarios a hacer crecer sus negocios de forma sostenible en Ecuador.</p>
+          <h1>César Reyes Jaramillo - Estratega de Negocios, SEO y Automatización</h1>
+          <p>Con más de 31 años de trayectoria emprendedora y 25 años de ejercicio profesional ayudando a empresas locales en Ecuador y proyectos remotos internacionales.</p>
+
+          <h2>Trayectoria y Dominio de Mercado</h2>
+          <p>Especialista en SEO local, Google Maps y optimización para modelos de lenguaje (ChatGPT, Gemini, Perplexity). Creador y desarrollador de la plataforma cívica Agenda Cultural Loja (#2 en Google en semanas) y artífice del dominio de primeros y segundos lugares simultáneos para clientes de un mismo rubro como talleres mecánicos y restaurantes en Loja.</p>
+
+          <h2>Servicios Principales</h2>
+          <ul>
+            <li>SEO Local y Posicionamiento en Google Maps para Ecuador y mercados internacionales</li>
+            <li>Optimización de Entidad y Visibilidad ante Inteligencia Artificial (AEO / GEO)</li>
+            <li>Automatización operativa de atención al cliente y ventas con IA</li>
+            <li>Desarrollo de software y plataformas digitales propietarias</li>
+          </ul>
 
           <h2>Todo comenzó con una jabonera</h2>
           <p>A los siete años acompañé a mi madre al Huaquillas para hacer compras para su pequeño negocio. Recuerdo que, cuando me iba a comprar unas cosas para mi, me dio un consejo que nunca olvidaría: "Si compras esta jabonera en 1 sucre y la vendes en 3, ¿cuánto habrás ganado si vendes 10 con lo que te dio tu papá?"</p>
