@@ -87,6 +87,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'google-site-verification-code', // Reemplaza con tu código de verificación de Google Search Console
+    other: {
+      'msvalidate.01': '45AFC2983D2F78DED86417265CB1ED36',
+    },
   },
   alternates: {
     canonical: 'https://www.cesarreyesjaramillo.com',
