@@ -1,9 +1,29 @@
 {
-  "totalVisitas": 2116,
-  "visitasHoy": 2116,
+  "totalVisitas": 2120,
+  "visitasHoy": 2120,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
+    {
+      "fecha": "2026-09-07",
+      "pagina": "/cotizaciones/posicionamiento-turistico-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-07",
+      "pagina": "/cotizaciones/posicionamiento-turistico-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-07",
+      "pagina": "/cotizaciones/posicionamiento-turistico-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-07",
+      "pagina": "/cotizaciones/posicionamiento-turistico-loja",
+      "visitas": 1
+    },
     {
       "fecha": "2026-09-04",
       "pagina": "/casos-de-exito/agenda-cultural-loja",
@@ -32,26 +52,6 @@
     {
       "fecha": "2026-08-14",
       "pagina": "/cotizaciones/propuesta-lilys-peruvian-chicken-menu-2026",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-14",
-      "pagina": "/cotizaciones/propuesta-lilys-peruvian-chicken-menu-2026",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-14",
-      "pagina": "/propuesta-lilys-peruvian-chicken-menu-2026",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-14",
-      "pagina": "/propuesta-lilys-peruvian-chicken-menu-2026",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-08-12",
-      "pagina": "/",
       "visitas": 1
     }
   ],
@@ -117,6 +117,7 @@
     "2026-08-11": 12,
     "2026-08-12": 5,
     "2026-08-14": 6,
-    "2026-09-04": 3
+    "2026-09-04": 3,
+    "2026-09-07": 4
   }
 }

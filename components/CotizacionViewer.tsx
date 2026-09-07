@@ -71,13 +71,42 @@ interface CotizacionData {
   };
   ir_mas_alla?: {
     titulo: string;
+    subtitulo?: string;
     parrafos: string[];
+  };
+  participantes?: {
+    titulo: string;
+    subtitulo?: string;
+    grupos: {
+      rol: string;
+      subtitulo?: string;
+      icono?: string;
+      beneficios: string[];
+    }[];
+  };
+  identidad_marca?: {
+    titulo: string;
+    nombre_propuesto: string;
+    eslogan: string;
+    descripcion: string;
+    alternativas_titulo?: string;
+    alternativas?: string[];
+    nota_final?: string;
   };
   cierre: {
     titulo: string;
     texto: string;
     frase_final: string;
     frase_bisagra?: string;
+    bloque_derecha?: {
+      titulo: string;
+      subtitulo?: string;
+      cards: {
+        titulo?: string;
+        texto: string;
+        icono?: string;
+      }[];
+    };
     mapa_url?: string;
     mapa_embed_url?: string;
     mapa_iframe?: string;
@@ -91,11 +120,28 @@ interface CotizacionData {
 export default function CotizacionViewer({ data }: { data: CotizacionData }) {
   const [openEtapas, setOpenEtapas] = useState<Record<string, boolean>>({ "01": true });
   const [showFullIntro, setShowFullIntro] = useState(false);
+  const [openParticipantes, setOpenParticipantes] = useState<Record<number, boolean>>({});
+  const [showFullIrMasAlla, setShowFullIrMasAlla] = useState(false);
+  const [openCardsCierre, setOpenCardsCierre] = useState<Record<number, boolean>>({ 0: true });
 
   const toggleEtapa = (num: string) => {
     setOpenEtapas(prev => ({
       ...prev,
       [num]: !prev[num]
+    }));
+  };
+
+  const toggleParticipante = (idx: number) => {
+    setOpenParticipantes(prev => ({
+      ...prev,
+      [idx]: !prev[idx]
+    }));
+  };
+
+  const toggleCardCierre = (idx: number) => {
+    setOpenCardsCierre(prev => ({
+      ...prev,
+      [idx]: !prev[idx]
     }));
   };
 
@@ -262,7 +308,7 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
         </motion.div>
       </section>
 
-      {/* CÓMO FUNCIONA (Timeline) */}
+      {/* CÓMO FUNCIONA (Cards Grid 3-3-2) */}
       {data.como_funciona && data.como_funciona.pasos && data.como_funciona.pasos.length > 0 && (
         <section className="py-24 px-6 relative bg-[#111111] overflow-hidden">
           <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-gold/20 to-transparent z-0"></div>
@@ -270,9 +316,9 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
 
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
-            className="container mx-auto max-w-5xl relative z-10"
+            className="container mx-auto max-w-6xl relative z-10"
           >
-            <div className="text-center mb-20">
+            <div className="text-center mb-16">
               <div className="font-outfit text-xs tracking-[0.2em] uppercase text-gold font-bold mb-4 justify-center flex items-center gap-2">
                 <span className="w-8 h-px bg-gold"></span>
                 Funcionamiento
@@ -283,37 +329,113 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
               </h2>
             </div>
 
-            <div className="space-y-8">
-              {data.como_funciona.pasos.map((paso, idx) => {
-                const stepIcons = [Clock, Zap, ArrowRight, Shield];
-                const StepIcon = stepIcons[idx % stepIcons.length];
-                return (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, x: idx % 2 === 0 ? -40 : 40 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: idx * 0.15, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative group"
-                  >
-                    <div className="flex items-start gap-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 hover:bg-white/10 transition-all duration-500 shadow-xl">
-                      <div className="w-14 h-14 rounded-2xl bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-gold/20 transition-all duration-500">
-                        <StepIcon className="w-6 h-6 text-gold" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-3">
-                          <span className="font-outfit text-[10px] tracking-widest uppercase text-gold font-bold bg-gold/10 px-3 py-1 rounded-full">
-                            {String(idx + 1).padStart(2, '0')}
-                          </span>
-                          <h3 className="font-outfit text-xl font-semibold text-white">{paso.momento}</h3>
+            {/* Si son 8 pasos: Fila 1 (3), Fila 2 (3), Fila 3 (2 centrados) */}
+            {data.como_funciona.pasos.length === 8 ? (
+              <div className="space-y-6">
+                {/* Primeras 2 filas de 3 */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {data.como_funciona.pasos.slice(0, 6).map((paso, idx) => {
+                    const stepIcons = [Clock, Zap, ArrowRight, Shield, Rocket, Sparkles];
+                    const StepIcon = stepIcons[idx % stepIcons.length];
+                    return (
+                      <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: idx * 0.08 }}
+                        className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-7 hover:border-gold/40 hover:bg-white/[0.08] transition-all duration-300 shadow-xl flex flex-col justify-between group"
+                      >
+                        <div>
+                          <div className="flex items-center justify-between mb-4">
+                            <span className="font-outfit text-xs tracking-widest uppercase text-gold font-bold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full">
+                              Paso {String(idx + 1).padStart(2, '0')}
+                            </span>
+                            <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold group-hover:scale-110 group-hover:bg-gold/20 transition-all">
+                              <StepIcon className="w-5 h-5" />
+                            </div>
+                          </div>
+                          <h3 className="font-outfit text-lg font-semibold text-white mb-2 group-hover:text-gold transition-colors">
+                            {paso.momento.includes(':') ? paso.momento.split(':')[1].trim() : paso.momento}
+                          </h3>
+                          <p className="font-montserrat text-sm text-slate-300 leading-relaxed font-light">
+                            {paso.descripcion}
+                          </p>
                         </div>
-                        <p className="font-montserrat text-sm md:text-base text-slate-300 leading-relaxed">{paso.descripcion}</p>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+
+                {/* Última fila de 2 centrada */}
+                <div className="flex flex-col md:flex-row justify-center gap-6 max-w-4xl mx-auto">
+                  {data.como_funciona.pasos.slice(6, 8).map((paso, idx) => {
+                    const actualIdx = idx + 6;
+                    const stepIcons = [Star, CheckCircle2];
+                    const StepIcon = stepIcons[idx % stepIcons.length];
+                    return (
+                      <motion.div
+                        key={actualIdx}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: actualIdx * 0.08 }}
+                        className="w-full md:w-1/2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-7 hover:border-gold/40 hover:bg-white/[0.08] transition-all duration-300 shadow-xl flex flex-col justify-between group"
+                      >
+                        <div>
+                          <div className="flex items-center justify-between mb-4">
+                            <span className="font-outfit text-xs tracking-widest uppercase text-gold font-bold bg-gold/10 border border-gold/20 px-3 py-1 rounded-full">
+                              Paso {String(actualIdx + 1).padStart(2, '0')}
+                            </span>
+                            <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold group-hover:scale-110 group-hover:bg-gold/20 transition-all">
+                              <StepIcon className="w-5 h-5" />
+                            </div>
+                          </div>
+                          <h3 className="font-outfit text-lg font-semibold text-white mb-2 group-hover:text-gold transition-colors">
+                            {paso.momento.includes(':') ? paso.momento.split(':')[1].trim() : paso.momento}
+                          </h3>
+                          <p className="font-montserrat text-sm text-slate-300 leading-relaxed font-light">
+                            {paso.descripcion}
+                          </p>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-8">
+                {data.como_funciona.pasos.map((paso, idx) => {
+                  const stepIcons = [Clock, Zap, ArrowRight, Shield];
+                  const StepIcon = stepIcons[idx % stepIcons.length];
+                  return (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0, x: idx % 2 === 0 ? -40 : 40 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: idx * 0.15, ease: [0.22, 1, 0.36, 1] }}
+                      className="relative group"
+                    >
+                      <div className="flex items-start gap-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 hover:bg-white/10 transition-all duration-500 shadow-xl">
+                        <div className="w-14 h-14 rounded-2xl bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-gold/20 transition-all duration-500">
+                          <StepIcon className="w-6 h-6 text-gold" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-3">
+                            <span className="font-outfit text-[10px] tracking-widest uppercase text-gold font-bold bg-gold/10 px-3 py-1 rounded-full">
+                              {String(idx + 1).padStart(2, '0')}
+                            </span>
+                            <h3 className="font-outfit text-xl font-semibold text-white">{paso.momento}</h3>
+                          </div>
+                          <p className="font-montserrat text-sm md:text-base text-slate-300 leading-relaxed">{paso.descripcion}</p>
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            )}
           </motion.div>
         </section>
       )}
@@ -597,7 +719,160 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
         </section>
       )}
 
-      {/* IR MÁS ALLÁ */}
+      {/* PARTICIPANTES / BENEFICIOS POR ACTOR (Acordeón desplegable) */}
+      {data.participantes && data.participantes.grupos && data.participantes.grupos.length > 0 && (
+        <section className="py-24 px-6 relative bg-[#111111] overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gold opacity-[0.03] blur-[120px] pointer-events-none"></div>
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
+            className="container mx-auto max-w-6xl relative z-10"
+          >
+            <div className="text-center mb-16">
+              <div className="font-outfit text-xs tracking-[0.2em] uppercase text-gold font-bold mb-4 justify-center flex items-center gap-2">
+                <span className="w-8 h-px bg-gold"></span>
+                Impacto Integral
+                <span className="w-8 h-px bg-gold"></span>
+              </div>
+              <h2 className="font-outfit text-4xl md:text-5xl font-light text-white mb-4">
+                {data.participantes.titulo}
+              </h2>
+              {data.participantes.subtitulo && (
+                <p className="font-montserrat text-slate-400 max-w-2xl mx-auto text-sm md:text-base">
+                  {data.participantes.subtitulo}
+                </p>
+              )}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+              {data.participantes.grupos.map((grupo, idx) => {
+                const isOpen = !!openParticipantes[idx];
+                return (
+                  <div 
+                    key={idx} 
+                    className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:border-gold/40 hover:bg-white/[0.08] transition-all duration-300 shadow-xl"
+                  >
+                    <div 
+                      onClick={() => toggleParticipante(idx)}
+                      className="p-6 md:p-7 flex items-center justify-between cursor-pointer group"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-2xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold font-outfit font-bold text-lg shrink-0 group-hover:scale-105 group-hover:bg-gold/20 transition-all">
+                          {String(idx + 1).padStart(2, '0')}
+                        </div>
+                        <div>
+                          <h3 className="font-outfit text-lg md:text-xl font-semibold text-white group-hover:text-gold transition-colors">
+                            {grupo.rol}
+                          </h3>
+                          {grupo.subtitulo && (
+                            <p className="font-montserrat text-xs text-slate-400 mt-0.5 line-clamp-1">
+                              {grupo.subtitulo}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 shrink-0 ml-3">
+                        <span className="font-outfit text-[11px] uppercase tracking-wider text-gold font-bold hidden sm:inline-block">
+                          {isOpen ? 'Ocultar' : 'Ver 10 beneficios'}
+                        </span>
+                        <div className={`w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white transition-transform duration-300 ${isOpen ? 'rotate-180 bg-gold text-white' : 'group-hover:bg-white/20'}`}>
+                          <ChevronDown className="w-4 h-4" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                          className="overflow-hidden"
+                        >
+                          <div className="p-6 md:p-7 pt-2 border-t border-white/10 bg-black/20">
+                            <ul className="space-y-3">
+                              {grupo.beneficios.map((b, bIdx) => (
+                                <li key={bIdx} className="flex items-start gap-3">
+                                  <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-1" />
+                                  <span className="font-montserrat text-sm text-slate-300 leading-relaxed font-light">
+                                    {b}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
+            </div>
+          </motion.div>
+        </section>
+      )}
+
+      {/* IDENTIDAD DE MARCA (Optional) */}
+      {data.identidad_marca && (
+        <section className="py-24 px-6 relative bg-gradient-to-b from-[#111111] to-[#1a1714] text-white overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent pointer-events-none"></div>
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
+            className="container mx-auto max-w-4xl relative z-10 text-center"
+          >
+            <div className="font-outfit text-xs tracking-[0.2em] uppercase text-gold font-bold mb-4 justify-center flex items-center gap-2">
+              <span className="w-8 h-px bg-gold"></span>
+              Identidad de Marca
+              <span className="w-8 h-px bg-gold"></span>
+            </div>
+            <h2 className="font-outfit text-4xl md:text-5xl font-light text-white mb-6">
+              {data.identidad_marca.titulo}
+            </h2>
+
+            <div className="my-10 p-8 md:p-12 rounded-3xl bg-white/[0.04] border border-gold/30 backdrop-blur-xl shadow-2xl relative">
+              <span className="font-outfit text-xs tracking-widest uppercase text-gold font-bold mb-2 block">
+                Marca de Trabajo Propuesta
+              </span>
+              <h3 className="font-outfit text-4xl md:text-6xl font-bold tracking-tight text-white mb-3">
+                {data.identidad_marca.nombre_propuesto}
+              </h3>
+              <p className="font-serif-elegant italic text-xl md:text-2xl text-amber-200/90 mb-6">
+                "{data.identidad_marca.eslogan}"
+              </p>
+              <p className="font-montserrat text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                {data.identidad_marca.descripcion}
+              </p>
+
+              {data.identidad_marca.alternativas && data.identidad_marca.alternativas.length > 0 && (
+                <div className="mt-8 pt-8 border-t border-white/10 text-left">
+                  <p className="font-outfit text-xs tracking-widest uppercase text-slate-400 font-bold mb-4 text-center">
+                    {data.identidad_marca.alternativas_titulo || "Alternativas Evaluadas"}
+                  </p>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {data.identidad_marca.alternativas.map((alt, i) => (
+                      <span 
+                        key={i} 
+                        className="font-montserrat text-xs px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:border-gold/50 transition-colors"
+                      >
+                        {alt}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {data.identidad_marca.nota_final && (
+                <p className="font-montserrat text-xs text-slate-400 mt-6 italic">
+                  {data.identidad_marca.nota_final}
+                </p>
+              )}
+            </div>
+          </motion.div>
+        </section>
+      )}
+
+      {/* IR MÁS ALLÁ (Con opción de Seguir leyendo) */}
       {data.ir_mas_alla && data.ir_mas_alla.parrafos && data.ir_mas_alla.parrafos.length > 0 && (
         <section className="py-20 px-6 relative bg-slate-50 overflow-hidden">
           <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
@@ -610,15 +885,48 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
               <div className="relative z-10">
                 <div className="font-outfit text-xs tracking-[0.2em] uppercase text-gold font-bold mb-4 flex items-center gap-2">
                   <span className="w-8 h-px bg-gold"></span>
-                  Nota Adicional
+                  {data.ir_mas_alla.subtitulo || "Nota Adicional"}
                 </div>
                 <h2 className="font-serif-elegant text-3xl md:text-4xl text-slate-900 mb-8 leading-tight">
                   {data.ir_mas_alla.titulo}
                 </h2>
                 <div className="space-y-5">
-                  {data.ir_mas_alla.parrafos.map((p, i) => (
-                    <p key={i} className="font-montserrat text-base text-slate-500 leading-relaxed">{p}</p>
-                  ))}
+                  {/* Primer párrafo siempre visible */}
+                  <p className="font-montserrat text-base text-slate-600 leading-relaxed font-light">
+                    {data.ir_mas_alla.parrafos[0]}
+                  </p>
+
+                  {/* Párrafos adicionales colapsables */}
+                  {data.ir_mas_alla.parrafos.length > 1 && (
+                    <>
+                      <AnimatePresence>
+                        {showFullIrMasAlla && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                            className="space-y-5 overflow-hidden pt-1"
+                          >
+                            {data.ir_mas_alla.parrafos.slice(1).map((p, i) => (
+                              <p key={i + 1} className="font-montserrat text-base text-slate-600 leading-relaxed font-light">
+                                {p}
+                              </p>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+
+                      <button
+                        onClick={() => setShowFullIrMasAlla(!showFullIrMasAlla)}
+                        className="group flex items-center gap-2 font-outfit text-xs tracking-widest uppercase text-gold hover:text-amber-600 font-bold transition-colors duration-300 pt-3"
+                      >
+                        <span className="w-6 h-px bg-gold group-hover:w-10 transition-all duration-300"></span>
+                        {showFullIrMasAlla ? 'Leer menos' : 'Seguir leyendo articulación'}
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showFullIrMasAlla ? 'rotate-180' : ''}`} />
+                      </button>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
@@ -649,12 +957,94 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
              <Target className="w-8 h-8" />
           </div>
           
-          <h2 className="font-outfit text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.1]">{data.cierre.titulo}</h2>
+          <h2 className="font-outfit text-4xl md:text-6xl font-bold tracking-tight text-slate-900 mb-12 leading-[1.1]">{data.cierre.titulo}</h2>
           
-          <div 
-            className="font-montserrat text-xl text-slate-600 leading-relaxed mb-16 max-w-2xl mx-auto"
-            dangerouslySetInnerHTML={{ __html: data.cierre.texto }}
-          />
+          {data.cierre.bloque_derecha ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch mb-16 text-left">
+              {/* Columna Izquierda: Invitación y Reunión */}
+              <div className="bg-slate-50/80 border border-slate-200/80 rounded-3xl p-8 md:p-10 flex flex-col justify-between shadow-sm">
+                <div>
+                  <div className="font-outfit text-xs tracking-widest uppercase text-gold font-bold mb-3 flex items-center gap-2">
+                    <span className="w-6 h-px bg-gold"></span>
+                    Sesión de Trabajo
+                  </div>
+                  <div 
+                    className="font-montserrat text-base text-slate-600 leading-relaxed space-y-4"
+                    dangerouslySetInnerHTML={{ __html: data.cierre.texto }}
+                  />
+                </div>
+              </div>
+
+              {/* Columna Derecha: 9. Cierre y Visión Compartida estructurada en cards de igual altura */}
+              <div className="bg-[#111111] text-white border border-[#222222] rounded-3xl p-8 md:p-10 flex flex-col justify-between shadow-xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-gold opacity-5 blur-3xl pointer-events-none"></div>
+                <div className="relative z-10">
+                  <div className="font-outfit text-xs tracking-widest uppercase text-gold font-bold mb-3 flex items-center gap-2">
+                    <span className="w-6 h-px bg-gold"></span>
+                    Visión Compartida
+                  </div>
+                  <h3 className="font-outfit text-2xl md:text-3xl font-semibold text-white mb-6">
+                    {data.cierre.bloque_derecha.titulo}
+                  </h3>
+                  {data.cierre.bloque_derecha.subtitulo && (
+                    <p className="font-montserrat text-sm text-slate-300 mb-6 font-light">
+                      {data.cierre.bloque_derecha.subtitulo}
+                    </p>
+                  )}
+
+                  <div className="space-y-3.5">
+                    {data.cierre.bloque_derecha.cards.map((card, cIdx) => {
+                      const isCardOpen = !!openCardsCierre[cIdx];
+                      return (
+                        <div 
+                          key={cIdx} 
+                          className="rounded-2xl bg-white/[0.04] border border-white/10 hover:border-gold/30 transition-all overflow-hidden"
+                        >
+                          <div
+                            onClick={() => toggleCardCierre(cIdx)}
+                            className="p-4 md:p-5 flex items-center justify-between cursor-pointer group"
+                          >
+                            <div className="flex items-center gap-3">
+                              <span className="w-2 h-2 rounded-full bg-gold shrink-0"></span>
+                              <h4 className="font-outfit text-sm md:text-base font-semibold text-white group-hover:text-gold transition-colors">
+                                {card.titulo || `Punto ${cIdx + 1}`}
+                              </h4>
+                            </div>
+                            <div className={`w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white transition-transform duration-300 ${isCardOpen ? 'rotate-180 bg-gold text-white' : 'group-hover:bg-white/20'}`}>
+                              <ChevronDown className="w-3.5 h-3.5" />
+                            </div>
+                          </div>
+
+                          <AnimatePresence>
+                            {isCardOpen && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                                className="overflow-hidden"
+                              >
+                                <div className="px-5 pb-5 pt-1 border-t border-white/5">
+                                  <p className="font-montserrat text-sm text-slate-300 leading-relaxed font-light">
+                                    {card.texto}
+                                  </p>
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div 
+              className="font-montserrat text-xl text-slate-600 leading-relaxed mb-16 max-w-2xl mx-auto"
+              dangerouslySetInnerHTML={{ __html: data.cierre.texto }}
+            />
+          )}
 
           {/* Mapa Embebido con Botón Flotante */}
           <div className="relative mb-16 rounded-[2rem] overflow-hidden border border-slate-200 shadow-2xl p-2 bg-slate-50 max-w-5xl mx-auto w-full group">
