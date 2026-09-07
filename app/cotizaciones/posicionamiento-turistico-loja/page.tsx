@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://cesarweb.b-cdn.net/articulos/Mgs.%20David%20Eduardo%20Morocho%20Loj%C3%A1n%20-%20Director%20de%20Turismo%20del%20Municipio%20de%20Loja%20y%20el%20Ing.%20C%C3%A9sar%20Reyes%20Jaramillo%20-%20Promotor%20y%20estratega%20de%20posicionamiento%20tur%C3%ADstico%20y%20transformaci%C3%B3n%20digital.webp",
+        url: "https://cesarweb.b-cdn.net/articulos/Mgs.%20David%20Eduardo%20Morocho%20Loj%C3%A1n%20-%20Director%20de%20Turismo%20del%20Municipio%20de%20Loja%20y%20el%20Ing.%20C%C3%A9sar%20Reyes%20Jaramillo%20-%20Promotor%20y%20estratega%20de%20posicionamiento%20tur%C3%ADstico%20y%20transformaci%C3%B3nn%20digital.webp",
         width: 1200,
         height: 630,
         alt: "Propuesta de Posicionamiento Turístico de Loja — Descubre Loja"
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Propuesta para el posicionamiento turístico de Loja — Descubre Loja",
     description: "Plataforma digital de posicionamiento turístico y gestión de experiencias para Loja.",
-    images: ["https://cesarweb.b-cdn.net/articulos/Mgs.%20David%20Eduardo%20Morocho%20Loj%C3%A1n%20-%20Director%20de%20Turismo%20del%20Municipio%20de%20Loja%20y%20el%20Ing.%20C%C3%A9sar%20Reyes%20Jaramillo%20-%20Promotor%20y%20estratega%20de%20posicionamiento%20tur%C3%ADstico%20y%20transformaci%C3%B3n%20digital.webp"]
+    images: ["https://cesarweb.b-cdn.net/articulos/Mgs.%20David%20Eduardo%20Morocho%20Loj%C3%A1n%20-%20Director%20de%20Turismo%20del%20Municipio%20de%20Loja%20y%20el%20Ing.%20C%C3%A9sar%20Reyes%20Jaramillo%20-%20Promotor%20y%20estratega%20de%20posicionamiento%20tur%C3%ADstico%20y%20transformaci%C3%B3nn%20digital.webp"]
   }
 };
 
@@ -38,8 +38,8 @@ export default function PosicionamientoTuristicoLojaPage() {
       preparado_para: "Mgs. David Eduardo Morocho Loján (Director de Turismo del Municipio de Loja)",
       preparado_por: "Ing. César Reyes Jaramillo (Promotor y estratega de posicionamiento turístico y transformación digital)",
       fecha: "Septiembre 2026",
-      imagen_url: "https://cesarweb.b-cdn.net/articulos/Mgs.%20David%20Eduardo%20Morocho%20Loj%C3%A1n%20-%20Director%20de%20Turismo%20del%20Municipio%20de%20Loja%20y%20el%20Ing.%20C%C3%A9sar%20Reyes%20Jaramillo%20-%20Promotor%20y%20estratega%20de%20posicionamiento%20tur%C3%ADstico%20y%20transformaci%C3%B3n%20digital.webp",
-      url_fondo: "https://cesarweb.b-cdn.net/articulos/Mgs.%20David%20Eduardo%20Morocho%20Loj%C3%A1n%20-%20Director%20de%20Turismo%20del%20Municipio%20de%20Loja%20y%20el%20Ing.%20C%C3%A9sar%20Reyes%20Jaramillo%20-%20Promotor%20y%20estratega%20de%20posicionamiento%20tur%C3%ADstico%20y%20transformaci%C3%B3n%20digital.webp",
+      imagen_url: "https://cesarweb.b-cdn.net/articulos/Mgs.%20David%20Eduardo%20Morocho%20Loj%C3%A1n%20-%20Director%20de%20Turismo%20del%20Municipio%20de%20Loja%20y%20el%20Ing.%20C%C3%A9sar%20Reyes%20Jaramillo%20-%20Promotor%20y%20estratega%20de%20posicionamiento%20tur%C3%ADstico%20y%20transformaci%C3%B3nn%20digital.webp",
+      url_fondo: "https://cesarweb.b-cdn.net/articulos/Mgs.%20David%20Eduardo%20Morocho%20Loj%C3%A1n%20-%20Director%20de%20Turismo%20del%20Municipio%20de%20Loja%20y%20el%20Ing.%20C%C3%A9sar%20Reyes%20Jaramillo%20-%20Promotor%20y%20estratega%20de%20posicionamiento%20tur%C3%ADstico%20y%20transformaci%C3%B3nn%20digital.webp",
       url_logo_cliente: ""
     },
     introduccion: {
