@@ -146,9 +146,10 @@ export default async function OrganizationSchema() {
             "closes": "18:00"
         },
         "sameAs": [
-            "https://www.linkedin.com/in/cesar-reyes-jaramillo/",
-            "https://www.instagram.com/cesarreyesjaramillo/",
-            "https://www.facebook.com/cesarreyesjaramillo",
+            "https://www.linkedin.com/in/cesarreyesjaramillo/",
+            "https://www.instagram.com/cesarreyesjaramillo/?hl=es-la",
+            "https://www.facebook.com/CesarReyes.Pymes/?locale=es_LA",
+            "https://www.youtube.com/@CesarReyesJaramillo/videos",
             "https://www.tiktok.com/@cesarreyesjaramillo"
         ],
         "aggregateRating": {

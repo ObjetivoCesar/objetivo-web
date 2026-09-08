@@ -8,10 +8,11 @@ export default function PersonSchema() {
         "url": "https://www.cesarreyesjaramillo.com",
         "image": "https://www.cesarreyesjaramillo.com/images/cesar-reyes-perfil.webp",
         "sameAs": [
-            "https://www.linkedin.com/in/cesar-reyes-jaramillo/",
-            "https://www.instagram.com/cesarreyesjaramillo/",
-            "https://www.facebook.com/cesarreyesjaramillo",
-            "https://www.youtube.com/@cesarreyesjaramillo"
+            "https://www.linkedin.com/in/cesarreyesjaramillo/",
+            "https://www.instagram.com/cesarreyesjaramillo/?hl=es-la",
+            "https://www.facebook.com/CesarReyes.Pymes/?locale=es_LA",
+            "https://www.youtube.com/@CesarReyesJaramillo/videos",
+            "https://www.tiktok.com/@cesarreyesjaramillo"
         ],
         "knowsAbout": [
             "Estrategia de Negocios",

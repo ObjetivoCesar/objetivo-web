@@ -21,6 +21,7 @@ const tabs = [
   { id: "cotizaciones", label: "Cotizaciones" },
   { id: "estadisticas", label: "Estadísticas" },
   { id: "clientes", label: "Clientes / Consentimiento" },
+  { id: "newsletter", label: "Newsletter" },
 ];
 
 function ImagenUploader() {
@@ -1619,6 +1620,370 @@ export default function AdminPanel() {
   );
 }
 
+// ─── Newsletter Panel ───────────────────────────────────────────────────────
+function NewsletterPanel() {
+  const [subscribers, setSubscribers] = useState<any[]>([]);
+  const [filtered, setFiltered] = useState<any[]>([]);
+  const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [subject, setSubject] = useState("");
+  const [body, setBody] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  const [uploadingImage, setUploadingImage] = useState(false);
+  const [imageUploadStatus, setImageUploadStatus] = useState<string | null>(null);
+  const [ctaText, setCtaText] = useState("");
+  const [ctaUrl, setCtaUrl] = useState("");
+  const [modalTab, setModalTab] = useState<"edit" | "preview">("edit");
+  const [confirmed, setConfirmed] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendResult, setSendResult] = useState<{ok: boolean; msg: string} | null>(null);
+
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploadingImage(true);
+    setImageUploadStatus("Subiendo y optimizando a WebP en Bunny.net...");
+
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+
+      const res = await fetch("/api/upload-bunny", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || "Error al subir imagen a Bunny.net");
+      }
+
+      setImageUrl(data.url);
+      setImageUploadStatus(`✓ Subida con éxito a Bunny.net (${data.format.toUpperCase()})`);
+    } catch (err: any) {
+      console.error(err);
+      setImageUploadStatus(`❌ ${err?.message || "Error al subir imagen"}`);
+    } finally {
+      setUploadingImage(false);
+    }
+  };
+
+
+  useEffect(() => {
+    fetch("/api/newsletter-subscribers")
+      .then(r => r.json())
+      .then(data => {
+        if (Array.isArray(data)) {
+          setSubscribers(data);
+          setFiltered(data);
+        } else {
+          setError(data.error || "Error cargando suscriptores");
+        }
+        setLoading(false);
+      })
+      .catch(() => { setError("Error de red"); setLoading(false); });
+  }, []);
+
+  useEffect(() => {
+    const q = search.toLowerCase();
+    setFiltered(subscribers.filter(s =>
+      s.email?.toLowerCase().includes(q) || s.name?.toLowerCase().includes(q)
+    ));
+  }, [search, subscribers]);
+
+  const handleSend = async () => {
+    if (!confirmed) { alert("Debes confirmar antes de enviar."); return; }
+    if (!subject.trim() || !body.trim()) { alert("Asunto y cuerpo son obligatorios."); return; }
+    setSending(true);
+    setSendResult(null);
+    try {
+      const res = await fetch("/api/send-newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ subject, body, imageUrl, ctaText, ctaUrl }),
+      });
+      const data = await res.json();
+      setSendResult({ ok: res.ok, msg: data.message || (res.ok ? "Enviado correctamente" : "Error al enviar") });
+    } catch {
+      setSendResult({ ok: false, msg: "Error de red al enviar" });
+    }
+    setSending(false);
+    setConfirmed(false);
+  };
+
+  return (
+    <div>
+      {/* Stats bar */}
+      <div className="flex gap-4 mb-6">
+        <div className="bg-[#2d2420] rounded-lg px-6 py-4 text-center">
+          <div className="text-3xl font-bold text-amber-400">{subscribers.length}</div>
+          <div className="text-gray-300 text-sm mt-1">Suscriptores totales</div>
+        </div>
+        <div className="flex-1 flex items-center">
+          <button
+            onClick={() => { setShowModal(true); setSendResult(null); setModalTab("edit"); }}
+            className="ml-auto px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-bold rounded-full transition-colors"
+          >
+            ✉️ Redactar y Enviar Newsletter
+          </button>
+        </div>
+      </div>
+
+      {/* Search */}
+      <input
+        type="text"
+        placeholder="Buscar por email o nombre..."
+        value={search}
+        onChange={e => setSearch(e.target.value)}
+        className="w-full px-4 py-2 rounded bg-[#2d2420] border border-[#4a3b33] text-white mb-4 focus:outline-none focus:border-amber-500"
+      />
+
+      {/* Table */}
+      {loading ? (
+        <div className="text-center py-8 text-gray-400">Cargando suscriptores...</div>
+      ) : error ? (
+        <div className="text-red-400 py-4">{error}</div>
+      ) : filtered.length === 0 ? (
+        <div className="text-gray-400 py-4">No hay suscriptores que coincidan.</div>
+      ) : (
+        <div className="overflow-x-auto rounded-lg border border-[#4a3b33]">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="bg-[#2d2420] text-gray-300">
+                <th className="px-4 py-3 text-left">#</th>
+                <th className="px-4 py-3 text-left">Email</th>
+                <th className="px-4 py-3 text-left">Nombre</th>
+                <th className="px-4 py-3 text-left">Fecha suscripción</th>
+                <th className="px-4 py-3 text-left">Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filtered.map((s, i) => (
+                <tr key={s.id || i} className="border-t border-[#4a3b33] hover:bg-[#2d2420] transition-colors">
+                  <td className="px-4 py-3 text-gray-400">{i + 1}</td>
+                  <td className="px-4 py-3 text-white">{s.email}</td>
+                  <td className="px-4 py-3 text-gray-300">{s.name || "—"}</td>
+                  <td className="px-4 py-3 text-gray-400">
+                    {s.created_at ? new Date(s.created_at).toLocaleDateString("es-CL") : "—"}
+                  </td>
+                  <td className="px-4 py-3">
+                    <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
+                      s.active !== false ? "bg-green-900 text-green-300" : "bg-red-900 text-red-300"
+                    }`}>
+                      {s.active !== false ? "Activo" : "Inactivo"}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {/* Modal enviar newsletter */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black/75 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-[#1f1916] rounded-xl w-full max-w-3xl max-h-[90vh] flex flex-col shadow-2xl border border-[#4a3b33] overflow-hidden">
+            {/* Header */}
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[#4a3b33] bg-[#28201c]">
+              <div className="flex items-center gap-4">
+                <h3 className="text-xl font-bold text-amber-400">Diseño y Envío de Newsletter</h3>
+                <div className="flex bg-[#111] rounded-lg p-1 border border-[#3a2f29]">
+                  <button
+                    onClick={() => setModalTab("edit")}
+                    className={`px-3 py-1 text-xs font-semibold rounded ${modalTab === "edit" ? "bg-amber-500 text-black" : "text-gray-400 hover:text-white"}`}
+                  >
+                    Edición
+                  </button>
+                  <button
+                    onClick={() => setModalTab("preview")}
+                    className={`px-3 py-1 text-xs font-semibold rounded ${modalTab === "preview" ? "bg-amber-500 text-black" : "text-gray-400 hover:text-white"}`}
+                  >
+                    Vista Previa Email
+                  </button>
+                </div>
+              </div>
+              <button onClick={() => setShowModal(false)} className="text-gray-400 hover:text-white text-2xl font-bold">×</button>
+            </div>
+
+            {/* Content Body */}
+            <div className="p-6 overflow-y-auto space-y-4 flex-1">
+              {modalTab === "edit" ? (
+                <>
+                  <div className="bg-amber-950/40 border border-amber-800/60 rounded-lg p-3 text-amber-300 text-xs">
+                    El correo se enviará con el diseño corporativo de César Reyes Jaramillo (logotipo, tipografía serif/sans optimizada para email, links oficiales y pie legal anti-spam).
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-amber-300 mb-1">Asunto del correo *</label>
+                    <input
+                      type="text"
+                      value={subject}
+                      onChange={e => setSubject(e.target.value)}
+                      placeholder="Ej: 3 Estrategias para Aumentar Ventas en tu Negocio"
+                      className="w-full px-3 py-2 rounded bg-[#111111] border border-[#4a3b33] text-white focus:outline-none focus:border-amber-500 text-sm"
+                    />
+                  </div>
+
+                  <div className="bg-[#181311] p-3 rounded-lg border border-[#3a2f29] space-y-2">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-amber-300">
+                      Imagen de Cabecera (Bunny.net CDN + WebP)
+                    </label>
+
+                    <div className="flex flex-col sm:flex-row gap-2 items-center">
+                      <label className="cursor-pointer bg-[#2d2420] hover:bg-[#4a3b33] border border-[#4a3b33] px-3 py-1.5 rounded text-xs text-white font-medium flex items-center gap-2 whitespace-nowrap transition-colors">
+                        <span>📁 Subir y convertir a WebP</span>
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={handleImageUpload}
+                          disabled={uploadingImage}
+                          className="hidden"
+                        />
+                      </label>
+
+                      <input
+                        type="text"
+                        value={imageUrl}
+                        onChange={e => setImageUrl(e.target.value)}
+                        placeholder="https://cesarweb.b-cdn.net/newsletter/..."
+                        className="w-full px-3 py-1.5 rounded bg-[#111111] border border-[#4a3b33] text-white focus:outline-none focus:border-amber-500 text-xs font-mono"
+                      />
+                    </div>
+
+                    {imageUploadStatus && (
+                      <p className={`text-xs ${imageUploadStatus.startsWith("✓") ? "text-green-400" : imageUploadStatus.startsWith("❌") ? "text-red-400" : "text-amber-400 animate-pulse"}`}>
+                        {imageUploadStatus}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1">Texto del Botón CTA (Opcional)</label>
+                      <input
+                        type="text"
+                        value={ctaText}
+                        onChange={e => setCtaText(e.target.value)}
+                        placeholder="Ej: Leer artículo completo"
+                        className="w-full px-3 py-2 rounded bg-[#111111] border border-[#4a3b33] text-white focus:outline-none focus:border-amber-500 text-sm"
+                      />
+                    </div>
+                    {ctaText ? (
+                      <div>
+                        <label className="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-1">URL de Destino del Botón *</label>
+                        <input
+                          type="text"
+                          value={ctaUrl}
+                          onChange={e => setCtaUrl(e.target.value)}
+                          placeholder="https://cesarreyesjaramillo.com/blog/tu-articulo"
+                          className="w-full px-3 py-2 rounded bg-[#111111] border border-[#4a3b33] text-white focus:outline-none focus:border-amber-500 text-sm"
+                        />
+                      </div>
+                    ) : (
+                      <div className="hidden md:block"></div>
+                    )}
+                  </div>
+
+
+                  <div>
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-amber-300 mb-1">Mensaje / Contenido *</label>
+                    <textarea
+                      value={body}
+                      onChange={e => setBody(e.target.value)}
+                      placeholder="Escribe el contenido de tu mensaje. Puedes separar párrafos con saltos de línea normales."
+                      rows={8}
+                      className="w-full px-3 py-2 rounded bg-[#111111] border border-[#4a3b33] text-white focus:outline-none focus:border-amber-500 text-sm"
+                    />
+                  </div>
+                </>
+              ) : (
+                /* Vista Previa */
+                <div className="bg-[#121212] p-4 rounded-lg border border-neutral-800">
+                  <div className="max-w-xl mx-auto bg-[#1a1a1a] rounded-xl border border-neutral-700 overflow-hidden shadow-xl text-left">
+                    <div className="bg-[#241d1a] p-5 text-center border-b border-[#3a2f29]">
+                      <h4 className="text-xl font-bold font-serif text-amber-400">César Reyes Jaramillo</h4>
+                      <p className="text-[11px] text-gray-400 uppercase tracking-wider">Estrategia de Negocios · Desarrollo Web · SEO & GEO</p>
+                    </div>
+
+                    {imageUrl && (
+                      <img src={imageUrl} alt="Cabecera" className="w-full max-h-48 object-cover" />
+                    )}
+
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold text-white mb-2">{subject || "(Asunto del correo)"}</h3>
+                      <div className="w-10 h-1 bg-amber-500 rounded mb-4"></div>
+                      <div className="text-gray-300 text-sm whitespace-pre-wrap leading-relaxed">
+                        {body || "(Escribe el contenido del mensaje para verlo aquí)"}
+                      </div>
+
+                      {ctaText && (
+                        <div className="mt-6 text-center">
+                          <span className="inline-block bg-amber-500 text-black font-bold text-xs px-5 py-2.5 rounded-full">
+                            {ctaText} →
+                          </span>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="p-4 bg-[#241d1a] border-t border-[#3a2f29] text-xs italic text-gray-300">
+                      "No adivines, mide. El crecimiento rentable de un negocio se construye con datos y estrategia."
+                      <div className="text-amber-400 font-semibold mt-1">— César Reyes Jaramillo</div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <div className="pt-2">
+                <label className="flex items-center gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={confirmed}
+                    onChange={e => setConfirmed(e.target.checked)}
+                    className="w-4 h-4 accent-amber-500"
+                  />
+                  <span className="text-xs text-gray-300">
+                    Confirmo el envío de este boletín a los <strong>{subscribers.filter(s => s.active !== false).length} suscriptores activos</strong>.
+                  </span>
+                </label>
+              </div>
+
+              {sendResult && (
+                <div className={`rounded-lg p-3 text-sm font-semibold ${
+                  sendResult.ok ? "bg-green-900/80 text-green-300 border border-green-700" : "bg-red-900/80 text-red-300 border border-red-700"
+                }`}>
+                  {sendResult.msg}
+                </div>
+              )}
+            </div>
+
+            {/* Footer buttons */}
+            <div className="px-6 py-4 border-t border-[#4a3b33] bg-[#28201c] flex justify-end gap-3">
+              <button
+                onClick={() => setShowModal(false)}
+                className="px-5 py-2 rounded-full bg-[#111111] text-gray-300 hover:bg-[#333] text-sm transition-colors"
+              >
+                Cerrar
+              </button>
+              <button
+                onClick={handleSend}
+                disabled={sending || !confirmed}
+                className="px-6 py-2 rounded-full bg-amber-500 hover:bg-amber-600 text-black font-bold text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
+              >
+                {sending ? "Enviando..." : `Enviar Campaña`}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+
 // Componente que contiene el contenido principal del panel de administración
 function AdminPanelContent({ activeTab, setActiveTab }: { activeTab: string, setActiveTab: (tab: string) => void }) {
 
@@ -1723,6 +2088,16 @@ function AdminPanelContent({ activeTab, setActiveTab }: { activeTab: string, set
                 Gestión de leads y registros de consentimiento obtenidos a través del widget de privacidad.
               </p>
               <ClientesPanel />
+            </div>
+          )}
+
+          {activeTab === "newsletter" && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">Gestión de Newsletter</h2>
+              <p className="text-gray-300 mb-6">
+                Visualiza los suscriptores y envía campañas de email de forma segura.
+              </p>
+              <NewsletterPanel />
             </div>
           )}
         </div>

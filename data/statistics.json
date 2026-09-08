@@ -1,57 +1,57 @@
 {
-  "totalVisitas": 2120,
-  "visitasHoy": 2120,
+  "totalVisitas": 2129,
+  "visitasHoy": 2129,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
     {
-      "fecha": "2026-09-07",
-      "pagina": "/cotizaciones/posicionamiento-turistico-loja",
+      "fecha": "2026-09-08",
+      "pagina": "/admin",
       "visitas": 1
     },
     {
-      "fecha": "2026-09-07",
-      "pagina": "/cotizaciones/posicionamiento-turistico-loja",
+      "fecha": "2026-09-08",
+      "pagina": "/admin",
       "visitas": 1
     },
     {
-      "fecha": "2026-09-07",
-      "pagina": "/cotizaciones/posicionamiento-turistico-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-07",
-      "pagina": "/cotizaciones/posicionamiento-turistico-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-04",
-      "pagina": "/casos-de-exito/agenda-cultural-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-04",
-      "pagina": "/casos-de-exito",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-04",
+      "fecha": "2026-09-08",
       "pagina": "/",
       "visitas": 1
     },
     {
-      "fecha": "2026-08-14",
-      "pagina": "/cotizaciones/propuesta-lilys-peruvian-chicken-menu-2026",
+      "fecha": "2026-09-08",
+      "pagina": "/admin",
       "visitas": 1
     },
     {
-      "fecha": "2026-08-14",
-      "pagina": "/cotizaciones/propuesta-lilys-peruvian-chicken-menu-2026",
+      "fecha": "2026-09-08",
+      "pagina": "/admin",
       "visitas": 1
     },
     {
-      "fecha": "2026-08-14",
-      "pagina": "/cotizaciones/propuesta-lilys-peruvian-chicken-menu-2026",
+      "fecha": "2026-09-08",
+      "pagina": "/admin",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-08",
+      "pagina": "/auth/signin",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-08",
+      "pagina": "/admin",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-08",
+      "pagina": "/",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-07",
+      "pagina": "/cotizaciones/posicionamiento-turistico-loja",
       "visitas": 1
     }
   ],
@@ -118,6 +118,7 @@
     "2026-08-12": 5,
     "2026-08-14": 6,
     "2026-09-04": 3,
-    "2026-09-07": 4
+    "2026-09-07": 4,
+    "2026-09-08": 9
   }
 }

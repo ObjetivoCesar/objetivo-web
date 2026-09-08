@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseRetoClient } from "@/lib/supabaseRetoClient";
+import { getMySQLPool } from "@/lib/mysqlClient";
 
 export const dynamic = 'force-dynamic';
 
@@ -25,19 +26,30 @@ export async function POST(req: NextRequest) {
     }
 
     // Guardar el email en Supabase
-    const { error } = await supabaseRetoClient
+    const { error: supabaseError } = await supabaseRetoClient
       .from("newsletter_subscribers")
       .insert([{ email }]);
 
-    if (error) {
-      // Si el error es por duplicado (código 23505 en Postgres/Supabase), lo manejamos gracefuly
-      if (error.code === '23505') {
-        return NextResponse.json(
-          { error: "Este email ya está suscrito" },
-          { status: 400 }
-        );
-      }
-      throw error;
+    if (supabaseError && supabaseError.code !== '23505') {
+      console.warn("Error guardando en Supabase:", supabaseError);
+    }
+
+    // Guardar también en MySQL para unificar la base de datos
+    try {
+      const pool = getMySQLPool();
+      await pool.execute(
+        'INSERT IGNORE INTO newsletter_subscribers (email, is_active, subscribed_at) VALUES (?, 1, NOW())',
+        [email]
+      );
+    } catch (mysqlErr) {
+      console.error("Error guardando suscriptor en MySQL:", mysqlErr);
+    }
+
+    if (supabaseError && supabaseError.code === '23505') {
+      return NextResponse.json(
+        { error: "Este email ya está suscrito" },
+        { status: 400 }
+      );
     }
 
     return NextResponse.json({

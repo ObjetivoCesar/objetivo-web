@@ -268,19 +268,19 @@ export default function ModernSidebarMenu() {
                             {/* Footer / CTA */}
                             <div className="mt-12 flex flex-col md:flex-row md:items-end justify-between gap-8 border-t border-white/10 pt-8 pb-8 md:pb-0">
                                 <div className="flex gap-4">
-                                    <Link href="https://www.instagram.com/objetivoemprendo/" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all">
+                                    <Link href="https://www.instagram.com/cesarreyesjaramillo/?hl=es-la" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all">
                                         <Instagram size={20} />
                                     </Link>
-                                    <Link href="https://www.linkedin.com/in/c%C3%A9sar-reyes-jaramillo/" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all">
+                                    <Link href="https://www.linkedin.com/in/cesarreyesjaramillo/" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all">
                                         <Linkedin size={20} />
                                     </Link>
-                                    <Link href="https://www.facebook.com/ObjetivoEmprendo" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all">
+                                    <Link href="https://www.facebook.com/CesarReyes.Pymes/?locale=es_LA" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all">
                                         <Facebook size={20} />
                                     </Link>
-                                    <Link href="https://www.youtube.com/@ObjetivoEmprendo" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all">
+                                    <Link href="https://www.youtube.com/@CesarReyesJaramillo/videos" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all">
                                         <Youtube size={20} />
                                     </Link>
-                                    <Link href="https://www.tiktok.com/@objetivoemprendo" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all">
+                                    <Link href="https://www.tiktok.com/@cesarreyesjaramillo" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="20"

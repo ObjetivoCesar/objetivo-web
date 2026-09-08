@@ -65,7 +65,7 @@ export default async function CasoDetallePage({ params }: Props) {
       jobTitle: 'Ingeniero de Eficiencia & Estratega Digital',
       url: 'https://cesarreyesjaramillo.com/',
       sameAs: [
-        'https://www.linkedin.com/in/cesar-reyes-jaramillo',
+        'https://www.linkedin.com/in/cesarreyesjaramillo/',
         'https://cesarreyesjaramillo.com/sobre-mi'
       ]
     }

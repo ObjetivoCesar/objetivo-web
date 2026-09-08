@@ -1,7 +1,7 @@
 # 📊 SEO Implementado — cesarreyesjaramillo.com
 
 > **Documento vivo**: Se actualiza cada vez que se agrega una nueva mejora SEO al proyecto.
-> **Última actualización**: 2026-09-07
+> **Última actualización**: 2026-09-08
 
 ---
 
@@ -85,6 +85,8 @@ Home, posicionamiento, posicionamiento/loja, posicionamiento/auditoria-seo-redis
 | `FAQ` | `FAQSchema.tsx` | Páginas con preguntas frecuentes |
 | `BreadcrumbList` | `BreadcrumbSchema.tsx` | Navegación jerárquica |
 | `WebSite` | `WebsiteSchema.tsx` | Identificación del sitio |
+
+> **Actualización 2026-09-08**: Se actualizaron las propiedades `sameAs` en `PersonSchema.tsx` y `OrganizationSchema.tsx` con los perfiles oficiales de César Reyes Jaramillo (YouTube, LinkedIn, Facebook, Instagram y TikTok) para consolidación de entidad ante Google y motores de IA.
 
 ---
 
@@ -180,8 +182,10 @@ Incluye enlaces de recuperación a `sitemap.xml` y `llms.txt` para que agentes d
 | **Blog dinámico con MDX** | ✅ | Artículos en categorías con metadata dinámica |
 | **URLs limpias y semánticas** | ✅ | `/posicionamiento/loja`, `/desarrollo-web/tu-negocio-24-7`, etc. |
 | **Archivo VCF de contacto** | ✅ | `/Cesar-Reyes-Contacto.vcf` descargable |
+| **Email Marketing & Newsletter** | ✅ | Captación en footer sincronizada a Supabase + MySQL, template corporativo responsive y panel de despacho con vista previa |
 
 ---
+
 
 ## 11. Registro en Plataformas de Webmasters
 
