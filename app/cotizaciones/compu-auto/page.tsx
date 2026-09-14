@@ -94,28 +94,12 @@ export default function CompuAutoCotizacionPage() {
       titulo: "El antes y después con el sistema",
       filas: [
         {
-          antes: "Los leads que llegan por WhatsApp se pierden en el chat personal del asesor. No hay seguimiento ni registro.",
-          despues: "Cada lead queda registrado automáticamente en un pipeline visual con etapas claras: Nuevo → Contactado → Cita Agendada → En Taller → Cliente."
+          antes: "Los prospectos por WhatsApp se pierden en chats personales sin registro, seguimiento ni control de quién agendó.",
+          despues: "Pipeline visual de leads con WhatsApp integrado: cada contacto queda registrado, se le da seguimiento oportuno y se convierte en cita de taller."
         },
         {
-          antes: "No se sabe cuántos prospectos cotizaron, cuántos agendaron cita ni cuántos se perdieron.",
-          despues: "Dashboard con métricas de conversión en tiempo real: tasa de cierre, leads por canal, tiempo promedio de respuesta."
-        },
-        {
-          antes: "Los clientes vienen una vez y no regresan porque nadie les recuerda que es momento de su mantenimiento.",
-          despues: "Recordatorios automáticos por WhatsApp según historial de servicios y kilometraje estimado del vehículo."
-        },
-        {
-          antes: "La comunicación con el cliente es manual, desorganizada y depende de la memoria del asesor.",
-          despues: "WhatsApp integrado con mensajes automatizados: confirmación de cita, seguimiento post-servicio, promociones personalizadas."
-        },
-        {
-          antes: "Las reseñas en Google dependen de que el cliente se acuerde de dejarlas por su cuenta.",
-          despues: "Solicitud automática de calificación vía WhatsApp con canalización estratégica a Google Business."
-        },
-        {
-          antes: "Un cliente insatisfecho se va sin decir nada y nunca vuelve.",
-          despues: "Detección temprana de incidencias con gestión interna antes de que se conviertan en quejas públicas."
+          antes: "Los clientes realizan su servicio y no regresan porque nadie les recuerda cuándo toca su próximo mantenimiento preventivo.",
+          despues: "Fidelización activa con recordatorios automáticos por WhatsApp según kilometraje e historial, logrando visitas recurrentes."
         }
       ]
     },
