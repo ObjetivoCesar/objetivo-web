@@ -68,6 +68,12 @@ Home, posicionamiento, posicionamiento/loja, posicionamiento/auditoria-seo-redis
 - **Metadata**: Title *"Propuesta de Posicionamiento Turístico de Loja — Descubre Loja"*, OpenGraph 1200x630, Twitter Cards, Canonical URL configurada.
 - **Detalle**: Propuesta completa para el Mgs. David Eduardo Morocho Loján (Municipio de Loja). Integración con componente interactivo `CotizacionViewer` con desglose de actores, fases y llamado directo a WhatsApp.
 
+### Cotización Compu Auto — Sistema de Fidelización (2026-09-14):
+- **Ruta**: `app/cotizaciones/compu-auto/page.tsx`
+- **Metadata**: Title *"Propuesta de Sistema de Fidelización — Compu Auto"*, OpenGraph 1200x630 con hero desktop, Twitter Cards `summary_large_image`, Canonical URL `https://www.cesarreyesjaramillo.com/cotizaciones/compu-auto`.
+- **Detalle**: Propuesta de sistema de fidelización y mini CRM automotriz ($600) para Compu Auto (Mantenimiento de Flotas Automotrices). Dirigida al Ing. Alexis Román (Coordinador de Taller). Incluye hero responsive con imágenes distintas para móvil y desktop (`url_fondo_movil`). Secciones: introducción, cómo funciona, comparativa antes/después, etapa única con entregables, cierre con WhatsApp CTA.
+- **Archivos modificados**: `components/CotizacionViewer.tsx` (soporte `url_fondo_movil` en interfaz + hero responsive).
+
 
 ---
 

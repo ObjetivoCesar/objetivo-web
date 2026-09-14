@@ -20,6 +20,7 @@ interface CotizacionData {
     url_logo_cliente?: string;
     imagen_url?: string;
     url_fondo?: string;
+    url_fondo_movil?: string;
   };
   introduccion: {
     titulo: string;
@@ -184,13 +185,35 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
 
       {/* PORTADA FULL SCREEN */}
       <section className="relative flex items-center min-h-[100svh] w-full overflow-hidden bg-[#111111]">
-        <motion.div 
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: 'easeOut' }}
-          className="absolute inset-0 bg-cover bg-center z-0" 
-          style={{ backgroundImage: `url('${data.portada.url_fondo || data.portada.imagen_url || '/images/categorias/analisis-estrategico/analisis-financiero.webp'}')` }}
-        />
+        {/* Background: responsive mobile/desktop when url_fondo_movil is provided */}
+        {data.portada.url_fondo_movil ? (
+          <>
+            {/* Desktop background */}
+            <motion.div 
+              initial={{ scale: 1.1 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1.5, ease: 'easeOut' }}
+              className="absolute inset-0 bg-cover bg-center z-0 hidden md:block" 
+              style={{ backgroundImage: `url('${data.portada.url_fondo || data.portada.imagen_url || '/images/categorias/analisis-estrategico/analisis-financiero.webp'}')` }}
+            />
+            {/* Mobile background */}
+            <motion.div 
+              initial={{ scale: 1.1 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1.5, ease: 'easeOut' }}
+              className="absolute inset-0 bg-cover bg-center z-0 block md:hidden" 
+              style={{ backgroundImage: `url('${data.portada.url_fondo_movil}')` }}
+            />
+          </>
+        ) : (
+          <motion.div 
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
+            className="absolute inset-0 bg-cover bg-center z-0" 
+            style={{ backgroundImage: `url('${data.portada.url_fondo || data.portada.imagen_url || '/images/categorias/analisis-estrategico/analisis-financiero.webp'}')` }}
+          />
+        )}
         <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#111111]/95 via-[#111111]/80 to-transparent"></div>
         
         <div className="container mx-auto px-6 relative z-20 pt-20 pb-16 h-full flex flex-col justify-center">
