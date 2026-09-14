@@ -112,7 +112,7 @@ export default function CompuAutoCotizacionPage() {
         etiqueta_tiempo: "Implementación Completa · 3–4 semanas",
         nombre: "Sistema de Fidelización Automotriz",
         eslogan: "\"Un sistema que convierte cada servicio en una relación de largo plazo.\"",
-        precio: "$600",
+        precio: "$1.000",
         precio_subtitulo: "inversión única / implementación completa",
         descripcion: "Desarrollo e implementación del sistema integral de fidelización diseñado para Compu Auto. Incluye la configuración, personalización, capacitación del equipo y puesta en marcha en ambas sucursales (Cuenca y Loja).",
         entregables: [
