@@ -1,7 +1,7 @@
 # 📊 SEO Implementado — cesarreyesjaramillo.com
 
 > **Documento vivo**: Se actualiza cada vez que se agrega una nueva mejora SEO al proyecto.
-> **Última actualización**: 2026-09-08
+> **Última actualización**: 2026-09-16
 
 ---
 
@@ -58,6 +58,7 @@ Cada página del proyecto tiene metadata individual con:
 - `app/cotizaciones/[id]/page.tsx`
 - `app/casos-de-exito/[slug]/page.tsx`
 - `app/blog/[category]/page.tsx`
+- `app/descubre-loja/[slug]/page.tsx` (Propuestas comerciales dinámicas con noindex, nofollow)
 - `app/blog/[category]/[slug]/page.tsx`
 
 ### Páginas con canonical explícito:
@@ -73,6 +74,13 @@ Home, posicionamiento, posicionamiento/loja, posicionamiento/auditoria-seo-redis
 - **Metadata**: Title *"Propuesta de Sistema de Fidelización — Compu Auto"*, OpenGraph 1200x630 con hero desktop, Twitter Cards `summary_large_image`, Canonical URL `https://www.cesarreyesjaramillo.com/cotizaciones/compu-auto`.
 - **Detalle**: Propuesta de sistema de fidelización y mini CRM automotriz ($600) para Compu Auto (Mantenimiento de Flotas Automotrices). Dirigida al Ing. Alexis Román (Coordinador de Taller). Incluye hero responsive con imágenes distintas para móvil y desktop (`url_fondo_movil`). Secciones: introducción, cómo funciona, comparativa antes/después, etapa única con entregables, cierre con WhatsApp CTA.
 - **Archivos modificados**: `components/CotizacionViewer.tsx` (soporte `url_fondo_movil` en interfaz + hero responsive).
+
+### Landing Page — Red Descubre Loja con Asesor IA (2026-09-16):
+- **Ruta**: `app/descubre-loja/page.tsx`
+- **Metadata**: Title *"Propuesta de Integración — Red Descubre Loja con Asesor IA"*, `robots: noindex, nofollow` (propuesta privada), OpenGraph completo, Canonical URL configurada.
+- **Detalle**: Landing page personalizada de cierre de ventas para el proyecto de turismo IA en Loja. Se envía de forma individual tras contacto previo. Variables clave por cliente: `nombreNegocio`, `sector`, `zona`, `categoriaKey`, `videoUrl`, `whatsappNumero`, `diasVigencia`. 4 categorías de precios (bares $250/año, hoteles pequeños $350/año, restaurantes $400/año, hoteles grandes $650/año) con oferta ancla 10×12 (16.7% ahorro). Countdown timer de urgencia de 7 días persistido en `sessionStorage`. CTA directo a WhatsApp con mensaje predeterminado personalizado.
+- **Archivos creados**: `app/descubre-loja/DescubreLojaCLient.tsx`, `app/descubre-loja/page.tsx`.
+- **Nota SEO**: La página está marcada con `noindex, nofollow` intencionalmente — es una propuesta comercial confidencial, no debe indexarse.
 
 
 ---

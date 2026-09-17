@@ -1,9 +1,49 @@
 {
-  "totalVisitas": 2130,
-  "visitasHoy": 2130,
+  "totalVisitas": 2138,
+  "visitasHoy": 2138,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
     {
       "fecha": "2026-09-14",
       "pagina": "/cotizaciones/compu-auto",
@@ -12,46 +52,6 @@
     {
       "fecha": "2026-09-08",
       "pagina": "/admin",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-08",
-      "pagina": "/admin",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-08",
-      "pagina": "/",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-08",
-      "pagina": "/admin",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-08",
-      "pagina": "/admin",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-08",
-      "pagina": "/admin",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-08",
-      "pagina": "/auth/signin",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-08",
-      "pagina": "/admin",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-08",
-      "pagina": "/",
       "visitas": 1
     }
   ],
@@ -120,6 +120,7 @@
     "2026-09-04": 3,
     "2026-09-07": 4,
     "2026-09-08": 9,
-    "2026-09-14": 1
+    "2026-09-14": 1,
+    "2026-09-16": 8
   }
 }
