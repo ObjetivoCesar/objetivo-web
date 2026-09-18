@@ -1444,7 +1444,7 @@ function QuotesManager() {
   const getStatus = (quote: any) => {
     // Si is_public es 0, está archivada manualmente
     if (quote.is_public === 0 || quote.is_public === false) {
-      return { label: "Archivada (Oculta)", color: "bg-red-500/20 text-red-400 border-red-500/30" };
+      return { label: "Archivada (Oculta)", color: "bg-red-500/20 text-red-400 border-red-500/30", isExpired: false };
     }
 
     // Calcular días desde su creación
@@ -1454,17 +1454,18 @@ function QuotesManager() {
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
       
       if (diffDays > 15) {
-        return { label: "Expirada (Oculta)", color: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30" };
+        return { label: "Expirada (Oculta)", color: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30", isExpired: true };
       }
       
       const daysLeft = 15 - diffDays;
       return { 
         label: `Pública (${daysLeft === 0 ? 'Expira hoy' : `Quedan ${daysLeft} días`})`, 
-        color: "bg-green-500/20 text-green-400 border-green-500/30" 
+        color: "bg-green-500/20 text-green-400 border-green-500/30",
+        isExpired: false
       };
     }
 
-    return { label: "Pública", color: "bg-green-500/20 text-green-400 border-green-500/30" };
+    return { label: "Pública", color: "bg-green-500/20 text-green-400 border-green-500/30", isExpired: false };
   };
 
   if (loading && quotes.length === 0) return <div className="text-gray-400">Cargando cotizaciones...</div>;
@@ -1519,15 +1520,15 @@ function QuotesManager() {
                       Ver
                     </a>
                     <button
-                      onClick={() => toggleVisibility(quote.id, quote.is_public)}
+                      onClick={() => toggleVisibility(quote.id, status.isExpired || quote.is_public === 0 || quote.is_public === false ? false : true)}
                       className={`text-xs font-bold py-1 px-3 rounded-full border transition-all ${
-                        quote.is_public === 0 || quote.is_public === false
+                        status.isExpired || quote.is_public === 0 || quote.is_public === false
                           ? "bg-green-600 hover:bg-green-700 text-white border-transparent"
                           : "bg-[#2d2420] text-gray-300 hover:bg-[#3a2f29] border-[#4a3b33]"
                       }`}
                       disabled={loading}
                     >
-                      {quote.is_public === 0 || quote.is_public === false ? "Hacer Pública" : "Archivar"}
+                      {status.isExpired ? "Reactivar (15 días)" : quote.is_public === 0 || quote.is_public === false ? "Hacer Pública" : "Archivar"}
                     </button>
                   </td>
                 </tr>

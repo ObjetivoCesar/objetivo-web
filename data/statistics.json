@@ -1,57 +1,57 @@
 {
-  "totalVisitas": 2138,
-  "visitasHoy": 2138,
+  "totalVisitas": 2140,
+  "visitasHoy": 2140,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
     {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
+      "fecha": "2026-09-18",
+      "pagina": "/cotizaciones/propuesta-libreria-san-jose-2026",
       "visitas": 1
     },
     {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-14",
-      "pagina": "/cotizaciones/compu-auto",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-08",
+      "fecha": "2026-09-18",
       "pagina": "/admin",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-16",
+      "pagina": "/descubre-loja",
       "visitas": 1
     }
   ],
@@ -121,6 +121,7 @@
     "2026-09-07": 4,
     "2026-09-08": 9,
     "2026-09-14": 1,
-    "2026-09-16": 8
+    "2026-09-16": 8,
+    "2026-09-18": 2
   }
 }

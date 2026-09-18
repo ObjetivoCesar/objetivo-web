@@ -105,12 +105,16 @@ export async function updateQuoteVisibility(id: string, isPublic: boolean) {
   try {
     const db = getPool();
     const archivedAt = isPublic ? null : new Date();
-    const query = `
-      UPDATE cotizaciones 
-      SET is_public = ?, archived_at = ? 
-      WHERE id = ?
-    `;
-    await db.execute(query, [isPublic ? 1 : 0, archivedAt, id]);
+    // Si se hace pública nuevamente, renovamos la vigencia actualizando created_at a la fecha/hora actual
+    const query = isPublic
+      ? `UPDATE cotizaciones SET is_public = 1, archived_at = NULL, created_at = CURRENT_TIMESTAMP WHERE id = ?`
+      : `UPDATE cotizaciones SET is_public = 0, archived_at = ? WHERE id = ?`;
+    
+    if (isPublic) {
+      await db.execute(query, [id]);
+    } else {
+      await db.execute(query, [archivedAt, id]);
+    }
     return true;
   } catch (error) {
     console.error('Error updating quote visibility:', error);
