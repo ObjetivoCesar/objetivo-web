@@ -208,6 +208,9 @@ Incluye enlaces de recuperación a `sitemap.xml` y `llms.txt` para que agentes d
 | **Descanibalización de Casos de Éxito** | `app/casos-de-exito/page.tsx`, `CasosExitoClientPage.tsx` | Retirar `"SEO Loja"` de metadatos de portafolio y enfocarlo en prueba social (`"portafolio SEO Ecuador"`, `"casos de estudio posicionamiento"`). Agregar enlace estratégico hacia la landing de Loja. |
 | **Optimización de Landing Local de Loja** | `app/posicionamiento/loja/page.tsx` | Ajustar Title exacto: `"Posicionamiento Web en Loja y SEO Local \| César Reyes"`, meta description persuasiva y consolidación de Schema `LocalBusiness` con FAQs locales. |
 | **Topic Cluster & Link Juice Interno** | `components/home/HomePersonalClient.tsx`, `components/home/NicheDominanceSection.tsx` | Inserción de enlaces internos contextuales con anchor text exacto hacia `/posicionamiento/loja` desde la Home y la sección de Dominio de Nicho para transferir la autoridad del dominio a la página de servicio local. |
+| **Desindexación de Pruebas y Backups** | `app/nueva-home/layout.tsx`, `app/home-test/page.tsx`, `app/home-test-backup/page.tsx`, `app/test-header/page.tsx`, `next-sitemap.config.js` | Agregar `robots: { index: false, follow: false }` y exclusiones en sitemap/robots.txt a páginas de prueba para evitar duplicados con la Home. |
+| **Descanibalización Plan Salir Google** | `app/posicionamiento/plan-salir-google/page.tsx` | Eliminar keywords locales de Loja en servicios genéricos y corregir enlace de retorno a `/posicionamiento`. |
+| **Sincronización Canónica de Sitemaps** | `app/sitemap.ts` | Corregir rutas estáticas eliminando prefijos erróneos (`/servicios/...`) e incorporar `/posicionamiento/loja` y `/casos-de-exito`. |
 
 ---
 

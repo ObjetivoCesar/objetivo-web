@@ -1,5 +1,13 @@
+import { Metadata } from 'next';
 import { pageContent } from "../../lib/content";
 import HomeTestClient from "./HomeTestClient";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 // Este es el Server Component. Su única responsabilidad es
 // obtener los datos y pasarlos al componente cliente.

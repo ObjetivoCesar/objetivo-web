@@ -6,7 +6,7 @@ import { ArrowLeft, Check, Search, BarChart, Target, Zap, Clock, TrendingUp } fr
 export const metadata: Metadata = {
   title: 'Plan para Salir en Google - Posicionamiento SEO en Ecuador',
   description: 'Estrategia de posicionamiento SEO para aparecer en los primeros resultados de Google. Aumenta tu visibilidad y atrae más clientes a tu negocio en Ecuador.',
-  keywords: 'posicionamiento SEO Ecuador, aparecer en Google Loja, estrategia SEO local, posicionamiento web Ecuador, consultor SEO Loja'
+  keywords: 'posicionamiento SEO Ecuador, salir en Google, estrategia SEO técnica, posicionamiento web Ecuador, consultoría SEO PYMEs'
 };
 
 export default function PlanSalirGoogle() {
@@ -17,7 +17,7 @@ export default function PlanSalirGoogle() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Link 
-              href="/servicios/posicionamiento" 
+              href="/posicionamiento" 
               className="inline-flex items-center text-purple-200 hover:text-white mb-6 transition-colors"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />

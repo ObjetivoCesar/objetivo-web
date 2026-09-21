@@ -3,6 +3,10 @@ User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /api
+Disallow: /nueva-home
+Disallow: /home-test
+Disallow: /home-test-backup
+Disallow: /test-header
 
 # Host
 Host: https://cesarreyesjaramillo.com
