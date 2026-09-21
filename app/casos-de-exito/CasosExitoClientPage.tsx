@@ -33,7 +33,7 @@ export default function CasosExitoClientPage() {
           </h1>
           
           <p className="text-lg sm:text-xl text-gray-400 font-medium leading-relaxed max-w-3xl mx-auto">
-            No te mostramos teoría ni promesas. Te mostramos <span className="text-white font-bold">{CASOS_EXITO.length} proyectos reales</span> en Ecuador con búsquedas verificables, sitios activos y posiciones en buscadores de IA.
+            No te mostramos teoría ni promesas. Te mostramos <span className="text-white font-bold">{CASOS_EXITO.length} proyectos reales</span> en Ecuador con búsquedas verificables, sitios activos y posiciones en buscadores de IA. ¿Tienes un negocio en la región sur? Consulta nuestro servicio de <Link href="/posicionamiento/loja" className="text-cyan-400 font-semibold hover:underline">posicionamiento web en Loja</Link>.
           </p>
 
           {/* Métricas Rápidas */}

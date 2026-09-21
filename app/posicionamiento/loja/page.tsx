@@ -2,14 +2,15 @@ import { Metadata } from 'next';
 import PosicionamientoLojaClient from './PosicionamientoLojaClient';
 
 export const metadata: Metadata = {
-  title: 'Posicionamiento Web y SEO en Loja, Ecuador | César Reyes',
-  description: 'Agencia y consultoría de SEO en Loja, Ecuador. Casos reales verificables, optimización en Google Maps y búsqueda local para negocios en Loja y la región.',
+  title: 'Posicionamiento Web en Loja y SEO Local | César Reyes',
+  description: 'Agencia y consultoría de posicionamiento web en Loja y SEO local. Casos reales verificables, optimización en Google Maps y búsqueda local para empresas en Loja.',
   keywords: [
-    'SEO Loja',
     'posicionamiento web Loja',
+    'SEO Loja',
     'agencia SEO Loja',
     'consultor SEO Loja',
     'SEO local Loja',
+    'posicionamiento web en Loja',
     'marketing digital Loja',
     'posicionamiento Google Maps Loja'
   ],
@@ -17,8 +18,8 @@ export const metadata: Metadata = {
     canonical: 'https://www.cesarreyesjaramillo.com/posicionamiento/loja',
   },
   openGraph: {
-    title: 'Posicionamiento Web y SEO en Loja, Ecuador | César Reyes',
-    description: 'Estrategia de SEO local y Google Maps con casos de éxito reales y verificables en Loja, Ecuador.',
+    title: 'Posicionamiento Web en Loja y SEO Local | César Reyes',
+    description: 'Estrategia de posicionamiento web y SEO local en Loja. Casos de éxito reales comprobables en Google y Google Maps.',
     url: 'https://www.cesarreyesjaramillo.com/posicionamiento/loja',
     siteName: 'César Reyes Jaramillo',
     images: [

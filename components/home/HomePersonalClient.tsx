@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles, Brain, Search, LayoutGrid, CheckCircle, Smartphone, Rocket } from 'lucide-react'
 import ModernSidebarMenu from '@/components/navigation/ModernSidebarMenu'
@@ -64,7 +65,7 @@ export default function HomePersonalClient() {
                 El <strong className="text-white">posicionamiento web (SEO)</strong> es el conjunto de estrategias técnicas y de contenido que permiten que tu sitio web aparezca en Google cuando un potencial cliente busca tus productos o servicios en su ciudad. No se trata de comprar anuncios temporales: se trata de <strong className="text-white">construir autoridad digital real</strong>.
               </p>
               <p>
-                En el mercado ecuatoriano, cuando una persona necesita contratar una notaría, buscar una clínica dental o encontrar un restaurante especializado, su primer impulso es buscar en Google o consultar asistentes de inteligencia artificial. Si tu negocio no aparece en esas búsquedas específicas (ejemplo: <em>"notaria en loja"</em>, <em>"restaurante de mariscos"</em> o <em>"mecánica automotriz"</em>), esos clientes terminan en la competencia.
+                En el mercado ecuatoriano, cuando una persona necesita contratar una notaría, buscar una clínica dental o encontrar un restaurante especializado, su primer impulso es buscar en Google o consultar asistentes de inteligencia artificial. Si tu negocio no aparece en esas búsquedas específicas (ejemplo: <em>"notaria en loja"</em>, <em>"restaurante de mariscos"</em> o <em>"mecánica automotriz"</em>), esos clientes terminan en la competencia. Si tienes un negocio físico o de servicios en la ciudad, revisa nuestra estrategia especializada de <Link href="/posicionamiento/loja" className="text-cyan-400 font-semibold hover:underline">posicionamiento web en Loja</Link>.
               </p>
               <p>
                 Nuestra metodología de <strong className="text-white">SEO técnico y de intención primaria</strong> optimiza la arquitectura de tu sitio web, su velocidad y la relevancia técnica de tu contenido para que Google y la IA reconozcan tu negocio como la respuesta exacta a lo que busca el usuario.

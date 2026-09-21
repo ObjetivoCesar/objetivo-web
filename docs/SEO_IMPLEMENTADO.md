@@ -1,7 +1,7 @@
 # 📊 SEO Implementado — cesarreyesjaramillo.com
 
 > **Documento vivo**: Se actualiza cada vez que se agrega una nueva mejora SEO al proyecto.
-> **Última actualización**: 2026-09-16
+> **Última actualización**: 2026-09-21 (Descanibalización SEO 'posicionamiento web Loja')
 
 ---
 
@@ -200,8 +200,18 @@ Incluye enlaces de recuperación a `sitemap.xml` y `llms.txt` para que agentes d
 
 ---
 
+## 11. Arquitectura de Intención y Descanibalización SEO (2026-09-21)
 
-## 11. Registro en Plataformas de Webmasters
+| Acción | Archivos Modificados | Objetivo |
+|---|---|---|
+| **Eliminación de keywords locales en Home** | `app/metadata.ts`, `app/page.tsx` | Quitar `"SEO Loja"` de la Home para evitar que compita con la landing local. Se enfoca en alcance nacional (`"César Reyes Jaramillo \| SEO y Posicionamiento Web en Ecuador"`). |
+| **Descanibalización de Casos de Éxito** | `app/casos-de-exito/page.tsx`, `CasosExitoClientPage.tsx` | Retirar `"SEO Loja"` de metadatos de portafolio y enfocarlo en prueba social (`"portafolio SEO Ecuador"`, `"casos de estudio posicionamiento"`). Agregar enlace estratégico hacia la landing de Loja. |
+| **Optimización de Landing Local de Loja** | `app/posicionamiento/loja/page.tsx` | Ajustar Title exacto: `"Posicionamiento Web en Loja y SEO Local \| César Reyes"`, meta description persuasiva y consolidación de Schema `LocalBusiness` con FAQs locales. |
+| **Topic Cluster & Link Juice Interno** | `components/home/HomePersonalClient.tsx`, `components/home/NicheDominanceSection.tsx` | Inserción de enlaces internos contextuales con anchor text exacto hacia `/posicionamiento/loja` desde la Home y la sección de Dominio de Nicho para transferir la autoridad del dominio a la página de servicio local. |
+
+---
+
+## 12. Registro en Plataformas de Webmasters
 
 | Plataforma | Estado | Fecha |
 |---|---|---|

@@ -117,12 +117,20 @@ export default function NicheDominanceSection() {
               <strong className="text-white">Validado por Motores de IA:</strong> ChatGPT, Gemini y Perplexity no inventan referencias; recomiendan a negocios y profesionales con presencia estructurada, consistente y respaldada por hechos.
             </p>
           </div>
-          <Link
-            href="/casos-de-exito"
-            className="w-full sm:w-auto flex-shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-xs transition-colors"
-          >
-            Explorar los 27+ Casos de Éxito <ExternalLink className="w-3.5 h-3.5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto flex-shrink-0">
+            <Link
+              href="/posicionamiento/loja"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold text-xs transition-colors shadow-lg shadow-cyan-400/20"
+            >
+              SEO en Loja <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              href="/casos-de-exito"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold text-xs transition-colors"
+            >
+              Explorar 27+ Casos <ExternalLink className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description: "Posiciono negocios en Google, Maps y buscadores de IA en Ecuador. SEO, posicionamiento web y estrategias con resultados verificables. +50 negocios transformados en Loja y Ecuador.",
   keywords: [
     "posicionamiento web",
-    "SEO Loja",
+    "consultoría SEO Ecuador",
     "SEO Ecuador",
     "agencia SEO",
     "consultor SEO",

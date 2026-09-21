@@ -9,12 +9,11 @@ export const metadata: Metadata = {
   description: 'Posiciono negocios en Google, Maps y buscadores de IA en Ecuador. SEO, posicionamiento web y estrategias con resultados verificables. +50 negocios transformados en Loja y Ecuador.',
   keywords: [
     "posicionamiento web",
-    "SEO Loja",
+    "posicionamiento web Ecuador",
     "SEO Ecuador",
     "agencia SEO",
     "consultor SEO",
-    "posicionamiento web Ecuador",
-    "SEO local",
+    "SEO local Ecuador",
     "experto SEO"
   ],
     openGraph: {

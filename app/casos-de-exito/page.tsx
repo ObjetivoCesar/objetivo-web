@@ -7,10 +7,10 @@ export const metadata: Metadata = {
     'Portafolio real: 14 negocios posicionados en Google, Maps y ChatGPT en Ecuador. Casos verificables de SEO y posicionamiento web con resultados medibles.',
   keywords: [
     'casos de éxito SEO',
-    'posicionamiento web Ecuador',
-    'SEO Loja',
+    'portafolio SEO Ecuador',
+    'casos de estudio posicionamiento',
     'resultados SEO verificables',
-    'portafolio SEO',
+    'evidencia posicionamiento Google',
     'posicionamiento Google Maps',
   ],
   alternates: {
