@@ -1,9 +1,34 @@
 {
-  "totalVisitas": 2140,
-  "visitasHoy": 2140,
+  "totalVisitas": 2145,
+  "visitasHoy": 2145,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
+    {
+      "fecha": "2026-09-28",
+      "pagina": "/motor-reservas-hotel",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-28",
+      "pagina": "/motor-reservas-hotel",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-28",
+      "pagina": "/motor-reservas-hotel",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-28",
+      "pagina": "/hoteles-y-restaurantes",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-28",
+      "pagina": "/",
+      "visitas": 1
+    },
     {
       "fecha": "2026-09-18",
       "pagina": "/cotizaciones/propuesta-libreria-san-jose-2026",
@@ -12,31 +37,6 @@
     {
       "fecha": "2026-09-18",
       "pagina": "/admin",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
       "visitas": 1
     },
     {
@@ -122,6 +122,7 @@
     "2026-09-08": 9,
     "2026-09-14": 1,
     "2026-09-16": 8,
-    "2026-09-18": 2
+    "2026-09-18": 2,
+    "2026-09-28": 5
   }
 }

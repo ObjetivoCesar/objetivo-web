@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState } from 'react';
 import { supabaseReto } from '@/src/lib/supabaseRetoClient';
@@ -858,7 +858,7 @@ const HotelObjetivoClient = () => {
                                             </AccordionTrigger>
                                             <AccordionContent>
                                                 <ul className="space-y-2 text-sm text-gray-600 pb-3">
-                                                    <li className="flex items-start"><span className="mr-2">•</span> Hasta 10 páginas profesionales</li>
+                                                    <li className="flex items-start"><span className="mr-2">•</span> Hasta 8 páginas profesionales</li>
                                                     <li className="flex items-start"><span className="mr-2">•</span> Sistema de reservas directo (cero comisiones, automatizado)</li>
                                                     <li className="flex items-start"><span className="mr-2">•</span> Código QR dinámico permanente</li>
                                                     <li className="flex items-start"><span className="mr-2">•</span> Galería de fotos y servicios</li>
@@ -900,13 +900,7 @@ const HotelObjetivoClient = () => {
                                     <p className="text-sm text-gray-600 leading-relaxed">Hostales o hoteles pequeños (menos de 10 habitaciones o máximo 13), enfocados solo en alojamiento.</p>
                                 </div>
 
-                                <div className="bg-green-50 p-4 rounded-xl border border-green-100">
-                                    <p className="font-bold text-green-800 mb-2 text-sm">💰 ROI PROYECTADO:</p>
-                                    <ul className="space-y-1 text-sm text-green-700">
-                                        <li>- 4-5 reservas directas/mes</li>
 
-                                    </ul>
-                                </div>
                             </div>
                             <div className="p-8 pt-0">
                                 <Link
@@ -950,7 +944,6 @@ const HotelObjetivoClient = () => {
                                                     <li className="flex items-start"><span className="mr-2">•</span> Hasta 20 páginas profesionales</li>
                                                     <li className="flex items-start"><span className="mr-2">•</span> Sistema de reservas directo (cero comisiones, automatizado)</li>
                                                     <li className="flex items-start"><span className="mr-2">•</span> Secciones especiales: eventos, promociones</li>
-                                                    <li className="flex items-start"><span className="mr-2">•</span> Integración avanzada con redes sociales</li>
                                                 </ul>
                                             </AccordionContent>
                                         </AccordionItem>
@@ -962,25 +955,14 @@ const HotelObjetivoClient = () => {
                                             <AccordionContent>
                                                 <ul className="space-y-2 text-sm text-gray-600 pb-3">
                                                     <li className="flex items-start"><span className="mr-2">•</span> Estudio profesional de 50+ palabras clave</li>
-                                                    <li className="flex items-start"><span className="mr-2">•</span> 15 artículos SEO-optimizados</li>
+                                                    <li className="flex items-start"><span className="mr-2">•</span> 5 artículos SEO-optimizados</li>
                                                     <li className="flex items-start"><span className="mr-2">•</span> Blog activo para búsquedas locales</li>
                                                     <li className="flex items-start"><span className="mr-2">•</span> Optimización Google My Business completo</li>
                                                 </ul>
                                             </AccordionContent>
                                         </AccordionItem>
 
-                                        <AccordionItem value="item-3" className="border border-gray-200 rounded-lg px-4">
-                                            <AccordionTrigger className="text-left font-semibold text-gray-800 hover:no-underline py-3">
-                                                Resultados Medibles:
-                                            </AccordionTrigger>
-                                            <AccordionContent>
-                                                <ul className="space-y-2 text-sm text-gray-600 pb-3">
-                                                    <li className="flex items-start"><span className="mr-2">•</span> Aparece en búsquedas locales (mes 3-6)</li>
-                                                    <li className="flex items-start"><span className="mr-2">•</span> Tráfico orgánico: 200-500 visitas/mes</li>
-                                                    <li className="flex items-start"><span className="mr-2">•</span> Conversión: 6-25 reservas/mes</li>
-                                                </ul>
-                                            </AccordionContent>
-                                        </AccordionItem>
+
                                     </Accordion>
                                 </div>
 
@@ -989,13 +971,7 @@ const HotelObjetivoClient = () => {
                                     <p className="text-sm text-gray-600 leading-relaxed">Hoteles de 10-40 habitaciones que quieren dominar las búsquedas locales y captar huéspedes directos.</p>
                                 </div>
 
-                                <div className="bg-green-50 p-4 rounded-xl border border-green-100">
-                                    <p className="font-bold text-green-800 mb-2 text-sm">💰 ROI PROYECTADO:</p>
-                                    <ul className="space-y-1 text-sm text-green-700">
-                                        <li>- 10-15 reservas directas/mes</li>
 
-                                    </ul>
-                                </div>
                             </div>
                             <div className="p-8 pt-0">
                                 <Link
@@ -1048,7 +1024,7 @@ const HotelObjetivoClient = () => {
                                                 <ul className="space-y-2 text-sm text-gray-300 pb-3">
                                                     <li className="flex items-start"><span className="mr-2">•</span> ChatGPT, Claude, Perplexity optimizados</li>
                                                     <li className="flex items-start"><span className="mr-2">•</span> Estrategia de contenido para LLMs</li>
-                                                    <li className="flex items-start"><span className="mr-2">•</span> 30 artículos SEO-optimizados</li>
+                                                    <li className="flex items-start"><span className="mr-2">•</span> 15 artículos SEO-optimizados</li>
                                                 </ul>
                                             </AccordionContent>
                                         </AccordionItem>
@@ -1059,17 +1035,13 @@ const HotelObjetivoClient = () => {
                                             </AccordionTrigger>
                                             <AccordionContent>
                                                 <ul className="space-y-2 text-sm text-gray-300 pb-3">
-                                                    <li className="flex items-start"><span className="mr-2">•</span> Soporte post-entrega: 90 días</li>
                                                     <li className="flex items-start"><span className="mr-2">•</span> Actualizaciones de contenido (6 meses)</li>
                                                 </ul>
                                             </AccordionContent>
                                         </AccordionItem>
                                     </Accordion>
 
-                                    <div className="bg-gray-800/50 p-3 rounded-lg border border-gray-700 mt-4">
-                                        <p className="font-bold text-[#FFD700] mb-1 text-sm">🎁 BONUS EXCLUSIVO:</p>
-                                        <p className="text-sm text-gray-300">12 meses de informes mensuales de rendimiento (Valor $1,800)</p>
-                                    </div>
+
                                 </div>
 
                                 <div className="bg-gray-800 p-4 rounded-xl border border-gray-700">
@@ -1077,13 +1049,7 @@ const HotelObjetivoClient = () => {
                                     <p className="text-sm text-gray-400 leading-relaxed">Hoteles boutique o cadenas (20-80 hab) que quieren ser LA REFERENCIA y ven 5 años adelante.</p>
                                 </div>
 
-                                <div className="bg-green-900/30 p-4 rounded-xl border border-green-900/50">
-                                    <p className="font-bold text-green-400 mb-2 text-sm">💰 ROI PROYECTADO:</p>
-                                    <ul className="space-y-1 text-sm text-green-300">
-                                        <li>- 20-30 reservas directas/mes</li>
 
-                                    </ul>
-                                </div>
                             </div>
                             <div className="p-8 pt-0">
                                 <Link
@@ -1143,20 +1109,20 @@ const HotelObjetivoClient = () => {
                                         <div className="p-4 space-y-3">
                                             <div className="flex justify-between border-b border-gray-100 pb-2">
                                                 <span className="text-sm font-medium text-gray-700">Páginas web</span>
-                                                <span className="text-sm font-bold text-gray-900">10</span>
+                                                <span className="text-sm font-bold text-gray-900">8</span>
                                             </div>
                                             <div className="flex justify-between border-b border-gray-100 pb-2">
                                                 <span className="text-sm font-medium text-gray-700">Sistema reservas</span>
-                                                <span className="text-sm text-gray-900">--</span>
+                                                <span className="text-sm text-gray-900">✅</span>
                                             </div>
                                             <div className="flex justify-between border-b border-gray-100 pb-2">
                                                 <span className="text-sm font-medium text-gray-700">Código QR</span>
                                                 <span className="text-sm text-gray-900">✅</span>
                                             </div>
-                                            <div className="flex justify-between border-b border-gray-100 pb-2">
-                                                <span className="text-sm font-medium text-gray-700">Actualizaciones en menu digital</span>
-                                                <span className="text-sm text-gray-900">Ilimitado</span>
-                                            </div>
+
+
+
+
                                             <div className="flex justify-between border-b border-gray-100 pb-2">
                                                 <span className="text-sm font-medium text-gray-700">Dominio + Hosting</span>
                                                 <span className="text-sm text-gray-900">1 año</span>
@@ -1177,10 +1143,10 @@ const HotelObjetivoClient = () => {
                                                 <span className="text-sm font-medium text-gray-700">Posicionamiento IA</span>
                                                 <span className="text-sm font-bold text-gray-900">✅ ChatGPT/Claude</span>
                                             </div>
-                                            <div className="flex justify-between border-b border-gray-100 pb-2">
-                                                <span className="text-sm font-medium text-gray-700">Informes (12 m)</span>
-                                                <span className="text-sm text-gray-900">✅ Mensuales</span>
-                                            </div>
+
+
+
+
 
                                             <div className="flex justify-between border-b border-gray-100 pb-2">
                                                 <span className="text-sm font-medium text-gray-700">Propiedad tuya</span>
@@ -1218,7 +1184,7 @@ const HotelObjetivoClient = () => {
                                             </div>
                                             <div className="flex justify-between border-b border-gray-100 pb-2">
                                                 <span className="text-sm font-medium text-gray-700">Dominio + Hosting</span>
-                                                <span className="text-sm text-gray-900">2 años</span>
+                                                <span className="text-sm text-gray-900">1 año</span>
                                             </div>
                                             <div className="flex justify-between border-b border-gray-100 pb-2">
                                                 <span className="text-sm font-medium text-gray-700">Keywords</span>
@@ -1226,7 +1192,7 @@ const HotelObjetivoClient = () => {
                                             </div>
                                             <div className="flex justify-between border-b border-gray-100 pb-2">
                                                 <span className="text-sm font-medium text-gray-700">Artículos blog</span>
-                                                <span className="text-sm font-bold text-[#FF6B00]">15</span>
+                                                <span className="text-sm font-bold text-[#FF6B00]">5</span>
                                             </div>
                                             <div className="flex justify-between border-b border-gray-100 pb-2">
                                                 <span className="text-sm font-medium text-gray-700">Google My Business</span>
@@ -1236,10 +1202,10 @@ const HotelObjetivoClient = () => {
                                                 <span className="text-sm font-medium text-gray-700">Posicionamiento IA</span>
                                                 <span className="text-sm font-bold text-gray-900">✅ ChatGPT/Claude</span>
                                             </div>
-                                            <div className="flex justify-between border-b border-gray-100 pb-2">
-                                                <span className="text-sm font-medium text-gray-700">Informes (12 m)</span>
-                                                <span className="text-sm font-bold text-gray-900">✅ Mensuales</span>
-                                            </div>
+
+
+
+
 
                                             <div className="flex justify-between border-b border-gray-100 pb-2">
                                                 <span className="text-sm font-medium text-gray-700">Propiedad tuya</span>
@@ -1277,7 +1243,7 @@ const HotelObjetivoClient = () => {
                                             </div>
                                             <div className="flex justify-between border-b border-gray-700 pb-2">
                                                 <span className="text-sm font-medium text-gray-300">Dominio + Hosting</span>
-                                                <span className="text-sm text-white">2 años</span>
+                                                <span className="text-sm text-white">1 año</span>
                                             </div>
                                             <div className="flex justify-between border-b border-gray-700 pb-2">
                                                 <span className="text-sm font-medium text-gray-300">Keywords</span>
@@ -1285,7 +1251,7 @@ const HotelObjetivoClient = () => {
                                             </div>
                                             <div className="flex justify-between border-b border-gray-700 pb-2">
                                                 <span className="text-sm font-medium text-gray-300">Artículos blog</span>
-                                                <span className="text-sm font-bold text-[#FFD700]">30</span>
+                                                <span className="text-sm font-bold text-[#FFD700]">15</span>
                                             </div>
                                             <div className="flex justify-between border-b border-gray-700 pb-2">
                                                 <span className="text-sm font-medium text-gray-300">Google My Business</span>
@@ -1295,10 +1261,10 @@ const HotelObjetivoClient = () => {
                                                 <span className="text-sm font-medium text-gray-300">Posicionamiento IA</span>
                                                 <span className="text-sm font-bold text-[#FFD700]">✅ ChatGPT/Claude</span>
                                             </div>
-                                            <div className="flex justify-between border-b border-gray-700 pb-2">
-                                                <span className="text-sm font-medium text-gray-300">Informes (12 m)</span>
-                                                <span className="text-sm font-bold text-[#FFD700]">✅ Mensuales</span>
-                                            </div>
+
+
+
+
 
                                             <div className="flex justify-between border-b border-gray-700 pb-2">
                                                 <span className="text-sm font-medium text-gray-300">Propiedad tuya</span>
@@ -1330,13 +1296,13 @@ const HotelObjetivoClient = () => {
                                     </tr>
                                     <tr className="border-b border-gray-100 hover:bg-gray-50">
                                         <td className="p-2.5 md:p-3 font-medium text-gray-700">Páginas web</td>
-                                        <td className="p-2.5 md:p-3 text-center text-gray-900">10</td>
+                                        <td className="p-2.5 md:p-3 text-center text-gray-900">8</td>
                                         <td className="p-2.5 md:p-3 text-center font-bold text-gray-900 bg-[#FF6B00]/5">20</td>
                                         <td className="p-2.5 md:p-3 text-center font-bold text-gray-900 bg-gray-50">40</td>
                                     </tr>
                                     <tr className="border-b border-gray-100 hover:bg-gray-50">
                                         <td className="p-2.5 md:p-3 font-medium text-gray-700">Sistema reservas</td>
-                                        <td className="p-2.5 md:p-3 text-center text-gray-900">--</td>
+                                        <td className="p-2.5 md:p-3 text-center text-gray-900">✅</td>
                                         <td className="p-2.5 md:p-3 text-center text-gray-900 bg-[#FF6B00]/5">✅</td>
                                         <td className="p-2.5 md:p-3 text-center text-gray-900 bg-gray-50">✅</td>
                                     </tr>
@@ -1348,15 +1314,15 @@ const HotelObjetivoClient = () => {
                                     </tr>
                                     <tr className="border-b border-gray-100 hover:bg-gray-50">
                                         <td className="p-2.5 md:p-3 font-medium text-gray-700">Actualizaciones en menu digital</td>
-                                        <td className="p-2.5 md:p-3 text-center text-gray-900">Ilimitado</td>
+                                        <td className="p-2.5 md:p-3 text-center text-gray-900">--</td>
                                         <td className="p-2.5 md:p-3 text-center text-gray-900 bg-[#FF6B00]/5">Ilimitado</td>
                                         <td className="p-2.5 md:p-3 text-center text-gray-900 bg-gray-50">Ilimitado</td>
                                     </tr>
                                     <tr className="border-b border-gray-100 hover:bg-gray-50">
                                         <td className="p-2.5 md:p-3 font-medium text-gray-700">Dominio + Hosting</td>
                                         <td className="p-2.5 md:p-3 text-center text-gray-900">1 año</td>
-                                        <td className="p-2.5 md:p-3 text-center text-gray-900 bg-[#FF6B00]/5">2 años</td>
-                                        <td className="p-2.5 md:p-3 text-center text-gray-900 bg-gray-50">2 años</td>
+                                        <td className="p-2.5 md:p-3 text-center text-gray-900 bg-[#FF6B00]/5">1 año</td>
+                                        <td className="p-2.5 md:p-3 text-center text-gray-900 bg-gray-50">1 año</td>
                                     </tr>
                                     <tr className="border-b border-gray-100 hover:bg-gray-50">
                                         <td className="p-2.5 md:p-3 font-medium text-gray-700">Keywords</td>
@@ -1367,8 +1333,8 @@ const HotelObjetivoClient = () => {
                                     <tr className="border-b border-gray-100 hover:bg-gray-50">
                                         <td className="p-2.5 md:p-3 font-medium text-gray-700">Artículos blog</td>
                                         <td className="p-2.5 md:p-3 text-center text-gray-400">--</td>
-                                        <td className="p-2.5 md:p-3 text-center font-bold text-gray-900 bg-[#FF6B00]/5">15</td>
-                                        <td className="p-2.5 md:p-3 text-center font-bold text-gray-900 bg-gray-50">30</td>
+                                        <td className="p-2.5 md:p-3 text-center font-bold text-gray-900 bg-[#FF6B00]/5">5</td>
+                                        <td className="p-2.5 md:p-3 text-center font-bold text-gray-900 bg-gray-50">15</td>
                                     </tr>
                                     <tr className="border-b border-gray-100 hover:bg-gray-50">
                                         <td className="p-2.5 md:p-3 font-medium text-gray-700">Google My Business</td>
@@ -1382,12 +1348,12 @@ const HotelObjetivoClient = () => {
                                         <td className="p-2.5 md:p-3 text-center text-gray-900 font-bold bg-[#FF6B00]/5">✅ ChatGPT/Claude</td>
                                         <td className="p-2.5 md:p-3 text-center font-bold text-gray-900 bg-gray-50">✅ ChatGPT/Claude</td>
                                     </tr>
-                                    <tr className="border-b border-gray-100 hover:bg-gray-50">
-                                        <td className="p-2.5 md:p-3 font-medium text-gray-700">Informes (12 m)</td>
-                                        <td className="p-2.5 md:p-3 text-center text-gray-900 font-bold">✅ Mensuales</td>
-                                        <td className="p-2.5 md:p-3 text-center text-gray-900 font-bold bg-[#FF6B00]/5">✅ Mensuales</td>
-                                        <td className="p-2.5 md:p-3 text-center font-bold text-gray-900 bg-gray-50">✅ Mensuales</td>
-                                    </tr>
+
+
+
+
+
+
 
                                     <tr className="border-b border-gray-100 hover:bg-gray-50">
                                         <td className="p-2.5 md:p-3 font-medium text-gray-700">Propiedad tuya</td>
