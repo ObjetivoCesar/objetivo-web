@@ -55,7 +55,7 @@ Cada página del proyecto tiene metadata individual con:
 **+47 páginas** con metadata estática (`export const metadata`) o dinámica (`generateMetadata`).
 
 ### Páginas con `generateMetadata` (dinámico):
-- `app/cotizaciones/[id]/page.tsx`
+- `app/cotizaciones/[id]/page.tsx` (Incluye propuestas dinámicas: `zerimar`, `calefonesloja` con Open Graph cards optimizadas 1200x630 en CDN, fallback estático y webhook de sincronización en MySQL - Octubre 2026)
 - `app/casos-de-exito/[slug]/page.tsx`
 - `app/blog/[category]/page.tsx`
 - `app/descubre-loja/[slug]/page.tsx` (Propuestas comerciales dinámicas con noindex, nofollow)

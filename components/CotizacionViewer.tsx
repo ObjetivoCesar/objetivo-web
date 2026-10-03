@@ -651,7 +651,7 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {data.modalidades.opciones.map((opt, i) => (
-                <div key={i} className="glass-panel rounded-3xl p-8 md:p-10 relative group hover:-translate-y-2 transition-transform duration-500">
+                <div key={i} className="bg-white/[0.04] hover:bg-white/[0.08] backdrop-blur-xl border border-white/10 hover:border-gold/40 rounded-3xl p-8 md:p-10 relative group hover:-translate-y-2 transition-all duration-500 shadow-2xl overflow-hidden">
                   <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                      <Target className="w-24 h-24 text-white" />
                   </div>
@@ -659,7 +659,7 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
                   <p className="font-montserrat text-sm text-slate-300 leading-relaxed mb-10 relative z-10 max-w-sm">{opt.descripcion}</p>
                   
                   <div className="pt-6 border-t border-white/10 relative z-10">
-                    <div className="font-outfit text-[10px] tracking-widest uppercase text-gold mb-2">Inversión</div>
+                    <div className="font-outfit text-[10px] tracking-widest uppercase text-gold font-bold mb-2">Inversión</div>
                     <div className="font-outfit text-4xl font-bold text-white mb-1">{opt.precio}</div>
                     <div className="font-montserrat text-xs text-slate-400">{opt.detalle_precio}</div>
                   </div>
