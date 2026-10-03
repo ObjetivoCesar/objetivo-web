@@ -45,9 +45,9 @@ export default function ZerimarCotizacionPage() {
     "url_fondo": ""
   },
   "introduccion": {
-    "titulo": "El costo oculto de atender WhatsApp de forma manual.\nCada hora sin respuesta es dinero que se pierde.",
+    "titulo": "La oportunidad es ahora: atención por WhatsApp de forma corporativa.",
     "parrafos": [
-      "Zerimar es la empresa que más factura en Loja, y WhatsApp es uno de sus principales canales de contacto con clientes. Hoy esa atención es manual: personas que leen cada mensaje, lo derivan y vuelven a explicar. Cada hora de ese trabajo es dinero, y en picos comerciales es dinero que se pierde cuando alguien escribe y no recibe respuesta a tiempo.",
+      "Zerimar es la empresa que más factura en Loja, ha dominado el mercado y hoy enfrenta la venida de nueva competencia como el Coral y Titán, y por eso el paso estratégico es convertir a WhatsApp en uno de sus principales canales de contacto con clientes, proveedores e incluso interno de la empresa. Hoy esa atención es manual: personas que leen cada mensaje, lo derivan y vuelven a explicar. Cada hora de ese trabajo es dinero, y en picos comerciales es dinero que se pierde cuando alguien escribe y no recibe respuesta a tiempo.",
       "Nadie lleva la cuenta exacta de lo que cuesta una conversación que no se contestó a tiempo, pero el impacto es directo: clientes que se enfrían y cotizan con otra empresa, decenas de horas hombre al día dedicadas a responder lo mismo, derivaciones «en frío» donde la colaboradora debe volver a preguntar todo, reclamos sin seguimiento que dañan la reputación y conversaciones que quedan atrapadas en teléfonos personales sin registro central.",
       "Le proponemos un software de comunicaciones tipo call center, con inteligencia artificial, construido a la medida de Zerimar sobre la API oficial de WhatsApp. Atiende 24/7, responde decenas de chats simultáneos, entrega cada consulta al área correspondiente con un resumen previo, genera un ticket por cada reclamo y registra a cada cliente en una base de datos propia para fidelizarlo antes de que llegue nueva competencia a la ciudad.",
       "IMPORTANTE: Nuestro software es un COMUNICADOR OPERATIVO Y CENTRAL DE ATENCIÓN. Optimiza el flujo de comunicación y facilita la labor de las colaboradoras en créditos, facturación, ventas y cobranzas. No reemplaza ni ejecuta tareas de contabilidad ni emisión tributaria; les entrega la información ya filtrada, estructurada y con contexto para actuar de inmediato."
@@ -183,8 +183,7 @@ export default function ZerimarCotizacionPage() {
       "nota_especial": "Plazo y condiciones: 2 meses de ejecución. Para tener el sistema 100% operativo en producción antes de las festividades navideñas, la firma y entrega de insumos debe concretarse a más tardar el 23 de octubre. La mensajería oficial es cobrada por Meta directamente a Zerimar según su consumo.",
       "detalles_pie": [
         "⏱ <strong>Plazo de entrega:</strong> 2 meses (hito clave: 23 de octubre para entrega hacia el 18 de diciembre)",
-        "💳 <strong>Forma de pago:</strong> 50% ($3,000.00 USD) a la firma / 50% ($3,000.00 USD) contra entrega en producción",
-        "📄 <strong>Facturación:</strong> Grupo Empresarial Reyes S.A.S. B.I.C. · RUC 1103421531001"
+        "💳 <strong>Forma de pago:</strong> 50% ($3,000.00 USD) a la firma / 50% ($3,000.00 USD) contra entrega en producción"
       ]
     },
     {
@@ -192,7 +191,7 @@ export default function ZerimarCotizacionPage() {
       "etiqueta_tiempo": "Plan Continuo · Soporte y Evolución",
       "nombre": "Plan Mensual de Soporte, Infraestructura Cloud y Evolución",
       "eslogan": "Un equipo tecnológico dedicado para Zerimar con presencia física en Loja",
-      "precio": "$150.00",
+      "precio": "$165.00 + IVA",
       "precio_subtitulo": "mensual / desde la puesta en producción",
       "descripcion": "Plan integral para garantizar máxima disponibilidad, soporte prioritario y mejora continua del sistema. Es como contar con un departamento tecnológico propio para Zerimar, con atención presencial inmediata en Loja.",
       "entregables": [
@@ -206,8 +205,7 @@ export default function ZerimarCotizacionPage() {
       "nota_especial": "Ventaja local: Equipo con sede en Loja. Si requiere un ajuste o asistencia, no abre un ticket a otro país: se resuelve de inmediato y de forma presencial si es necesario.",
       "detalles_pie": [
         "🚀 <strong>Disponibilidad:</strong> 24/7 ininterrumpida",
-        "📍 <strong>Soporte local:</strong> Presencia técnica física en Loja",
-        "📄 <strong>Facturación mensual:</strong> RUC 1103421531001"
+        "📍 <strong>Soporte local:</strong> Presencia técnica física en Loja"
       ]
     },
     {
@@ -236,15 +234,15 @@ export default function ZerimarCotizacionPage() {
     "titulo": "Retorno de inversión y referencia frente al mercado",
     "subtitulo": "Análisis Financiero & Diferenciales Clave",
     "parrafos": [
-      "Escenario de referencia económica: Las horas hombre que hoy se dedican a responder manualmente consultas repetitivas equivalen a uno o dos puestos dedicados, con un costo directo aproximado de $16,000 USD al año. Con nuestra solución, el primer año representa una inversión de $7,800 USD ($6,000 de implementación + $1,800 anuales de soporte a $150/mes), y desde el segundo año únicamente $1,800 USD anuales. La inversión se recupera en pocos meses liberando al personal para vender más.",
-      "Frente a plataformas genéricas nacionales como Mercately (planes de $89 a $299/mes que cobran extra por cupos de IA, exigen que la empresa se adapte a su molde y no están a la medida) o suites internacionales como Zendesk, Respond.io o Salesforce (cuyas implementaciones van de $5,000 a más de $20,000 USD más suscripciones mensuales de miles de dólares), nuestra solución ofrece un desarrollo 100% propio sobre sus procesos por una fracción del costo.",
+      "Escenario de referencia económica: Las horas hombre que hoy se dedican a responder manualmente consultas repetitivas equivalen a varios puestos dedicados. El costo real de implementación es de $6,000 USD. El costo operativo de funcionamiento —API de WhatsApp, servidor, tokens de IA y mantenimiento técnico— es de aproximadamente $250 a $350 mensuales según el volumen de conversaciones. La inversión se recupera en pocos meses liberando al personal para vender más.",
+      "Plataformas genéricas nacionales como Mercately (planes de $89 a $299/mes que cobran extra por cupos de IA, exigen que la empresa se adapte a su molde y no están a la medida) o suites internacionales como Zendesk, Respond.io o Salesforce (cuyas implementaciones van de $5,000 a más de $20,000 USD más suscripciones mensuales de miles de dólares), nuestra solución ofrece un desarrollo 100% propio sobre sus procesos por una fracción del costo.",
       "El mayor diferencial: Nuestra presencia es cercana y local. Somos un equipo con sede en Loja, a pocos minutos de su operación. Si algo debe ajustarse o capacitarse, se resuelve el mismo día en sus oficinas de forma presencial, sin depender de mesas de ayuda en otros países."
     ]
   },
   "cierre": {
     "titulo": "El siguiente paso para Zerimar",
     "frase_bisagra": "Zerimar ya tiene la clientela y el liderazgo en Loja. Con este software, su WhatsApp se convierte en su mejor canal de ventas y retención.",
-    "texto": "Podemos coordinar una reunión presencial en sus oficinas o videollamada para revisar la demostración en vivo del software y definir los pasos de inicio. Contácteme directamente al correo clientes@zerimar.com.ec o al WhatsApp directo.",
+    "texto": "Ya hemos tenido el primer acercamiento y estamos buscando el espacio con Gerencia para definir los pasos de inicio. Contácteme directamente al WhatsApp o al correo indicado para coordinar.",
     "bloque_derecha": {
       "titulo": "Preguntas Frecuentes Clave",
       "subtitulo": "Criterios operativos sobre la propuesta",
