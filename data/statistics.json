@@ -1,9 +1,19 @@
 {
-  "totalVisitas": 2156,
-  "visitasHoy": 2156,
+  "totalVisitas": 2158,
+  "visitasHoy": 2158,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
+    {
+      "fecha": "2026-10-15",
+      "pagina": "/cotizaciones/santiago-papeleria",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-10-15",
+      "pagina": "/",
+      "visitas": 1
+    },
     {
       "fecha": "2026-10-15",
       "pagina": "/cotizaciones/veterinaria-diana-jaramillo",
@@ -42,16 +52,6 @@
     {
       "fecha": "2026-10-15",
       "pagina": "/cotizaciones/union-cariamanga",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-10-15",
-      "pagina": "/cotizaciones/cotizaciones/trazabilidad-encomiendas-union-cariamanga",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-10-15",
-      "pagina": "/cotizaciones/trazabilidad-encomiendas-union-cariamanga",
       "visitas": 1
     }
   ],
@@ -124,6 +124,6 @@
     "2026-09-16": 8,
     "2026-09-18": 2,
     "2026-09-28": 5,
-    "2026-10-15": 11
+    "2026-10-15": 13
   }
 }
