@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og-veterinaria-diana.jpg",
+        url: "https://www.cesarreyesjaramillo.com/images/og-veterinaria-diana.jpg",
         width: 1200,
         height: 630,
         alt: "Propuesta de Sistema de Gestión Veterinaria — Diana del Rocío Jaramillo",
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     title: "Sistema de Gestión & Fidelización Veterinaria — Diana Jaramillo",
     description:
       "Facturación SRI, inventario con etiquetas propias, contabilidad gerencial y CRM veterinario con avisos por WhatsApp.",
-    images: ["/images/og-veterinaria-diana.jpg"],
+    images: ["https://www.cesarreyesjaramillo.com/images/og-veterinaria-diana.jpg"],
   },
 };
 
 export default function VeterinariaDianaCotizacionPage() {
   const data = {
     id: "veterinaria-diana-jaramillo",
-    og_image_url: "/images/og-veterinaria-diana.jpg",
+    og_image_url: "https://www.cesarreyesjaramillo.com/images/og-veterinaria-diana.jpg",
     portada: {
       etiqueta: "Propuesta de Transformación Digital & Automatización Veterinaria",
       titulo_principal: "Un sistema integral",
