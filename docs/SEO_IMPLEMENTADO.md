@@ -82,6 +82,11 @@ Home, posicionamiento, posicionamiento/loja, posicionamiento/auditoria-seo-redis
 - **Archivos creados**: `app/descubre-loja/DescubreLojaCLient.tsx`, `app/descubre-loja/page.tsx`.
 - **Nota SEO**: La página está marcada con `noindex, nofollow` intencionalmente — es una propuesta comercial confidencial, no debe indexarse.
 
+### Cotización Veterinaria Diana Jaramillo — Sistema de Gestión & Fidelización (2026-10-15):
+- **Ruta**: `app/cotizaciones/veterinaria-diana-jaramillo/page.tsx`
+- **Metadata**: Title *"Propuesta de Sistema de Gestión & Fidelización Veterinaria — Diana Jaramillo"*, `robots: noindex, nofollow` (propuesta privada/confidencial), OpenGraph completo 1200x630, Twitter Cards `summary_large_image`, Canonical URL `https://www.cesarreyesjaramillo.com/cotizaciones/veterinaria-diana-jaramillo`.
+- **Detalle**: Propuesta integral personalizada para Diana del Rocío Jaramillo Condolo (RUC: 1104613946001, Loja). Enfocada en resolver el dolor operativo (facturación electrónica SRI y control de inventario con códigos de barra y alertas de caducidad), activar el canal de ingresos mediante fidelización médica con recordatorios automáticos por WhatsApp y dotar de reportes gerenciales con bot de resúmenes ejecutivos. Estructurada con el visualizador interactivo `CotizacionViewer` replicando el estándar de Calefones Loja.
+- **Archivos creados**: `app/cotizaciones/veterinaria-diana-jaramillo/page.tsx`.
 
 ---
 

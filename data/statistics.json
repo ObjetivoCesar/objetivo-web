@@ -1,9 +1,24 @@
 {
-  "totalVisitas": 2153,
-  "visitasHoy": 2153,
+  "totalVisitas": 2156,
+  "visitasHoy": 2156,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
+    {
+      "fecha": "2026-10-15",
+      "pagina": "/cotizaciones/veterinaria-diana-jaramillo",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-10-15",
+      "pagina": "/cotizaciones/veterinaria-diana-jaramillo",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-10-15",
+      "pagina": "/cotizaciones/veterinaria-diana-jaramillo",
+      "visitas": 1
+    },
     {
       "fecha": "2026-10-15",
       "pagina": "/cotizaciones/union-cariamanga",
@@ -37,21 +52,6 @@
     {
       "fecha": "2026-10-15",
       "pagina": "/cotizaciones/trazabilidad-encomiendas-union-cariamanga",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-10-15",
-      "pagina": "/",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-28",
-      "pagina": "/motor-reservas-hotel",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-28",
-      "pagina": "/motor-reservas-hotel",
       "visitas": 1
     }
   ],
@@ -124,6 +124,6 @@
     "2026-09-16": 8,
     "2026-09-18": 2,
     "2026-09-28": 5,
-    "2026-10-15": 8
+    "2026-10-15": 11
   }
 }
