@@ -1,57 +1,57 @@
 {
-  "totalVisitas": 2145,
-  "visitasHoy": 2145,
+  "totalVisitas": 2153,
+  "visitasHoy": 2153,
   "articulosPublicados": 0,
   "suscriptoresNewsletter": 0,
   "ultimasVisitas": [
     {
-      "fecha": "2026-09-28",
-      "pagina": "/motor-reservas-hotel",
+      "fecha": "2026-10-15",
+      "pagina": "/cotizaciones/union-cariamanga",
       "visitas": 1
     },
     {
-      "fecha": "2026-09-28",
-      "pagina": "/motor-reservas-hotel",
+      "fecha": "2026-10-15",
+      "pagina": "/cotizaciones/union-cariamanga",
       "visitas": 1
     },
     {
-      "fecha": "2026-09-28",
-      "pagina": "/motor-reservas-hotel",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-28",
-      "pagina": "/hoteles-y-restaurantes",
-      "visitas": 1
-    },
-    {
-      "fecha": "2026-09-28",
+      "fecha": "2026-10-15",
       "pagina": "/",
       "visitas": 1
     },
     {
-      "fecha": "2026-09-18",
-      "pagina": "/cotizaciones/propuesta-libreria-san-jose-2026",
+      "fecha": "2026-10-15",
+      "pagina": "/cotizaciones/trazabilidad-encomiendas-union-cariamanga",
       "visitas": 1
     },
     {
-      "fecha": "2026-09-18",
-      "pagina": "/admin",
+      "fecha": "2026-10-15",
+      "pagina": "/cotizaciones/union-cariamanga",
       "visitas": 1
     },
     {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
+      "fecha": "2026-10-15",
+      "pagina": "/cotizaciones/cotizaciones/trazabilidad-encomiendas-union-cariamanga",
       "visitas": 1
     },
     {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
+      "fecha": "2026-10-15",
+      "pagina": "/cotizaciones/trazabilidad-encomiendas-union-cariamanga",
       "visitas": 1
     },
     {
-      "fecha": "2026-09-16",
-      "pagina": "/descubre-loja",
+      "fecha": "2026-10-15",
+      "pagina": "/",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-28",
+      "pagina": "/motor-reservas-hotel",
+      "visitas": 1
+    },
+    {
+      "fecha": "2026-09-28",
+      "pagina": "/motor-reservas-hotel",
       "visitas": 1
     }
   ],
@@ -123,6 +123,7 @@
     "2026-09-14": 1,
     "2026-09-16": 8,
     "2026-09-18": 2,
-    "2026-09-28": 5
+    "2026-09-28": 5,
+    "2026-10-15": 8
   }
 }
