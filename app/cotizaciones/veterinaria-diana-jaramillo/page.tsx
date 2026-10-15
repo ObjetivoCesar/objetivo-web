@@ -5,10 +5,6 @@ export const metadata: Metadata = {
   title: "Propuesta de Sistema de Gestión & Fidelización Veterinaria — Diana Jaramillo",
   description:
     "Sistema de gestión integral para la clínica veterinaria de Diana del Rocío Jaramillo Condolo: Facturación electrónica SRI con firma, control de inventarios con códigos de barra y alertas de vencimiento, contabilidad automatizada y CRM de fidelización con recordatorios automáticos por WhatsApp.",
-  robots: {
-    index: false,
-    follow: false,
-  },
   openGraph: {
     title: "Sistema de Gestión & Fidelización Veterinaria — Diana Jaramillo × César Reyes",
     description:
@@ -18,7 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.cesarreyesjaramillo.com/images/og-veterinaria-diana.jpg",
+        url: "https://cesarweb.b-cdn.net/cotizaciones/og-veterinaria-diana.jpg",
         width: 1200,
         height: 630,
         alt: "Propuesta de Sistema de Gestión Veterinaria — Diana del Rocío Jaramillo",
@@ -30,14 +26,14 @@ export const metadata: Metadata = {
     title: "Sistema de Gestión & Fidelización Veterinaria — Diana Jaramillo",
     description:
       "Facturación SRI, inventario con etiquetas propias, contabilidad gerencial y CRM veterinario con avisos por WhatsApp.",
-    images: ["https://www.cesarreyesjaramillo.com/images/og-veterinaria-diana.jpg"],
+    images: ["https://cesarweb.b-cdn.net/cotizaciones/og-veterinaria-diana.jpg"],
   },
 };
 
 export default function VeterinariaDianaCotizacionPage() {
   const data = {
     id: "veterinaria-diana-jaramillo",
-    og_image_url: "https://www.cesarreyesjaramillo.com/images/og-veterinaria-diana.jpg",
+    og_image_url: "https://cesarweb.b-cdn.net/cotizaciones/og-veterinaria-diana.jpg",
     portada: {
       etiqueta: "Propuesta de Transformación Digital & Automatización Veterinaria",
       titulo_principal: "Un sistema integral",
@@ -48,9 +44,9 @@ export default function VeterinariaDianaCotizacionPage() {
       preparado_por: "Ing. César Augusto Reyes Jaramillo · Estrategia · Sistemas · Automatización",
       fecha: "Octubre 2026",
       url_logo_cliente: "",
-      imagen_url: "/images/og-veterinaria-diana.jpg",
-      url_fondo: "/images/og-veterinaria-diana.jpg",
-      url_fondo_movil: "/images/og-veterinaria-diana.jpg",
+      imagen_url: "https://cesarweb.b-cdn.net/cotizaciones/og-veterinaria-diana.jpg",
+      url_fondo: "https://cesarweb.b-cdn.net/cotizaciones/og-veterinaria-diana.jpg",
+      url_fondo_movil: "https://cesarweb.b-cdn.net/cotizaciones/og-veterinaria-diana.jpg",
     },
     introduccion: {
       titulo: "Menos horas en tareas administrativas.\nMás pacientes atendidos y clientes que siempre regresan.",
