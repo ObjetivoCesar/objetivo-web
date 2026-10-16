@@ -2,13 +2,13 @@ import CotizacionViewer from "@/components/CotizacionViewer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Propuesta de Asistente Comercial & Operación Inteligente — Santiago Papelería",
+  title: "Propuesta de Sistema Inteligente de Atención Comercial — Santiago Papelería",
   description:
-    "Desarrollo e integración de un asistente inteligente conectado a la operación comercial de Santiago Papelería: consultas de catálogo, delegación de tareas, supervisión humana, puesta en marcha y 2 meses de acompañamiento y mejora continua.",
+    "Tecnología para delegar tareas, mejorar la atención por WhatsApp y mantener el control del negocio. MVP comercial conectado al catálogo con 2 meses de acompañamiento.",
   openGraph: {
-    title: "Asistente Comercial Inteligente & Automatización — Santiago Papelería × César Reyes",
+    title: "Sistema Inteligente de Atención Comercial — Santiago Papelería × César Reyes",
     description:
-      "Automatización comercial con criterio profesional: consultas precisas de productos, delegación controlada de tareas y 2 meses de seguimiento continuo en operación real.",
+      "Delegar tareas comerciales sin perder el control de la operación: catálogo conectado, atención por WhatsApp y supervisión humana directa.",
     url: "https://www.cesarreyesjaramillo.com/cotizaciones/santiago-papeleria",
     siteName: "César Reyes Jaramillo",
     type: "website",
@@ -17,15 +17,15 @@ export const metadata: Metadata = {
         url: "https://www.cesarreyesjaramillo.com/images/og-santiago-papeleria.jpg",
         width: 1200,
         height: 630,
-        alt: "Propuesta Asistente Comercial Inteligente — Santiago Papelería",
+        alt: "Propuesta Sistema Comercial — Santiago Papelería",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Asistente Comercial Inteligente & Automatización — Santiago Papelería",
+    title: "Sistema Inteligente de Atención Comercial — Santiago Papelería",
     description:
-      "Desarrollo, puesta en marcha y evolución guiada para Santiago Papelería: automatización con criterio y supervisión técnica directa.",
+      "Tecnología para delegar tareas, agilizar ventas por WhatsApp y mantener el control del negocio.",
     images: ["https://www.cesarreyesjaramillo.com/images/og-santiago-papeleria.jpg"],
   },
 };
@@ -35,13 +35,13 @@ export default function SantiagoPapeleriaCotizacionPage() {
     id: "santiago-papeleria",
     og_image_url: "https://www.cesarreyesjaramillo.com/images/og-santiago-papeleria.jpg",
     portada: {
-      etiqueta: "Propuesta de Transformación Digital & Automatización Comercial con IA",
-      titulo_principal: "Criterio profesional y tecnología:",
-      titulo_destacado: "delegar tareas sin perder el control de la operación.",
+      etiqueta: "Santiago Papelería · Primera etapa: MVP Comercial",
+      titulo_principal: "Tecnología para delegar tareas,",
+      titulo_destacado: "mejorar la atención y mantener el control del negocio.",
       subtitulo:
-        "Desarrollo, integración con su catálogo comercial, puesta en marcha del MVP y dos meses de seguimiento continuo para que la inteligencia artificial responda con exactitud, consistencia y supervisión humana.",
+        "Un centro inteligente de atención comercial conectado a sus productos reales: atiende por WhatsApp, responde con datos verificados y delega oportunamente a su equipo.",
       preparado_para: "Ing. Verónica Luna (Gerente General) & Rosemary Alejandro (Gerente Comercial Financiera) — Papelería Santiago",
-      preparado_por: "Ing. César Augusto Reyes Jaramillo · Estrategia · Sistemas · Automatización (Objetivo)",
+      preparado_por: "Ing. César Augusto Reyes Jaramillo · Objetivo",
       fecha: "Octubre 2026",
       url_logo_cliente: "https://santiagopapeleria.com/wp-content/uploads/2020/05/cropped-logonuev.png",
       imagen_url: "/images/og-santiago-papeleria.jpg",
@@ -49,174 +49,145 @@ export default function SantiagoPapeleriaCotizacionPage() {
       url_fondo_movil: "/images/og-santiago-papeleria.jpg",
     },
     introduccion: {
-      titulo: "La IA puede construir muchas cosas.\nLa responsabilidad no se delega a una herramienta.",
+      titulo: "Comenzar con un objetivo concreto.\nCrecer con la experiencia real del negocio.",
       parrafos: [
-        "Hoy en día, la frase «la IA lo hace» es fácil de decir. Lo difícil es conseguir que el sistema consulte el precio correcto, no confunda artículos similares, no pierda una conversación, sepa con precisión cuándo delegar una tarea a una persona de su equipo y continúe funcionando de forma consistente cuando aparece un problema.",
-        "La inteligencia artificial nos permite desarrollar soluciones con mayor rapidez y en Objetivo también la utilizamos como herramienta de construcción. Pero implementar un sistema para una empresa consolidada como Santiago Papelería implica mucho más que lograr que funcione en una demostración: hay que conectar correctamente los datos, controlar los accesos, probar los resultados con casos reales, documentar su funcionamiento y saber qué hacer cuando una integración falla, un proceso se interrumpe o una modificación produce un desajuste.",
-        "Porque cuando un sistema forma parte de la operación comercial cotidiana, la pregunta crucial no es solamente quién lo construyó, sino quién entiende a fondo cómo funciona y puede hacerse cargo de su supervisión, estabilidad y evolución continua junto al equipo del negocio.",
+        "Santiago Papelería cuenta con un catálogo consolidado, presencia comercial y un equipo que conoce a fondo sus productos y clientes. El siguiente paso es convertir ese canal digital en un verdadero call center comercial inteligente, capaz de consultar información real de productos, atender consultas por WhatsApp y reconocer con precisión cuándo transferir una conversación al personal.",
+        "Proponemos iniciar con un MVP funcional y productivo en una línea de productos. Esto permite comprobar resultados con clientes reales en el mostrador digital y sentar una base sólida para crecer, con soporte técnico directo y sin depender de chatbots genéricos o cajas negras.",
       ],
     },
     como_funciona: {
-      titulo: "¿Cómo nos aseguramos de que el sistema haga bien su trabajo?",
+      titulo: "¿Qué obtienen con esta primera etapa?",
       pasos: [
         {
-          momento: "1. Búsqueda y Validación Exacta de Productos",
+          momento: "1. Consulta Inteligente del Catálogo",
           descripcion:
-            "Si un cliente pregunta por un cuaderno o suministro escolar/oficina, comprobamos rigurosamente que el sistema encuentre el producto correcto y no confunda su precio ni características con el de otro artículo del inventario.",
+            "El sistema se conecta con su fuente comercial para consultar artículos de la línea seleccionada: precios oficiales, características y disponibilidad de stock al instante.",
         },
         {
-          momento: "2. Cero Respuestas Inventadas (Alucinaciones)",
+          momento: "2. Atención Inmediata por WhatsApp",
           descripcion:
-            "Si el sistema no encuentra un producto o no hay disponibilidad en stock, debe reconocerlo con total transparencia en lugar de inventar una respuesta o prometer lo que no existe.",
+            "Canal de atención fluido donde el cliente consulta de forma natural, reduciendo el tiempo que el personal hoy dedica a responder mensajes idénticos una y otra vez.",
         },
         {
-          momento: "3. Solicitud Oportuna de Ayuda e Información",
+          momento: "3. Respuestas con Información Verificada",
           descripcion:
-            "Si la consulta requiere especificaciones técnicas, cotizaciones por volumen o datos que no están disponibles de forma pública, el asistente reconoce el límite y solicita la ayuda requerida según el protocolo establecido.",
+            "El sistema nunca inventa precios ni condiciones: utiliza exclusivamente datos comerciales oficiales y reconoce con transparencia si un dato no está disponible.",
         },
         {
-          momento: "4. Delegación Fluida a Atención Humana",
+          momento: "4. Delegación Fluida al Equipo Comercial",
           descripcion:
-            "Si una conversación requiere atención personal, trato preferencial mayorista o criterio comercial específico, el sistema transfiere de inmediato el caso para que el equipo humano intervenga sin fricciones.",
+            "Consultas mayoristas, cotizaciones por volumen o pedidos especiales se derivan de inmediato al asesor correspondiente sin fricción.",
         },
         {
-          momento: "5. Diagnóstico y Corrección Inmediata ante Fallos",
+          momento: "5. Panel de Supervisión y Registro",
           descripcion:
-            "Si ocurre cualquier incidencia técnica o cambio en el catálogo, contamos con la arquitectura clara para identificar qué sucedió, por qué y corregirlo de inmediato sin detener la atención comercial.",
+            "Historial completo de conversaciones y panel web para que la gerencia supervise la atención, detecte oportunidades y tome el control cuando lo desee.",
         },
       ],
     },
     comparativa: {
-      titulo: "El antes y después en la atención comercial de Santiago Papelería",
+      titulo: "¿Cómo garantizamos que el sistema esté listo para operar?",
       filas: [
         {
           antes:
-            "El equipo invierte horas respondiendo una y otra vez consultas idénticas de precios, disponibilidad y horarios, descuidando el cierre de ventas.",
+            "Respuestas no verificadas: riesgo de que un sistema confunda artículos similares o entregue precios desactualizados.",
           despues:
-            "Delegación progresiva de consultas repetitivas al sistema inteligente, liberando tiempo valioso del personal para negociaciones y ventas clave.",
+            "Pruebas con productos reales (ej. cuadernos): verificación estricta de precios exactos y reconocimiento transparente si un ítem no existe.",
         },
         {
           antes:
-            "Respuestas genéricas o bots desconectados que inventan datos, desorientan al comprador y generan fricción con los clientes.",
+            "Clientes que se quedan sin respuesta o en callejones sin salida cuando la consulta es compleja.",
           despues:
-            "Asistente conectado a la API y catálogo comercial con reglas estrictas: verifica precios reales, reconoce si algo falta y transfiere a humanos cuando corresponde.",
+            "Protocolo de delegación: el sistema solicita asistencia oportuna y transfiere la conversación al asesor indicado.",
         },
         {
           antes:
-            "Sistemas entregados como 'cajas negras' donde nadie sabe qué hacer si algo falla o si se desea cambiar reglas de negocio.",
+            "Sistemas entregados sin respaldo donde nadie sabe dónde corregir si surge un inconveniente técnico.",
           despues:
-            "Acompañamiento profesional de 2 meses post-entrega con observación, afinación y control continuo en la operación diaria.",
+            "Acompañamiento profesional directo de 2 meses: supervisión, resolución de incidencias y afinación continua en operación real.",
         },
       ],
     },
     etapas: [
       {
         numero: "01",
-        etiqueta_tiempo: "Mes 1 · Desarrollo y Puesta en Marcha",
-        nombre: "Construcción del Asistente Comercial Inteligente (MVP)",
-        eslogan: "\"Implementar una herramienta sólida, conectada a los datos reales y probada en situaciones cotidianas de la papelería.\"",
-        precio: "$1.250",
-        precio_subtitulo: "50% al inicio del proyecto · puesta en funcionamiento",
+        etiqueta_tiempo: "Proyecto Integral · 3 Meses de Trabajo y Acompañamiento",
+        nombre: "Implementación del Sistema Inteligente de Atención Comercial (MVP)",
+        eslogan: "\"Poner en marcha la solución conectada a los datos de la papelería y perfeccionarla en operación real.\"",
+        precio: "$2.500",
+        precio_subtitulo: "inversión única total · desarrollo, puesta en marcha y 2 meses de seguimiento",
         descripcion:
-          "Diseño, arquitectura, conexión de datos y desarrollo integral del asistente para WhatsApp y canales comerciales. Construido para responder con precisión, delegar tareas operativas y someterse a pruebas de aceptación con situaciones reales antes de su entrega.",
+          "Solución completa llave en mano: Mes 1 de desarrollo, conexión con API/catálogo y puesta en marcha del canal WhatsApp con panel de control; seguido de los Meses 2 y 3 de acompañamiento, corrección y optimización continua con clientes reales incluidos.",
         entregables: [
-          "Integración con la API comercial disponible y base de datos de productos de Santiago Papelería",
-          "Conexión oficial de mensajería (WhatsApp) y configuración de base de datos de conversaciones",
-          "Módulo de búsqueda inteligente de artículos, precios oficiales y disponibilidad de inventario",
-          "Reglas estrictas de validación comercial para evitar respuestas inventadas o precios desactualizados",
-          "Mecanismo de delegación inteligente: detección de casos que requieren atención del equipo y transferencia fluida",
-          "Panel de supervisión comercial: visualización de conversaciones, estados y puntos de intervención humana",
-          "Protocolo de pruebas de aceptación en frío simulando consultas de clientes reales (cuadernos, útiles, papelería técnica)",
-          "Capacitación inicial al personal sobre la supervisión, lectura de conversaciones e intervención directa",
+          "Integración con la API comercial y catálogo para consulta de precios, stock y datos verificados",
+          "Conexión con WhatsApp para atención comercial fluida sin respuestas inventadas",
+          "Mecanismo de delegación inteligente: derivación oportuna a asesores humanos ante cotizaciones o clientes mayoristas",
+          "Panel web de supervisión para monitorear conversaciones, actividad y tomar control en vivo",
+          "Pruebas de aceptación en condiciones reales antes de la entrega",
+          "Capacitación inicial al equipo comercial y administrativo",
+          "2 meses continuos de seguimiento, soporte técnico directo, resolución de incidencias y afinación con clientes reales",
+          "Diagnóstico final y hoja de ruta basada en datos reales para futuras ampliaciones",
         ],
         nota_especial:
-          "No nos conformamos con mostrar una conversación bonita: revisamos que cada función cumpla exactamente lo que debe hacer y corregimos cualquier desviación antes de darla por aceptada.",
+          "La inversión incluye tanto el desarrollo técnico como los dos meses posteriores de acompañamiento activo para garantizar que la solución funcione y aporte valor desde el primer día.",
         detalles_pie: [
-          "📍 <strong>Alcance:</strong> Catálogo comercial y canal de mensajería de Santiago Papelería",
-          "🤖 <strong>Precisión:</strong> Reglas estrictas de consulta de stock y precios sin alucinaciones",
-          "👥 <strong>Supervisión:</strong> Panel operativo para intervención y control humano del equipo",
-        ],
-      },
-      {
-        numero: "02",
-        etiqueta_tiempo: "Meses 2 y 3 · Seguimiento, Corrección y Mejora Incluidos",
-        nombre: "Acompañamiento en Operación Real y Optimización Continua",
-        eslogan: "\"Los dos meses de seguimiento no son un regalo ni una garantía vaga: son el método profesional para perfeccionar el sistema con la experiencia real.\"",
-        precio: "$1.250",
-        precio_subtitulo: "50% contra entrega y aceptación del MVP · 2 meses de acompañamiento",
-        descripcion:
-          "No intentamos automatizarlo todo desde el primer día. Durante los 60 días posteriores al lanzamiento, trabajamos junto a Santiago Papelería para observar la operación real, recoger casos atípicos, solucionar defectos y afinar las reglas de funcionamiento.",
-        entregables: [
-          "Observación continua de conversaciones reales para identificar dudas recurrentes y excepciones de compra",
-          "Detección y resolución prioritaria de errores o desajustes dentro del alcance acordado del MVP",
-          "Afinación de reglas de respuesta, catálogo y criterios de delegación a asesores humanos",
-          "Reuniones periódicas de seguimiento y evaluación del desempeño comercial de la herramienta",
-          "Clasificación técnica de mejoras: Correcciones (dentro del alcance), Afinaciones y Nuevos Desarrollos",
-          "Definición documentada de la hoja de ruta para futuras ampliaciones (atención mayorista vs minorista, cotizaciones complejas, catálogo extendido)",
-        ],
-        nota_especial:
-          "Es cuando el equipo y los clientes reales interactúan cuando surgen los detalles que marcan la diferencia. Este periodo garantiza que cada decisión futura se base en evidencia real.",
-        detalles_pie: [
-          "🔍 <strong>Método:</strong> Observar → Detectar → Priorizar → Construir → Probar → Evaluar",
-          "🛡️ <strong>Soporte:</strong> Corrección de incidencias y afinación fina durante 60 días continuos",
-          "📈 <strong>Evolución:</strong> Diagnóstico claro para decidir con fundamento los siguientes pasos",
+          "📍 <strong>Alcance:</strong> Línea de productos seleccionada y WhatsApp comercial",
+          "⏱️ <strong>Duración:</strong> 1 mes de desarrollo + 2 meses de seguimiento incluidos",
+          "🛡️ <strong>Garantía:</strong> Soporte, afinación y supervisión técnica directa",
         ],
       },
     ],
     ir_mas_alla: {
-      titulo: "Evolución después del MVP: Mejorar con la experiencia real",
-      subtitulo: "De un asistente funcional a una operación comercial escalable y mejor organizada",
+      titulo: "Evolución posterior: Crecer con fundamento",
+      subtitulo: "De un canal inicial a un centro omnicanal de gestión comercial",
       parrafos: [
-        "Una de las principales ventajas de empezar con un MVP es que podemos observar cómo se utiliza el sistema en la dinámica viva de Santiago Papelería, sin incurrir en costos sobredimensionados ni complejidades innecesarias desde el inicio.",
-        "Con la experiencia obtenida durante los dos meses de operación real, podremos determinar con total claridad y números en mano si conviene desarrollar etapas posteriores especializadas, tales como:",
-        "• Diferenciar la atención automatizada para clientes mayoristas (colegios, empresas, distribuidores) vs clientes minoristas.\n• Preparación, emisión y seguimiento comercial automatizado de cotizaciones formales.\n• Identificación proactiva de conversaciones que requieren seguimiento de cierre por parte de un vendedor.\n• Conexión de nuevas áreas o canales de venta adicionales.\n• Ampliación de la consulta hacia la totalidad del catálogo (hasta aproximadamente 30.000 productos).\n• Integración profunda con el sistema contable, facturación o ERP comercial.",
-        "¿Qué ocurre con las mejoras que requieren desarrollo adicional? Durante el seguimiento distinguimos con total transparencia entre Correcciones (solucionar defectos del MVP incluidos), Afinaciones (mejorar funciones existentes incluidas) y Nuevos Desarrollos (nuevas capacidades no previstas).",
-        "Como referencia inicial de proyección, estimamos que una etapa posterior de ampliación integral podría situarse en torno a USD 5.000, dependiendo exclusivamente de los módulos priorizados y de la complejidad de las integraciones. Esta cifra no constituye una obligación ni un amarre anticipado: cada nueva inversión responderá a una necesidad demostrada en la práctica y con un retorno claro para Santiago Papelería.",
+        "Comenzar con un MVP permite validar qué funciona y qué necesitan sus clientes antes de asumir compromisos mayores. Con la experiencia de los dos primeros meses de operación, evaluaremos con datos si conviene avanzar hacia:",
+        "• Atención diferenciada para clientes mayoristas vs minoristas.\n• Preparación y seguimiento de cotizaciones automáticas.\n• Ampliación gradual hacia las ~30.000 referencias del catálogo completo.\n• Integración omnicanal (sitio web, Instagram, Facebook).\n• Conexión con facturación y procesos de su sistema empresarial.",
       ],
     },
     modalidades: {
-      titulo: "Inversión y Estructura de Pagos",
-      subtitulo: "Un esquema transparente basado en hitos de entrega y acompañamiento profesional",
+      titulo: "Inversión y Condiciones",
+      subtitulo: "Inversión cerrada por hitos de entrega para 3 meses de trabajo conjunto",
       opciones: [
         {
           nombre: "Inversión Total del Proyecto",
           descripcion:
-            "Incluye el Mes 1 de desarrollo y puesta en marcha del MVP + Meses 2 y 3 de seguimiento, correcciones y afinación continua en operación real.",
+            "Mes 1 de desarrollo y puesta en marcha del MVP + Meses 2 y 3 de acompañamiento, corrección y afinación en operación real.",
           precio: "$2.500",
-          detalle_precio: "Inversión integral (3 meses de trabajo)",
+          detalle_precio: "Inversión integral (3 meses)",
         },
         {
-          nombre: "Hito 1: Inicio del Proyecto",
+          nombre: "Hito 1: Inicio de Proyecto",
           descripcion:
-            "50% al confirmar inicio, accesos a la API y comenzar el desarrollo del MVP y configuración de canales.",
+            "50% al iniciar desarrollo, integración con API de catálogo y configuración de canales.",
           precio: "$1.250",
           detalle_precio: "Al inicio de los trabajos",
         },
         {
-          nombre: "Hito 2: Entrega y Aceptación del MVP",
+          nombre: "Hito 2: Entrega y Aceptación",
           descripcion:
-            "50% contra entrega, pruebas de aceptación satisfactorias y puesta en marcha del sistema, dando inicio a los 2 meses de seguimiento incluidos.",
+            "50% contra entrega del MVP probado, dando inicio inmediato a los 2 meses de seguimiento.",
           precio: "$1.250",
           detalle_precio: "Contra entrega y pruebas superadas",
         },
       ],
     },
     cierre: {
-      titulo: "El valor de contar con un aliado técnico",
+      titulo: "Criterio profesional y tecnología al servicio de su empresa",
       frase_bisagra:
-        "La tecnología ayuda a construir. El criterio, el control y la responsabilidad profesional hacen que esa tecnología realmente funcione en su empresa.",
+        "La tecnología permite construir con rapidez. El criterio profesional asegura que funcione de manera consistente en su negocio.",
       texto:
-        "Santiago Papelería no está adquiriendo un experimento con inteligencia artificial ni una suscripción a una plataforma genérica que nadie sabrá cómo arreglar si falla. Está incorporando una solución diseñada a su medida, respaldada por un equipo que entiende cómo está construida, cómo auditarla y cómo evolucionarla para que su negocio crezca con seguridad y control.",
+        "Santiago Papelería incorpora una solución adaptada a su dinámica comercial, respaldada por un equipo que comprende su funcionamiento y acompaña su evolución, asegurando que cada cliente reciba una atención ágil y confiable.",
       mapa_url: "https://maps.app.goo.gl/jdZgBYatRApSHLnTA",
       mapa_embed_url:
         "https://maps.google.com/maps?q=-4.0008611,-79.199&hl=es&z=18&t=&ie=UTF8&iwloc=B&output=embed",
-      cta_texto: "✅ Coordinar reunión para iniciar el proyecto",
+      cta_texto: "✅ Coordinar inicio del proyecto",
       cta_url:
-        "https://wa.me/593984180497?text=Ing.+C%C3%A9sar%2C+hemos+revisado+la+propuesta+del+Asistente+Comercial+para+Santiago+Papeler%C3%ADa+y+deseamos+coordinar+los+siguientes+pasos.",
+        "https://wa.me/593984180497?text=Ing.+C%C3%A9sar%2C+hemos+revisado+la+propuesta+para+Santiago+Papeler%C3%ADa+y+deseamos+coordinar+el+inicio.",
       pie_texto:
         "Grupo Empresarial Reyes S.A.S. B.I.C. · Loja, Ecuador · Atención directa con el Ing. César Reyes Jaramillo.",
       frase_final:
-        "Criterio profesional y tecnología para <span>transformar la atención comercial de Santiago Papelería en una ventaja competitiva duradera.</span>",
+        "Tecnología y criterio profesional para <span>delegar tareas comerciales, optimizar ventas y mantener el control del negocio.</span>",
     },
     validez: "Propuesta válida por 15 días · Octubre 2026",
   };
