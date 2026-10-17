@@ -2,13 +2,13 @@ import CotizacionViewer from "@/components/CotizacionViewer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Propuesta de Sistema de Gestión — Calefones Loja",
+  title: "Propuesta de Sistema de Gestión & Proyectos — Calefones Loja",
   description:
-    "Sistema de gestión integral para Calefones Loja: CRM contable y facturación por local, control de inventario, CRM de fidelización y garantías, y ampliación estratégica de la presencia web.",
+    "Sistema de gestión integral para Calefones Loja: CRM contable y facturación por local, control de inventario, CRM de fidelización con seguimiento de proyectos en obra, y ampliación estratégica de la presencia web.",
   openGraph: {
-    title: "Propuesta de Sistema de Gestión — Calefones Loja × César Reyes",
+    title: "Propuesta de Sistema de Gestión & Proyectos — Calefones Loja × César Reyes",
     description:
-      "Control de inventario por local, facturación, seguimiento de mantenimientos, control de garantías y expansión digital para Calefones Loja.",
+      "Control de inventario por local, facturación, seguimiento de proyectos e instalaciones en obra con galerías multimedia, garantías y expansión digital para Calefones Loja.",
     url: "https://www.cesarreyesjaramillo.com/cotizaciones/calefonesloja",
     siteName: "César Reyes Jaramillo",
     type: "website",
@@ -17,15 +17,15 @@ export const metadata: Metadata = {
         url: "https://cesarweb.b-cdn.net/cotizaciones/og-calefonesloja.jpg",
         width: 1200,
         height: 630,
-        alt: "Propuesta de Sistema de Gestión — Calefones Loja",
+        alt: "Propuesta de Sistema de Gestión & Proyectos — Calefones Loja",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Propuesta de Sistema de Gestión — Calefones Loja",
+    title: "Propuesta de Sistema de Gestión & Proyectos — Calefones Loja",
     description:
-      "Sistema integral de facturación, inventario multilocales, CRM de fidelización y ampliación web para Calefones Loja.",
+      "Sistema integral de facturación, inventario multilocales, CRM de fidelización con seguimiento técnico de proyectos y ampliación web para Calefones Loja.",
     images: ["https://cesarweb.b-cdn.net/cotizaciones/og-calefonesloja.jpg"],
   },
 };
@@ -35,11 +35,11 @@ export default function CalefonesLojaCotizacionPage() {
     id: "calefonesloja",
     og_image_url: "https://cesarweb.b-cdn.net/cotizaciones/og-calefonesloja.jpg",
     portada: {
-      etiqueta: "Propuesta de Sistema de Gestión & Crecimiento Digital",
+      etiqueta: "Propuesta de Sistema de Gestión, Proyectos & Crecimiento Digital",
       titulo_principal: "Un sistema a la altura",
       titulo_destacado: "del crecimiento de Calefones Loja.",
       subtitulo:
-        "Control total de inventario por local, ventas, facturación, seguimiento post-servicio, control de garantías y blindaje comercial para que cada cliente se convierta en una relación a largo plazo.",
+        "Control total de inventario por local, ventas, facturación, seguimiento integral de proyectos e instalaciones en obra con registro multimedia, control de garantías y blindaje comercial a largo plazo.",
       preparado_para: "Calefones Loja — Dirección General & Gerencia",
       preparado_por: "Ing. César Augusto Reyes Jaramillo · Estrategia · Sistemas · Automatización",
       fecha: "Octubre 2026",
@@ -51,13 +51,13 @@ export default function CalefonesLojaCotizacionPage() {
     introduccion: {
       titulo: "El negocio creció.\nAhora el control debe crecer con él.",
       parrafos: [
-        "Calefones Loja ya no funciona como un pequeño negocio. Hoy cuenta con dos locales comerciales en la ciudad, personal técnico y de atención, vehículos de instalación a domicilio, un volumen constante de inventario, cientos de clientes atendidos, garantías vigentes y una operación que sigue creciendo mes a mes.",
-        "El siguiente paso natural es contar con un sistema profesional que permita que ese crecimiento esté respaldado por control riguroso, información en tiempo real y seguimiento constante, sin depender de libretas de papel, hojas de Excel dispersas o de que una sola persona tenga que memorizar o recordar cada detalle del negocio.",
+        "Calefones Loja ya no funciona como un pequeño negocio. Hoy cuenta con dos locales comerciales en la ciudad, personal técnico y de atención, vehículos de instalación a domicilio, obras y proyectos residenciales e institucionales en marcha, un volumen constante de inventario, cientos de clientes atendidos, garantías vigentes y una operación que sigue creciendo mes a mes.",
+        "El siguiente paso natural es contar con un sistema profesional que permita que ese crecimiento esté respaldado por control riguroso, información en tiempo real, seguimiento técnico de proyectos con respaldo fotográfico y georreferenciado, y contacto comercial continuo, sin depender de libretas de papel, chats de WhatsApp dispersos ni de que una sola persona tenga que memorizar cada detalle de la obra.",
         "La presente propuesta no busca simplemente instalar un software genérico de caja. Está pensada para construir una herramienta hecha a la medida de la dinámica operativa de Calefones Loja hoy, permitiéndoles trabajar con agilidad y orden para sostener su liderazgo en el sur del país."
       ]
     },
     como_funciona: {
-      titulo: "La operación integrada: del mostrador al servicio en domicilio",
+      titulo: "La operación integrada: del mostrador al seguimiento técnico en obra",
       pasos: [
         {
           momento: "Paso 1: Control de Inventario y Ventas en Ambos Locales",
@@ -70,17 +70,22 @@ export default function CalefonesLojaCotizacionPage() {
             "En el momento de la venta o instalación, se registran los datos del cliente, la dirección exacta donde quedó colocado el calefón, la fecha de compra y el tiempo de garantía oficial del equipo."
         },
         {
-          momento: "Paso 3: Seguimiento Activo de Mantenimientos Preventivos",
+          momento: "Paso 3: Ficha Técnica de Proyectos e Instalaciones en Obra",
+          descripcion:
+            "Cada instalación o proyecto cuenta con su expediente digital: geolocalización GPS exacta, documentación técnica, galería de fotos de avance/entrega, videos de funcionamiento, notas de voz del técnico y chat de bitácora interna para respaldo total ante reclamos o auditorías."
+        },
+        {
+          momento: "Paso 4: Seguimiento Activo de Mantenimientos Preventivos",
           descripcion:
             "El sistema agenda automáticamente los tiempos de servicio preventivo y reemplazo periódico de baterías. El equipo comercial recibe alertas para contactar al cliente antes de que el equipo sufra una falla."
         },
         {
-          momento: "Paso 4: Captura y Reactivación de Prospectos",
+          momento: "Paso 5: Captura y Reactivación de Prospectos",
           descripcion:
             "Aquellas personas que cotizan por WhatsApp, llamadas o visitan el local pero no concretan de inmediato quedan registradas para darles seguimiento comercial oportuno sin perder ventas."
         },
         {
-          momento: "Paso 5: Ampliación de la Demanda desde la Web",
+          momento: "Paso 6: Ampliación de la Demanda desde la Web",
           descripcion:
             "Se fortalecen las secciones web de mantenimiento, reparación técnica urgente y nuevas búsquedas clave en Loja, canalizando llamadas y chats directamente al equipo."
         }
@@ -94,6 +99,12 @@ export default function CalefonesLojaCotizacionPage() {
             "Inventario repartido entre dos locales sin visibilidad centralizada, dependiendo de llamadas o confirmaciones manuales de stock.",
           despues:
             "Panel unificado con stock en tiempo real por local, transferencias claras, descuento automático en cada venta y control de caja diario."
+        },
+        {
+          antes:
+            "Las fotos de instalaciones, videos y audios de los técnicos se quedan perdidos en los chats personales de WhatsApp sin orden ni respaldo.",
+          despues:
+            "Módulo de Proyectos centralizado: expedientes por cliente con ubicación exacta, galería multimedia organizada, documentación, audios y chat interno de seguimiento."
         },
         {
           antes:
@@ -141,17 +152,22 @@ export default function CalefonesLojaCotizacionPage() {
       },
       {
         numero: "02",
-        etiqueta_tiempo: "Módulo de Fidelización & Crecimiento",
-        nombre: "CRM Enfocado en Fidelización, Crecimiento y Automatización",
-        eslogan: "\"Que una venta no termine al salir del local, sino que sea una relación de largo plazo.\"",
-        precio: "$900",
-        precio_subtitulo: "inversión única · segunda capa estratégica",
+        etiqueta_tiempo: "Módulo de Fidelización, Proyectos & Crecimiento",
+        nombre: "CRM Enfocado en Fidelización, Seguimiento de Proyectos y Automatización",
+        eslogan: "\"Control técnico en obra y relaciones comerciales que perduran en el tiempo.\"",
+        precio: "$1.600",
+        precio_subtitulo: "inversión única · segunda capa estratégica integral",
         descripcion:
-          "Una segunda capa estratégica sobre el sistema administrativo, enfocada en no perder clientes, activar la posventa recurrente y multiplicar las oportunidades de negocio en Loja.",
+          "Una segunda capa estratégica sobre el sistema administrativo, enfocada en blindar la postventa recurrente y profesionalizar el seguimiento operativo de obras e instalaciones técnicas mediante expedientes digitales multimedia.",
         entregables: [
+          "Módulo integral de Seguimiento de Proyectos e Instalaciones: registro de obras residenciales, comerciales e industriales",
+          "Ficha de ubicación georreferenciada (coordenadas GPS, dirección exacta y mapa integrado del lugar de instalación)",
+          "Galería multimedia por proyecto: almacenamiento organizado de fotografías de pre-instalación, avance y entrega final",
+          "Soporte multimedia extendido: carga y reproducción de videos técnicos explicativos y notas de voz/audio del instalador",
+          "Documentación digital del proyecto: contratos, actas de entrega-recepción, planos básicos, manuales y proformas en PDF",
+          "Canal de chat y bitácora interna por proyecto para coordinación entre técnicos, supervisores y gerencia",
           "Historial técnico por cliente con detalle de marca, modelo y capacidad del calefón instalado",
           "Control digital de garantías (fechas de inicio, vigencia, coberturas y condiciones)",
-          "Registro de dirección exacta y ficha técnica del lugar de instalación para visitas a domicilio",
           "Módulo de seguimiento y programación de mantenimientos preventivos anuales",
           "Sistema de alertas y recordatorios automáticos de mantenimiento y cambio periódico de baterías",
           "Registro y seguimiento comercial de personas que preguntaron o cotizaron pero no compraron",
@@ -162,10 +178,10 @@ export default function CalefonesLojaCotizacionPage() {
           "Estructura técnica preparada para futuras integraciones directas con la API de WhatsApp"
         ],
         nota_especial:
-          "Diseñado para convertir el parque de calefones instalados en Loja en una fuente continua de ingresos por mantenimiento y repuestos.",
+          "Permite que cada instalación quede 100% documentada con fotos, videos, audios y GPS, eliminando controversias de garantía y generando confianza total en el cliente.",
         detalles_pie: [
-          "🔧 <strong>Postventa:</strong> Garantías y ficha técnica de instalación",
-          "⏰ <strong>Alertas:</strong> Recordatorios automáticos de pilas y revisiones",
+          "📁 <strong>Proyectos:</strong> Expediente con GPS, fotos, videos, audios y chat interno",
+          "🔧 <strong>Postventa:</strong> Garantías, historial técnico y alertas de mantenimiento",
           "📈 <strong>Retención:</strong> Pipeline de prospectos y metas de equipo"
         ]
       },
@@ -202,15 +218,15 @@ export default function CalefonesLojaCotizacionPage() {
         {
           nombre: "Implementación Total del Sistema",
           descripcion:
-            "Incluye el CRM de Contabilidad y Facturación ($1.900) + CRM de Fidelización y Automatización ($900) + Ampliación Web ($250).",
-          precio: "$3.050",
+            "Incluye el CRM de Contabilidad y Facturación ($1.900) + CRM de Fidelización, Proyectos y Automatización ($1.600) + Ampliación Web ($250).",
+          precio: "$3.750",
           detalle_precio: "Inversión total del proyecto"
         },
         {
           nombre: "Financiamiento con Tarjeta de Crédito",
           descripcion:
             "El proyecto puede diferirse hasta a 12 meses sin intereses (sujeto a las condiciones de la tarjeta y entidad emisora).",
-          precio: "$254,17 / mes",
+          precio: "$312,50 / mes",
           detalle_precio: "Durante 12 meses sin intereses"
         }
       ]

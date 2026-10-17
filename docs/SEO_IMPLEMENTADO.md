@@ -88,6 +88,12 @@ Home, posicionamiento, posicionamiento/loja, posicionamiento/auditoria-seo-redis
 - **Detalle**: Propuesta integral personalizada para Diana del Rocío Jaramillo Condolo (RUC: 1104613946001, Loja). Enfocada en resolver el dolor operativo (facturación electrónica SRI y control de inventario con códigos de barra y alertas de caducidad), activar el canal de ingresos mediante fidelización médica con recordatorios automáticos por WhatsApp y dotar de reportes gerenciales con bot de resúmenes ejecutivos. Estructurada con el visualizador interactivo `CotizacionViewer` replicando el estándar de Calefones Loja.
 - **Archivos creados**: `app/cotizaciones/veterinaria-diana-jaramillo/page.tsx`.
 
+### Cotización Calefones Loja — Sistema de Gestión, Proyectos & Fidelización (Actualizado 2026-10-17):
+- **Ruta**: `app/cotizaciones/calefonesloja/page.tsx`
+- **Metadata**: Title *"Propuesta de Sistema de Gestión & Proyectos — Calefones Loja"*, OpenGraph 1200x630, Twitter Cards `summary_large_image`, Canonical URL `https://www.cesarreyesjaramillo.com/cotizaciones/calefonesloja`.
+- **Detalle**: Ampliación de la propuesta comercial incorporando el módulo de **Seguimiento de Proyectos en Obra** dentro de la capa de Fidelización ($1.600, +$700): expedientes por cliente/obra con geolocalización GPS, galerías multimedia organizadas (fotos de avance y entrega), soporte para videos demostrativos, notas de voz de técnicos, documentación técnica y canal de bitácora/chat interno. Inversión total actualizada a **$3.750** ($1.900 contabilidad + $1.600 fidelización y proyectos + $250 ampliación web). Cuota referencial a 12 meses: $312,50/mes.
+- **Archivos modificados**: `app/cotizaciones/calefonesloja/page.tsx`.
+
 ---
 
 ## 4. Structured Data (JSON-LD Schemas)
