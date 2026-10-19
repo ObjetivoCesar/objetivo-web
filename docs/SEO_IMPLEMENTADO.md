@@ -88,13 +88,14 @@ Home, posicionamiento, posicionamiento/loja, posicionamiento/auditoria-seo-redis
 - **Detalle**: Propuesta integral personalizada para Diana del Rocío Jaramillo Condolo (RUC: 1104613946001, Loja). Enfocada en resolver el dolor operativo (facturación electrónica SRI y control de inventario con códigos de barra y alertas de caducidad), activar el canal de ingresos mediante fidelización médica con recordatorios automáticos por WhatsApp y dotar de reportes gerenciales con bot de resúmenes ejecutivos. Estructurada con el visualizador interactivo `CotizacionViewer` replicando el estándar de Calefones Loja.
 - **Archivos creados**: `app/cotizaciones/veterinaria-diana-jaramillo/page.tsx`.
 
-### Cotización Calefones Loja — Sistema de Gestión, Proyectos & Fidelización (Actualizado 2026-10-17):
-- **Ruta**: `app/cotizaciones/calefonesloja/page.tsx`
-- **Metadata**: Title *"Propuesta de Sistema de Gestión & Proyectos — Calefones Loja"*, OpenGraph 1200x630, Twitter Cards `summary_large_image`, Canonical URL `https://www.cesarreyesjaramillo.com/cotizaciones/calefonesloja`.
-- **Detalle**: Ampliación de la propuesta comercial incorporando el módulo de **Seguimiento de Proyectos en Obra** dentro de la capa de Fidelización ($1.600, +$700): expedientes por cliente/obra con geolocalización GPS, galerías multimedia organizadas (fotos de avance y entrega), soporte para videos demostrativos, notas de voz de técnicos, documentación técnica y canal de bitácora/chat interno. Inversión total actualizada a **$3.750** ($1.900 contabilidad + $1.600 fidelización y proyectos + $250 ampliación web). Cuota referencial a 12 meses: $312,50/mes.
-- **Archivos modificados**: `app/cotizaciones/calefonesloja/page.tsx`.
+### Cotización Cámara — Infraestructura Institucional & Demostración de Resultados (2026-10-19):
+- **Ruta**: `app/cotizaciones/camara/page.tsx`
+- **Metadata**: Title *"Propuesta de Infraestructura Institucional — Cámara"*, `robots: noindex, nofollow` (propuesta comercial confidencial), OpenGraph 1200x630 personalizado en `public/images/og-camara.jpg`, Twitter Cards `summary_large_image`, Canonical URL `https://www.cesarreyesjaramillo.com/cotizaciones/camara`.
+- **Detalle**: Propuesta estratégica para la Cámara enfocada en dotar a la institución de una infraestructura digital integrada de 4 módulos: (1) Sitio web institucional dinámico ($1.000), (2) CRM institucional con memoria histórica, acreditación por QR y asistente de atención ($1.000), (3) Sistema de fidelización y seguimiento inteligente con alertas directas ($1.500) y (4) Posicionamiento web, redes y fábrica de contenidos ($500/mes). Presentación orientada al valor institucional, continuidad de relaciones gremiales y demostración objetiva de resultados mediante un panel de KPIs en tres niveles ante asambleas y autoridades, sin tecnicismos innecesarios.
+- **Archivos creados**: `app/cotizaciones/camara/page.tsx`, `public/images/og-camara.jpg`, `public/images/camara-portada.jpg`.
 
 ---
+
 
 ## 4. Structured Data (JSON-LD Schemas)
 
