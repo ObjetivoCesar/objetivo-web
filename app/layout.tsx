@@ -3,7 +3,7 @@ import "./globals.css"
 import { Inter, Poiret_One, Montserrat, Poppins, Playfair_Display } from "next/font/google"
 // Google Tag Manager will be implemented manually with Script component
 import Footer from "@/components/footer"
-import VisitTracker from '@/components/VisitTracker'
+// import VisitTracker from '@/components/VisitTracker'
 // import TransparentHeader from '@/components/transparent-header'
 import ModernSidebarMenu from '@/components/navigation/ModernSidebarMenu'
 import { Providers } from './providers'
@@ -134,7 +134,7 @@ export default function RootLayout({
             {/* <TransparentHeader /> */}
             <ModernSidebarMenu />
             <main className="min-h-[calc(100vh-64px)] w-full overflow-x-hidden">
-              <VisitTracker />
+              {/* VisitTracker disabled to avoid serverless function invocations on every page view */}
               {children}
               <Footer />
               <ClarityAnalytics />

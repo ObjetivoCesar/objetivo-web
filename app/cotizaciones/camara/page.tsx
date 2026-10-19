@@ -4,11 +4,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Propuesta de Infraestructura Institucional — CCEATI",
   description:
-    "Infraestructura digital integrada para la Cámara de Comercio Ecuatoriano Árabe (CCEATI), dirigida a la Ing. Marianella Alvarado y al Ing. Agustín Ontaneda: memoria institucional, trazabilidad y resultados medibles.",
+    "Infraestructura digital integrada para la Cámara Ecuatoriana Emiratos Árabes Unidos de Comercio, Industrias y Turismo (CCEATI), dirigida a la Ing. Marianella Alvarado y al Ing. Agustín Ontaneda: memoria institucional, trazabilidad y resultados medibles.",
   openGraph: {
     title: "Infraestructura Digital Institucional — CCEATI × César Reyes",
     description:
-      "Propuesta para la Ing. Marianella Alvarado (Directora Ejecutiva) y el Ing. Agustín Ontaneda (Presidente Ejecutivo): Web Institucional, CRM, Fidelización y Fábrica de Posicionamiento.",
+      "Propuesta para la Ing. Marianella Alvarado (Directora Ejecutiva) y el Ing. Agustín Ontaneda (Presidente Ejecutivo): Web Institucional, CRM, Continuidad y Motor de Contenidos.",
     url: "https://www.cesarreyesjaramillo.com/cotizaciones/camara",
     siteName: "César Reyes Jaramillo",
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Infraestructura Digital Institucional — CCEATI",
     description:
-      "Transformar actividades en relaciones continuas y resultados medibles con 4 módulos integrados.",
+      "La infraestructura digital para impulsar el comercio, atraer inversiones y conectar mercados entre Ecuador y los Emiratos Árabes Unidos.",
     images: ["https://www.cesarreyesjaramillo.com/images/og-camara.jpg"],
   },
   robots: {
@@ -39,309 +39,332 @@ export default function CamaraCotizacionPage() {
     id: "camara",
     og_image_url: "https://www.cesarreyesjaramillo.com/images/og-camara.jpg",
     portada: {
-      etiqueta: "Propuesta de Infraestructura Institucional · CCEATI",
-      titulo_principal: "Menos tareas dispersas.",
-      titulo_destacado: "Relaciones que generan resultados medibles.",
+      etiqueta: "Propuesta institucional · Octubre de 2026",
+      titulo_principal: "La infraestructura digital para impulsar el comercio,",
+      titulo_destacado: "atraer inversiones y conectar mercados.",
       subtitulo:
-        "Una infraestructura digital para que cada actividad de la Cámara conserve su memoria, dé continuidad a sus compromisos y demuestre con datos su impacto ante las autoridades.",
-      preparado_para: "Ing. Marianella Alvarado (Directora Ejecutiva CCEATI) & Ing. Agustín Ontaneda (Presidente Ejecutivo de CCEATI)",
-      preparado_por: "Ing. César Augusto Reyes Jaramillo · Estrategia & Sistemas",
-      fecha: "Octubre 2026",
+        "Una plataforma conectada para transformar la presencia digital, los eventos y las relaciones institucionales de la CCEATI en oportunidades comerciales con seguimiento y resultados medibles entre Ecuador y los Emiratos Árabes Unidos.",
+      preparado_para: "Ing. Marianella Alvarado, Directora Ejecutiva · Ing. Agustín Ontaneda, Presidente Ejecutivo de la CCEATI",
+      preparado_por: "Ing. César Augusto Reyes Jaramillo · Estrategia y Sistemas (Grupo Empresarial Reyes S.A.S. B.I.C.)",
+      fecha: "Loja, Ecuador · Octubre de 2026",
       url_logo_cliente: "",
       imagen_url: "/images/og-camara.jpg",
       url_fondo: "/images/og-camara.jpg",
       url_fondo_movil: "/images/og-camara.jpg",
     },
+    video_destacado: {
+      url: "https://www.youtube.com/watch?v=GKSiAQRO_94",
+      titulo: "La Transformación Digital de la Cámara en Video",
+      subtitulo: "Visualice en minutos cómo los componentes del sistema convierten actividades en relaciones continuas y resultados medibles.",
+    },
     introduccion: {
-      titulo: "La Cámara no necesita únicamente publicar lo que hace.\nNecesita conservar la memoria de su gestión y demostrar resultados.",
+      titulo: "Una relación comercial no termina cuando concluye una reunión",
       parrafos: [
-        "El desafío central de la Cámara radica en pasar de una gestión de actividades aisladas a una infraestructura institucional sólida, con trazabilidad completa de cada acción y capacidad de rendición de cuentas documentada ante las autoridades.",
-        "Cuando la Cámara organiza una asamblea, una rueda de negocios, una feria o una misión comercial internacional, se genera un caudal invaluable de contactos, acuerdos preliminares y necesidades comerciales. Sin embargo, si esa información no se centraliza de inmediato en un sistema propio, el esfuerzo se diluye con el tiempo y los compromisos quedan sin seguimiento formal.",
-        "La presente propuesta no plantea un sitio web tradicional ni herramientas sueltas. Presenta una infraestructura digital integrada en 4 módulos estratégicos que conectan la atracción de oportunidades, el registro de participantes, el seguimiento comercial continuo y la difusión del conocimiento institucional, respaldado por un panel de indicadores ejecutivos listo para responder qué se hizo, a cuántos actores se integró y qué resultados reales se alcanzaron."
+        "Una exposición, una visita técnica o una rueda de negocios puede abrir una oportunidad. Pero si las necesidades de los participantes quedan dispersas en listas, agendas y conversaciones, resulta difícil dar continuidad a los compromisos y demostrar qué resultados produjo la gestión.",
+        "La CCEATI necesita algo más que publicar sus actividades: requiere conectar la información institucional, los contactos que genera, el seguimiento posterior y la evidencia de sus avances.",
+        "La propuesta responde a esa necesidad con una infraestructura que acompaña el ciclo completo: atraer interés, registrar contactos, dar seguimiento y medir la gestión.",
+        "El propósito no es prometer exportaciones o inversiones. Es ofrecer a la Cámara mejores herramientas para identificar oportunidades, mantener relaciones activas y documentar avances verificables."
       ],
     },
     como_funciona: {
-      titulo: "Cómo se conectan los cuatro módulos en la práctica institucional",
+      titulo: "Una infraestructura alineada con la misión de la CCEATI",
       pasos: [
         {
-          momento: "1. La Web Institucional Atrae y Distribuye Información",
+          momento: "01. ATRAER — Información útil",
           descripcion:
-            "Funciona como la puerta de entrada oficial: los empresarios, productores y aliados acceden a información institucional transparente, oportunidades comerciales bilaterales (Ecuador y Emiratos Árabes) y servicios gremiales disponibles las 24 horas."
+            "Un portal que organiza oportunidades, proyectos, servicios, sectores productivos, publicaciones y actividades bilaterales para productores, exportadores, empresarios e inversionistas."
         },
         {
-          momento: "2. El CRM Registra la Memoria Histórica en Cada Evento",
+          momento: "02. REGISTRAR — Contactos con contexto",
           descripcion:
-            "En asambleas, ferias y reuniones, los participantes se registran de forma ágil mediante códigos QR. Se crea una ficha individual con su historial de participación, acuerdos alcanzados, expectativas y necesidades específicas."
+            "Una ficha por contacto o empresa, asociada con el evento, sus intereses, necesidades y el siguiente paso acordado mediante código QR."
         },
         {
-          momento: "3. La Fidelización Mantiene Vivas las Relaciones Comerciales",
+          momento: "03. DAR CONTINUIDAD — Seguimiento activo",
           descripcion:
-            "El sistema da continuidad proactiva a cada contacto registrado mediante mensajes y recordatorios contextualizados según el tipo de relación y compromiso acordado, alertando al equipo humano ante respuestas o pendientes críticos."
+            "Recordatorios, consultas de avance y alertas para que las solicitudes pendientes lleguen a una persona responsable y no se enfríen."
         },
         {
-          momento: "4. El Motor de Contenidos Amplifica la Visibilidad",
+          momento: "04. DEMOSTRAR — Avances documentados",
           descripcion:
-            "Cada exposición, asamblea o visita técnica se procesa para extraer su valor formativo y transformarlo en artículos de posicionamiento, piezas informativas y reportes que proyectan el liderazgo gremial de la Cámara a escala nacional e internacional."
-        },
-        {
-          momento: "5. El Panel de Control Evalúa Resultados ante las Autoridades",
-          descripcion:
-            "La Presidencia y el Directorio cuentan con métricas claras y objetivas: porcentaje de contactos con seguimiento, compromisos cumplidos, tasas de respuesta efectiva y evolución de oportunidades comerciales concretadas."
+            "Indicadores de actividades, respuestas, compromisos y evolución de oportunidades según los datos registrados por el sistema."
         }
       ],
     },
     comparativa: {
-      titulo: "Evolución de la Gestión: Del Esfuerzo Artesanal a la Gestión Documentada",
+      titulo: "De tareas dispersas a relaciones documentadas",
       filas: [
         {
-          antes:
-            "Actividades y eventos multitudinarios donde los asistentes llenan listas en papel o quedan dispersos en agendas personales.",
-          despues:
-            "Registro digital inmediato con código QR y generación automática de la ficha histórica de cada empresa, autoridad o productor."
+          antes: "Asistentes anotados en listas en papel, agendas personales o archivos desconectados tras cada evento.",
+          despues: "Registro digital por QR y ficha histórica asociada a la actividad, el interés y la empresa."
         },
         {
-          antes:
-            "Compromisos y acuerdos asumidos en reuniones que se enfrían con las semanas por falta de un canal formal de seguimiento.",
-          despues:
-            "Sistema de fidelización y seguimiento inteligente que mantiene el contacto vivo, programa recordatorios y alerta al equipo responsable."
+          antes: "Acuerdos que pierden continuidad al pasar los días y no tienen responsable ni fecha de revisión.",
+          despues: "Próximos pasos, recordatorios, respuestas y alertas organizados para una intervención oportuna."
         },
         {
-          antes:
-            "Un sitio web estático que funciona como un folleto digital informativo sin interactividad ni medición de demanda real.",
-          despues:
-            "Portal dinámico interactivo con información de oportunidades comerciales, consultas empresariales y medición continua del interés de mercado."
+          antes: "Un portal que publica información, pero no conecta la consulta con el registro y el seguimiento.",
+          despues: "Información comercial, captación de contactos y seguimiento integrados en un flujo coherente."
         },
         {
-          antes:
-            "Dificultad para sustentar con cifras precisas el impacto y los logros de la gestión ante socios, asambleas y autoridades gubernamentales.",
-          despues:
-            "Panel de indicadores de gestión con datos agregados en tres niveles: actividades realizadas, resultados inmediatos y oportunidades comerciales."
+          antes: "Dificultad para explicar con evidencias qué produjo una actividad institucional ante socios y autoridades.",
+          despues: "Indicadores de actividad, respuesta y evolución comercial documentados con criterios definidos."
         }
       ],
     },
     etapas: [
       {
         numero: "01",
-        etiqueta_tiempo: "Módulo Uno · La Puerta de Entrada Oficial",
-        nombre: "Sitio Web Institucional Dinámico",
-        eslogan: "\"Atraer, informar y distribuir oportunidades comerciales de forma transparente y ágil.\"",
+        etiqueta_tiempo: "COMPONENTE 01 · ATRACCIÓN",
+        nombre: "Sitio web institucional dinámico",
+        eslogan: "\"Atraer interés y convertir información en oportunidades de contacto.\"",
         precio: "$1.000",
-        precio_subtitulo: "inversión única · plataforma completa y administrable",
+        precio_subtitulo: "inversión única · portal administrable",
         descripcion:
-          "El centro neurálgico de comunicación digital de la Cámara. Diseñado no como un folleto estático, sino como una vitrina institucional interactiva que conecta las necesidades de los productores locales con mercados internacionales y socios estratégicos.",
+          "El portal será la puerta de entrada digital de la Cámara: un sitio administrable para organizar información institucional y comercial, servicios para socios, sectores productivos, proyectos, eventos, publicaciones y oportunidades bilaterales. La arquitectura facilitará desarrollar contenidos que respondan a búsquedas concretas de productores, exportadores, empresarios e inversionistas.",
         entregables: [
-          "Arquitectura de información institucional de alto impacto y navegación intuitiva para empresarios y autoridades",
-          "Módulo de información comercial estratégica y oportunidades bilaterales (Ecuador y Emiratos Árabes)",
-          "Directorio de servicios de la Cámara, beneficios para socios y requisitos de afiliación gremial",
-          "Publicaciones dinámicas y base de conocimiento orientada a resolver las dudas más frecuentes de productores y exportadores",
-          "Panel administrativo intuitivo para la actualización autónoma de noticias, boletines, eventos y normativas",
-          "Sistema de analítica web integrada para medir el interés por sector, tráfico de visitantes y temas de mayor demanda",
-          "Diseño visual premium 100% responsivo y optimizado para navegación veloz desde cualquier dispositivo móvil",
-          "Demostración en video navegable que muestra cómo un empresario consulta información y encuentra oportunidades en el portal"
+          "Arquitectura de información institucional y comercial",
+          "Páginas dinámicas y publicaciones optimizadas",
+          "Panel administrativo para gestionar los contenidos con total autonomía",
+          "Sección de información comercial bilateral con estadísticas públicas (priorizando fuentes oficiales ecuatorianas, indicando fuente, periodo y fecha)",
+          "Estructura técnica preparada para posicionamiento orgánico en buscadores (SEO)",
+          "Configuración inicial de analítica web para medir el interés real de los visitantes",
+          "Demostración funcional en video del flujo de consulta e interacción"
         ],
         nota_especial:
-          "El sitio web deja de ser un elemento aislado para convertirse en el canal de atracción directo hacia el sistema institucional.",
+          "La disponibilidad, el nivel de detalle y las posibilidades de actualización automatizada de las estadísticas dependerán de las capacidades técnicas de cada fuente oficial.",
         detalles_pie: [
-          "🌐 <strong>Enfoque:</strong> Información institucional y comercial bilateral",
-          "📱 <strong>Acceso:</strong> Multiplataforma para empresarios y autoridades",
-          "📊 <strong>Métricas:</strong> Registro de visitas, temas consultados e interés real"
+          "🌐 <strong>Enfoque:</strong> Información institucional, servicios y oportunidades bilaterales",
+          "📊 <strong>Transparencia:</strong> Estadísticas con fuente oficial y fecha de actualización",
+          "⚡ <strong>Autonomía:</strong> Panel administrativo intuitivo sin dependencia técnica"
         ],
       },
       {
         numero: "02",
-        etiqueta_tiempo: "Módulo Dos · La Memoria Institucional de la Cámara",
-        nombre: "CRM Institucional y Registro de Relaciones",
-        eslogan: "\"Conservar el historial de cada contacto y no perder jamás un compromiso asumido.\"",
+        etiqueta_tiempo: "COMPONENTE 02 · REGISTRO",
+        nombre: "CRM institucional, registro QR y asistente de atención",
+        eslogan: "\"Convertir la participación en una memoria institucional organizada.\"",
         precio: "$1.000",
-        precio_subtitulo: "inversión única · implementación con registro QR y asistente de atención",
+        precio_subtitulo: "inversión única · implementación con QR y asistente de atención",
         descripcion:
-          "El archivo vivo y centralizado de la Cámara. Registra quiénes han participado en asambleas, ferias, ruedas de negocios y visitas técnicas, conservando la memoria histórica de cada participante y sus requerimientos institucionales.",
+          "En eventos, exposiciones, reuniones o visitas técnicas, la Cámara podrá compartir un código QR para que los asistentes registren sus datos e intereses desde el teléfono. Cada registro quedará asociado con la actividad correspondiente para consultar el historial y reconocer intereses recurrentes por sector.",
         entregables: [
-          "Sistema de acreditación y registro ágil de asistentes mediante códigos QR para asambleas, foros y eventos",
-          "Ficha unificada por participante: empresas, productores, gremios, autoridades, diplomáticos e invitados especiales",
-          "Historial completo de participaciones, asistencias y compromisos asumidos en cada actividad",
-          "Módulo de captura de expectativas, acuerdos de cooperación, necesidades comerciales y oportunidades de inversión",
-          "Asistente conversacional inteligente para responder consultas frecuentes institucionales de los participantes y derivar solicitudes",
-          "Buscador avanzado para segmentar contactos por sector productivo, provincia, tamaño de empresa o tipo de relación",
-          "Recorrido demostrativo en video del sistema: registro en evento, ficha individual e historial acumulado de gestión"
+          "Registro ágil por QR y fichas de contacto asociadas a cada actividad",
+          "Campos acordados con la CCEATI: empresa, cargo, sector o producto, objetivo, necesidad, apoyo requerido y próximo paso",
+          "Organización básica de oportunidades por sector, interés y siguiente paso",
+          "Historial centralizado de participaciones para dar continuidad a las relaciones institucionales y comerciales",
+          "Asistente de atención en el portal para responder preguntas frecuentes a partir de información validada por la Cámara",
+          "Derivación automática de consultas no cubiertas o con criterio comercial hacia el equipo humano",
+          "Métricas de captación y consulta de registros"
         ],
         nota_especial:
-          "Permite a la presidencia y al equipo directivo saber en cualquier momento con quién se habló, qué se acordó y qué está pendiente.",
+          "Evita que la memoria gremial se disperse y permite al equipo disponer de información organizada para dar seguimiento a cada actor.",
         detalles_pie: [
-          "👥 <strong>Gestión:</strong> Empresas, productores, autoridades y aliados",
-          "📲 <strong>Registro:</strong> Captura inmediata con QR en eventos presenciales y virtuales",
-          "🤖 <strong>Atención:</strong> Asistente de respuesta inmediata a consultas institucionales"
+          "📲 <strong>Registro:</strong> Captura inmediata con código QR desde el móvil",
+          "👥 <strong>Historial:</strong> Fichas de contacto vinculadas a cada actividad",
+          "🤖 <strong>Atención:</strong> Asistente de consultas frecuentes con derivación a equipo humano"
         ],
       },
       {
         numero: "03",
-        etiqueta_tiempo: "Módulo Tres · Relaciones que Permanecen Activas",
-        nombre: "Sistema de Fidelización y Seguimiento Inteligente",
-        eslogan: "\"Mantener viva la relación institucional y asegurar el cumplimiento de compromisos.\"",
+        etiqueta_tiempo: "COMPONENTE 03 · CONTINUIDAD",
+        nombre: "Seguimiento, automatizaciones y alertas",
+        eslogan: "\"Evitar que los compromisos se enfríen después del evento.\"",
         precio: "$1.500",
-        precio_subtitulo: "inversión única · automatización de seguimiento y alertas gerenciales",
+        precio_subtitulo: "inversión única · automatizaciones, alertas y panel de gestión",
         descripcion:
-          "El motor de continuidad de la Cámara. Asegura que las relaciones iniciadas en asambleas y reuniones no se enfríen con el tiempo, gestionando recordatorios oportunos, respuestas automatizadas y derivación personalizada.",
+          "Los contactos podrán seguir flujos definidos según el interés expresado y el siguiente paso acordado (por ejemplo, tras una visita técnica con productores de café: quién ofreció muestras, quién pidió ficha técnica y qué gestión debe ejecutar la Cámara). Envía consultas de seguimiento (ej. a los 15 días), registra respuestas y alerta al responsable cuando se requiere intervención humana.",
         entregables: [
-          "Clasificación avanzada de contactos mediante etiquetas estratégicas (productores prioritarios, autoridades, exportadores, inversionistas)",
-          "Asistente inteligente de atención y seguimiento continuo conectado al historial de cada contacto",
-          "Programación de mensajes y recordatorios según el tipo de compromiso, fecha de evento o etapa de negociación",
-          "Actualización automática del expediente institucional en el CRM tras cada respuesta recibida",
-          "Sistema de alertas de tareas pendientes para evitar que acuerdos institucionales queden sin atender",
-          "Derivación contextualizada hacia los responsables humanos de la Cámara cuando se requiere intervención ejecutiva",
-          "Demostración en video: flujo completo desde la clasificación de un contacto hasta la reactivación y actualización de su historial"
+          "Reglas de seguimiento definidas con la Cámara según el tipo de contacto",
+          "Recordatorios automatizados y registro sistemático de respuestas",
+          "Alertas de tareas y solicitudes pendientes para el responsable",
+          "Configuración de canales de comunicación de acuerdo con preferencias y autorizaciones de cada contacto",
+          "Panel de consulta de indicadores alimentado por los datos del sistema (sin costo adicional)",
+          "Demostración funcional de los flujos acordados en video"
         ],
         nota_especial:
-          "Garantiza una atención ágil y profesional, reforzando la percepción de seriedad y eficiencia de la Cámara ante sus aliados.",
+          "El panel de gestión funciona como una capa transversal de consulta de los datos del CRM y seguimiento; no constituye un módulo con precio independiente.",
         detalles_pie: [
-          "⚡ <strong>Seguimiento:</strong> Contacto continuo y personalizado sin sobrecargar al personal",
-          "🏷️ <strong>Segmentación:</strong> Etiquetas por tipo de actor y prioridad gremial",
-          "🚨 <strong>Alertas:</strong> Avisos de compromisos por vencer para el equipo de dirección"
+          "⚡ <strong>Continuidad:</strong> Seguimiento automático de acuerdos sin sobrecargar al personal",
+          "🚨 <strong>Alertas:</strong> Avisos de tareas y solicitudes pendientes para el equipo directivo",
+          "📊 <strong>Panel Integrado:</strong> Capa de consulta directa sin costo adicional"
         ],
       },
       {
         numero: "04",
-        etiqueta_tiempo: "Módulo Cuatro · El Conocimiento que Amplifica la Gestión",
-        nombre: "Posicionamiento Web, Redes y Motor de Contenidos",
-        eslogan: "\"Convertir cada actividad institucional en visibilidad pública y prestigio gremial.\"",
+        etiqueta_tiempo: "SERVICIO OPCIONAL · VISIBILIDAD",
+        nombre: "Posicionamiento web y transformación de actividades en contenidos",
+        eslogan: "\"Hacer que el trabajo de la Cámara siga generando valor después de cada actividad.\"",
         precio: "$500 / mes",
-        precio_subtitulo: "servicio mensual recurrente · producción, posicionamiento y difusión",
+        precio_subtitulo: "servicio mensual opcional · producción y posicionamiento",
         descripcion:
-          "El departamento de comunicación y visibilidad estratégica de la Cámara. Transforma las intervenciones, asambleas y proyectos de la institución en contenidos estructurados de alto valor que posicionan a la Cámara como referente indispensable del sector.",
+          "Una persona autorizada entrega el audio, video y contexto de una presentación mediante un enlace de recepción. A partir del material se identifican las ideas principales y se preparan contenidos derivados para revisión institucional: artículos para el portal, publicaciones para redes y piezas audiovisuales breves, según el calendario acordado.",
         entregables: [
-          "Recepción y procesamiento de grabaciones, audios y memorias de asambleas, ponencias y ruedas de negocio",
-          "Extracción del conocimiento clave mediante síntesis estructurada para convertir exposiciones en material institucional",
-          "Redacción de artículos de análisis y noticias institucionales optimizados para aparecer en los primeros resultados de búsqueda de Google",
-          "Adaptación de contenidos en piezas ejecutivas para redes sociales, infografías y formatos de difusión gremial",
-          "Producción y edición de piezas audiovisuales y clips dinámicos a partir de las actividades realizadas",
-          "Flujo de revisión y validación institucional previa antes de cada publicación",
-          "Informes mensuales de alcance, posicionamiento, interacción empresarial e impacto mediático de la gestión",
-          "Video demostrativo que enseña el proceso completo de transformación: de una grabación en bruto a artículos y piezas de impacto"
+          "Recepción organizada de materiales y procesamiento editorial tras cada actividad",
+          "Artículos y piezas derivadas para el portal y redes según calendario mensual",
+          "Optimización de contenidos para motores de búsqueda (SEO) en comercio exterior",
+          "Flujo de revisión y validación institucional previa a la publicación",
+          "Seguimiento periódico del rendimiento, alcance e interacción",
+          "Acuerdo previo por escrito del volumen mensual incluido (material recibido, artículos, piezas y reportes; no producción ilimitada)"
         ],
         nota_especial:
-          "Asegura que el esfuerzo invertido en cada evento tenga resonancia permanente y amplifique la voz de la Cámara.",
+          "El objetivo no es publicar por publicar ni limitarse a administrar redes sociales: es construir una biblioteca de información útil y ampliar las posibilidades de que las empresas encuentren a la Cámara al investigar mercados.",
         detalles_pie: [
-          "📈 <strong>Posicionamiento:</strong> Presencia destacada en buscadores y ecosistema digital",
-          "🎬 <strong>Formatos:</strong> Artículos de fondo, piezas para redes y cápsulas audiovisuales",
-          "📑 <strong>Impacto:</strong> Reportes mensuales de rendimiento comunicacional"
+          "📈 <strong>Visibilidad:</strong> Posicionamiento en búsquedas sobre comercio exterior",
+          "🎬 <strong>Formatos:</strong> Artículos web, piezas para redes y cápsulas audiovisuales",
+          "🗓️ <strong>Independencia:</strong> Servicio mensual recurrente e independiente del software"
         ],
       },
     ],
     participantes: {
-      titulo: "Indicadores de Gestión Institucional: Medir para Demostrar Resultados",
+      titulo: "Indicadores para Evaluar la Gestión",
       subtitulo:
-        "El sistema no es solo software: es la herramienta que permite pasar de una gestión artesanal a una gestión medible, transparente y evaluable.",
+        "Medir la actividad y documentar los avances: el panel organizará la información disponible para responder preguntas operativas y facilitar la evaluación institucional.",
       grupos: [
         {
-          rol: "Nivel 1: Actividades Institucionales Realizadas",
+          rol: "01. Actividad Realizada",
           subtitulo: "Registro de la operatividad gremial",
           beneficios: [
-            "Conteo y registro detallado de asambleas, ruedas de negocio, foros y visitas técnicas efectuadas.",
-            "Detalle de ferias comerciales y misiones internacionales con participación oficial de la Cámara.",
-            "Calendario institucional consolidado con historial acumulado de actividades del periodo."
+            "Eventos ejecutados, asambleas, ruedas de negocio y visitas técnicas realizadas.",
+            "Participantes registrados formalmente en cada actividad mediante código QR.",
+            "Sectores productivos y empresas representadas en cada convocatoria."
           ],
         },
         {
-          rol: "Nivel 2: Resultados Inmediatos y Participación",
-          subtitulo: "Alcance y respuesta de la comunidad",
+          rol: "02. Respuesta y Continuidad",
+          subtitulo: "Seguimiento y compromisos activos",
           beneficios: [
-            "Número total de asistentes únicos acreditados y registrados formalmente en el sistema.",
-            "Total de empresas representadas, productores integrados y autoridades que asistieron a las convocatorias.",
-            "Porcentaje de contactos que recibieron atención inmediata y seguimiento formal posterior al evento.",
-            "Tasa de respuesta efectiva a las comunicaciones y acuerdos establecidos por la Cámara."
+            "Contactos con seguimiento sistemático tras la actividad institucional.",
+            "Respuestas recibidas y registradas en el expediente del CRM.",
+            "Compromisos pendientes y próximos pasos asignados a los responsables."
           ],
         },
         {
-          rol: "Nivel 3: Oportunidades Concretadas y Rendición de Cuentas",
-          subtitulo: "Evidencia de impacto ante autoridades y socios",
+          rol: "03. Evolución de Oportunidades",
+          subtitulo: "Avances documentados con criterios definidos",
           beneficios: [
-            "Tasa de cumplimiento de compromisos institucionales frente a los registrados en las mesas de trabajo.",
-            "Volumen de necesidades comerciales identificadas y cartera de oportunidades comerciales en seguimiento.",
-            "Evolución cuantitativa de las vinculaciones entre productores locales y mercados compradores.",
-            "Alcance e impacto público de los contenidos y comunicados difundidos por la Cámara.",
-            "Capacidad de generar informes ejecutivos inmediatos para responder con exactitud ante la asamblea: ¿qué hicimos?, ¿a quiénes llegamos?, ¿qué compromisos asumimos? y ¿qué resultados obtuvimos?"
+            "Solicitudes, reuniones y gestiones comerciales que avanzan de etapa.",
+            "Resultados validados por los responsables con criterios definidos por la Cámara.",
+            "Consultas y visitas al portal institucional según la analítica web disponible."
           ],
         },
       ],
     },
+    ir_mas_alla: {
+      titulo: "Ejemplo Práctico: De una Reunión con Productores a un Seguimiento Verificable",
+      subtitulo: "Caso de Uso y Aplicación en Misiones Internacionales",
+      parrafos: [
+        "Imaginemos una actividad con productores cafeteros y representantes de instituciones públicas. La infraestructura une el registro, los compromisos, la información y la revisión de avances en cinco momentos clave:",
+        "<strong>01. Identificar:</strong> Al inicio, los asistentes escanean el QR e indican empresa, producto, intereses y apoyo requerido.<br/><strong>02. Organizar:</strong> Los registros quedan asociados con el evento y se agrupan por sector, interés y siguiente paso.<br/><strong>03. Dar seguimiento:</strong> El flujo consulta avances, registra respuestas y asigna solicitudes que necesitan gestión humana.<br/><strong>04. Extender el valor:</strong> El material de la presentación se procesa para preparar un artículo y contenidos derivados, sujetos a revisión institucional.<br/><strong>05. Evaluar:</strong> Presidencia y Dirección Ejecutiva consultan participantes, intereses, respuestas y compromisos pendientes.",
+        "Así, la actividad no termina con una fotografía o una publicación: queda registrada, genera continuidad y deja información para evaluar la gestión.",
+        "<strong>Aplicación posible en una feria internacional:</strong> La misma lógica puede prepararse para una feria o misión comercial internacional (por ejemplo, Gulfood 2027 como referencia de planificación). Antes del evento, se organiza la información de la oferta ecuatoriana. Durante la actividad, se registran los contactos y sus intereses. Después, se priorizan las solicitudes, se coordina el envío de información o muestras y se documenta la evolución de cada oportunidad."
+      ],
+    },
     modalidades: {
-      titulo: "Resumen de Inversión Estratégica",
-      subtitulo: "Infraestructura tecnológica completa y plan de acompañamiento continuo",
+      titulo: "Inversión y Modalidad de Contratación",
+      subtitulo: "Infraestructura tecnológica: implementación única y escenarios de referencia",
       opciones: [
         {
-          nombre: "Infraestructura Base de 3 Módulos (Desarrollo y Puesta en Marcha)",
+          nombre: "Sitio web institucional dinámico",
           descripcion:
-            "Comprende el Módulo 1: Sitio Web Institucional Dinámico ($1.000) + Módulo 2: CRM Institucional con Registro QR y Asistente ($1.000) + Módulo 3: Sistema de Fidelización y Seguimiento Inteligente ($1.500).",
+            "Arquitectura de información, páginas dinámicas, panel administrativo, sección comercial con fuentes oficiales, analítica y preparación SEO.",
+          precio: "$1.000",
+          detalle_precio: "Implementación única"
+        },
+        {
+          nombre: "CRM, registro QR y asistente de atención",
+          descripcion:
+            "Registro QR en actividades, fichas asociadas al evento, organización de oportunidades, asistente de preguntas frecuentes y derivación humana.",
+          precio: "$1.000",
+          detalle_precio: "Implementación única"
+        },
+        {
+          nombre: "Seguimiento, automatizaciones y alertas",
+          descripcion:
+            "Reglas de seguimiento, recordatorios, registro de respuestas, alertas de pendientes y panel de consulta integrado transversalmente.",
+          precio: "$1.500",
+          detalle_precio: "Implementación única"
+        },
+        {
+          nombre: "Total de Implementación Tecnológica",
+          descripcion:
+            "Desarrollo y puesta en marcha de los tres componentes de infraestructura, con configuración acordada y demostraciones funcionales aprobadas.",
           precio: "$3.500",
-          detalle_precio: "Inversión única · Despliegue, configuración y demostraciones funcionales"
+          detalle_precio: "Inversión única total de infraestructura"
         },
         {
-          nombre: "Módulo 4: Posicionamiento, Redes y Motor de Contenidos",
+          nombre: "Posicionamiento web y contenidos (Opcional)",
           descripcion:
-            "Servicio mensual continuo de transformación de actividades en artículos, piezas para redes, edición audiovisual y posicionamiento en buscadores para la Cámara.",
+            "Servicio mensual recurrente e independiente del software. Procesamiento de audios/videos, artículos, redes y reportes según volumen pactado.",
           precio: "$500 / mes",
-          detalle_precio: "Acompañamiento mensual recurrente · Sin plazos forzosos"
+          detalle_precio: "Servicio mensual recurrente opcional"
         },
         {
-          nombre: "Inversión Integral Primer Año",
+          nombre: "Escenario Referencial: Implementación + 6 meses",
           descripcion:
-            "Infraestructura completa instalada ($3.500) más 6 meses de acompañamiento en posicionamiento y producción de contenidos ($3.000 referencial).",
-          precio: "$3.500 + $500/mes",
-          detalle_precio: "Financiamiento disponible en cuotas según cronograma de entrega"
+            "Referencia aritmética: Implementación base ($3.500) + 6 meses de servicio mensual de contenidos ($3.000). Sin obligación forzosa.",
+          precio: "$6.500",
+          detalle_precio: "Referencia total estimada ($3.500 + $500/mes × 6)"
         }
       ],
     },
     cierre: {
-      titulo: "La CCEATI que Convierte Actividades en Relaciones, Continuidad y Resultados.",
+      titulo: "Una Infraestructura al Servicio de los Resultados Institucionales",
       frase_bisagra:
-        "Una infraestructura digital para que cada actividad deje información, cada relación tenga continuidad y cada gestión pueda demostrar sus resultados.",
+        "Que cada actividad deje una oportunidad mejor identificada, una relación mejor atendida y un resultado que pueda demostrarse.",
       texto: `
         <p class="text-base text-slate-700 font-light mb-4">
-          Estimados <strong>Ing. Marianella Alvarado e Ing. Agustín Ontaneda</strong>: lo que plantea esta propuesta no es tecnología por sí misma, sino la capacidad que obtiene la CCEATI de <strong>conservar la memoria de cada reunión, dar continuidad a cada relación comercial y demostrar con datos el valor real de la gestión institucional</strong> ante los socios, la asamblea y las autoridades.
+          Estimados <strong>Ing. Marianella Alvarado e Ing. Agustín Ontaneda</strong>:
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
-          Con esta infraestructura, la CCEATI deja de depender de la memoria de las personas. Cada asamblea, feria o misión comercial queda registrada, cada participante recibe seguimiento activo y cada actividad se convierte en visibilidad institucional. La Directora Ejecutiva y la Presidencia tendrán siempre datos consolidados para responder con seguridad: ¿qué hicimos?, ¿a quiénes llegamos? y ¿qué resultados obtuvimos?
+          La propuesta no plantea tecnología como un fin. Plantea conectar la presencia digital de la CCEATI con su trabajo institucional: <strong>atraer consultas relevantes, conservar la memoria de los contactos, dar continuidad a los compromisos y disponer de información clara para evaluar los avances</strong>.
         </p>
-        <p class="font-outfit text-sm uppercase tracking-wider text-slate-900 font-bold mb-3">
-          Próximos pasos recomendados:
+        <p class="text-base text-slate-700 font-light mb-4">
+          La decisión no consiste únicamente en escoger quién construye una página web. Consiste en definir cómo la Cámara gestionará la información, las relaciones y el seguimiento que pueden acercar a productores ecuatorianos, compradores, inversionistas y aliados estratégicos.
         </p>
-        <ul class="space-y-2 text-sm text-slate-600 list-disc pl-5">
-          <li>Revisión conjunta de la propuesta y priorización de módulos según el calendario institucional.</li>
-          <li>Validación de los campos clave para la ficha del participante en el CRM y registro QR.</li>
-          <li>Definición de los canales de comunicación oficiales para el asistente de seguimiento y fidelización.</li>
-          <li>Planificación del primer evento institucional para el despliegue del piloto operativo.</li>
-        </ul>
+        <p class="text-base text-slate-700 font-light mb-4">
+          Propongo revisar conjuntamente el alcance, priorizar los flujos iniciales y elegir la primera actividad para el piloto operativo. Con esa validación, será posible definir la secuencia de trabajo y formalizar los entregables.
+        </p>
+        <div class="mt-6 pt-6 border-t border-slate-200">
+          <p class="font-outfit text-sm font-bold text-slate-900 mb-1">Puesta en marcha recomendada en 4 fases:</p>
+          <ol class="space-y-1.5 text-sm text-slate-600 list-decimal pl-5">
+            <li><strong>Fase 01. Alinear el alcance:</strong> Validar páginas, fuentes, campos del QR, preguntas frecuentes e indicadores.</li>
+            <li><strong>Fase 02. Construir y configurar:</strong> Desarrollar el portal, conectar el CRM y configurar los flujos de seguimiento.</li>
+            <li><strong>Fase 03. Probar con un piloto:</strong> Usar una actividad real para verificar el registro, seguimiento y panel.</li>
+            <li><strong>Fase 04. Ajustar y transferir:</strong> Corregir hallazgos, capacitar a las personas responsables y acordar el procedimiento.</li>
+          </ol>
+        </div>
       `,
       bloque_derecha: {
-        titulo: "Compromiso de Implementación",
-        subtitulo: "Acompañamiento profesional y soporte técnico directo",
+        titulo: "Continuidad Operativa y Garantías",
+        subtitulo: "La implementación parte de la infraestructura que la Cámara ya utiliza",
         cards: [
           {
-            titulo: "Demostraciones Reales en Video",
-            texto: "Cada módulo incluye su respectiva demostración en video funcional para que todo el directorio visualice con claridad su funcionamiento y utilidad práctica antes de la adopción masiva."
+            titulo: "Hosting, Dominio y Correo Existente",
+            texto: "Se mantendrá el proveedor de confianza de la CCEATI. Se revisará compatibilidad y no se migrará el correo ni se cambiará el proveedor sin necesidad técnica justificada y aprobación previa."
           },
           {
-            titulo: "Sin Complicaciones Técnicas",
-            texto: "El equipo directivo y el personal se concentran exclusivamente en la gestión gremial; nosotros asumimos el desarrollo, configuración técnica, seguridad y puesta a punto de los sistemas."
+            titulo: "Demostraciones Reales y Flujos Validados",
+            texto: "Cada módulo incluye demostración funcional para verificar en la práctica el registro, el seguimiento y el panel antes de la adopción formal."
           },
           {
-            titulo: "Capacidad de Demostración Continua",
-            texto: "La Cámara dispondrá de datos certeros y verificables para sustentar su gestión ante asambleas generales, ministerios y cooperantes internacionales."
+            titulo: "Privacidad y Reglas Operativas Claras",
+            texto: "Configuración conforme a la normativa ecuatoriana de protección de datos personales, con finalidad de uso informada y canales autorizados validados."
           }
         ]
       },
       mapa_url: "https://maps.app.goo.gl/jdZgBYatRApSHLnTA",
       mapa_embed_url:
         "https://maps.google.com/maps?q=-4.0008611,-79.199&hl=es&z=18&t=&ie=UTF8&iwloc=B&output=embed",
-      cta_texto: "Coordinar Reunión de Presentación por WhatsApp",
+      cta_texto: "Coordinar una sesión de trabajo por WhatsApp",
       cta_url:
-        "https://wa.me/593984180497?text=Estimado+Ing.+C%C3%A9sar+Reyes%2C+he+revisado+la+propuesta+de+Infraestructura+Digital+para+la+C%C3%A1mara+y+me+gustar%C3%ADa+coordinar+una+reuni%C3%B3n+de+trabajo.",
+        "https://wa.me/593984180497?text=Estimado+Ing.+C%C3%A9sar+Reyes%2C+he+revisado+la+propuesta+de+Infraestructura+Digital+para+la+CCEATI+y+me+gustar%C3%ADa+coordinar+una+sesi%C3%B3n+de+trabajo.",
       pie_texto:
         "Propuesta institucional confidencial · Grupo Empresarial Reyes S.A.S. B.I.C. · Loja, Ecuador",
       frase_final:
-        "Una infraestructura digital para que <span>cada actividad deje información, cada relación tenga continuidad y cada gestión pueda demostrar sus resultados.</span>",
+        "Cada contacto deja información útil. Cada compromiso tiene seguimiento. <span>Cada actividad contribuye a demostrar resultados.</span>",
     },
-    validez: "Propuesta institucional válida por 30 días · Octubre 2026",
+    validez: "Propuesta institucional confidencial · Validez comercial de referencia: 30 días · Octubre de 2026",
   };
 
   return <CotizacionViewer data={data} />;

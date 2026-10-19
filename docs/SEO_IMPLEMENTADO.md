@@ -1,7 +1,7 @@
 # 📊 SEO Implementado — cesarreyesjaramillo.com
 
 > **Documento vivo**: Se actualiza cada vez que se agrega una nueva mejora SEO al proyecto.
-> **Última actualización**: 2026-09-21 (Descanibalización SEO 'posicionamiento web Loja')
+> **Última actualización**: 2026-10-19 (Optimización CPU Vercel & Core Web Vitals)
 
 ---
 
@@ -226,7 +226,17 @@ Incluye enlaces de recuperación a `sitemap.xml` y `llms.txt` para que agentes d
 
 ---
 
-## 12. Registro en Plataformas de Webmasters
+## 12. Optimización de Performance Vercel & Core Web Vitals (2026-10-19)
+
+| Acción | Archivos Modificados | Objetivo |
+|---|---|---|
+| **Eliminación de Serverless Invocations en Cada Navegación** | `app/layout.tsx` | Desactivar `VisitTracker` que ejecutaba `fetch('/api/statistics')` en cada cambio de ruta de usuario/bot. Reduce drásticamente el consumo de CPU Fluid en Vercel y elimina bloqueo innecesario del hilo principal del navegador. La analítica real y confiable permanece en Google Tag Manager (`GTM-NLQ7BVT8`) y Microsoft Clarity. |
+| **Optimización de Middleware Auth Scope** | `middleware.ts` | Aislar la decodificación de tokens de sesión (`getToken`) exclusivamente para las rutas de `/admin/*`. Evita procesamiento de JWT en peticiones de usuarios anónimos y rastreadores de búsqueda, preservando intacto el *Content Negotiation* de IA para `text/markdown` hacia `/llms.txt`. |
+| **Mejora de TTFB e INP** | `app/layout.tsx`, `middleware.ts` | Al eliminar la función serverless continua por navegación, se acelera el *Time to First Byte* (TTFB) y se optimiza el *Interaction to Next Paint* (INP) para Google Search Console. |
+
+---
+
+## 13. Registro en Plataformas de Webmasters
 
 | Plataforma | Estado | Fecha |
 |---|---|---|

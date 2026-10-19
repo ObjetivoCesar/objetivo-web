@@ -22,6 +22,11 @@ interface CotizacionData {
     url_fondo?: string;
     url_fondo_movil?: string;
   };
+  video_destacado?: {
+    url: string;
+    titulo?: string;
+    subtitulo?: string;
+  };
   introduccion: {
     titulo: string;
     parrafos: string[];
@@ -216,15 +221,15 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
         )}
         <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#111111]/95 via-[#111111]/80 to-transparent"></div>
         
-        <div className="container mx-auto px-6 relative z-20 pt-20 pb-16 h-full flex flex-col justify-center">
+        <div className="container mx-auto px-6 relative z-20 pt-16 pb-12 h-full flex flex-col justify-center">
           {data.portada.url_logo_cliente && (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="mb-8 self-start inline-block bg-white/95 px-4 py-2 rounded-lg shadow-lg backdrop-blur-sm"
+              className="mb-5 self-start inline-block bg-white/95 px-4 py-2 rounded-lg shadow-lg backdrop-blur-sm"
             >
-              <img src={data.portada.url_logo_cliente} alt="Logo Cliente" className="h-10 md:h-12 w-auto object-contain" />
+              <img src={data.portada.url_logo_cliente} alt="Logo Cliente" className="h-9 md:h-11 w-auto object-contain" />
             </motion.div>
           )}
           <motion.div
@@ -232,17 +237,17 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <div className="font-outfit text-xs md:text-sm tracking-[0.3em] uppercase text-gold font-bold mb-6 flex items-center gap-4">
-              <span className="w-12 h-px bg-gold"></span>
+            <div className="font-outfit text-xs tracking-[0.25em] uppercase text-gold font-bold mb-4 flex items-center gap-3">
+              <span className="w-10 h-px bg-gold"></span>
               {data.portada.etiqueta}
             </div>
             
-            <h1 className="font-outfit text-4xl md:text-6xl lg:text-7xl font-light text-white leading-[1.1] mb-6 max-w-4xl tracking-tight">
+            <h1 className="font-outfit text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.12] mb-5 max-w-5xl tracking-tight">
               {data?.portada?.titulo_principal || ""} <br className="hidden md:block"/>
               <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-amber-200" dangerouslySetInnerHTML={{ __html: data?.portada?.titulo_destacado || "" }}></span>
             </h1>
             
-            <p className="font-montserrat text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed mb-16 font-light">
+            <p className="font-montserrat text-sm sm:text-base md:text-lg text-slate-300 max-w-3xl leading-relaxed mb-8 md:mb-10 font-light">
               {data?.portada?.subtitulo || ""}
             </p>
           </motion.div>
@@ -250,7 +255,7 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
           {/* META INFO */}
           <motion.div 
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8, duration: 1 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-white/10 max-w-4xl"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-white/10 max-w-4xl"
           >
             <div>
               <p className="font-outfit text-[10px] tracking-widest uppercase text-slate-400 mb-2">Preparado para</p>
@@ -276,6 +281,46 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
           </motion.div>
         </div>
       </section>
+
+      {/* VIDEO DESTACADO (JUSTO DESPUÉS DEL HERO) */}
+      {data.video_destacado && (
+        <section className="relative bg-[#0d1117] py-16 md:py-24 px-6 border-b border-white/5 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent pointer-events-none"></div>
+          <div className="container mx-auto max-w-5xl relative z-10">
+            {data.video_destacado.titulo && (
+              <div className="text-center mb-8 md:mb-12">
+                <div className="inline-flex items-center gap-2 font-outfit text-xs tracking-[0.25em] uppercase text-gold font-bold mb-3">
+                  <span className="w-8 h-px bg-gold"></span>
+                  Presentación en Video
+                  <span className="w-8 h-px bg-gold"></span>
+                </div>
+                <h2 className="font-outfit text-2xl md:text-4xl text-white font-light tracking-tight">
+                  {data.video_destacado.titulo}
+                </h2>
+                {data.video_destacado.subtitulo && (
+                  <p className="font-montserrat text-sm md:text-base text-slate-400 mt-2 max-w-2xl mx-auto font-light">
+                    {data.video_destacado.subtitulo}
+                  </p>
+                )}
+              </div>
+            )}
+
+            <div className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video w-full max-w-4xl">
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${
+                  data.video_destacado.url.includes('v=')
+                    ? data.video_destacado.url.split('v=')[1]?.split('&')[0]
+                    : data.video_destacado.url.split('/').pop()?.split('?')[0]
+                }?rel=0&modestbranding=1&playsinline=1`}
+                title={data.video_destacado.titulo || "Presentación Institucional"}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full border-0 absolute inset-0"
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* INTRODUCCIÓN */}
       <section className="py-24 px-6 relative bg-white">

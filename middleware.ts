@@ -62,34 +62,33 @@ export async function middleware(request: NextRequest) {
     return res;
   }
 
-  // Debug info
-  logDebug(`Processing request for: ${pathname}`, {
-    cookies: request.cookies.getAll().map(c => c.name),
-    hasSessionCookie: request.cookies.has(sessionCookieName),
-    hasCsrfCookie: request.cookies.has(csrfCookieName),
-    hasCallbackCookie: request.cookies.has(callbackCookieName)
-  });
-
-  // Get the session token
-  const token = await getToken({
-    req: request,
-    secret: process.env.NEXTAUTH_SECRET,
-    secureCookie: useSecureCookies,
-    // Explicitly set cookie name to match NextAuth config
-    cookieName: sessionCookieName
-  });
-
-  logDebug('Session token check', {
-    hasToken: !!token,
-    token: token ? {
-      name: token.name,
-      email: token.email,
-      expires: token.exp ? new Date(token.exp * 1000).toISOString() : null
-    } : null
-  });
-
-  // Handle admin routes
+  // Only check session token for protected admin routes
   if (pathname.startsWith('/admin')) {
+    // Debug info
+    logDebug(`Processing request for: ${pathname}`, {
+      cookies: request.cookies.getAll().map(c => c.name),
+      hasSessionCookie: request.cookies.has(sessionCookieName),
+      hasCsrfCookie: request.cookies.has(csrfCookieName),
+      hasCallbackCookie: request.cookies.has(callbackCookieName)
+    });
+
+    // Get the session token
+    const token = await getToken({
+      req: request,
+      secret: process.env.NEXTAUTH_SECRET,
+      secureCookie: useSecureCookies,
+      // Explicitly set cookie name to match NextAuth config
+      cookieName: sessionCookieName
+    });
+
+    logDebug('Session token check', {
+      hasToken: !!token,
+      token: token ? {
+        name: token.name,
+        email: token.email,
+        expires: token.exp ? new Date(token.exp * 1000).toISOString() : null
+      } : null
+    });
     if (!token) {
       logDebug('No session token found, redirecting to login');
       const signInUrl = new URL('/auth/signin', request.url);
