@@ -960,9 +960,10 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
                 </h2>
                 <div className="space-y-5">
                   {/* Primer párrafo siempre visible */}
-                  <p className="font-montserrat text-base text-slate-600 leading-relaxed font-light">
-                    {data.ir_mas_alla.parrafos[0]}
-                  </p>
+                  <p 
+                    className="font-montserrat text-base text-slate-600 leading-relaxed font-light"
+                    dangerouslySetInnerHTML={{ __html: data.ir_mas_alla.parrafos[0] }}
+                  />
 
                   {/* Párrafos adicionales colapsables */}
                   {data.ir_mas_alla.parrafos.length > 1 && (
@@ -977,9 +978,11 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
                             className="space-y-5 overflow-hidden pt-1"
                           >
                             {data.ir_mas_alla.parrafos.slice(1).map((p, i) => (
-                              <p key={i + 1} className="font-montserrat text-base text-slate-600 leading-relaxed font-light">
-                                {p}
-                              </p>
+                              <p 
+                                key={i + 1} 
+                                className="font-montserrat text-base text-slate-600 leading-relaxed font-light"
+                                dangerouslySetInnerHTML={{ __html: p }}
+                              />
                             ))}
                           </motion.div>
                         )}

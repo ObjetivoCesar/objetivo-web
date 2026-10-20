@@ -45,7 +45,7 @@ export default function CamaraCotizacionPage() {
       subtitulo:
         "Una plataforma conectada para transformar la presencia digital, los eventos y las relaciones institucionales de la CCEATI en oportunidades comerciales con seguimiento y resultados medibles entre Ecuador y los Emiratos Árabes Unidos.",
       preparado_para: "Ing. Marianella Alvarado, Directora Ejecutiva · Ing. Agustín Ontaneda, Presidente Ejecutivo de la CCEATI",
-      preparado_por: "Ing. César Augusto Reyes Jaramillo · Estrategia y Sistemas (Grupo Empresarial Reyes S.A.S. B.I.C.)",
+      preparado_por: "Ing. César Augusto Reyes Jaramillo · Estrategia y Sistemas",
       fecha: "Loja, Ecuador · Octubre de 2026",
       url_logo_cliente: "",
       imagen_url: "/images/og-camara.jpg",
@@ -255,7 +255,13 @@ export default function CamaraCotizacionPage() {
       subtitulo: "Caso de Uso y Aplicación en Misiones Internacionales",
       parrafos: [
         "Imaginemos una actividad con productores cafeteros y representantes de instituciones públicas. La infraestructura une el registro, los compromisos, la información y la revisión de avances en cinco momentos clave:",
-        "<strong>01. Identificar:</strong> Al inicio, los asistentes escanean el QR e indican empresa, producto, intereses y apoyo requerido.<br/><strong>02. Organizar:</strong> Los registros quedan asociados con el evento y se agrupan por sector, interés y siguiente paso.<br/><strong>03. Dar seguimiento:</strong> El flujo consulta avances, registra respuestas y asigna solicitudes que necesitan gestión humana.<br/><strong>04. Extender el valor:</strong> El material de la presentación se procesa para preparar un artículo y contenidos derivados, sujetos a revisión institucional.<br/><strong>05. Evaluar:</strong> Presidencia y Dirección Ejecutiva consultan participantes, intereses, respuestas y compromisos pendientes.",
+        `<div class="space-y-3 my-2 pl-1">
+          <p><strong>01. Identificar:</strong> Al inicio, los asistentes escanean el QR e indican empresa, producto, intereses y apoyo requerido.</p>
+          <p><strong>02. Organizar:</strong> Los registros quedan asociados con el evento y se agrupan por sector, interés y siguiente paso.</p>
+          <p><strong>03. Dar seguimiento:</strong> El flujo consulta avances, registra respuestas y asigna solicitudes que necesitan gestión humana.</p>
+          <p><strong>04. Extender el valor:</strong> El material de la presentación se procesa para preparar un artículo y contenidos derivados, sujetos a revisión institucional.</p>
+          <p><strong>05. Evaluar:</strong> Presidencia y Dirección Ejecutiva consultan participantes, intereses, respuestas y compromisos pendientes.</p>
+        </div>`,
         "Así, la actividad no termina con una fotografía o una publicación: queda registrada, genera continuidad y deja información para evaluar la gestión.",
         "<strong>Aplicación posible en una feria internacional:</strong> La misma lógica puede prepararse para una feria o misión comercial internacional (por ejemplo, Gulfood 2027 como referencia de planificación). Antes del evento, se organiza la información de la oferta ecuatoriana. Durante la actividad, se registran los contactos y sus intereses. Después, se priorizan las solicitudes, se coordina el envío de información o muestras y se documenta la evolución de cada oportunidad."
       ],
@@ -298,13 +304,6 @@ export default function CamaraCotizacionPage() {
             "Servicio mensual recurrente e independiente del software. Procesamiento de audios/videos, artículos, redes y reportes según volumen pactado.",
           precio: "$500 / mes",
           detalle_precio: "Servicio mensual recurrente opcional"
-        },
-        {
-          nombre: "Escenario Referencial: Implementación + 6 meses",
-          descripcion:
-            "Referencia aritmética: Implementación base ($3.500) + 6 meses de servicio mensual de contenidos ($3.000). Sin obligación forzosa.",
-          precio: "$6.500",
-          detalle_precio: "Referencia total estimada ($3.500 + $500/mes × 6)"
         }
       ],
     },
@@ -360,7 +359,7 @@ export default function CamaraCotizacionPage() {
       cta_url:
         "https://wa.me/593984180497?text=Estimado+Ing.+C%C3%A9sar+Reyes%2C+he+revisado+la+propuesta+de+Infraestructura+Digital+para+la+CCEATI+y+me+gustar%C3%ADa+coordinar+una+sesi%C3%B3n+de+trabajo.",
       pie_texto:
-        "Propuesta institucional confidencial · Grupo Empresarial Reyes S.A.S. B.I.C. · Loja, Ecuador",
+        "Propuesta institucional confidencial · César Reyes Jaramillo · Loja, Ecuador",
       frase_final:
         "Cada contacto deja información útil. Cada compromiso tiene seguimiento. <span>Cada actividad contribuye a demostrar resultados.</span>",
     },
