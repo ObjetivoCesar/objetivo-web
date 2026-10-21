@@ -22,17 +22,17 @@ const menuItems = [
     },
     {
         title: "Software Personalizado",
-        href: "/hoteles-y-restaurantes",
+        href: "/software-personalizado",
         image: "/images/hotel-objetivo/hero.png",
         subtitle: "Soluciones de alta eficiencia",
         subitems: [
+            { title: "Comandas Restaurantes", href: "/comandas-restaurantes" },
             { title: "Software de Gestión (Servicios)", href: "https://www.cesarreyesjaramillo.com/software-gestion-servicios" },
             { title: "Motor de Reservas (Hoteles)", href: "/motor-reservas-hotel" },
             { title: "Menú Digital (Restaurantes)", href: "/menu-digital" },
             { title: "Mensajería", href: "/mensajeria" },
-            { title: "Control Financiero", href: "/sistema-de-contabilidad" },
-            { title: "Reto de 7 Días", href: "/reto-de-7-dias" },
-            { title: "Promo Carnavales 2026", href: "/carnavales-2026" }
+            { title: "Fidelización de Clientes & CRM", href: "/fidelizacion-clientes" },
+            { title: "Control Financiero", href: "/sistema-de-contabilidad" }
         ]
     },
     {

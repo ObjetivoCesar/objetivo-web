@@ -943,6 +943,24 @@ const CrmClient = () => {
                         </AccordionItem>
                     </Accordion>
                 </div>
+
+                {/* Enlace al catálogo matriz de Software Personalizado */}
+                <div className="container mx-auto px-4 mt-14 max-w-4xl text-center">
+                    <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8">
+                        <p className="text-xs font-bold text-[#FF6B00] uppercase tracking-wider mb-2">Ingeniería a Medida · Ecuador</p>
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">¿Buscas otro tipo de sistema para tu empresa?</h3>
+                        <p className="text-sm text-gray-600 mb-4 max-w-xl mx-auto">
+                            Además de software para servicios y talleres, desarrollamos comandas para restaurantes, motores de reservas y ERPs a medida en Loja, Quito, Guayaquil y Cuenca.
+                        </p>
+                        <a
+                            href="/software-personalizado"
+                            className="inline-flex items-center gap-2 text-sm font-bold text-[#FF6B00] hover:text-orange-700 hover:underline"
+                        >
+                            <span>Explorar todo el catálogo de Software Personalizado en Ecuador</span>
+                            <ArrowRight className="w-4 h-4" />
+                        </a>
+                    </div>
+                </div>
             </section>
 
             {false && (

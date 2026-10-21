@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import { supabaseReto } from '@/src/lib/supabaseRetoClient';
@@ -1794,6 +1794,16 @@ const HotelObjetivoClient = () => {
                         <ArrowRight className="ml-2 w-5 h-5" />
                     </a>
                     <p className="text-sm text-gray-500 mt-4">Sin comisiones por pedido · Actualizable desde tu celular</p>
+
+                    <div className="mt-8 pt-8 border-t border-orange-200/60">
+                        <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Desarrollo a Medida · Ecuador</p>
+                        <p className="text-sm text-gray-700">
+                            ¿Necesitas un sistema personalizado de inventario, comandas o gestión para tu empresa?{' '}
+                            <a href="/software-personalizado" className="text-[#FF6B00] font-bold hover:underline">
+                                Conoce nuestras soluciones de Software Personalizado en Ecuador →
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </section >
         </div >

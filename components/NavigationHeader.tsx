@@ -197,8 +197,8 @@ export default function NavigationHeader({ currentPath }: NavigationHeaderProps)
             {/* Dropdown Software Personalizado */}
             <div className="relative group">
               <Link
-                href="/hoteles-y-restaurantes"
-                className={`font-medium px-3 py-2 rounded-md hover:opacity-80 transition-opacity flex items-center gap-1 ${isActive('/hoteles-y-restaurantes') ? 'text-cyan-400' : textColor}`}
+                href="/software-personalizado"
+                className={`font-medium px-3 py-2 rounded-md hover:opacity-80 transition-opacity flex items-center gap-1 ${isActive('/software-personalizado') ? 'text-cyan-400' : textColor}`}
                 style={{
                   minHeight: '40px',
                   display: 'flex',
@@ -215,6 +215,14 @@ export default function NavigationHeader({ currentPath }: NavigationHeaderProps)
               {/* Menu desplegable con puente invisible para evitar parpadeo */}
               <div className="absolute left-0 mt-0 w-64 bg-white rounded-xl shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100 transform translate-y-2 group-hover:translate-y-0">
                 <div className="absolute top-0 left-0 w-full h-4 -mt-4 bg-transparent" /> {/* Puente invisible */}
+                <Link
+                  href="/comandas-restaurantes"
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-amber-600 transition-colors border-b border-gray-50"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <span className="font-bold block">Comandas Restaurantes</span>
+                  <span className="text-xs text-gray-400">Cocina, Mesas & Celular</span>
+                </Link>
                 <Link
                   href="/motor-reservas-hotel"
                   className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors border-b border-gray-50"
@@ -240,20 +248,20 @@ export default function NavigationHeader({ currentPath }: NavigationHeaderProps)
                   <span className="text-xs text-gray-400">Automatización de Chat</span>
                 </Link>
                 <Link
-                  href="/sistema-de-contabilidad"
+                  href="/fidelizacion-clientes"
                   className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors border-b border-gray-50"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <span className="font-bold block">Fidelización de Clientes & CRM</span>
+                  <span className="text-xs text-gray-400">Automatización y Recompra WhatsApp</span>
+                </Link>
+                <Link
+                  href="/sistema-de-contabilidad"
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span className="font-bold block">Control Financiero</span>
                   <span className="text-xs text-gray-400">Sistema de contabilidad</span>
-                </Link>
-                <Link
-                  href="/carnavales-2026"
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <span className="font-bold block">Promo Carnavales 2026</span>
-                  <span className="text-xs text-gray-400">Vive la experiencia</span>
                 </Link>
               </div>
             </div>

@@ -160,11 +160,18 @@ export default function MobileMenu({
               className={`bg-gray-50 border-t border-gray-100 transition-all duration-200 overflow-hidden ${expandedMenus['software'] ? 'max-h-[800px]' : 'max-h-0'}`}
             >
               <Link
-                href="/hoteles-y-restaurantes"
+                href="/software-personalizado"
                 className="block py-4 px-8 text-blue-600 font-bold border-b border-gray-100 bg-blue-50 transition-colors touch-manipulation"
                 onClick={onClose}
               >
                 Ver sección completa
+              </Link>
+              <Link
+                href="/comandas-restaurantes"
+                className="block py-4 px-8 text-amber-700 font-semibold active:bg-gray-50 border-b border-gray-100 transition-colors touch-manipulation"
+                onClick={onClose}
+              >
+                Comandas Restaurantes
               </Link>
               <Link
                 href="/motor-reservas-hotel"
@@ -188,18 +195,18 @@ export default function MobileMenu({
                 Mensajería (WhatsApp/Chat)
               </Link>
               <Link
-                href="/sistema-de-contabilidad"
+                href="/fidelizacion-clientes"
                 className="block py-4 px-8 text-gray-700 active:bg-gray-50 border-b border-gray-100 transition-colors touch-manipulation"
                 onClick={onClose}
               >
-                Control Financiero
+                Fidelización de Clientes & CRM
               </Link>
               <Link
-                href="/carnavales-2026"
+                href="/sistema-de-contabilidad"
                 className="block py-4 px-8 text-gray-700 active:bg-gray-50 transition-colors touch-manipulation"
                 onClick={onClose}
               >
-                Promo Carnavales 2026
+                Control Financiero
               </Link>
             </div>
           </div>

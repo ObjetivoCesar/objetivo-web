@@ -310,3 +310,162 @@ Usa esta lista como guía al implementar SEO en un nuevo proyecto Next.js:
 ---
 
 > **💡 Nota**: Este documento se irá actualizando conforme se implementen nuevas mejoras SEO en este u otros proyectos.
+
+---
+
+## Landing Pages: Software Personalizado y Comandas Restaurantes (2026-10-20)
+
+### ¿Qué se implementó?
+
+1. **Separación y creación de la página matriz `/software-personalizado`**:
+   - Página principal de posicionamiento para **Software Personalizado en Ecuador** (`app/software-personalizado/page.tsx`).
+   - Catálogo integral de las soluciones especializadas: Comandas Restaurantes, Software de Gestión (Servicios), Motor de Reservas (Hoteles), Menú Digital, Mensajería y Control Financiero.
+   - Comparativa de valor vs. sistemas genéricos rígidos, FAQs y schemas estructurados (`ServiceSchema`, `BreadcrumbSchema`, `FAQSchema`).
+
+2. **Independización de la landing `/comandas-restaurantes`**:
+   - Página dedicada para el avatar de dueños de restaurantes pequeños y medianos (`app/comandas-restaurantes/page.tsx`).
+   - Enfoque directo en el dolor operativo: comandas perdidas, pedidos en cocina ordenados por tiempo de espera y ventas en el celular.
+   - Efectos parallax fotográficos (`bg-fixed`) en Hero y Cierre.
+   - Integración fotográfica fotorrealista de pantalla KDS en cocina y celular de comandas.
+
+3. **Navegación Global Actualizada**:
+   - `NavigationHeader.tsx`, `MobileMenu.tsx` y `ModernSidebarMenu.tsx` actualizados con el enlace principal a `/software-personalizado` e incorporando **Comandas Restaurantes** en el listado de soluciones.
+   - Ambas rutas indexadas en `app/sitemap.ts`.
+
+### Archivos creados o modificados
+
+| Archivo | Acción |
+|---|---|
+| `app/software-personalizado/page.tsx` | **Creado** — Página matriz de Software Personalizado en Ecuador |
+| `app/comandas-restaurantes/page.tsx` | **Creado** — Landing independiente de Comandas Restaurantes |
+| `app/comandas-restaurantes/MiRestClient.tsx` | **Creado** — Componente con diseño parallax e imágenes de cocina/celular |
+| `components/NavigationHeader.tsx` | **Modificado** — Enlace principal y dropdown actualizado |
+| `components/MobileMenu.tsx` | **Modificado** — Menú móvil con ambas rutas |
+| `components/navigation/ModernSidebarMenu.tsx` | **Modificado** — Sidebar actualizado |
+| `app/sitemap.ts` | **Actualizado** — Ambas rutas registradas para rastreo |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Este registro |
+
+### Metadata implementada
+
+- **`title`**: `Comandas para Restaurantes en Ecuador | Mi-Rest | César Reyes Jaramillo`
+- **`description`**: Comandas para Restaurantes (Mi-Rest): Ve en tu celular cómo va tu día, qué mesas están ocupadas, quiénes son tus clientes y quiénes llevan semanas sin volver. Carta digital y cocina incluida. $50/mes.
+- **`keywords`**: comandas restaurantes Ecuador, sistema de comandas restaurante, comandas cocina digital, software restaurantes Ecuador, carta digital restaurante, mi-rest software, etc.
+- **Open Graph**: Imagen y título con la propuesta de valor de comandas en cocina y ventas.
+- **`canonical`**: `https://www.cesarreyesjaramillo.com/comandas-restaurantes`
+- **`locale`**: `es_EC`
+
+### Patrón LLM (GEO)
+
+Se implementó el *Server-Side Hidden Content Pattern* en `page.tsx`:
+- `<h1>` con keyword principal completa
+- `<h2>` de funciones y precio con texto plano
+- `<ul>` y `<ol>` con listas estructuradas para parseo por LLMs
+- Referencia al autor (César Reyes Jaramillo) para señales de autoridad
+
+### Estructura de la página (9 secciones)
+
+1. **Portada / Hero** — Titular + subtítulo + precio + CTA WhatsApp
+2. **Video** — Placeholder para video de 60-90 seg (preparado para embed)
+3. **Problemas** — "Un restaurante que no lleva números, adivina"
+4. **QR ≠ diferenciador** — El QR es la puerta, los números son el negocio
+5. **Features** — 6 tarjetas de funciones con íconos y color accent
+6. **Cómo empezamos** — 3 pasos simples (WhatsApp-first)
+7. **Precio** — $600/$50 mes, con lista de incluidos y nota de dominio
+8. **FAQ** — 5 preguntas frecuentes con acordeón
+9. **Cierre** — CTA final con fondo parallax
+
+### Fecha de implementación
+
+`2026-10-20`
+
+---
+
+## Expansión Geo-Localizada: Software Personalizado en Ciudades Clave (2026-10-20)
+
+### ¿Qué se implementó?
+
+Para maximizar el posicionamiento orgánico en Google y motores de IA (GEO), se implementó una arquitectura en **Topic Cluster Geo-Específico**:
+
+1. **Pilar Matriz `/software-personalizado`**:
+   - Bloque de Cobertura Nacional y Presencia Local con enlaces contextuales a Loja, Quito, Guayaquil y Cuenca.
+   - Bloque visual de Integraciones Financieras Locales (Facturación SRI, PayPhone, Deuna, bancos locales).
+   - Componentes enriquecidos con metadata y Hero con foto de alto impacto tecnológico.
+
+2. **4 Landings Geo-Específicas Creadas**:
+   - `/software-personalizado/loja`: Enfoque en comercio, gastronomía y hotelería de Loja y Vilcabamba, soporte presencial.
+   - `/software-personalizado/quito`: Enfoque en software corporativo, automatización B2B, empresas de consultoría y Pichincha.
+   - `/software-personalizado/guayaquil`: Enfoque en distribuidoras comerciales, logística, puntos de venta y Guayas.
+   - `/software-personalizado/cuenca`: Enfoque en talleres de manufactura, hoteles patrimoniales, gastronomía y Azuay.
+
+3. **Schemas JSON-LD Geo-Localizados**:
+   - Cada ciudad cuenta con `LocalBusiness` y `Service` con `areaServed` y geolocalización correspondiente.
+
+4. **Visibilidad IA (GEO)**:
+   - `public/llms.txt` actualizado con mención directa de César Reyes como desarrollador de software a medida en Loja, Quito, Guayaquil y Cuenca.
+
+6. **Interlinking Bidireccional (Topic Cluster Consolidado)**:
+   - Se crearon enlaces de retorno con anchor text semántico hacia `/software-personalizado` desde:
+     - `/comandas-restaurantes` (al pie y en el banner de cierre).
+     - `/software-gestion-servicios` (bloque de recomendación empresarial).
+     - `/motor-reservas-hotel` (bloque de desarrollo de software para hoteles).
+   - Esto transfiere autoridad de página y consolida a `/software-personalizado` como el nodo central ante Googlebot y rastreadores de IA.
+
+### Archivos modificados y creados
+
+| Archivo | Acción |
+|---|---|
+| `components/software-personalizado/SoftwareCiudadClient.tsx` | **Creado** — Componente reutilizable y responsive para ciudades |
+| `app/software-personalizado/loja/page.tsx` | **Creado** — Landing y schemas para Loja |
+| `app/software-personalizado/quito/page.tsx` | **Creado** — Landing y schemas para Quito |
+| `app/software-personalizado/guayaquil/page.tsx` | **Creado** — Landing y schemas para Guayaquil |
+| `app/software-personalizado/cuenca/page.tsx` | **Creado** — Landing y schemas para Cuenca |
+| `app/software-personalizado/SoftwarePersonalizadoClient.tsx` | **Modificado** — Añadido bloque de cobertura y ecosistema Ecuador |
+| `app/comandas-restaurantes/MiRestClient.tsx` | **Modificado** — Enlace bidireccional a software personalizado |
+| `app/software-gestion-servicios/CrmClient.tsx` | **Modificado** — Enlace bidireccional a software personalizado |
+| `app/motor-reservas-hotel/HotelObjetivoClient.tsx` | **Modificado** — Enlace bidireccional a software personalizado |
+| `app/sitemap.ts` | **Modificado** — Indexación de las 4 nuevas URLs |
+| `public/llms.txt` | **Modificado** — Enriquecido para ChatGPT/Perplexity/Gemini con ciudades y software |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
+
+---
+
+## Landing Page: Fidelización de Clientes y CRM WhatsApp en Ecuador (2026-10-21)
+
+### ¿Qué se implementó?
+
+Nueva landing page comercial y estratégica para capturar las búsquedas de alto volumen y valor transaccional identificadas en el Planificador de Palabras Clave de Google (*fidelizacion de clientes* - 500/mes, *crm whatsapp* - 500/mes con CPC de hasta $18.91 USD):
+
+1. **Ruta y URL Canónica**:
+   - `/fidelizacion-clientes` con metadata completa, Open Graph y Twitter Cards.
+2. **Arquitectura de Conversión**:
+   - Hero fullscreen con fotografía fotorrealista de alta gama y mockup dinámico de smartphone con notificación interactiva de CRM.
+   - Los 4 momentos clave: `01. ATENDER` (WhatsApp 24/7), `02. REGISTRAR` (Ficha histórica automática), `03. DAR CONTINUIDAD` (Avisos de garantías y mantenimientos) y `04. RECOMPRAR` (Ventas repetidas).
+   - Componentes de inversión desglosados: Sitio web ($1.000), CRM y Fidelización ($2.500) y Mantenimiento técnico anual ($290).
+   - Tabla comparativa de transformación (Antes vs. Con el sistema).
+   - Cálculo del impacto financiero y ahorro estimado de más de $5.000 USD anuales en horas de personal de atención repetitiva.
+   - Preguntas frecuentes con acordeón (`FAQPage` schema).
+3. **Schemas JSON-LD Estructurados**:
+   - `SoftwareApplication` para indexación de la herramienta.
+   - `Service` geolocalizado en Ecuador.
+   - `FAQPage` para fragmentos enriquecidos en Google Search.
+4. **Interlinking Bidireccional**:
+   - Enlazado desde `/software-personalizado` en el catálogo de soluciones.
+   - Enlace de retorno desde el pie de `/fidelizacion-clientes` hacia la matriz de software personalizado.
+5. **Indexación y GEO (IA)**:
+   - Añadido a `app/sitemap.ts`.
+   - Registrado en `public/llms.txt` para citación en ChatGPT, Claude y Perplexity.
+
+### Archivos modificados y creados
+
+| Archivo | Acción |
+|---|---|
+| `app/fidelizacion-clientes/FidelizacionClientesClient.tsx` | **Creado** — Componente interactivo completo de fidelización y CRM |
+| `app/fidelizacion-clientes/page.tsx` | **Creado** — Metadata SEO, Open Graph y schemas JSON-LD |
+| `public/images/fidelizacion-clientes-hero.jpg` | **Creado** — Imagen hero fotorrealista generada por IA |
+| `app/software-personalizado/SoftwarePersonalizadoClient.tsx` | **Modificado** — Añadida tarjeta de fidelización al catálogo |
+| `app/sitemap.ts` | **Modificado** — Indexada la ruta `/fidelizacion-clientes` |
+| `public/llms.txt` | **Modificado** — Añadido el servicio a los motores de IA |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
+
+
+
