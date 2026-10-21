@@ -464,8 +464,35 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
 | `public/images/fidelizacion-clientes-hero.jpg` | **Creado** — Imagen hero fotorrealista generada por IA |
 | `app/software-personalizado/SoftwarePersonalizadoClient.tsx` | **Modificado** — Añadida tarjeta de fidelización al catálogo |
 | `app/sitemap.ts` | **Modificado** — Indexada la ruta `/fidelizacion-clientes` |
-| `public/llms.txt` | **Modificado** — Añadido el servicio a los motores de IA |
 | `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
+
+---
+
+## Sincronización Dinámica de Casos de Éxito y Optimización de Servicios en Sitemap y LLMs (2026-10-21)
+
+### ¿Qué se implementó?
+
+1. **Sitemap Dinámico para Casos de Éxito (`app/sitemap.ts`)**:
+   - Integración automática del arreglo `CASOS_EXITO` dentro de `sitemap.ts`.
+   - Ahora cada uno de los **17 casos de estudio individuales** (`/casos-de-exito/[slug]`) se genera y expone dinámicamente a los rastreadores con frecuencia mensual y prioridad 0.7.
+   - Corrige la omisión histórica donde solo la página matriz `/casos-de-exito` figuraba en el mapa del sitio.
+
+2. **Actualización de Metadata y Contadores (`app/casos-de-exito/page.tsx`)**:
+   - Actualizado el conteo de prueba social de 14 a **17 negocios reales posicionados** en Google, Maps y ChatGPT en Ecuador en las etiquetas `description`, `openGraph` y `twitter`.
+
+3. **Optimización de URLs de Servicios y Portafolio en Motores de IA (`public/llms.txt`)**:
+   - Corrección de hipervínculos internos en `llms.txt` apuntando a las rutas canónicas reales de primer nivel: `/analisis-estrategico`, `/desarrollo-web`, `/posicionamiento` y `/posicionamiento/loja`.
+   - Inclusión de sección de evidencia de autoridad con los nuevos 6 dominios cliente verificables (`reparaciondieselloja.com`, `agendaculturalloja.com`, `beautystudioisabeljimenez.com`, `agendaturisticaloja.com`, `cortinasypersianasloja.com`, `quecomerenloja.com`) para citación directa en respuestas de LLMs.
+
+### Archivos modificados
+
+| Archivo | Acción |
+|---|---|
+| `app/sitemap.ts` | **Modificado** — Integración dinámica de los 17 slugs de casos de éxito |
+| `app/casos-de-exito/page.tsx` | **Modificado** — Contador actualizado a 17 negocios |
+| `public/llms.txt` | **Modificado** — URLs canónicas de servicios y sección de casos verificables |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
+
 
 
 

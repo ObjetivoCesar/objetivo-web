@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getAllBlogArticles } from '@/lib/utils-node'
+import { CASOS_EXITO } from '@/data/casos-exito'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = 'https://www.cesarreyesjaramillo.com'
@@ -33,6 +34,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: route === '' ? 1 : 0.8,
     }))
 
+    // Dynamic casos de éxito routes
+    const casosRoutes = CASOS_EXITO.map((caso) => ({
+        url: `${baseUrl}/casos-de-exito/${caso.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+    }))
+
     // Dynamic blog routes
     const articles = await getAllBlogArticles(false);
 
@@ -43,5 +52,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.6,
     }));
 
-    return [...routes, ...blogRoutes]
+    return [...routes, ...casosRoutes, ...blogRoutes]
 }

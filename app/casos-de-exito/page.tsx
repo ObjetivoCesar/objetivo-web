@@ -4,7 +4,7 @@ import CasosExitoClientPage from './CasosExitoClientPage';
 export const metadata: Metadata = {
   title: 'Casos de Éxito SEO y Posicionamiento Web | César Reyes',
   description:
-    'Portafolio real: 14 negocios posicionados en Google, Maps y ChatGPT en Ecuador. Casos verificables de SEO y posicionamiento web con resultados medibles.',
+    'Portafolio real: 17 negocios posicionados en Google, Maps y ChatGPT en Ecuador. Casos verificables de SEO y posicionamiento web con resultados medibles.',
   keywords: [
     'casos de éxito SEO',
     'portafolio SEO Ecuador',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Casos de Éxito SEO y Posicionamiento Web | César Reyes',
     description:
-      'Portafolio real: 14 negocios posicionados en Google, Maps y ChatGPT en Ecuador. Casos verificables de SEO y posicionamiento web con resultados medibles.',
+      'Portafolio real: 17 negocios posicionados en Google, Maps y ChatGPT en Ecuador. Casos verificables de SEO y posicionamiento web con resultados medibles.',
     url: 'https://www.cesarreyesjaramillo.com/casos-de-exito',
     siteName: 'César Reyes Jaramillo',
     type: 'website',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Casos de Éxito SEO y Posicionamiento Web | César Reyes',
     description:
-      'Portafolio real: 14 negocios posicionados en Google, Maps y ChatGPT en Ecuador. Casos verificables de SEO y posicionamiento web con resultados medibles.',
+      'Portafolio real: 17 negocios posicionados en Google, Maps y ChatGPT en Ecuador. Casos verificables de SEO y posicionamiento web con resultados medibles.',
     images: ['https://www.cesarreyesjaramillo.com/images/bn.webp'],
   },
 };

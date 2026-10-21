@@ -45,9 +45,80 @@ export const metadata: Metadata = {
   },
 };
 
+const comandasSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Mi-Rest — Software y Comandas para Restaurantes",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, Cloud, Android, iOS",
+      "description": "Sistema operativo de comandas de cocina KDS, carta digital interactiva y métricas de ventas para dueños de restaurantes en Ecuador.",
+      "offers": {
+        "@type": "Offer",
+        "price": "600",
+        "priceCurrency": "USD",
+        "description": "$600 primer año o 12 cuotas de $50/mes con PayPhone."
+      },
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "César Reyes Jaramillo",
+        "url": "https://www.cesarreyesjaramillo.com"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Sistema de Comandas y Gestión Gastronómica",
+      "description": "Digitalización operativa para restaurantes: comandas en pantalla de cocina, carta QR interactiva y fidelización de comensales.",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "César Reyes Jaramillo",
+        "url": "https://www.cesarreyesjaramillo.com"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Ecuador"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Necesito comprar tablets o equipos caros para usar Mi-Rest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Funciona en cualquier celular, tablet o computador que ya tengas en el local con conexión a internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se ordenan los pedidos en la cocina?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La pantalla de cocina KDS organiza automáticamente los pedidos por tiempo de espera y mesa para evitar retrasos y quejas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El precio incluye dominio propio y soporte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, incluye tu propio dominio web (ej. turestaurante.com), hosting seguro, carta digital, soporte y actualizaciones continuas."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 export default function MiRestPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(comandasSchema) }}
+      />
       <MiRestClient />
 
       {/* SEO Hidden Content — Server-Side Pattern para LLMs */}
