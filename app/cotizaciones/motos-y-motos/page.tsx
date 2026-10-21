@@ -15,8 +15,10 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://www.cesarreyesjaramillo.com/images/og-motos-y-motos.jpg",
+        secureUrl: "https://www.cesarreyesjaramillo.com/images/og-motos-y-motos.jpg",
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: "Propuesta de Sistema Integral — Motos y Motos",
       },
     ],
