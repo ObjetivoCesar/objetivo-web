@@ -841,7 +841,7 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
 
                       <div className="flex items-center gap-2 shrink-0 ml-3">
                         <span className="font-outfit text-[11px] uppercase tracking-wider text-gold font-bold hidden sm:inline-block">
-                          {isOpen ? 'Ocultar' : 'Ver 10 beneficios'}
+                          {isOpen ? 'Ocultar' : `Ver detalle (${grupo.beneficios.length})`}
                         </span>
                         <div className={`w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white transition-transform duration-300 ${isOpen ? 'rotate-180 bg-gold text-white' : 'group-hover:bg-white/20'}`}>
                           <ChevronDown className="w-4 h-4" />
