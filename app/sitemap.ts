@@ -15,7 +15,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/analisis-estrategico',
         '/menu-digital',
         '/motor-reservas-hotel',
-        '/mensajeria',
         '/software-gestion-servicios',
         '/software-personalizado',
         '/software-personalizado/loja',

@@ -7,6 +7,7 @@ Disallow: /nueva-home
 Disallow: /home-test
 Disallow: /home-test-backup
 Disallow: /test-header
+Disallow: /mensajeria
 
 # Host
 Host: https://cesarreyesjaramillo.com

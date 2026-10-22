@@ -30,7 +30,6 @@ const menuItems = [
             { title: "Software de Gestión (Servicios)", href: "https://www.cesarreyesjaramillo.com/software-gestion-servicios" },
             { title: "Motor de Reservas (Hoteles)", href: "/motor-reservas-hotel" },
             { title: "Menú Digital (Restaurantes)", href: "/menu-digital" },
-            { title: "Mensajería", href: "/mensajeria" },
             { title: "Fidelización de Clientes & CRM", href: "/fidelizacion-clientes" },
             { title: "Control Financiero", href: "/sistema-de-contabilidad" }
         ]

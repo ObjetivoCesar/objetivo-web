@@ -493,6 +493,39 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
 | `public/llms.txt` | **Modificado** — URLs canónicas de servicios y sección de casos verificables |
 | `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
 
+---
+
+## Retiro de indexación y ocultación de página "Mensajería" (2026-10-22)
+
+### ¿Qué se implementó?
+
+1. **Retiro de Menús y Navegación del Sitio**:
+   - Eliminado el enlace `/mensajeria` de la navegación de escritorio (`components/NavigationHeader.tsx`).
+   - Eliminado el enlace `/mensajeria` del menú lateral animado (`components/navigation/ModernSidebarMenu.tsx`).
+   - Eliminado el enlace `/mensajeria` del menú móvil (`components/MobileMenu.tsx`).
+   - Retirada la tarjeta comercial de "Mensajería & WhatsApp Automatizado" del catálogo de software personalizado (`app/software-personalizado/SoftwarePersonalizadoClient.tsx`).
+
+2. **Desindexación SEO y Control de Rastreo**:
+   - **Noindex / Nofollow**: Añadida directiva `robots: { index: false, follow: false }` en la metadata de `app/mensajeria/page.tsx`.
+   - **Exclusión de Sitemap Dinámico**: Eliminada la ruta `/mensajeria` en `app/sitemap.ts`.
+   - **Exclusión de Sitemap Estático**: Configurado `exclude: ['/mensajeria', '/mensajeria/*']` en `next-sitemap.config.js`.
+   - **Robots.txt**: Añadida la regla `Disallow: /mensajeria` en `public/robots.txt` y en las políticas de `next-sitemap.config.js`.
+
+### Archivos modificados
+
+| Archivo | Acción |
+|---|---|
+| `components/navigation/ModernSidebarMenu.tsx` | **Modificado** — Retirado enlace de subitems |
+| `components/NavigationHeader.tsx` | **Modificado** — Retirado del menú desplegable |
+| `components/MobileMenu.tsx` | **Modificado** — Retirado del listado móvil |
+| `app/software-personalizado/SoftwarePersonalizadoClient.tsx` | **Modificado** — Retirada tarjeta de catálogo |
+| `app/mensajeria/page.tsx` | **Modificado** — Añadido `robots: { index: false, follow: false }` |
+| `app/sitemap.ts` | **Modificado** — Retirada la URL del sitemap dinámico |
+| `next-sitemap.config.js` | **Modificado** — Añadida exclusión y directiva disallow |
+| `public/robots.txt` | **Modificado** — Añadido `Disallow: /mensajeria` |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
+
+
 
 
 

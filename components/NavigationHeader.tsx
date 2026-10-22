@@ -240,14 +240,6 @@ export default function NavigationHeader({ currentPath }: NavigationHeaderProps)
                   <span className="text-xs text-gray-400">Para Restaurantes y Cafeterías</span>
                 </Link>
                 <Link
-                  href="/mensajeria"
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors border-b border-gray-50"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <span className="font-bold block">Mensajería</span>
-                  <span className="text-xs text-gray-400">Automatización de Chat</span>
-                </Link>
-                <Link
                   href="/fidelizacion-clientes"
                   className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors border-b border-gray-50"
                   onClick={() => setIsMenuOpen(false)}

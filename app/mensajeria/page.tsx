@@ -5,6 +5,10 @@ import MensajeriaAccordions from './components/MensajeriaAccordions';
 export const metadata: Metadata = {
   title: 'Mensajería Inteligente con IA | César Reyes',
   description: 'Sistema de mensajería inteligente y personalizada con Inteligencia Artificial para optimizar la atención al cliente y aumentar las ventas.',
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: 'Mensajería Inteligente con IA | César Reyes',
     description: 'Optimiza tu atención al cliente con IA',

@@ -86,17 +86,7 @@ const soluciones = [
     destacado: "Catálogo ágil en la nube",
     items: ["Cero apps pesadas para el cliente", "Integración con redes y mapas", "Precios en tiempo real"]
   },
-  {
-    title: "Mensajería & WhatsApp Automatizado",
-    badge: "Atención al Cliente",
-    href: "/mensajeria",
-    icon: MessageSquare,
-    color: "from-green-500 to-emerald-600",
-    border: "border-green-500/30",
-    desc: "Asistentes y flujos que responden preguntas frecuentes, cotizan y derivan prospectos calificados las 24 horas sin demora.",
-    destacado: "Respuestas en segundos",
-    items: ["Chatbot conversacional", "Filtro de prospectos calificados", "Atención automatizada 24/7"]
-  },
+
   {
     title: "Sistema de Control Financiero",
     badge: "Microempresas & Pymes",

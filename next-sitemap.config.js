@@ -15,7 +15,9 @@ module.exports = {
     '/test-header',
     '/test-header/*',
     '/descubre-loja',
-    '/descubre-loja/*'
+    '/descubre-loja/*',
+    '/mensajeria',
+    '/mensajeria/*'
   ],
   robotsTxtOptions: {
     policies: [
@@ -28,7 +30,8 @@ module.exports = {
           '/nueva-home',
           '/home-test',
           '/home-test-backup',
-          '/test-header'
+          '/test-header',
+          '/mensajeria'
         ],
       },
     ],

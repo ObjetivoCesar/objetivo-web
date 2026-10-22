@@ -188,13 +188,6 @@ export default function MobileMenu({
                 Menú Digital (Restaurantes)
               </Link>
               <Link
-                href="/mensajeria"
-                className="block py-4 px-8 text-gray-700 active:bg-gray-50 border-b border-gray-100 transition-colors touch-manipulation"
-                onClick={onClose}
-              >
-                Mensajería (WhatsApp/Chat)
-              </Link>
-              <Link
                 href="/fidelizacion-clientes"
                 className="block py-4 px-8 text-gray-700 active:bg-gray-50 border-b border-gray-100 transition-colors touch-manipulation"
                 onClick={onClose}
