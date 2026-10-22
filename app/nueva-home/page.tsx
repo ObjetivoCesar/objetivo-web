@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles, Brain, Search, LayoutGrid, CheckCircle, Smartphone, Rocket } from 'lucide-react'
-import ModernSidebarMenu from '@/components/navigation/ModernSidebarMenu'
+
 import { DualLogoCarousel } from '@/components/DualLogoCarousel'
 import CasesTabs from '@/components/home/CasesTabs'
 
@@ -12,8 +12,6 @@ export default function NuevaHome() {
   const [isExpanded, setIsExpanded] = React.useState(false)
   return (
     <div className="min-h-screen bg-[#121212] text-white selection:bg-cyan-500 selection:text-white">
-      <ModernSidebarMenu />
-      
       {/* Hero Section - Full Screen & Limbic Focus */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center relative overflow-hidden px-6 pt-20">
         

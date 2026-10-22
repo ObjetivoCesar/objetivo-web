@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { CASOS_EXITO, INDUSTRIAS, Industria } from '@/data/casos-exito';
-import ModernSidebarMenu from '@/components/navigation/ModernSidebarMenu';
+
 import { Search, Trophy, Bot, CheckCircle2, ArrowRight, Sparkles, Globe, ExternalLink, Filter } from 'lucide-react';
 
 export default function CasosExitoClientPage() {
@@ -16,9 +16,6 @@ export default function CasosExitoClientPage() {
 
   return (
     <div className="min-h-screen bg-[#121212] text-white selection:bg-cyan-500 selection:text-white">
-      {/* Menú Sidebar Oficial */}
-      <ModernSidebarMenu />
-
       <main className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
         {/* Header Hero Estilo Home */}
         <section className="relative pt-8 text-center space-y-6 max-w-4xl mx-auto">

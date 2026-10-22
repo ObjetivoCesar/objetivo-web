@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { CASOS_EXITO } from '@/data/casos-exito';
-import ModernSidebarMenu from '@/components/navigation/ModernSidebarMenu';
+
 import { ArrowLeft, CheckCircle, Search, Bot, MapPin, Target, Sparkles, Trophy, ArrowUpRight, Globe, ExternalLink, ArrowRight, ShieldCheck, Compass, Calendar } from 'lucide-react';
 
 interface Props {
@@ -78,8 +78,6 @@ export default async function CasoDetallePage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
-      <ModernSidebarMenu />
 
       <main className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-14">
         {/* Volver */}

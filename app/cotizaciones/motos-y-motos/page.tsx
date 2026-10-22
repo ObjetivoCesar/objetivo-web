@@ -55,7 +55,7 @@ export default function MotosYMotosCotizacionPage() {
       url_fondo_movil: "/images/og-motos-y-motos.jpg",
     },
     video_destacado: {
-      url: "https://www.youtube.com/watch?v=GKSiAQRO_94",
+      url: "https://www.youtube.com/watch?v=hrza7hcMoyY",
       titulo: "Un Mensaje para el Equipo de Motos y Motos",
       subtitulo: "Mire en menos de un minuto lo que este sistema puede hacer por su negocio.",
     },

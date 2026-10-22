@@ -199,7 +199,50 @@ export default function FidelizacionClientesClient() {
       </section>
 
       {/* ══════════════════════════════════════════
-          2. EL PUNTO DE PARTIDA (DOLOR DE RECOMPRA)
+          2. VIDEO DE PRESENTACIÓN
+      ══════════════════════════════════════════ */}
+      <section className="relative bg-zinc-950 py-16 md:py-24 border-t border-zinc-900 overflow-hidden">
+        {/* Glow ambiental decorativo */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/8 via-transparent to-transparent pointer-events-none" />
+        <div className="container mx-auto px-4 md:px-8 max-w-5xl relative z-10">
+          {/* Encabezado de sección */}
+          <div className="text-center mb-10 md:mb-14">
+            <div className="inline-flex items-center gap-2 text-amber-400 text-[11px] font-bold uppercase tracking-widest mb-4">
+              <span className="w-8 h-px bg-amber-500/60" />
+              Cómo funciona en la práctica
+              <span className="w-8 h-px bg-amber-500/60" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight tracking-tight">
+              Mira en 60 segundos lo que puede hacer{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-300">
+                por tu negocio
+              </span>
+            </h2>
+            <p className="mt-3 text-zinc-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+              Del primer mensaje de WhatsApp a la segunda compra, en automático.
+            </p>
+          </div>
+
+          {/* Contenedor de video con relación de aspecto 16:9 */}
+          <div className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl shadow-black/60 border border-zinc-700/50 bg-black aspect-video w-full max-w-4xl">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/hrza7hcMoyY?rel=0&modestbranding=1&playsinline=1"
+              title="Sistema de Fidelización de Clientes y CRM WhatsApp — César Reyes Jaramillo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full h-full border-0 absolute inset-0"
+            />
+          </div>
+
+          {/* Bajada de apoyo */}
+          <p className="mt-6 text-center text-zinc-500 text-xs max-w-md mx-auto leading-relaxed">
+            Sistema desarrollado por <span className="text-zinc-300 font-semibold">César Reyes Jaramillo</span> · Consultor de Negocios en Ecuador
+          </p>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          3. EL PUNTO DE PARTIDA (DOLOR DE RECOMPRA)
       ══════════════════════════════════════════ */}
       <section className="py-20 bg-zinc-900/50 border-t border-zinc-900">
         <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center space-y-6">

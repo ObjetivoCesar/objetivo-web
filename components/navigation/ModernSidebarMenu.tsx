@@ -83,11 +83,16 @@ export default function ModernSidebarMenu() {
     const [expandedItems, setExpandedItems] = useState<string[]>([]); // New State for mobile toggles
     const pathname = usePathname();
 
-    // Resetear al cerrar o cambiar ruta
-    useEffect(() => {
+    // Cerrar sidebar y resetear
+    const handleClose = () => {
         setIsOpen(false);
-        setExpandedItems([]); // Collapse all on close
+        setExpandedItems([]);
         setHoveredImage(defaultImage);
+    };
+
+    // Resetear al cambiar ruta
+    useEffect(() => {
+        handleClose();
     }, [pathname]);
 
     // Bloquear scroll
@@ -146,11 +151,15 @@ export default function ModernSidebarMenu() {
                         >
                             {/* Header */}
                             <div className="flex justify-between items-center mb-8 md:mb-12">
-                                <Link href="/" className="text-2xl font-bold tracking-tight">
+                                <Link 
+                                    href="/" 
+                                    className="text-2xl font-bold tracking-tight"
+                                    onClick={handleClose}
+                                >
                                     CESAR REYES
                                 </Link>
                                 <button
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={handleClose}
                                     className="flex items-center gap-2 text-sm font-bold tracking-[0.2em] hover:text-gray-400 transition-colors uppercase"
                                 >
                                     <X size={20} /> Cerrar
@@ -175,6 +184,7 @@ export default function ModernSidebarMenu() {
                                             {/* Link Principal */}
                                             <Link
                                                 href={item.href}
+                                                onClick={handleClose}
                                                 className="text-3xl md:text-5xl lg:text-5xl font-bold tracking-tight hover:text-outline-white text-transparent bg-clip-text bg-white transition-all duration-500 group-hover:pl-4"
                                                 style={{
                                                     WebkitTextStroke: "1px transparent",
@@ -189,6 +199,7 @@ export default function ModernSidebarMenu() {
                                                 <button
                                                     onClick={(e) => {
                                                         e.preventDefault();
+                                                        e.stopPropagation();
                                                         toggleSubmenu(item.title);
                                                     }}
                                                     className="p-2 text-white/50 hover:text-white transition-colors focus:outline-none"
@@ -210,28 +221,31 @@ export default function ModernSidebarMenu() {
                                                 <ul className="pl-4 md:pl-12 mt-4 space-y-2 mb-6 border-l border-white/10 ml-5">
                                                     {item.subitems.map((sub: any) => (
                                                         <li key={sub.title} className="group/sub relative">
-                                                            <button
-                                                                onClick={(e) => {
-                                                                    if (sub.subitems) {
-                                                                        e.preventDefault();
-                                                                        toggleSubmenu(sub.title);
-                                                                    }
-                                                                }}
-                                                                className="w-full text-left flex items-center justify-between"
-                                                            >
+                                                            <div className="w-full flex items-center justify-between">
                                                                 <Link
                                                                     href={sub.href}
-                                                                    className="text-gray-400 hover:text-[#FF6B00] text-sm md:text-base font-light tracking-wide transition-colors block py-0.5 hover:translate-x-1 duration-300"
+                                                                    onClick={handleClose}
+                                                                    className="text-gray-400 hover:text-[#FF6B00] text-sm md:text-base font-light tracking-wide transition-colors block py-1 hover:translate-x-1 duration-300 flex-1"
                                                                 >
                                                                     {sub.title}
                                                                 </Link>
                                                                 {sub.subitems && (
-                                                                    <ChevronRight 
-                                                                        size={16} 
-                                                                        className={`transition-transform duration-300 text-white/30 ${expandedItems.includes(sub.title) ? 'rotate-90' : ''}`}
-                                                                    />
+                                                                    <button
+                                                                        onClick={(e) => {
+                                                                            e.preventDefault();
+                                                                            e.stopPropagation();
+                                                                            toggleSubmenu(sub.title);
+                                                                        }}
+                                                                        className="p-1.5 text-white/30 hover:text-white transition-colors focus:outline-none"
+                                                                        aria-label={`Toggle ${sub.title}`}
+                                                                    >
+                                                                        <ChevronRight 
+                                                                            size={16} 
+                                                                            className={`transition-transform duration-300 ${expandedItems.includes(sub.title) ? 'rotate-90' : ''}`}
+                                                                        />
+                                                                    </button>
                                                                 )}
-                                                            </button>
+                                                            </div>
                                                             {/* Nivel 3: Servicios Específicos */}
                                                             {sub.subitems && (
                                                                 <div className={`overflow-hidden transition-all duration-300 ml-4 ${expandedItems.includes(sub.title) ? 'h-auto opacity-100 pt-2 pb-4' : 'h-0 opacity-0'}`}>
@@ -240,7 +254,8 @@ export default function ModernSidebarMenu() {
                                                                             <li key={subSub.title}>
                                                                                 <Link
                                                                                     href={subSub.href}
-                                                                                    className="text-gray-500 hover:text-[#FF6B00] text-xs font-light tracking-wide transition-colors block py-0.5"
+                                                                                    onClick={handleClose}
+                                                                                    className="text-gray-500 hover:text-[#FF6B00] text-xs font-light tracking-wide transition-colors block py-1 hover:translate-x-1 duration-200"
                                                                                 >
                                                                                     {subSub.title}
                                                                                 </Link>
@@ -264,6 +279,7 @@ export default function ModernSidebarMenu() {
                                     </motion.div>
                                 ))}
                             </nav>
+
 
                             {/* Footer / CTA */}
                             <div className="mt-12 flex flex-col md:flex-row md:items-end justify-between gap-8 border-t border-white/10 pt-8 pb-8 md:pb-0">

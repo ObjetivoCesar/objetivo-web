@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles, Brain, Search, LayoutGrid, CheckCircle, Smartphone, Rocket } from 'lucide-react'
-import ModernSidebarMenu from '@/components/navigation/ModernSidebarMenu'
+
 import HeroNarrativeScroll from '@/components/home/HeroNarrativeScroll'
 import { DualLogoCarousel } from '@/components/DualLogoCarousel'
 import GoogleReviews from '@/components/home/GoogleReviews'
@@ -34,8 +34,6 @@ export default function HomePersonalClient() {
   const [isExpanded, setIsExpanded] = React.useState(false)
   return (
     <div className="min-h-screen bg-[#121212] text-white selection:bg-cyan-500 selection:text-white">
-      <ModernSidebarMenu />
-      
       {/* Hero Narrative Scroll-Driven Section (6 Pantallas Continuas) */}
       <HeroNarrativeScroll />
 
