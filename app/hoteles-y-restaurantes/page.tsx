@@ -9,6 +9,8 @@ import LocalBusinessSchema from '@/components/schema/LocalBusinessSchema';
 import FAQSchema from '@/components/schema/FAQSchema';
 import ServiceSchema from '@/components/schema/ServiceSchema';
 
+export const revalidate = 86400; // Cache estático en CDN por 24h
+
 export const metadata: Metadata = {
   title: {
     absolute: 'Motor Reservas Hotel & Menú Digital | 0% Comisión Ecuador'

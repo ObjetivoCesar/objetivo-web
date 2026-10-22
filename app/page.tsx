@@ -4,6 +4,8 @@ import OrganizationSchema from '@/components/schema/OrganizationSchema'
 import WebsiteSchema from '@/components/schema/WebsiteSchema'
 import CookieBannerSPDP from '@/components/CookieBannerSPDP'
 
+export const dynamic = 'force-static'; // Garantiza 100% Static HTML en Vercel CDN (0 ms de Fluid CPU)
+
 export const metadata: Metadata = {
   title: 'César Reyes Jaramillo | SEO y Posicionamiento Web en Ecuador',
   description: 'Posiciono negocios en Google, Maps y buscadores de IA en Ecuador. SEO, posicionamiento web y estrategias con resultados verificables. +50 negocios transformados en Loja y Ecuador.',

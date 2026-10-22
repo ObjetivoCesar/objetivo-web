@@ -3,6 +3,8 @@ import { Metadata } from 'next';
 import { getPropuesta } from '@/lib/mysql-descubre-loja';
 import DescubreLojaClient from '../DescubreLojaCLient';
 
+export const revalidate = 300; // Cache en Edge CDN por 5 min
+
 export async function generateMetadata({
   params,
 }: {

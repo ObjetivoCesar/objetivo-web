@@ -1,24 +1,6 @@
-export default async function OrganizationSchema() {
-    const API_KEY = process.env.GOOGLE_MAPS_API_KEY;
-    const PLACE_ID = process.env.GOOGLE_PLACE_ID;
-
-    let ratingValue = "4.9"; // Fallback
-    let reviewCount = "150"; // Fallback
-
-    if (API_KEY && PLACE_ID) {
-        try {
-            const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=rating,user_ratings_total&key=${API_KEY}&language=es`;
-            const response = await fetch(url, { next: { revalidate: 86400 } }); // Cache 24h
-            const data = await response.json();
-            
-            if (data.status === 'OK' && data.result) {
-                ratingValue = data.result.rating?.toString() || ratingValue;
-                reviewCount = data.result.user_ratings_total?.toString() || reviewCount;
-            }
-        } catch (error) {
-            console.error('Error fetching dynamic schema rating:', error);
-        }
-    }
+export default function OrganizationSchema() {
+    const ratingValue = "5.0";
+    const reviewCount = "52";
 
     const schema = {
         "@context": "https://schema.org",

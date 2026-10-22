@@ -234,6 +234,10 @@ Incluye enlaces de recuperación a `sitemap.xml` y `llms.txt` para que agentes d
 | **Optimización de Middleware Auth Scope** | `middleware.ts` | Aislar la decodificación de tokens de sesión (`getToken`) exclusivamente para las rutas de `/admin/*`. Evita procesamiento de JWT en peticiones de usuarios anónimos y rastreadores de búsqueda, preservando intacto el *Content Negotiation* de IA para `text/markdown` hacia `/llms.txt`. |
 | **Mejora de TTFB e INP** | `app/layout.tsx`, `middleware.ts` | Al eliminar la función serverless continua por navegación, se acelera el *Time to First Byte* (TTFB) y se optimiza el *Interaction to Next Paint* (INP) para Google Search Console. |
 
+| **Fase 2: Restricción Total de Matcher en Middleware** | `middleware.ts` | El matcher global anterior interceptaba cada visita y bot en toda la web (`/`), disparando una función Edge de CPU en cada request. Se restringió el `matcher` exclusivamente a `['/admin/:path*']`. Cero invocaciones de middleware para visitantes públicos, clientes y bots de búsqueda. |
+| **Fase 2: Cache-Control Edge en API Google Reviews** | `app/api/google-reviews/route.ts` | Agregar headers `Cache-Control: public, s-maxage=86400, stale-while-revalidate=43200` para que el CDN de Vercel entregue las reseñas en Edge sin ejecutar CPU Node.js. |
+| **Fase 2: ISR Static Caching en Landing Dinámicas** | `app/hoteles-y-restaurantes/page.tsx`, `app/descubre-loja/page.tsx`, `app/descubre-loja/[slug]/page.tsx`, `app/cotizaciones/[id]/page.tsx` | Incorporar `revalidate` estático para que las peticiones se sirvan desde la Edge Cache de Vercel como páginas estáticas en lugar de SSR dinámico continuo. |
+
 ---
 
 ## 13. Registro en Plataformas de Webmasters

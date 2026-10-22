@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import { pageContent } from "../../lib/content";
 import HomeTestClient from "./HomeTestClient";
 
+export const revalidate = 86400; // Cache estático en CDN
+
 export const metadata: Metadata = {
   robots: {
     index: false,

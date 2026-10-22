@@ -47,7 +47,11 @@ export async function GET() {
     cachedReviews = reviewsData;
     lastFetchTime = now;
 
-    return NextResponse.json(reviewsData);
+    return NextResponse.json(reviewsData, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=43200',
+      },
+    });
   } catch (error: any) {
     console.error('Error al obtener reseñas de Google:', error);
     return NextResponse.json({ error: 'Exception', message: error.message }, { status: 200 });

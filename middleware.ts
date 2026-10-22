@@ -18,49 +18,9 @@ const sessionCookieName = 'next-auth.session-token';
 const csrfCookieName = 'authjs.csrf-token';
 const callbackCookieName = 'authjs.callback-url';
 
-// List of public paths that don't require authentication
-const publicPaths = [
-  '/',
-  '/blog',
-  '/menu-digital',
-  '/mensajeria',
-  '/motor-reservas-hotel',
-  '/gestion-consentimiento',
-  '/auth/signin',
-  '/auth/error',
-  '/api/auth',
-  '/_next',
-  '/favicon.ico'
-];
-
 export async function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const { pathname } = url;
-
-  // Handle Markdown Content Negotiation (acceptmarkdown.com)
-  const acceptHeader = request.headers.get('accept') || '';
-  if (acceptHeader.includes('text/markdown')) {
-    const markdownResponse = NextResponse.rewrite(new URL('/llms.txt', request.url));
-    markdownResponse.headers.set('Content-Type', 'text/markdown; charset=utf-8');
-    markdownResponse.headers.set('Vary', 'Accept, Accept-Encoding');
-    return markdownResponse;
-  }
-
-  // Skip middleware for public paths
-  if (publicPaths.some(path => pathname.startsWith(path))) {
-    logDebug(`Skipping auth check for public path: ${pathname}`);
-    const res = NextResponse.next();
-    res.headers.set('Vary', 'Accept, Accept-Encoding');
-    return res;
-  }
-
-  // Skip for static files and API routes
-  if (pathname.includes('.') || pathname.startsWith('/api/')) {
-    logDebug(`Skipping auth check for static/API path: ${pathname}`);
-    const res = NextResponse.next();
-    res.headers.set('Vary', 'Accept, Accept-Encoding');
-    return res;
-  }
 
   // Only check session token for protected admin routes
   if (pathname.startsWith('/admin')) {
@@ -112,14 +72,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     * - public folder
-     */
-    '/((?!api/|_next/static|_next/image|favicon.ico|.*\.(?:svg|png|jpg|jpeg|gif|webp|css|js|json)$).*)',
+    '/admin/:path*',
   ],
 };

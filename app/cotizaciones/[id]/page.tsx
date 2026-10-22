@@ -3,6 +3,8 @@ import CotizacionViewer from "@/components/CotizacionViewer";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
+export const revalidate = 300; // Cache en Vercel Edge por 5 minutos (evita invocar Node.js y MySQL en cada visita)
+
 function isQuoteExpired(quote: any): boolean {
   if (!quote?.metadata) return false;
   

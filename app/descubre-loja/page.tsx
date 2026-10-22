@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import DescubreLojaClient from './DescubreLojaCLient';
 
+export const revalidate = 86400; // Cache en CDN por 24h
+
 export const metadata: Metadata = {
   title: 'Alianza de Recomendación Turística — Agenda Cultural Loja',
   description: 'Miles de turistas buscan qué hacer en Loja en agendaculturalloja.com. Nuestro Asesor Turístico recomienda exclusivamente a los establecimientos afiliados.',
