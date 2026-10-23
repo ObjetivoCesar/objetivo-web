@@ -248,6 +248,14 @@ export default function NavigationHeader({ currentPath }: NavigationHeaderProps)
                   <span className="text-xs text-gray-400">Automatización y Recompra WhatsApp</span>
                 </Link>
                 <Link
+                  href="/trazabilidad-encomiendas"
+                  className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-amber-600 transition-colors border-b border-gray-50"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <span className="font-bold block">Trazabilidad Encomiendas</span>
+                  <span className="text-xs text-gray-400">Transporte Interprovincial</span>
+                </Link>
+                <Link
                   href="/sistema-de-contabilidad"
                   className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
                   onClick={() => setIsMenuOpen(false)}

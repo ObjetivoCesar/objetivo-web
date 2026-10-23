@@ -195,6 +195,13 @@ export default function MobileMenu({
                 Fidelización de Clientes & CRM
               </Link>
               <Link
+                href="/trazabilidad-encomiendas"
+                className="block py-4 px-8 text-gray-700 active:bg-gray-50 border-b border-gray-100 transition-colors touch-manipulation"
+                onClick={onClose}
+              >
+                Trazabilidad Encomiendas (Buses)
+              </Link>
+              <Link
                 href="/sistema-de-contabilidad"
                 className="block py-4 px-8 text-gray-700 active:bg-gray-50 transition-colors touch-manipulation"
                 onClick={onClose}

@@ -23,6 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/software-personalizado/cuenca',
         '/comandas-restaurantes',
         '/fidelizacion-clientes',
+        '/trazabilidad-encomiendas',
         '/sobre-mi',
         '/contacto',
         '/blog',

@@ -27,6 +27,7 @@ const menuItems = [
         subtitle: "Soluciones de alta eficiencia",
         subitems: [
             { title: "Comandas Restaurantes", href: "/comandas-restaurantes" },
+            { title: "Trazabilidad Encomiendas (Buses)", href: "/trazabilidad-encomiendas" },
             { title: "Software de Gestión (Servicios)", href: "https://www.cesarreyesjaramillo.com/software-gestion-servicios" },
             { title: "Motor de Reservas (Hoteles)", href: "/motor-reservas-hotel" },
             { title: "Menú Digital (Restaurantes)", href: "/menu-digital" },

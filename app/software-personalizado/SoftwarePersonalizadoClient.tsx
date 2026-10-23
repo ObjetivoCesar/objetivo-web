@@ -27,7 +27,8 @@ import {
   Globe,
   MapPin,
   Building2,
-  Users
+  Users,
+  Truck
 } from 'lucide-react';
 
 const soluciones = [
@@ -41,6 +42,17 @@ const soluciones = [
     desc: "Control total de mesas, pedidos a cocina ordenados por tiempo de espera, carta digital con QR propio y ventas del día en tu celular.",
     destacado: "Desde $50/mes (12 cuotas)",
     items: ["Pantalla de cocina en vivo", "Base de datos de comensales", "Carta digital autoadministrable"]
+  },
+  {
+    title: "Trazabilidad de Encomiendas",
+    badge: "Transporte Interprovincial",
+    href: "/trazabilidad-encomiendas",
+    icon: Truck,
+    color: "from-amber-500 to-orange-600",
+    border: "border-amber-500/40",
+    desc: "Control milimétrico de carga en buses: conciliación por código QR, manifiestos digitales, modo offline en carretera y entrega segura con cédula y PIN.",
+    destacado: "Cero carga equivocada en buses",
+    items: ["Escaneo QR en maletero y andén", "App PWA 100% offline en ruta", "Tracking 24/7 y avisos WhatsApp"]
   },
   {
     title: "Fidelización de Clientes & CRM WhatsApp",

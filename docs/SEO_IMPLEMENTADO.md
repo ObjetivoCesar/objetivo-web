@@ -61,6 +61,12 @@ Cada página del proyecto tiene metadata individual con:
 - `app/descubre-loja/[slug]/page.tsx` (Propuestas comerciales dinámicas con noindex, nofollow)
 - `app/blog/[category]/[slug]/page.tsx`
 
+### Landing Page — Sistema de Trazabilidad de Encomiendas (2026-10-23):
+- **Ruta**: `app/trazabilidad-encomiendas/page.tsx`
+- **Metadata**: Title *"Sistema de Trazabilidad de Encomiendas para Transporte Interprovincial"*, OpenGraph completo, keywords especializadas en transporte y paquetería interprovincial.
+- **Detalle**: Landing page integral para empresas y cooperativas de transporte interprovincial por carretera. Incluye 11 módulos del sistema divididos por pestañas (operativos en ruta y gestión/control offline PWA), ciclo visual del paquete en 5 etapas, 8 ventajas diferenciadoras, 4 perfiles de roles operativos, matriz de compatibilidad con hardware económico (smartphones y lectores láser/térmicos) y llamado a acción directo a WhatsApp.
+- **Archivos creados/modificados**: [app/trazabilidad-encomiendas/page.tsx](file:///d:/Abel%20paginas/Cesar%20Reyes/Mayo/objetivo-web-main/app/trazabilidad-encomiendas/page.tsx), [app/trazabilidad-encomiendas/TrazabilidadEncomiendasClient.tsx](file:///d:/Abel%20paginas/Cesar%20Reyes/Mayo/objetivo-web-main/app/trazabilidad-encomiendas/TrazabilidadEncomiendasClient.tsx), [app/sitemap.ts](file:///d:/Abel%20paginas/Cesar%20Reyes/Mayo/objetivo-web-main/app/sitemap.ts).
+
 ### Páginas con canonical explícito:
 Home, posicionamiento, posicionamiento/loja, posicionamiento/auditoria-seo-rediseno, posicionamiento/alianza-exclusiva, motor-reservas-hotel, menu-digital, hoteles-y-restaurantes, contacto, carnavales-2026, casos-de-exito, blog/[category]/[slug], cotizaciones/[id], cotizaciones/posicionamiento-turistico-loja, entre otras.
 
