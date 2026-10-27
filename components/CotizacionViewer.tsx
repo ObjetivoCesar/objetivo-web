@@ -227,7 +227,7 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="mb-5 self-start inline-block bg-white/95 px-4 py-2 rounded-lg shadow-lg backdrop-blur-sm"
+              className="mb-5 self-start inline-block"
             >
               <img src={data.portada.url_logo_cliente} alt="Logo Cliente" className="h-9 md:h-11 w-auto object-contain" />
             </motion.div>

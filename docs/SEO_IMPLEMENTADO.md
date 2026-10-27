@@ -98,7 +98,11 @@ Home, posicionamiento, posicionamiento/loja, posicionamiento/auditoria-seo-redis
 - **Ruta**: `app/cotizaciones/camara/page.tsx`
 - **Metadata**: Title *"Propuesta de Infraestructura Institucional — Cámara"*, `robots: noindex, nofollow` (propuesta comercial confidencial), OpenGraph 1200x630 personalizado en `public/images/og-camara.jpg`, Twitter Cards `summary_large_image`, Canonical URL `https://www.cesarreyesjaramillo.com/cotizaciones/camara`.
 - **Detalle**: Propuesta estratégica para la Cámara enfocada en dotar a la institución de una infraestructura digital integrada de 4 módulos: (1) Sitio web institucional dinámico ($1.000), (2) CRM institucional con memoria histórica, acreditación por QR y asistente de atención ($1.000), (3) Sistema de fidelización y seguimiento inteligente con alertas directas ($1.500) y (4) Posicionamiento web, redes y fábrica de contenidos ($500/mes). Presentación orientada al valor institucional, continuidad de relaciones gremiales y demostración objetiva de resultados mediante un panel de KPIs en tres niveles ante asambleas y autoridades, sin tecnicismos innecesarios.
-- **Archivos creados**: `app/cotizaciones/camara/page.tsx`, `public/images/og-camara.jpg`, `public/images/camara-portada.jpg`.
+### Cotización HCSA — Atención Digital Inteligente (2026-10-27):
+- **Ruta**: `app/cotizaciones/hcsa/page.tsx`
+- **Metadata**: Title *"Propuesta de Atención Digital Inteligente — Hospital Clínica San Agustín (HCSA)"*, `robots: noindex, nofollow` (propuesta privada/confidencial), OpenGraph completo 1200x630 personalizado en `public/images/og-hcsa.jpg`, Twitter Cards `summary_large_image`, Canonical URL `https://www.cesarreyesjaramillo.com/cotizaciones/hcsa`.
+- **Detalle**: Propuesta integral para el Msgt. David Romo (Gerente HCSA) y Jefatura de Marketing. Solución para absorber 700 consultas diarias con API oficial de WhatsApp Business Platform y web (hcsa.ec): orientación por especialidad, carrusel de médicos, protocolo institucional de emergencias, derivación a consultorios con aviso a secretarias, bandeja humana y base de datos con panel de indicadores. Incluye video embed funcional con demostración de flujo y botón CTA directo con mensaje preconfigurado a WhatsApp para probar el demo y coordinar reunión de trabajo.
+- **Archivos creados/modificados**: `app/cotizaciones/hcsa/page.tsx`, `public/images/og-hcsa.jpg`.
 
 ---
 
