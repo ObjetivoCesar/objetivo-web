@@ -2,13 +2,13 @@ import CotizacionViewer from "@/components/CotizacionViewer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Propuesta de Atención Digital Inteligente — Hospital Clínica San Agustín (HCSA)",
+  title: "Propuesta de Call Center Inteligente — Hospital Clínica San Agustín (HCSA)",
   description:
-    "Asistente digital 24/7 para HCSA vía WhatsApp API oficial y web: orientación por especialidad, carrusel de médicos, derivación a consultorios y analítica directiva.",
+    "Call center digital 24/7 para HCSA vía WhatsApp API oficial y web: orientación por especialidad, carrusel de médicos, derivación a consultorios y analítica directiva.",
   openGraph: {
-    title: "Atención Digital Inteligente — Hospital Clínica San Agustín × César Reyes",
+    title: "Call Center Inteligente — Hospital Clínica San Agustín × César Reyes",
     description:
-      "Propuesta para el Msgt. David Romo (Gerente HCSA) a través de la Jefatura de Marketing: Asistente 24/7, trazabilidad y protección de datos.",
+      "Propuesta para el Msgt. David Romo (Gerente HCSA) a través de la Jefatura de Marketing: Call center 24/7, trazabilidad y protección de datos.",
     url: "https://www.cesarreyesjaramillo.com/cotizaciones/hcsa",
     siteName: "César Reyes Jaramillo",
     type: "website",
@@ -17,15 +17,15 @@ export const metadata: Metadata = {
         url: "https://www.cesarreyesjaramillo.com/images/og-hcsa.jpg",
         width: 1200,
         height: 630,
-        alt: "Propuesta de Atención Digital Inteligente — Hospital Clínica San Agustín",
+        alt: "Propuesta de Call Center Inteligente — Hospital Clínica San Agustín",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Propuesta de Atención Digital Inteligente — HCSA",
+    title: "Propuesta de Call Center Inteligente — HCSA",
     description:
-      "Asistente digital inteligente 24/7 para HCSA: WhatsApp API oficial, derivación a consultorios y analítica de demanda.",
+      "Call center digital inteligente 24/7 para HCSA: WhatsApp API oficial, derivación a consultorios y analítica de demanda.",
     images: ["https://www.cesarreyesjaramillo.com/images/og-hcsa.jpg"],
   },
   robots: {
@@ -40,12 +40,12 @@ export default function HCSACotizacionPage() {
     og_image_url: "https://www.cesarreyesjaramillo.com/images/og-hcsa.jpg",
     portada: {
       etiqueta: "Hospital Clínica San Agustín · Octubre 2026",
-      titulo_principal: "Atención digital inteligente para",
+      titulo_principal: "Call Center inteligente para",
       titulo_destacado: "el Hospital Clínica San Agustín.",
       subtitulo:
         "Ordenar las 700 consultas diarias, derivar eficazmente a consultorios y generar indicadores de gestión — con API oficial de WhatsApp y plena protección de datos.",
       preparado_para: "Msgt. David Romo, Gerente General (a través de la Jefatura de Marketing)",
-      preparado_por: "Ing. César Reyes Jaramillo — Grupo Empresarial Reyes S.A.S. B.I.C.",
+      preparado_por: "Ing. César Reyes Jaramillo",
       fecha: "26 de octubre de 2026",
       url_logo_cliente: "https://hcsa.ec/wp-content/uploads/2021/08/hcsa-logo-2024.svg",
       imagen_url: "/images/og-hcsa.jpg",
@@ -53,9 +53,9 @@ export default function HCSACotizacionPage() {
       url_fondo_movil: "/images/og-hcsa.jpg",
     },
     video_destacado: {
-      url: "https://www.youtube.com/watch?v=GKSiAQRO_94",
-      titulo: "Véalo funcionando: carrusel de médicos, derivación y dashboard",
-      subtitulo: "Recorrido completo en 45–60 segundos con datos de prueba.",
+      url: "https://www.youtube.com/watch?v=tlwQzPCvAM4",
+      titulo: "Sistema CRM y Fidelización",
+      subtitulo: "Prueba de interacción entre el whatsapp con nuestro sistema",
     },
     introduccion: {
       titulo: "El momento que vive el hospital",
@@ -295,14 +295,25 @@ export default function HCSACotizacionPage() {
           <p class="text-sm text-slate-700 font-light leading-relaxed mb-4">
             El entorno de prueba usa datos de muestra. No ingrese nombres, diagnósticos ni información real de pacientes.
           </p>
-          <a 
-            href="https://wa.me/593984180497?text=Hola%20C%C3%A9sar%2C%20quiero%20probar%20el%20demo%20del%20asistente%20digital%20para%20el%20Hospital%20Cl%C3%ADnica%20San%20Agust%C3%ADn%20(HCSA)."
-            target="_blank"
-            rel="noopener noreferrer"
-            style="display:inline-flex;align-items:center;gap:8px;background:#16a34a;color:white;padding:10px 20px;border-radius:12px;font-size:13px;font-weight:700;text-decoration:none;"
-          >
-            👉 Probar demo en WhatsApp
-          </a>
+          <div style="margin-bottom:16px;">
+            <a 
+              href="https://wa.me/593963425323?text=San_agustin_demo"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="display:inline-flex;align-items:center;gap:8px;background:#16a34a;color:white;padding:10px 20px;border-radius:12px;font-size:13px;font-weight:700;text-decoration:none;"
+            >
+              👉 Ver demo
+            </a>
+          </div>
+          <div style="max-width:300px;margin:16px auto 0;aspect-ratio:9/16;border-radius:16px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.15);background:#000;">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/dUU30uuBDvw?rel=0&modestbranding=1&playsinline=1"
+              title="Demostración Móvil WhatsApp"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              style="width:100%;height:100%;border:0;"
+            ></iframe>
+          </div>
         </div>
         <p class="font-outfit text-sm uppercase tracking-wider text-slate-900 font-bold mb-3">
           Agenda de la reunión:

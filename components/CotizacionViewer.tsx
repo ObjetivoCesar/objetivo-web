@@ -23,9 +23,14 @@ interface CotizacionData {
     url_fondo_movil?: string;
   };
   video_destacado?: {
-    url: string;
+    url?: string;
     titulo?: string;
     subtitulo?: string;
+    videos?: Array<{
+      url: string;
+      titulo?: string;
+      tipo?: "horizontal" | "vertical" | "short";
+    }>;
   };
   introduccion: {
     titulo: string;
@@ -305,19 +310,73 @@ export default function CotizacionViewer({ data }: { data: CotizacionData }) {
               </div>
             )}
 
-            <div className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video w-full max-w-4xl">
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${
-                  data.video_destacado.url.includes('v=')
-                    ? data.video_destacado.url.split('v=')[1]?.split('&')[0]
-                    : data.video_destacado.url.split('/').pop()?.split('?')[0]
-                }?rel=0&modestbranding=1&playsinline=1`}
-                title={data.video_destacado.titulo || "Presentación Institucional"}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="w-full h-full border-0 absolute inset-0"
-              />
-            </div>
+            {data.video_destacado.videos && data.video_destacado.videos.length > 0 ? (
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
+                {/* Video 1 (Izquierda): Horizontal */}
+                <div className="lg:col-span-7 flex flex-col items-center">
+                  {data.video_destacado.videos[0]?.titulo && (
+                    <p className="font-outfit text-xs md:text-sm uppercase tracking-wider text-gold font-semibold mb-3 self-start">
+                      {data.video_destacado.videos[0].titulo}
+                    </p>
+                  )}
+                  <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video">
+                    <iframe
+                      src={`https://www.youtube-nocookie.com/embed/${
+                        data.video_destacado.videos[0].url.includes('v=')
+                          ? data.video_destacado.videos[0].url.split('v=')[1]?.split('&')[0]
+                          : data.video_destacado.videos[0].url.includes('/shorts/')
+                          ? data.video_destacado.videos[0].url.split('/shorts/')[1]?.split('?')[0]
+                          : data.video_destacado.videos[0].url.split('/').pop()?.split('?')[0]
+                      }?rel=0&modestbranding=1&playsinline=1`}
+                      title={data.video_destacado.videos[0].titulo || data.video_destacado.titulo || "Video Principal"}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="w-full h-full border-0 absolute inset-0"
+                    />
+                  </div>
+                </div>
+
+                {/* Video 2 (Derecha): Vertical / Short */}
+                <div className="lg:col-span-5 flex flex-col items-center">
+                  {data.video_destacado.videos[1]?.titulo && (
+                    <p className="font-outfit text-xs md:text-sm uppercase tracking-wider text-gold font-semibold mb-3 self-center lg:self-start">
+                      {data.video_destacado.videos[1].titulo}
+                    </p>
+                  )}
+                  <div className="relative w-full max-w-[280px] sm:max-w-[300px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black">
+                    <iframe
+                      src={`https://www.youtube-nocookie.com/embed/${
+                        data.video_destacado.videos[1].url.includes('/shorts/')
+                          ? data.video_destacado.videos[1].url.split('/shorts/')[1]?.split('?')[0]
+                          : data.video_destacado.videos[1].url.includes('v=')
+                          ? data.video_destacado.videos[1].url.split('v=')[1]?.split('&')[0]
+                          : data.video_destacado.videos[1].url.split('/').pop()?.split('?')[0]
+                      }?rel=0&modestbranding=1&playsinline=1`}
+                      title={data.video_destacado.videos[1].titulo || "Demostración en Móvil"}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="w-full h-full border-0 absolute inset-0"
+                    />
+                  </div>
+                </div>
+              </div>
+            ) : data.video_destacado.url ? (
+              <div className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video w-full max-w-4xl">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${
+                    data.video_destacado.url.includes('v=')
+                      ? data.video_destacado.url.split('v=')[1]?.split('&')[0]
+                      : data.video_destacado.url.includes('/shorts/')
+                      ? data.video_destacado.url.split('/shorts/')[1]?.split('?')[0]
+                      : data.video_destacado.url.split('/').pop()?.split('?')[0]
+                  }?rel=0&modestbranding=1&playsinline=1`}
+                  title={data.video_destacado.titulo || "Presentación Institucional"}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-full border-0 absolute inset-0"
+                />
+              </div>
+            ) : null}
           </div>
         </section>
       )}
