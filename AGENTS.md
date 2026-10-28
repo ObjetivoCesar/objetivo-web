@@ -22,3 +22,10 @@ Cada vez que se implemente, modifique o agregue cualquier mejora relacionada con
 - **Guía LLM**: `docs/LLM_VISIBILITY_GUIDE.md`
 - **Verificación Google**: `googlecc37cdbf30c6dce0.html`
 - **Verificación Bing**: Meta tag `msvalidate.01` en `app/metadata.ts`
+
+## Regla Crítica para Cotizaciones (`/cotizaciones/*`) y Open Graph en WhatsApp
+En todas las cotizaciones privadas:
+1. **`robots`**: Configurar SIEMPRE `{ index: false, follow: true, nocache: true }`. **NUNCA usar `follow: false`**, ya que el crawler de WhatsApp/Meta respeta el `nofollow` y bloquea la previsualización de la imagen OG.
+2. **Imagen OG**: Tamaño estricto `1200x630px`, formato JPG/PNG < 300KB, URL absoluta HTTPS (`https://www.cesarreyesjaramillo.com/images/...`).
+3. Ver documentación detallada en [docs/SEO_IMPLEMENTADO.md](file:///d:/Abel%20paginas/Cesar%20Reyes/Mayo/objetivo-web-main/docs/SEO_IMPLEMENTADO.md).
+

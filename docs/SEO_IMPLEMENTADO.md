@@ -104,6 +104,26 @@ Home, posicionamiento, posicionamiento/loja, posicionamiento/auditoria-seo-redis
 - **Detalle**: Propuesta integral para el Msgt. David Romo (Gerente HCSA) y Jefatura de Marketing. Solución para absorber 700 consultas diarias con API oficial de WhatsApp Business Platform y web (hcsa.ec): orientación por especialidad, carrusel de médicos, protocolo institucional de emergencias, derivación a consultorios con aviso a secretarias, bandeja humana y base de datos con panel de indicadores. Incluye video embed funcional con demostración de flujo y botón CTA directo con mensaje preconfigurado a WhatsApp para probar el demo y coordinar reunión de trabajo.
 - **Archivos creados/modificados**: `app/cotizaciones/hcsa/page.tsx`, `public/images/og-hcsa.jpg`.
 
+### Cotización HCSA / San Agustín — Call Center Inteligente & Fix WhatsApp OG Preview (2026-10-28):
+- **Ruta**: `app/cotizaciones/san-agustin/page.tsx`
+- **Metadata**: Title *"Propuesta de Call Center Inteligente — Hospital Clínica San Agustín (HCSA)"*, OpenGraph 1200x630 (`/images/og-san-agustin.jpg`), Twitter Cards `summary_large_image`.
+- **Regla Estándar para TODAS las futuras `/cotizaciones/*` (WhatsApp Link Preview)**:
+  1. **NUNCA usar `follow: false`**: WhatsApp Crawler y Meta Scraper respetan `nofollow`. Si se coloca `follow: false`, WhatsApp descarta la imagen o no la descarga.
+  2. **Configuración obligatoria de `robots` para cotizaciones privadas**:
+     ```typescript
+     robots: {
+       index: false,   // Evita que Google/Bing indexen la propuesta en SERPs
+       follow: true,   // OBLIGATORIO: Permite a WhatsApp/Telegram/Facebook crawlers rastrear y previsualizar la og:image
+       nocache: true,
+     }
+     ```
+  3. **Especificaciones de la imagen OG**:
+     - Formato: JPG o PNG optimizado (menor a 300 KB, preferible ~100-150 KB).
+     - Dimensiones exactas: 1200 × 630 px con texto centrado (área segura WhatsApp).
+     - URL absoluta: `https://www.cesarreyesjaramillo.com/images/og-[nombre].jpg`.
+  4. **Bypass de caché de WhatsApp si ya se envió el enlace previo**: Si WhatsApp ya cacheó una URL rota en sus servidores (su TTL es largo), la solución rápida y definitiva es cambiar levemente el slug (ej. `/cotizaciones/san-agustin` o añadir parámetro `?v=2`) y pasar el enlace por el Depurador de Contenido Compartido de Meta / Facebook Sharing Debugger para forzar el scraping del nuevo preview.
+- **Archivos creados/modificados**: `app/cotizaciones/san-agustin/page.tsx`, `public/images/og-san-agustin.jpg`, `docs/SEO_IMPLEMENTADO.md`.
+
 ---
 
 
