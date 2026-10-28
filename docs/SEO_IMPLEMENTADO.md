@@ -117,8 +117,9 @@ Home, posicionamiento, posicionamiento/loja, posicionamiento/auditoria-seo-redis
        nocache: true,
      }
      ```
-  3. **Especificaciones de la imagen OG**:
-     - Formato: JPG o PNG optimizado (menor a 300 KB, preferible ~100-150 KB).
+  3. **Especificaciones estrictas de la imagen OG**:
+     - **Codificación OBLIGATORIA**: **Baseline JPEG** (SOF0). **PROHIBIDO Progressive JPEG** (SOF2). WhatsApp Web/App descarta silenciosamente o no renderiza JPEGs progresivos en su motor de previsualización.
+     - Formato: JPG optimizado (menor a 300 KB, preferible ~100-150 KB).
      - Dimensiones exactas: 1200 × 630 px con texto centrado (área segura WhatsApp).
      - URL absoluta: `https://www.cesarreyesjaramillo.com/images/og-[nombre].jpg`.
   4. **Bypass de caché de WhatsApp si ya se envió el enlace previo**: Si WhatsApp ya cacheó una URL rota en sus servidores (su TTL es largo), la solución rápida y definitiva es cambiar levemente el slug (ej. `/cotizaciones/san-agustin` o añadir parámetro `?v=2`) y pasar el enlace por el Depurador de Contenido Compartido de Meta / Facebook Sharing Debugger para forzar el scraping del nuevo preview.
