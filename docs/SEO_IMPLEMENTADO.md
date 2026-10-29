@@ -560,6 +560,59 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
 | `public/robots.txt` | **Modificado** — Añadido `Disallow: /mensajeria` |
 | `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
 
+---
+
+## Creación de Cotización Privada: Laboratorio Clínico MÉDICOS (2026-10-28)
+
+### ¿Qué se implementó?
+1. **Página de Cotización Privada**:
+   - Implementada en `/cotizaciones/laboratorio-medicos` dirigida al **Dr. Romel Torres Sánchez** (Director & Responsable Técnico) de **MÉDICOS — Medicina de Laboratorio** (`laboratoriomedicos.com`).
+   - Propuesta de Call Center Inteligente 24/7 con API oficial de WhatsApp para:
+     - Guía interactiva de catálogo de pruebas y preparación previa de muestras (ayuno, recolección).
+     - Orientación y enlace seguro a consulta de Resultados en Línea.
+     - Derivación ágil para toma de muestras a domicilio y atención personalizada.
+     - Bandeja de atención multiagente y tablero gerencial de demanda.
+2. **Cumplimiento de Reglas SEO y WhatsApp Open Graph (según AGENTS.md)**:
+   - Configurado `robots: { index: false, follow: true, nocache: true }` para permitir que el crawler de WhatsApp/Meta siga el enlace y genere el preview sin indexar en buscadores.
+   - Generada imagen exclusiva `public/images/og-laboratorio-medicos.jpg` (1200×630px, JPG Baseline estricto, 102 KB, URL absoluta HTTPS) para garantizar la previsualización en WhatsApp sin colisionar con la cotización de San Agustín.
+   - Metadata Open Graph y Twitter Card actualizadas con la nueva imagen y descripciones dirigidas al Dr. Romel Torres Sánchez.
+
+### Archivos modificados
+
+| Archivo | Acción |
+|---|---|
+| `app/cotizaciones/laboratorio-medicos/page.tsx` | **Creado** — Página de propuesta para Laboratorio MÉDICOS |
+| `public/images/og-medicos.jpg` | **Creado** — Imagen OG 1200×630 JPG Baseline para preview WhatsApp |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
+
+---
+
+## Creación de Cotización Privada: BEISSO Odontología Funcional (2026-10-28)
+
+### ¿Qué se implementó?
+1. **Página de Cotización Privada**:
+   - Implementada en `/cotizaciones/beisso` dirigida a **BEISSO Odontología Funcional**.
+   - Propuesta de Call Center Inteligente 24/7 con API oficial de WhatsApp para:
+     - Orientación interactiva sobre tratamientos odontológicos y preparación previa para citas.
+     - Detección y alerta inmediata de urgencias dentales (dolor agudo, traumatismos).
+     - Derivación ágil al equipo de recepción y especialistas para agendamiento.
+     - Módulo de seguimiento post-tratamiento y agendamiento inteligente.
+2. **Cumplimiento de Reglas SEO y WhatsApp Open Graph (según AGENTS.md)**:
+   - Configurado `robots: { index: false, follow: true, nocache: true }` para permitir el rastreo del preview de WhatsApp/Meta sin indexar en buscadores.
+   - Imagen exclusiva `public/images/og-beisso.jpg` estandarizada a 1200×630px, JPG Baseline estricto, 160 KB (< 300 KB), con URL absoluta HTTPS.
+   - Logo institucional descargado y servido localmente en `public/images/beisso-logo.jpg`.
+
+### Archivos modificados
+
+| Archivo | Acción |
+|---|---|
+| `app/cotizaciones/beisso/page.tsx` | **Creado** — Página de propuesta para BEISSO Odontología Funcional |
+| `public/images/og-beisso.jpg` | **Modificado** — Estandarizada a 1200×630px JPG Baseline |
+| `public/images/beisso-logo.jpg` | **Creado** — Logo de BEISSO servido localmente |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
+
+
+
 
 
 
