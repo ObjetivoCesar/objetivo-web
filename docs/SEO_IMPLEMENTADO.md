@@ -611,6 +611,27 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
 | `public/images/beisso-logo.jpg` | **Creado** — Logo de BEISSO servido localmente |
 | `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
 
+---
+
+## Actualización de Esquema de Precios en Cotizaciones Privadas (2026-10-29)
+
+### ¿Qué se implementó?
+- Homologación de la estructura de precios de **Fase 1** con el paquete comercial de `/fidelizacion-clientes` ("CRM + Agente WhatsApp + Fidelización") para:
+  - `/cotizaciones/laboratorio-medicos`
+  - `/cotizaciones/beisso`
+- **Precio**: "Desde US$ 2.500" (Inversión única · CRM, Agente y Recordatorios).
+- **Mantenimiento**: Opcional anual de US$ 290/año (soporte técnico, actualizaciones, monitoreo y copias de respaldo).
+- **Entregables alineados**: CRM automático, agente 24/7, traspaso a asesor humano con historial, recordatorios programados, mensajes de fidelización y panel directivo.
+
+### Archivos modificados
+
+| Archivo | Acción |
+|---|---|
+| `app/cotizaciones/laboratorio-medicos/page.tsx` | **Modificado** — Actualizada Fase 1 a "Desde US$ 2.500" y soporte US$ 290/año |
+| `app/cotizaciones/beisso/page.tsx` | **Modificado** — Actualizada Fase 1 a "Desde US$ 2.500" y soporte US$ 290/año |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
+
+
 
 
 

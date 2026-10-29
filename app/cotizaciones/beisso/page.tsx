@@ -130,49 +130,49 @@ export default function BeissoCotizacionPage() {
     etapas: [
       {
         numero: "01",
-        etiqueta_tiempo: "FASE 1 · 1 MES DE DESARROLLO",
-        nombre: "Asistente Informativo, Orientación y Derivación",
-        eslogan: "\"Un call center digital para ordenar la atención y convertir cada consulta en un paciente agendado.\"",
-        precio: "US$ 7.380 + IVA",
-        precio_subtitulo: "50% al inicio · 50% al lanzamiento",
+        etiqueta_tiempo: "FASE 1 · IMPLEMENTACIÓN Y PUESTA EN MARCHA",
+        nombre: "CRM + Agente WhatsApp + Fidelización",
+        eslogan: "\"Una base de clientes a la que puedas venderle y atenderle muchas veces 24/7.\"",
+        precio: "Desde US$ 2.500",
+        precio_subtitulo: "Inversión única · CRM, Agente y Recordatorios",
         descripcion:
-          "Puesta en marcha del asistente en WhatsApp (API oficial de Meta) y sitio web: carrusel de tratamientos, protocolo ante urgencias dentales, derivación al consultorio, bandeja humana y tablero inicial de indicadores.",
+          "Puesta en marcha del agente inteligente en WhatsApp (API oficial de Meta) y sitio web de BEISSO: CRM automático que se arma solo desde el primer chat, catálogo de tratamientos odontológicos, recordatorios de mantenimientos y citas, traspaso a asesor humano con historial completo y panel de control directivo.",
         entregables: [
           {
-            nombre: "WhatsApp API Oficial & Widget Web",
-            descripcion: "Conexión mediante la API oficial de WhatsApp Business Platform e instalación del asistente en el sitio web de la clínica.",
+            nombre: "CRM automático y captura inteligente",
+            descripcion: "CRM que se arma solo desde el primer chat: registra contacto, fecha, motivo y estado de cada paciente en base de datos propia.",
+            icono: "file",
+          },
+          {
+            nombre: "Agente de WhatsApp 24/7 Oficial",
+            descripcion: "Atiende y cotiza de inmediato día y noche vía WhatsApp Business Platform oficial y widget web con respuestas validadas.",
             icono: "whatsapp",
           },
           {
-            nombre: "Respuestas validadas y alerta de urgencias",
-            descripcion: "Información aprobada (horarios, tratamientos, recomendaciones previas). Protocolo inmediato ante dolores agudos o urgencias odontológicas.",
-            icono: "shield",
-          },
-          {
-            nombre: "Carrusel de tratamientos en WhatsApp",
-            descripcion: "Visualización estructurada por especialidad odontológica con datos autorizados por la clínica.",
-            icono: "sparkles",
-          },
-          {
-            nombre: "Aviso al consultorio y derivación",
-            descripcion: "Enrutamiento tipo call center: notificación directa a recepción o especialista con datos mínimos autorizados por el paciente.",
-            icono: "rocket",
-          },
-          {
-            nombre: "Bandeja de intervención humana",
-            descripcion: "Panel para que el equipo autorizado retome conversaciones con historial completo.",
+            nombre: "Traspaso a asesor humano con historial",
+            descripcion: "Bandeja de atención donde recepción o especialistas retoman cualquier conversación en tiempo real con todo el contexto.",
             icono: "layers",
           },
           {
-            nombre: "Base de datos centralizada y tablero inicial",
-            descripcion: "Entorno exclusivo de BEISSO con dashboard de métricas, derivaciones y demanda por canales.",
-            icono: "file",
+            nombre: "Recordatorios automáticos de citas y mantenimientos",
+            descripcion: "Avisos programados de limpiezas semestrales, revisiones, preparación previa o citas para evitar inasistencias.",
+            icono: "rocket",
+          },
+          {
+            nombre: "Saludos y campañas personalizadas",
+            descripcion: "Mensajería oportuna con consentimiento del paciente (cumpleaños, recordatorios preventivos y programas de recomendación).",
+            icono: "sparkles",
+          },
+          {
+            nombre: "Panel de control y analítica directiva",
+            descripcion: "Dashboard con pacientes, oportunidades, demanda de tratamientos por canal y horarios pico en entorno 100% propio de BEISSO.",
+            icono: "shield",
           },
         ],
         nota_especial:
-          "Mantenimiento: US$ 180/mes (los primeros 2 meses están incluidos). Infraestructura: US$ 120–450/mes facturada directamente al entorno de la clínica. Consumo de WhatsApp (Meta): facturado directo a Meta.",
+          "Mantenimiento técnico anual opcional: US$ 290/año (actualizaciones de seguridad, monitoreo de disponibilidad, respaldos periódicos y soporte técnico directo vía WhatsApp). Consumo de WhatsApp (Meta): facturado directo a Meta.",
         detalles_pie: [
-          "🦷 <strong>Datos de la clínica:</strong> 100% en entorno propio de BEISSO",
+          "🦷 <strong>Datos de la clínica:</strong> 100% en entorno y propiedad de BEISSO",
           "🔒 <strong>Privacidad:</strong> Alineado a Ley Orgánica de Protección de Datos Personales",
           "📱 <strong>WhatsApp Oficial:</strong> API Meta verificada — sin conexiones no autorizadas",
         ],
@@ -180,10 +180,10 @@ export default function BeissoCotizacionPage() {
       {
         numero: "02",
         etiqueta_tiempo: "FASE 2 · AMPLIACIÓN FUTURA",
-        nombre: "Seguimiento y Fidelización para Pacientes",
+        nombre: "Seguimiento Post-Tratamiento y Fidelización Avanzada",
         eslogan: "\"Seguimiento post-tratamiento, recordatorios de mantenimiento y fidelización continua.\"",
         precio: "Por cotizar",
-        precio_subtitulo: "se cotiza al finalizar la Fase 1 con datos reales",
+        precio_subtitulo: "se cotiza al finalizar la Fase 1 según volumen real",
         descripcion:
           "Panel para seguimiento post-atención odontológica: recordatorios de revisiones semestrales, limpiezas y cuidados posteriores a cirugías o tratamientos funcionales.",
         entregables: [
