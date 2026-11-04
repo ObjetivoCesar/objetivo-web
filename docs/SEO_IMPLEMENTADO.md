@@ -733,3 +733,66 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
 | `public/images/og-horminor.jpg` | **Existente** — OG image 1200×630px Baseline JPEG |
 | `public/images/horminor-fondo-movil.jpg` | **Existente** — Fondo hero móvil JPG Baseline |
 | `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
+
+---
+
+## Actualización de Enfoque Comercial: Mayra Castillo — Estudio Contable (2026-11-04)
+
+### ¿Qué se implementó?
+- Reescritura comercial y editorial completa en `/cotizaciones/mayra-castillo` bajo el lenguaje y la perspectiva cotidiana de una contadora.
+- **Eliminación de jerga técnica y términos ajenos**: Se sustituyeron términos como "Bóveda Digital" por "Carpeta digital de cada cliente", "Frontend/Backend" por "Plataforma de gestión del estudio", "Despacho de documentos" por "Envío o entrega de documentos", y "Motor de cobranzas" por "Seguimiento automático de pagos".
+- **Nueva Portada**:
+  - H1: *Sistema de Gestión para el Estudio Contable*
+  - Título destacado: *Control de clientes, trámites, documentos y pagos desde un solo lugar.*
+  - Subtítulo enfocado en la organización diaria del equipo sin depender constantemente de la dirección.
+- **Introducción reescrita**: *Una forma más organizada de trabajar y atender a los clientes*, enfocada en el tiempo que consumen tareas pequeñas como enviar declaraciones, buscar archivos y dar seguimiento a pagos.
+- **Los 8 Pasos (`como_funciona`)**: Denominados según actividades operativas reales (Atención por WhatsApp, acuerdo legal, asignación a colaboradoras, envío automático, carpetas digitales, firmas electrónicas, recordatorios de pago y resumen diario).
+- **Esquema de Fases**:
+  - **Fase 1**: Plataforma de gestión contable y atención al cliente (Desde US$ 2.500 en cuotas).
+  - **Complemento incluido**: Página web y tarifario oficial de servicios (Incluido en el paquete).
+  - **Mantenimiento Técnico**: Clarificado como servicio anual opcional ($290 USD/año) a partir del segundo año.
+- **Cierre emocional**: Situación real del envío de 12 declaraciones bancarias desde la carpeta digital sin interrumpir a Mayra.
+
+### Archivos modificados
+
+| Archivo | Acción |
+|---|---|
+| `app/cotizaciones/mayra-castillo/page.tsx` | **Modificado** — Reescritura comercial y adaptación de terminología contable |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
+
+---
+
+## Creación de Cotización Privada: Transportes Alma Lojana (2026-11-04)
+
+### ¿Qué se implementó?
+- Nueva página de propuesta privada en `/cotizaciones/alma-lojana` dirigida a la **Gerencia General y Asamblea Directiva — Transportes Alma Lojana**.
+- Propuesta: **Sistema de Gestión y Control de Encomiendas** — Registro de paquetes, seguimiento de recorridos, control de entregas con etiquetas QR y liquidación de valores entre agencias.
+- **Enfoque de Negocio**: Control físico de la carga (saber qué paquete entró, a qué unidad se asignó, quién lo recibió y cuándo llegó) y control económico de la operación (modalidades de pago en origen, destino o crédito corporativo, y liquidación por agencia).
+- **Estructura de Componentes**:
+  - **Fase 1**: US$ 1.200 — Sistema de registro y seguimiento de encomiendas (cálculo automático de tarifas, etiquetas QR, asignación por unidad y conductor, control de llegada y notificaciones automáticas por WhatsApp).
+  - **Fase 2**: US$ 800 — Sistema de control de ingresos y liquidaciones por agencia (resumen diario de caja por agencia, seguimiento de fletes por cobrar y reportes exportables para contabilidad).
+  - **Mantenimiento y Soporte**: US$ 100 / mes — Servicio mensual opcional a partir del segundo mes.
+- **Imagen OG**: `og-alma-lojana.jpg` estandarizada a **1200×630px Baseline JPEG** (89.3 KB, < 300 KB), con directivas `robots: { index: false, follow: true, nocache: true }` para correcta previsualización en WhatsApp y Meta.
+- **Fondo móvil**: `alma-lojana-fondo-movil.jpg` (67.5 KB Baseline JPEG).
+
+### Archivos creados/modificados
+
+| Archivo | Acción |
+|---|---|
+| `app/cotizaciones/alma-lojana/page.tsx` | **Creado** — Página de propuesta para Transportes Alma Lojana |
+| `public/images/og-alma-lojana.jpg` | **Creado** — Imagen OG 1200×630px Baseline JPEG |
+| `public/images/alma-lojana-fondo-movil.jpg` | **Creado** — Fondo hero móvil JPG Baseline |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
+
+### Actualización de Precios y Enfoque Contable: Transportes Alma Lojana (4 de Noviembre de 2026)
+- **Archivo modificado**: `app/cotizaciones/alma-lojana/page.tsx`
+- **Cambios realizados**:
+  - Ajuste de precios de inversión: Fase 1 (Trazabilidad y control operativo de encomiendas) establecida en **US$ 8.000**, y Fase 2 (Control económico y liquidaciones por agencia) establecida en **US$ 4.000** (total inicial: US$ 12.000).
+  - Eliminación de referencias a "software contable existente" o "departamento contable", adecuando el enfoque al contexto real del cliente (la plataforma pasa a ser su sistema central de registro y control de ingresos/liquidaciones).
+  - Verificación de metadatos Open Graph, Twitter y directiva `robots: { index: false, follow: true, nocache: true }`.
+
+### Actualización de Arte Visual: Transportes Alma Lojana (4 de Noviembre de 2026)
+- **Archivos modificados**:
+  - `public/images/og-alma-lojana.jpg` (1200x630px, 113.3 KB, JPEG Baseline, relación de aspecto exacta para Open Graph y WhatsApp).
+  - `public/images/alma-lojana-fondo-movil.jpg` (576x1024px, 90.4 KB, JPEG Baseline para visualización móvil).
+- **Detalle**: Se reemplazaron las imágenes anteriores por las nuevas versiones del camión de encomiendas de Alma Lojana, respetando estrictamente las normas de peso (< 300KB) y compresión baseline sin escaneo progresivo para previsualización instantánea.

@@ -2,13 +2,13 @@ import CotizacionViewer from "@/components/CotizacionViewer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Propuesta Sistema Automatizado — Mayra Castillo · Estudio Contable",
+  title: "Sistema de Gestión para el Estudio Contable — Mayra Castillo",
   description:
-    "Sistema contable integral para Mayra Castillo: Asistente WhatsApp 24/7, expediente digital por cliente, cobranza automática y catálogo web oficial de servicios.",
+    "Control de clientes, trámites, documentos y pagos desde un solo lugar. Solución diseñada para organizar el trabajo diario de Mayra Castillo y su equipo.",
   openGraph: {
-    title: "Sistema Automatizado para Estudio Contable — Mayra Castillo × César Reyes",
+    title: "Sistema de Gestión para el Estudio Contable — Mayra Castillo × César Reyes",
     description:
-      "Propuesta para Mayra Castillo: WhatsApp 24/7, expediente digital, cobranza automática y web corporativa. Inversión integral desde $2.500.",
+      "Control de clientes, trámites, documentos y pagos desde un solo lugar. Una oficina más organizada, con más tiempo para lo importante.",
     url: "https://www.cesarreyesjaramillo.com/cotizaciones/mayra-castillo",
     siteName: "César Reyes Jaramillo",
     type: "website",
@@ -17,15 +17,15 @@ export const metadata: Metadata = {
         url: "https://www.cesarreyesjaramillo.com/images/og-mayra-castillo.jpg",
         width: 1200,
         height: 630,
-        alt: "Mayra Castillo — Sistema Automatizado de Gestión Contable",
+        alt: "Mayra Castillo — Sistema de Gestión para el Estudio Contable",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sistema Automatizado — Mayra Castillo × César Reyes",
+    title: "Sistema de Gestión para el Estudio Contable — Mayra Castillo",
     description:
-      "WhatsApp 24/7, expediente único, cobranza automática y web profesional para el estudio contable de Mayra Castillo.",
+      "Control de clientes, trámites, documentos y pagos desde un solo lugar para Mayra Castillo.",
     images: ["https://www.cesarreyesjaramillo.com/images/og-mayra-castillo.jpg"],
   },
   robots: {
@@ -41,13 +41,13 @@ export default function MayraCastilloCotizacionPage() {
     og_image_url: "https://www.cesarreyesjaramillo.com/images/og-mayra-castillo.jpg",
     portada: {
       etiqueta: "Mayra Castillo · Estudio Contable · Noviembre 2026",
-      titulo_principal: "Sistema Automatizado de Gestión para",
-      titulo_destacado: "Mayra Castillo.",
+      titulo_principal: "Sistema de Gestión para el Estudio Contable",
+      titulo_destacado: "Control de clientes, trámites, documentos y pagos desde un solo lugar.",
       subtitulo:
-        "Para que tu temporada alta sea tu mejor momento del año — no el que más te cuesta la salud. Tu WhatsApp personal deja de sonar. Las chicas trabajan sin depender de ti. Y el dinero que ya ganaste, se cobra solo.",
-      preparado_para: "Mayra Castillo — Contadora, Estudio Contable",
+        "Una solución diseñada para organizar el trabajo diario, facilitar la atención por WhatsApp y permitir que cada colaboradora gestione sus tareas sin depender constantemente de la dirección.",
+      preparado_para: "Mayra Castillo — Estudio Contable",
       preparado_por: "Ing. César Reyes Jaramillo",
-      fecha: "4 de noviembre de 2026",
+      fecha: "Noviembre de 2026",
       url_logo_cliente: "/images/og-mayra-castillo.jpg",
       imagen_url: "/images/og-mayra-castillo.jpg",
       url_fondo: "/images/og-mayra-castillo.jpg",
@@ -55,58 +55,60 @@ export default function MayraCastilloCotizacionPage() {
     },
     video_destacado: {
       url: "https://www.youtube.com/watch?v=tlwQzPCvAM4",
-      titulo: "Sistema CRM y Automatización",
-      subtitulo: "Prueba de interacción entre el WhatsApp con nuestro sistema",
+      titulo: "Demostración del Sistema",
+      subtitulo: "Prueba de interacción entre WhatsApp y la plataforma de gestión",
     },
     introduccion: {
-      titulo: "El diagnóstico de situación actual",
+      titulo: "Una forma más organizada de trabajar y atender a los clientes",
       parrafos: [
-        "Hoy Mayra vive atrapada como intermediaria: el cliente le escribe por todo, ella pasa claves a las chicas, espera a que hagan el trámite y lo reenvía de vuelta. Noches y fines de semana interrumpidos por tareas operativas, sumado a dinero ganado que no se cobra a tiempo por pena o falta de control.",
-        "Esta solución elimina esa fricción: una plataforma que atiende, archiva, notifica y cobra en automático, permitiendo que las colaboradoras resuelvan de forma autónoma y Mayra se concentre en asesorías de alto valor.",
+        "En un estudio contable, muchas tareas pequeñas terminan ocupando una buena parte del día: responder mensajes, recibir solicitudes, buscar documentos, recordar vencimientos, enviar declaraciones y dar seguimiento a los pagos.",
+        "Cuando todo llega al WhatsApp de la dirección o la información queda repartida entre conversaciones y archivos, el trabajo se acumula. Además, resulta más difícil saber qué está pendiente, quién debe atender cada solicitud y si el cliente ya recibió lo que necesitaba.",
+        "La propuesta consiste en implementar un sistema que permita organizar estas actividades desde un mismo lugar: cada solicitud queda registrada y asignada a la colaboradora correspondiente; los documentos de cada cliente están organizados en su propia carpeta digital; y los archivos se envían automáticamente por WhatsApp una vez que el equipo los prepara y guarda.",
+        "También incorpora herramientas para controlar vencimientos de firmas electrónicas, dar seguimiento a honorarios pendientes y consultar un resumen diario de las tareas realizadas por el equipo. El objetivo es sencillo: que Mayra tenga una visión clara de lo que ocurre en el estudio sin intervenir personalmente en cada solicitud, mientras sus colaboradoras cuentan con las herramientas para realizar y dar seguimiento a su trabajo.",
       ],
     },
     como_funciona: {
-      titulo: "Cómo funcionará tu día a día",
+      titulo: "Cómo funciona en el día a día del estudio",
       pasos: [
         {
-          momento: "01. Atención 24/7 en número de oficina",
+          momento: "01. Atención y recepción por WhatsApp",
           descripcion:
-            "El asistente responde al instante cualquier día y hora. El WhatsApp personal de Mayra queda libre de mensajes operativos.",
+            "El cliente escribe al número de la oficina a cualquier hora. El asistente saluda al instante y recibe la solicitud, liberando el WhatsApp personal de Mayra.",
         },
         {
-          momento: "02. Blindaje legal desde el primer chat",
+          momento: "02. Acuerdo de protección de datos",
           descripcion:
-            "El cliente nuevo acepta el Acuerdo de Protección de Datos con un toque, respaldando legalmente al estudio ante la Superintendencia.",
+            "Si es la primera vez que escribe, el cliente acepta el acuerdo de protección de datos con un clic, generando el respaldo legal correspondiente para el estudio.",
         },
         {
-          momento: "03. Filtro y derivación inteligente",
+          momento: "03. Asignación a cada colaboradora",
           descripcion:
-            "El bot clasifica solicitudes (Facturación, Declaraciones, IESS, Firmas). Lo operativo va directo a la bandeja de las colaboradoras; solo asesorías pasan a Mayra.",
+            "El sistema clasifica la consulta (facturación, declaraciones, IESS, firmas o asesoría) y la asigna a la colaboradora responsable. Solo las asesorías especializadas pasan a Mayra.",
         },
         {
-          momento: "04. Guarda y se envía solito",
+          momento: "04. Envío automático al cliente",
           descripcion:
-            "Al finalizar una declaración o factura, las chicas la suben al expediente y dan clic en Guardar. El sistema notifica y envía el archivo al cliente por WhatsApp sin intervención de Mayra.",
+            "Cuando la colaboradora termina una declaración o trámite, sube el archivo a la carpeta del cliente y presiona Guardar. El sistema notifica y envía el documento por WhatsApp en el acto.",
         },
         {
-          momento: "05. Bóveda Digital sin depender del SRI",
+          momento: "05. Carpeta digital y entrega de documentos",
           descripcion:
-            "Para solicitudes bancarias ('últimas 12 declaraciones'), se seleccionan los archivos desde su ficha y se despachan en segundos sin padecer caídas del portal SRI.",
+            "Cada cliente cuenta con un espacio organizado con sus declaraciones, planillas del IESS, escrituras y nombramientos. Cuando solicitan varios archivos para un banco, se seleccionan y envían juntos en pocos pasos.",
         },
         {
-          momento: "06. Firmas electrónicas y alertas preventivas",
+          momento: "06. Control y renovación de firmas electrónicas",
           descripcion:
-            "Captura requisitos y pagos automáticamente. Además, notifica con 5, 4 y 3 días de anticipación al cliente para asegurar su renovación oportuna.",
+            "Recopila requisitos y comprobantes de pago. Al emitir la firma, programa avisos automáticos al cliente 5, 4 y 3 días antes de su vencimiento para coordinar su renovación.",
         },
         {
-          momento: "07. Cobranza constante y reporte al esposo",
+          momento: "07. Recordatorios de pago y control de cartera",
           descripcion:
-            "Recordatorios automáticos de honorarios y devoluciones de IVA. Pausa inteligente ante abonos y entrega de lista depurada de morosos para la llamada final de su esposo.",
+            "Seguimiento automático de honorarios y comisiones de devolución de IVA. Si el cliente registra un abono o promesa de fecha, el sistema se pausa inteligentemente y genera un reporte claro para el cobro.",
         },
         {
-          momento: "08. Reporte diario de auditoría",
+          momento: "08. Resumen diario de trámites y actividades",
           descripcion:
-            "Resumen diario automático con los trámites realizados y colaboradora responsable ('El Testigo'), permitiendo responder reclamos con respaldo exacto.",
+            "Resumen diario automático con los trámites realizados y colaboradora responsable, permitiendo responder cualquier consulta de clientes con la información exacta a la mano.",
         },
       ],
     },
@@ -115,177 +117,239 @@ export default function MayraCastilloCotizacionPage() {
       filas: [
         {
           antes:
-            "Todo llega al WhatsApp personal de Mayra: noches, fines de semana, sin parar. Ella es el intermediario entre el cliente y sus propias colaboradoras.",
+            "Todas las solicitudes entran al WhatsApp personal de Mayra a cualquier hora, interrumpiendo su descanso y obligándola a ser intermediaria con sus colaboradoras.",
           despues:
-            "El número de oficina recibe todo. El asistente filtra y deriva. A Mayra solo le llegan las asesorías y los cierres que requieren su criterio.",
+            "El número de oficina atiende y asigna cada tarea al equipo. A Mayra solo le llegan las consultas de asesoría que requieren su criterio profesional.",
         },
         {
           antes:
-            "\"Las últimas 12 declaraciones para el banco\" obliga a entrar al SRI, perseguir claves a los hijos del cliente y esperar que cargue la página.",
+            "Cuando piden 'las últimas 12 declaraciones para el banco', las colaboradoras deben buscar claves, pedir accesos y esperar que carguen los portales externos.",
           despues:
-            "Expediente único por cliente: las chicas abren la ficha, seleccionan los archivos y el cliente los recibe en WhatsApp en segundos.",
+            "La colaboradora abre la carpeta digital del cliente, selecciona los documentos almacenados y los envía juntos por WhatsApp en pocos pasos.",
         },
         {
           antes:
-            "Le da vergüenza cobrar. Los $80 o $90 de IVA se acumulan en fotos de WhatsApp que nunca mira. Los clientes piden extras gratis porque no hay tarifario.",
+            "Incomodidad para cobrar honorarios o comisiones de IVA, acumulando saldos pendientes sin un control ordenado ni recordatorios claros.",
           despues:
-            "El cobrador automático insiste sin vergüenza. El esposo recibe la lista de morosos. La web muestra el precio de cada servicio adicional.",
+            "Recordatorios automáticos y amables de pago con reporte periódico de cuentas pendientes para facilitar el seguimiento de cobranza.",
+        },
+        {
+          antes:
+            "Clientes que solicitan trámites extras asumiendo que están incluidos dentro de su honorario mensual básico.",
+          despues:
+            "Página web con el catálogo oficial de servicios y tarifas, facilitando comunicar el costo de tareas adicionales con transparencia.",
         },
       ],
     },
     etapas: [
       {
         numero: "01",
-        etiqueta_tiempo: "FASE 1 · SISTEMA INTEGRAL: FRONTEND, BACKEND, CRM Y COBRANZAS",
-        nombre: "Plataforma Contable Completa + Asistente WhatsApp 24/7 + Bóveda Digital + Cobranza",
+        etiqueta_tiempo: "FASE 1 · PLATAFORMA DE GESTIÓN Y ATENCIÓN",
+        nombre: "Plataforma de gestión contable y atención al cliente",
         eslogan:
-          '"Todo el sistema operativo, flujos de trabajo y cobranzas automáticas en un solo lugar — para que la temporada alta no te cueste la salud."',
+          '"Una oficina más organizada, con herramientas para el equipo y más tranquilidad para la dirección."',
         precio: "Desde US$ 2.500",
-        precio_subtitulo: "Inversión única · Pago en cuotas cómodas mientras recuperas cartera",
+        precio_subtitulo: "Inversión única · Facilidad de pago en cuotas mientras se organiza el estudio",
         descripcion:
-          "Plataforma a medida (Frontend intuitivo, Backend seguro y Base de Datos) conectada al Asistente WhatsApp de oficina. Incluye Bóveda Digital de clientes (claves, XML, estados financieros y declaraciones sin depender del SRI), tablero de control tributario, proyecciones de Renta, plantillas para Notas de Estados Financieros y módulo de cobranzas persistente con reporte para su esposo.",
+          "Implementación de una plataforma web para organizar la información de los clientes, recibir y asignar solicitudes, controlar los documentos entregados, gestionar vencimientos y dar seguimiento a los pagos. Incluye un asistente de WhatsApp conectado a la operación del estudio y un panel de control para la dirección.",
         entregables: [
           {
-            nombre: "Asistente WhatsApp 24/7 y Blindaje Legal",
+            nombre: "Atención inicial por WhatsApp (24/7) y protección de datos",
             descripcion:
-              "Atiende en el número de oficina, registra aceptación de Protección de Datos y deriva lo operativo a las colaboradoras, reservando solo asesorías clave para Mayra.",
+              "Recepción automática en el número de oficina, registro del acuerdo de protección de datos y asignación de tareas operativas a las colaboradoras.",
             icono: "whatsapp",
           },
           {
-            nombre: "Plataforma Web y Panel de Control Contable",
+            nombre: "Plataforma de gestión y control del estudio",
             descripcion:
-              "Panel en la nube con perfiles de acceso, seguimiento de vencimientos y registro diario de productividad ('El Testigo') para auditoría inmediata.",
+              "Acceso web seguro según las funciones de cada colaboradora, con seguimiento de estados de trámites y resumen diario de actividades realizadas.",
             icono: "shield",
           },
           {
-            nombre: "Bóveda Digital (Expediente Único por Cliente)",
+            nombre: "Carpeta digital de cada cliente",
             descripcion:
-              "Gestor centralizado de claves, nombramientos, escrituras, planillas y declaraciones. Despacho masivo de carpetas bancarias en 5 segundos.",
+              "Espacio ordenado para resguardar declaraciones, planillas del IESS, escrituras, nombramientos y XML, facilitando el envío de varios documentos en un solo paso.",
             icono: "layers",
           },
           {
-            nombre: "Despacho Automático a WhatsApp",
+            nombre: "Envío automático de documentos al cliente",
             descripcion:
-              "Al subir una declaración o factura al expediente y guardar, el sistema notifica y envía el PDF al cliente por WhatsApp sin intervención manual.",
+              "Al subir y guardar una declaración o trámite terminado, el sistema genera la notificación y entrega el archivo al cliente por WhatsApp sin intermediación de Mayra.",
             icono: "rocket",
           },
           {
-            nombre: "Flujos de Firmas, Proyecciones IR y Notas EEFF",
+            nombre: "Control de firmas electrónicas, proyecciones e informes",
             descripcion:
-              "Gestión de firmas electrónicas con alertas de vencimiento, proyecciones de Impuesto a la Renta y armado automatizado de Notas a Estados Financieros para abril.",
+              "Recordatorios previos al vencimiento de firmas, organización de información para proyecciones de Renta y plantillas de apoyo para Notas a Estados Financieros.",
             icono: "sparkles",
           },
           {
-            nombre: "Motor de Cobranzas Automático y Reporte al Esposo",
+            nombre: "Seguimiento automático de pagos y cuentas pendientes",
             descripcion:
-              "Cálculo del 10% en devoluciones de IVA, mensajes periódicos de cobro, pausa inteligente ante abonos y reporte depurado de deudores para su esposo.",
+              "Control de comisiones por devolución de IVA, recordatorios amables de saldos pendientes y reporte estructurado para la gestión de cobranza.",
             icono: "file",
           },
         ],
         nota_especial:
-          "Incluye 2 sesiones interactivas de revisión y ajuste con Mayra y su equipo con su listado Excel real. Facilidad de pago en cuotas cómodas.",
+          "Incluye 2 sesiones de revisión y ajuste con Mayra y su equipo durante la puesta en marcha para validar los flujos con su listado real de clientes. Facilidad de pago en cuotas.",
         detalles_pie: [
-          "💻 <strong>Frontend + Backend:</strong> Plataforma web accesible desde cualquier lugar",
-          "⚖️ <strong>Blindaje legal:</strong> Acuerdo de Protección de Datos desde el primer mensaje",
-          "📋 <strong>Reporte diario:</strong> Auditoría de quién hizo qué y trazabilidad total",
-          "💳 <strong>Cuotas cómodas:</strong> Diseñado para amortizarse con la recuperación de cartera",
+          "💻 <strong>Herramienta propia:</strong> Plataforma web accesible desde cualquier computadora o celular",
+          "⚖️ <strong>Respaldo legal:</strong> Registro de aceptación de protección de datos con cada cliente",
+          "📋 <strong>Control diario:</strong> Resumen claro de tareas realizadas y responsables asignadas",
+          "💳 <strong>Facilidad de pago:</strong> Esquema de cuotas coordinado con el estudio",
         ],
       },
       {
         numero: "02",
-        etiqueta_tiempo: "FASE 2 · PRESENCIA DIGITAL Y TARIFARIO",
-        nombre: "Página Web con Catálogo Oficial de Servicios y Precios",
+        etiqueta_tiempo: "COMPLEMENTO INCLUIDO · WEB Y TARIFARIO",
+        nombre: "Página web y tarifario oficial de servicios",
         eslogan:
-          '"Cada servicio con su precio claro — para nunca más hacer un favor o trámite gratis por compromiso."',
+          '"Cada servicio con su detalle y valor claro, respaldando el trabajo profesional del estudio."',
         precio: "Incluido",
-        precio_subtitulo: "Parte de la solución integral contratada",
+        precio_subtitulo: "Forma parte del paquete integral contratado en la Fase 1",
         descripcion:
-          "Sitio web profesional con diseño adaptado a móviles y computadoras que funciona como el Catálogo Oficial del estudio. Presenta de manera transparente todos los servicios del despacho (declaraciones, balances, auditoría, trámites societarios, firmas electrónicas y carpetas para préstamos). Conectado directamente al WhatsApp de la oficina para frenar pedidos de favores gratis y dar respaldo formal a los honorarios.",
+          "Sitio web corporativo adaptado a computadoras y celulares que funciona como el catálogo oficial del estudio contable. Presenta con claridad los servicios regulares y las tarifas de trámites adicionales (societarios, balances especiales, carpetas para bancos), conectándose directamente al WhatsApp de la oficina para respaldar formalmente los honorarios.",
         entregables: [
-          "Sitio web profesional corporativo con diseño limpio, confiable y adaptado a móviles",
-          "Catálogo oficial de servicios con tarifas claras de trámites adicionales (Supercias, carpetas para bancos, trámites societarios)",
-          "Integración directa con el Asistente WhatsApp de oficina para capturar consultas comerciales",
-          "Formulario web que ingresa prospectos y solicitudes directamente a la plataforma",
-          "Diseño visual alineado a la identidad corporativa de Mayra Castillo",
+          {
+            nombre: "Página web corporativa y adaptada a celulares",
+            descripcion:
+              "Presencia institucional clara, profesional y confiable para el estudio contable de Mayra Castillo.",
+            icono: "rocket",
+          },
+          {
+            nombre: "Catálogo de servicios y trámites adicionales",
+            descripcion:
+              "Detalle de trámites societarios, carpetas bancarias y balances con su valor formal para evitar solicitudes gratuitas por compromiso.",
+            icono: "file",
+          },
+          {
+            nombre: "Enlace directo al WhatsApp de oficina",
+            descripcion:
+              "Botón de contacto en la web que conduce las consultas directamente al canal de atención del estudio.",
+            icono: "whatsapp",
+          },
+          {
+            nombre: "Formulario web de recepción de consultas",
+            descripcion:
+              "Formulario de contacto para que nuevos prospectos ingresen sus datos directamente a la plataforma.",
+            icono: "sparkles",
+          },
         ],
         nota_especial:
-          "La web funciona como el 'filtro formal': cuando un cliente solicita tareas fuera de su honorario básico mensual, se le comparte el enlace oficial con el detalle del servicio y su respectivo valor.",
+          "La web funciona como una herramienta de apoyo: cuando un cliente solicita un trámite fuera de su mensualidad, se le comparte el enlace con el detalle y costo formal del servicio.",
         detalles_pie: [
-          "🌐 <strong>Web incluida:</strong> Catálogo y presencia digital sin costos sorpresa",
-          "🛡️ <strong>Sin favores gratis:</strong> El tarifario visible respalda el cobro de extras",
-          "🔗 <strong>100% Integrada:</strong> Conectada al asistente y flujos de trabajo de Fase 1",
+          "🌐 <strong>Sin costo adicional:</strong> Incluido como valor agregado en la propuesta",
+          "🛡️ <strong>Claridad de honorarios:</strong> Tarifas visibles para respaldar cobros extras",
+          "🔗 <strong>Integrado:</strong> Conectado con el canal de WhatsApp del estudio",
         ],
       },
     ],
     participantes: {
-      titulo: "Por qué funciona para Mayra",
+      titulo: "Beneficios cotidianos para el estudio",
       subtitulo:
-        "Un sistema diseñado para estudios contables con equipo — no para un contador solo frente a una computadora.",
+        "Una solución pensada para que el equipo trabaje con mayor comodidad y la dirección recupere su tiempo.",
       grupos: [
         {
-          rol: "Mayra en modo gerente, no secretaria",
-          subtitulo: "Solo le llega lo que requiere su cerebro de experta",
+          rol: "Para Mayra Castillo (Dirección)",
+          subtitulo: "Tranquilidad, visión clara y más tiempo libre",
           beneficios: [
-            "Las solicitudes operativas nunca llegan a su celular personal.",
-            "Atiende únicamente asesorías y cierres que requieren su criterio.",
-            "Puede desconectarse sin que el estudio se detenga.",
-            "Abre el reporte diario y sabe exactamente qué pasó y quién lo hizo.",
+            "Las consultas operativas ya no interrumpen su WhatsApp personal en noches o fines de semana.",
+            "Atiende únicamente consultas de asesoría que requieren su experiencia profesional.",
+            "Cuenta con un resumen diario para saber qué trámites se realizaron sin tener que preguntar.",
+            "Dispone de más tiempo para atender clientes importantes y hacer crecer el estudio.",
           ],
         },
         {
-          rol: "Las colaboradoras más eficientes, sin depender de Mayra",
-          subtitulo: "Trabajan solas con toda la información disponible",
+          rol: "Para las colaboradoras del equipo",
+          subtitulo: "Herramientas ordenadas para trabajar con mayor autonomía",
           beneficios: [
-            "No tienen que pedirle claves a Mayra ni esperar que cargue el SRI.",
-            "Suben documentos y el sistema notifica al cliente automáticamente.",
-            "El expediente único les da todo lo que necesitan de cada cliente.",
-            "Cada acción queda registrada — hay trazabilidad de quién hizo qué.",
+            "Cuentan con la carpeta digital de cada cliente para consultar declaraciones y documentos.",
+            "Al guardar un trámite terminado, el sistema lo envía al cliente sin esperar autorizaciones.",
+            "Pueden despachar varios documentos para trámites bancarios en pocos pasos.",
+            "Tienen claridad sobre las tareas asignadas y sus fechas de entrega.",
           ],
         },
         {
-          rol: "El cobrador automático — sin \"corazón de madre\"",
-          subtitulo: "El dinero que ya se ganó, se cobra sin vergüenza",
+          rol: "Para el control de cobros y cuentas pendientes",
+          subtitulo: "Seguimiento constante sin incomodidades",
           beneficios: [
-            "El sistema insiste todos los días en los saldos pendientes.",
-            "Pausa inteligente ante abonos y promesas de pago.",
-            "El esposo recibe la lista de morosos lista para la llamada final.",
-            "El tarifario en la web elimina los extras gratis por compromiso.",
+            "El sistema envía recordatorios amables y periódicos sobre honorarios pendientes.",
+            "Se calculan con claridad los valores de comisiones por devolución de IVA.",
+            "Se genera un reporte claro de cuentas por cobrar para coordinar la gestión de cobro.",
+            "El tarifario web evita malos entendidos sobre trámites que no están incluidos.",
           ],
         },
         {
-          rol: "Blindaje legal desde el primer mensaje",
-          subtitulo: "Protección de datos registrada y respaldada",
+          rol: "Para el resguardo de la información y respaldo legal",
+          subtitulo: "Seguridad y orden en la documentación de los clientes",
           beneficios: [
-            "Acuerdo de Uso y Protección de Datos aceptado por el cliente con un clic.",
-            "Respaldo legal ante cualquier revisión de oficio de la Superintendencia.",
-            "Claves y datos de clientes gestionados con protocolo seguro.",
-            "Registro de auditoría de cada acción realizada en el sistema.",
+            "Registro de aceptación del acuerdo de protección de datos desde el primer contacto.",
+            "Accesos organizados según las funciones de cada colaboradora del estudio.",
+            "Información y documentos centralizados como activo propio de la oficina de Mayra.",
+            "Respaldos periódicos para resguardar el historial contable ante cualquier eventualidad.",
           ],
         },
       ],
     },
     ir_mas_alla: {
-      titulo: "Plazos, requisitos y condiciones generales",
-      subtitulo: "Próximos pasos",
+      titulo: "Plazos, insumos y acompañamiento",
+      subtitulo: "Cómo coordinaremos la puesta en marcha",
       parrafos: [
-        "La Fase 1 se entrega en un mes. Para arrancar se necesita en los primeros días: el Excel con el listado de clientes y los documentos que se manejan por cliente (con audios si hace falta para explicar flujos). Las 2 sesiones de revisión se coordinan durante la construcción.",
-        "El pago en cuotas está diseñado para que Mayra empiece a recuperar cartera con el sistema mientras lo paga — no al revés. El valor final se ajusta solo según el volumen real del Excel.",
+        "El desarrollo e implementación se entrega en un plazo estimado de 30 días tras recibir la información inicial: el listado en Excel de los clientes activos, los tipos de documentos que se manejan y las tarifas de servicios.",
+        "A lo largo del proceso se coordinarán dos reuniones de revisión para mostrar los avances, ajustar pantallas según las costumbres de trabajo del equipo y asegurar que las colaboradoras se sientan totalmente cómodas con la plataforma.",
+        "El esquema de cuotas está pensado para facilitar la adopción del sistema mientras el estudio comienza a ordenar su gestión y mejorar la recuperación de cuentas pendientes.",
+      ],
+    },
+    modalidades: {
+      titulo: "Propuesta de inversión y modalidades",
+      subtitulo: "Solución completa diseñada para el estudio contable",
+      opciones: [
+        {
+          nombre: "Fase 1: Plataforma de gestión contable y atención al cliente",
+          descripcion:
+            "Recepción por WhatsApp, asignación de tareas al equipo, carpetas digitales de clientes, entrega automática de documentos, control de firmas electrónicas, seguimiento de pagos y panel directivo.",
+          precio: "Desde US$ 2.500",
+          detalle_precio: "Inversión única · Esquema de pago en cuotas acordadas con el estudio",
+        },
+        {
+          nombre: "Complemento incluido: Página web y tarifario de servicios",
+          descripcion:
+            "Sitio web corporativo adaptado a móviles con el catálogo oficial de servicios y tarifas para respaldar los honorarios del despacho frente a trámites adicionales.",
+          precio: "Incluido",
+          detalle_precio: "Forma parte del paquete integral contratado en la Fase 1",
+        },
+        {
+          nombre: "Servicio de soporte técnico y mantenimiento anual (Opcional)",
+          descripcion:
+            "Acompañamiento técnico continuo para asegurar el funcionamiento de la plataforma web, respaldos periódicos de la información, seguridad del servidor y soporte directo ante dudas o incidencias operativas.",
+          precio: "$290 USD / año",
+          detalle_precio: "Servicio anual opcional a partir del segundo año",
+        },
       ],
     },
     cierre: {
-      titulo: "30 minutos para revisar el demo",
+      titulo: "Una oficina más organizada, con más tiempo para lo importante",
       frase_bisagra:
-        "Antes de la reunión, puedes probar el asistente desde tu celular como si fueras un cliente pidiendo una factura.",
+        "La tecnología no reemplaza el conocimiento ni el criterio profesional de Mayra: le permite organizar mejor el trabajo de su equipo, mantener el control de la operación y dedicar más tiempo a sus clientes y al crecimiento del estudio.",
       texto: `
         <p class="text-base text-slate-700 font-light mb-4">
-          Estimada <strong>Mayra Castillo</strong>: proponemos una sesión de 30 minutos para revisar las impresiones del demo, responder preguntas y definir los criterios de aceptación de la Fase 1.
+          Estimada <strong>Mayra Castillo</strong>:
+        </p>
+        <p class="text-base text-slate-700 font-light mb-4">
+          Imaginemos que, durante la temporada de declaraciones, un cliente solicita sus últimas doce declaraciones para presentar en una institución financiera.
+        </p>
+        <p class="text-base text-slate-700 font-light mb-4">
+          En lugar de interrumpir a Mayra para pedirle que busque claves, ingrese al portal y recopile los documentos, la colaboradora podrá consultar la carpeta digital del cliente, seleccionar los archivos que ya están almacenados y enviarlos directamente por WhatsApp en pocos pasos.
+        </p>
+        <p class="text-base text-slate-700 font-light mb-4">
+          La misma lógica se aplica a las solicitudes diarias, los comprobantes, las planillas del IESS, los vencimientos de firmas y el control de pagos pendientes.
         </p>
         <div class="my-5 p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30">
           <p class="font-outfit text-sm uppercase tracking-wider text-slate-900 font-bold mb-2">
-            📲 Demo activo por 15 días
+            📲 Demostración práctica en WhatsApp
           </p>
           <p class="text-sm text-slate-700 font-light leading-relaxed mb-4">
-            El entorno de prueba usa datos de muestra. Puedes escribir como si fueras un cliente pidiendo facturación, una declaración o una firma electrónica.
+            Puedes probar el entorno de demostración desde tu teléfono y observar cómo el sistema recibe una consulta de facturación, declaraciones o firmas electrónicas.
           </p>
           <div style="margin-bottom:16px;">
             <a 
@@ -294,7 +358,7 @@ export default function MayraCastilloCotizacionPage() {
               rel="noopener noreferrer"
               style="display:inline-flex;align-items:center;gap:8px;background:#16a34a;color:white;padding:10px 20px;border-radius:12px;font-size:13px;font-weight:700;text-decoration:none;"
             >
-              👉 Ver demo
+              👉 Ver demo en WhatsApp
             </a>
           </div>
           <div style="max-width:300px;margin:16px auto 0;aspect-ratio:9/16;border-radius:16px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.15);background:#000;">
@@ -308,51 +372,50 @@ export default function MayraCastilloCotizacionPage() {
           </div>
         </div>
         <p class="font-outfit text-sm uppercase tracking-wider text-slate-900 font-bold mb-3">
-          Agenda de la reunión:
+          Temas a revisar en la sesión de 30 minutos:
         </p>
         <ul class="space-y-2 text-sm text-slate-600 list-disc pl-5">
-          <li>Impresiones del demo — cómo responde el asistente a un cliente real.</li>
-          <li>Revisión del flujo de las chicas: cómo suben documentos y derivan solicitudes.</li>
-          <li>Configuración inicial del módulo de cobranza y reporte para el esposo.</li>
-          <li>Volumen del Excel de clientes para ajuste final del precio.</li>
-          <li>Cronograma técnico y fechas de las 2 sesiones de revisión.</li>
+          <li>Revisión de impresiones sobre el demo interactivo en WhatsApp.</li>
+          <li>Estructura de las carpetas de clientes según los documentos habituales del estudio.</li>
+          <li>Forma de asignación de tareas a las colaboradoras y canales de atención.</li>
+          <li>Definición del listado de clientes en Excel para programar las sesiones de prueba.</li>
+          <li>Cronograma de trabajo y coordinación del esquema de cuotas.</li>
         </ul>
       `,
       bloque_derecha: {
-        titulo: "Compromiso con Mayra Castillo",
-        subtitulo: "Un sistema para que la temporada alta sea su mejor momento",
+        titulo: "Compromiso con el Estudio Contable",
+        subtitulo: "Tranquilidad operativa y orden para el equipo",
         cards: [
           {
-            titulo: "La temporada alta sin colapso",
+            titulo: "Mayor autonomía para el equipo",
             texto:
-              "Entrar a abril con el sistema funcionando significa que las chicas resuelven solas y Mayra cierra negocios — no apaga incendios.",
+              "Las colaboradoras resuelven las tareas habituales con acceso directo a los documentos de cada cliente sin interrumpir a Mayra.",
           },
           {
-            titulo: "El dinero que ya ganaste, cobrado",
+            titulo: "Cuentas pendientes bajo seguimiento",
             texto:
-              "La cartera vencida no se cobra sola por vergüenza — se cobra con un sistema que no conoce la vergüenza y persiste todos los días.",
+              "Recordatorios periódicos y reportes claros que facilitan el cobro oportuno de honorarios y devoluciones de IVA.",
           },
           {
-            titulo: "Tu mente libre para lo que vale",
+            titulo: "Tiempo recuperado para la dirección",
             texto:
-              "Cuando lo operativo se automatiza, el talento de Mayra se dedica a asesorar, crecer y cerrar clientes nuevos.",
+              "Mayra deja de ser la intermediaria de mensajes y dedica su tiempo a la asesoría profesional y a clientes estratégicos.",
           },
         ],
       },
       mapa_url: "https://maps.app.goo.gl/tB37eL6bVwPcvkS59",
       mapa_embed_url:
         "https://maps.google.com/maps?q=Calle+Sucre+207-41+Loja+Ecuador&hl=es&z=18&t=&ie=UTF8&iwloc=B&output=embed",
-      cta_texto: "Coordinar reunión por WhatsApp",
+      cta_texto: "Coordinar reunión de 30 minutos por WhatsApp",
       cta_url:
-        "https://wa.me/593984180497?text=Estimado%20Ing.%20C%C3%A9sar%20Reyes%2C%20he%20revisado%20la%20propuesta%20para%20mi%20estudio%20contable%20y%20me%20gustar%C3%ADa%20coordinar%20la%20reuni%C3%B3n%20de%2030%20minutos.",
+        "https://wa.me/593984180497?text=Estimado%20Ing.%20C%C3%A9sar%20Reyes%2C%20he%20revisado%20la%20propuesta%20para%20el%20estudio%20contable%20y%20me%20gustar%C3%ADa%20coordinar%20la%20reuni%C3%B3n%20de%2030%20minutos.",
       pie_texto:
-        "Documento confidencial — evaluación interna · Vigencia 15 días desde su emisión.",
+        "Propuesta confidencial para uso interno · Ing. César Reyes Jaramillo · Loja, Ecuador",
       frase_final:
-        "Un sistema bien construido no reemplaza a Mayra: <span>le devuelve el tiempo para hacer lo que nadie más puede hacer por ella — crecer su negocio.</span>",
+        "La tecnología no reemplaza el criterio profesional de Mayra: <span>le devuelve el tiempo y el orden para hacer crecer su estudio contable.</span>",
     },
-    validez: "Propuesta comercial · Noviembre 2026 · Vigencia 15 días",
+    validez: "Propuesta para evaluación interna · Noviembre 2026 · Vigencia 15 días",
   };
 
   return <CotizacionViewer data={data} />;
 }
-
