@@ -631,6 +631,28 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
 | `app/cotizaciones/beisso/page.tsx` | **Modificado** — Actualizada Fase 1 a "Desde US$ 2.500" y soporte US$ 290/año |
 | `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
 
+---
+
+## Creación de Cotización Privada: Horminor (2026-11-04)
+
+### ¿Qué se implementó?
+- Nueva página de propuesta privada en `/cotizaciones/horminor` dirigida a **Julio — Gerente General, Horminor** (planta de hormigón en El Coca, Orellana).
+- Propuesta: **Sistema Integral de Captación y Gestión Comercial** — CRM, asistente WhatsApp 24/7, captación SEO local y fidelización de cartera de constructores.
+- Concepto central: *"Un trabajador digital que no sustituye al gerente: le devuelve el tiempo para trabajar como gerente."*
+- OG/Hero:
+  - Imagen OG `public/images/og-horminor.jpg`: 1200×630px, JPG Baseline estricto, 125 KB (<300 KB), URL absoluta HTTPS.
+  - Fondo móvil `public/images/horminor-fondo-movil.jpg`: versión vertical original, JPG Baseline, 109 KB.
+- `robots: { index: false, follow: true, nocache: true }` — cumple regla crítica AGENTS.md para cotizaciones con OG WhatsApp.
+- Precio Fase 1: "Desde US$ 2.500" / Fases 2 y 3: "Por cotizar".
+
+### Archivos creados/modificados
+
+| Archivo | Acción |
+|---|---|
+| `app/cotizaciones/horminor/page.tsx` | **Creado** — Página de propuesta para Horminor |
+| `public/images/og-horminor.jpg` | **Creado** — OG image 1200×630px Baseline JPEG, 125 KB |
+| `public/images/horminor-fondo-movil.jpg` | **Creado** — Fondo hero móvil JPG Baseline, 109 KB |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
 
 
 
