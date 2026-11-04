@@ -4,11 +4,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Propuesta de Sistema Integral — Motos y Motos",
   description:
-    "Plataforma conectada que convierte cada mensaje de WhatsApp en un cliente registrado, cada garantía en una razón para volver y cada venta en la siguiente. Preparado para la Sra. Marcela Guzmán y el equipo de Motos y Motos.",
+    "Del caos de mensajes dispersos a una red comercial centralizada: catálogo digital de hasta 200 motos, agente de WhatsApp con derivación a 5 sucursales, CRM y postventa activa.",
   openGraph: {
-    title: "Propuesta de Sistema Integral — Motos y Motos × César Reyes",
+    title: "Sistema Integral de Ventas y Fidelización — Motos y Motos × César Reyes",
     description:
-      "La relación con sus clientes no termina cuando se entrega la moto: Catálogo digital administrable, CRM automático en WhatsApp y fidelización activa de postventa.",
+      "Plataforma modular para centralizar consultas, derivar por sucursal más cercana y automatizar mantenimientos y garantías en Loja, Saraguro, Vilcabamba y Palanda.",
     url: "https://www.cesarreyesjaramillo.com/cotizaciones/motos-y-motos",
     siteName: "César Reyes Jaramillo",
     type: "website",
@@ -25,14 +25,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Propuesta Integral de Ventas y Fidelización — Motos y Motos",
+    title: "Sistema Integral de Ventas y Fidelización — Motos y Motos",
     description:
-      "Catálogo web administrable, CRM automático y agente de ventas WhatsApp para Motos y Motos en Loja y Saraguro.",
+      "Catálogo digital de vehículos, enrutamiento a sucursales por WhatsApp y CRM de postventa.",
     images: ["https://www.cesarreyesjaramillo.com/images/og-motos-y-motos.jpg"],
   },
   robots: {
     index: false,
-    follow: false,
+    follow: true,
+    nocache: true,
   },
 };
 
@@ -41,14 +42,14 @@ export default function MotosYMotosCotizacionPage() {
     id: "motos-y-motos",
     og_image_url: "https://www.cesarreyesjaramillo.com/images/og-motos-y-motos.jpg",
     portada: {
-      etiqueta: "Propuesta institucional · Octubre de 2026",
-      titulo_principal: "La relación con sus clientes no termina",
-      titulo_destacado: "cuando se entrega la moto.",
+      etiqueta: "Propuesta Comercial Ejecutiva · Noviembre de 2026",
+      titulo_principal: "Del caos de mensajes dispersos a una",
+      titulo_destacado: "red comercial centralizada.",
       subtitulo:
-        "Una plataforma conectada que convierte cada mensaje de WhatsApp en un cliente registrado, cada garantía en una razón para volver y cada venta en la siguiente.",
-      preparado_para: "Sra. Marcela Guzmán y equipo de Motos y Motos",
+        "Plataforma modular diseñada para transformar cada consulta de WhatsApp en un cliente registrado, automatizar la postventa en sus 5 sucursales y proteger el tiempo de la gerencia.",
+      preparado_para: "Sra. Marcela Guzmán — Motos y Motos",
       preparado_por: "Ing. César Augusto Reyes Jaramillo · Estrategia y Sistemas",
-      fecha: "Loja, Ecuador · Octubre de 2026",
+      fecha: "Loja, Ecuador · Noviembre de 2026",
       url_logo_cliente: "",
       imagen_url: "/images/og-motos-y-motos.jpg",
       url_fondo: "/images/og-motos-y-motos.jpg",
@@ -60,291 +61,408 @@ export default function MotosYMotosCotizacionPage() {
       subtitulo: "Mire en menos de un minuto lo que este sistema puede hacer por su negocio.",
     },
     introduccion: {
-      titulo: "Vender una moto es el comienzo de la relación, no el final",
+      titulo:
+        "El activo más valioso de un directivo es su tiempo: vender una moto debe ser el inicio de una relación recurrente, no una carga operativa manual",
       parrafos: [
-        "Conversando con la Sra. Marcela, y con un cliente que llegó por un tema de garantía en ese mismo momento, surgió una pregunta valiosa: ¿cómo se mantiene viva la relación con el cliente después de la venta? Una moto necesita revisiones, cambios de aceite, repuestos y accesorios durante años. Cuando esa información no está organizada en un solo lugar, cada visita depende de que el cliente se acuerde.",
-        "Motos y Motos ya logró lo más difícil: que el cliente confíe y compre. Falta un sistema que mantenga esa relación activa sin cargar más trabajo al equipo.",
-        "El propósito de esta propuesta es conectar la vitrina digital con la gestión diaria de WhatsApp y el taller: atender inmediatamente a quien consulta por primera vez, registrar sus datos sin digitar a mano, recordar a tiempo sus garantías y mantener una base lista para compras repetidas."
+        "Durante más de dos décadas, Motos y Motos ha liderado el mercado con múltiples sucursales en Loja, Vilcabamba, Palanda y Saraguro. Sin embargo, la atención comercial ha dependido históricamente de respuestas manuales y teléfonos dispersos. Filtrar a mano de qué cantón escribe cada cliente o transferir chats a ciegas satura a la gerencia y genera fugas de ventas cuando un interesado no recibe respuesta inmediata.",
+        "Un sistema contable tradicional administra la facturación, pero no la relación comercial ni fotos de catálogo. Si los contactos se quedan en los celulares personales de los vendedores, el negocio pierde la memoria comercial, olvida los cambios de aceite y regala la recompra de repuestos y accesorios a la competencia.",
+        "La estrategia para este MVP se enfoca en resultados rápidos sin entorpecer la operación: digitalizar la línea principal (~160 a 200 modelos de Daytona, Loncin, Factory, KTM, Suzuki), centralizar las consultas en WhatsApp y entregar prospectos con ciudad y modelo identificado directamente al asesor de la sucursal más cercana.",
       ],
     },
     como_funciona: {
-      titulo: "Un sistema alineado con la forma de vender de Motos y Motos",
+      titulo: "Recorrido operativo: de la primera consulta al mantenimiento continuo",
       pasos: [
         {
-          momento: "01. ATENDER — Respuesta inmediata",
+          momento: "01. Captación y bienvenida automática",
           descripcion:
-            "Un agente por WhatsApp responde consultas, muestra modelos y precios, y puede llegar hasta el cierre de la venta, a cualquier hora."
+            "El cliente escribe al WhatsApp principal desde cualquier cantón. El asistente responde al instante, presenta el catálogo digital y le pide elegir el modelo de su interés.",
         },
         {
-          momento: "02. REGISTRAR — Clientes con contexto",
+          momento: "02. Selección simple de ciudad o cantón",
           descripcion:
-            "Cada contacto queda en una ficha con su interés, la moto consultada, la compra y todos los datos que el negocio necesite."
+            "Mediante botones directos en WhatsApp (o lista desplegable), el cliente indica desde dónde escribe (Loja, Vilcabamba, Saraguro, Palanda, etc.). Sin pedir ubicaciones raras ni GPS.",
         },
         {
-          momento: "03. DAR CONTINUIDAD — Recordatorios activos",
+          momento: "03. Enrutamiento directo al asesor de sucursal",
           descripcion:
-            "Avisos automáticos de revisiones, garantía, cambio de aceite y cumpleaños, antes de que el cliente los necesite."
+            "El sistema asigna la conversación al vendedor del local más cercano con la ficha lista (nombre, cantón y moto consultada) para que entre directo a cerrar.",
         },
         {
-          momento: "04. RECOMPRAR — Clientes que vuelven",
+          momento: "04. Alerta de seguimiento por demoras",
           descripcion:
-            "Repuestos, accesorios, mantenimiento, referidos y la siguiente moto, ofrecidos al cliente que ya conoce a Motos y Motos."
-        }
+            "Si un asesor tarda más de 2 horas en atender a un prospecto caliente, el sistema emite una alerta interna para evitar que el cliente cotice y compre en otra ciudad.",
+        },
+        {
+          momento: "05. Activación de garantías y taller",
+          descripcion:
+            "Al facturar la moto, la plataforma agenda las revisiones según la marca. El cliente recibe recordatorios automáticos por WhatsApp para su primer cambio de aceite y chequeos periódicos.",
+        },
+        {
+          momento: "06. Fidelización y recompra activa",
+          descripcion:
+            "Felicitaciones automáticas en cumpleaños con beneficios de taller y campañas preventivas a los 12 y 24 meses para repuestos, accesorios o la renovación de su moto.",
+        },
       ],
     },
     comparativa: {
-      titulo: "De cada venta a una relación que se repite",
+      titulo: "Antes y después de la plataforma",
       filas: [
         {
-          antes: "Revisiones y garantía dependiendo de que el cliente se acuerde o llame.",
-          despues: "Recordatorio automático antes de cada revisión, por kilometraje o fecha, según la marca y el modelo."
+          antes:
+            "La gerencia atiende llamadas y mensajes personales preguntando manualmente de qué ciudad escriben para derivarlos uno por uno.",
+          despues:
+            "El asistente saluda 24/7, el cliente elige su cantón con un botón y el chat pasa enrutado y limpio al vendedor correspondiente en segundos.",
         },
         {
-          antes: "Conversaciones de WhatsApp dispersas en celulares personales de los asesores sin registro central.",
-          despues: "Cada chat queda registrado en una ficha con todos los datos que el negocio defina."
+          antes:
+            "Respuestas demoradas en celulares personales de los asesores, sin registro directivo de cuántos clientes se atendieron ni cuánto tardaron.",
+          despues:
+            "Monitoreo de tiempos de atención con alertas ante demoras de más de 2 horas, asegurando que ningún lead caliente se enfríe.",
         },
         {
-          antes: "Consultas repetitivas fuera de horario sin respuesta hasta el día siguiente.",
-          despues: "Respuesta inmediata a cualquier hora con modelos y precios; el asesor entra cuando hace falta."
+          antes:
+            "Garantías y revisiones de taller libradas a la suerte de que el cliente recuerde cuándo le toca el mantenimiento.",
+          despues:
+            "Avisos automáticos por kilometraje y tiempo programados según los estándares de cada marca (Daytona, Loncin, KTM, Suzuki).",
         },
         {
-          antes: "Clientes que compran la moto y nunca más vuelven a comprar repuestos ni taller.",
-          despues: "Una base activa y segmentada para ofrecer mantenimiento, repuestos, accesorios y la siguiente moto."
-        }
+          antes:
+            "Contactos e historiales dispersos en agendas privadas de los vendedores, expuestos a perderse si un colaborador rota.",
+          despues:
+            "CRM centralizado propiedad de Motos y Motos con el historial de compras, mantenimientos y preferencias de cada cliente.",
+        },
       ],
     },
     etapas: [
       {
         numero: "01",
-        etiqueta_tiempo: "COMPONENTE 01 · PRESENCIA",
-        nombre: "Sitio web con catálogo administrable",
-        eslogan: "\"Que sus motos se vean, se encuentren y se coticen a cualquier hora.\"",
-        precio: "Desde $1.000",
-        precio_subtitulo: "inversión única · sitio web administrable",
+        etiqueta_tiempo: "COMPONENTE 01 (MVP BASE) · VITRINA Y CATÁLOGO",
+        nombre: "Catálogo Digital de Vehículos y Vitrina Web Motos y Motos",
+        eslogan:
+          '"Que sus marcas y modelos se encuentren, se exhiban y se coticen a cualquier hora del día."',
+        precio: "$1.300 USD",
+        precio_subtitulo: "Inversión única de implementación · Esquema 50% inicio / 50% entrega",
         descripcion:
-          "Será la vitrina digital de Motos y Motos: un sitio donde cada marca y modelo se presenta con su información, y donde cada visita termina en una conversación de WhatsApp con un asesor o con el agente. Quien busque una moto en Loja podrá encontrarla, compararla y consultarla sin salir de la página.",
+          "Desarrollo de portal web moderno y adaptado a celulares diseñado como vitrina digital oficial. Permite a los compradores explorar especificaciones técnicas y fotografías de las 8 marcas comercializadas antes de visitar el local físico.",
         entregables: [
-          "Catálogo por marca y modelo (Daytona, Loncin, Factory, KTM, Suzuki y las demás)",
-          "Botón directo a WhatsApp desde cada moto con mensaje preconfigurado",
-          "Información de ubicación, horarios y sucursal de Saraguro",
-          "Panel administrativo intuitivo para actualizar modelos y precios con autonomía",
-          "Estructura técnica preparada para posicionamiento en Google (SEO en Loja y región)",
-          "Configuración inicial de analítica para medir visitas y consultas reales",
-          "Demostración funcional en video del flujo completo de consulta"
+          {
+            nombre: "Catálogo por marca y modelo",
+            descripcion:
+              "Estructura organizada para Daytona, Loncin, Factory, KTM, Suzuki y demás líneas de vehículos comercializadas.",
+            icono: "rocket",
+          },
+          {
+            nombre: "Carga de hasta 200 modelos de motocicletas",
+            descripcion:
+              "Diagramación de fichas técnicas con fotografías claras, características mecánicas y opciones de financiamiento.",
+            icono: "layers",
+          },
+          {
+            nombre: "Botones directos de WhatsApp por modelo",
+            descripcion:
+              "Cada ficha incluye un botón de cotización directa con mensaje preconfigurado indicando la moto exacta de interés.",
+            icono: "whatsapp",
+          },
+          {
+            nombre: "Módulo de sucursales y geolocalización básica",
+            descripcion:
+              "Datos de contacto, horarios y mapa de los locales (Loja 10 de Agosto, Terminal, Vilcabamba, Palanda y Saraguro).",
+            icono: "sparkles",
+          },
+          {
+            nombre: "Panel administrativo autónomo",
+            descripcion:
+              "Administrador intuitivo para actualizar modelos, cambiar precios y subir fotos sin depender de soporte técnico.",
+            icono: "file",
+          },
+          {
+            nombre: "Analítica comercial de visitas",
+            descripcion:
+              "Medición de visitas, modelos más consultados y volumen de prospectos derivados hacia los asesores.",
+            icono: "shield",
+          },
         ],
         nota_especial:
-          "El sitio permite que el cliente explore fichas técnicas y opciones de financiamiento desde su celular antes de llegar al local.",
+          "Plazo de entrega ágil con demostración funcional previa en 45 días. Incluye 12 meses de garantía técnica sobre código y estructura.",
         detalles_pie: [
-          "🏍️ <strong>Enfoque:</strong> Catálogo, ubicación y contacto directo por WhatsApp",
-          "📊 <strong>Medición:</strong> Analítica de visitas y consultas de interesados",
-          "⚡ <strong>Autonomía:</strong> Panel intuitivo sin dependencia técnica externa"
+          "🏍️ <strong>Línea de motos:</strong> Hasta 200 modelos cargados y diagramados",
+          "⏱️ <strong>Demostración:</strong> Avances funcionales a los 45 días",
+          "💳 <strong>Facilidad de pago:</strong> 50% al inicio y 50% contra entrega probada",
         ],
       },
       {
         numero: "02",
-        etiqueta_tiempo: "COMPONENTE 02 · RELACIÓN",
-        nombre: "CRM automático, agente de ventas y fidelización",
-        eslogan: "\"Una base de clientes a la que se le pueda vender muchas veces.\"",
-        precio: "Desde $2.500",
-        precio_subtitulo: "inversión única · CRM, agente de WhatsApp y recordatorios",
+        etiqueta_tiempo: "COMPONENTE 02 (MVP BASE) · CRM, ASISTENTE Y POSTVENTA",
+        nombre: "Motor Comercial de Inteligencia, CRM y Gestión de Postventa",
+        eslogan:
+          '"Una base de datos centralizada a la que se le puede vender vehículos, repuestos y mantenimientos de forma recurrente."',
+        precio: "$2.500 USD",
+        precio_subtitulo: "Inversión única de implementación · Pagos vinculados a hitos de avance",
         descripcion:
-          "Cada contacto de WhatsApp se registra solo, con nombre, teléfono, interés, moto consultada, forma de pago, fecha de compra, kilometraje, cumpleaños y todos los datos que el negocio necesite. Sobre esa base, el agente atiende y puede cerrar la venta, y el sistema recuerda a cada cliente sus revisiones, su garantía y sus oportunidades de compra.",
+          "Núcleo de automatización que conecta las conversaciones de WhatsApp con la gestión comercial del negocio. Cualifica prospectos, asigna chats a vendedores por cantón y ejecuta secuencias automáticas de fidelización y postventa.",
         entregables: [
-          "CRM personalizado con los campos específicos que Motos y Motos defina",
-          "Agente de ventas por WhatsApp: consultas, modelos, precios y formas de pago 24/7",
-          "Cierre de venta o traspaso a un asesor humano con todo el contexto de la conversación",
-          "Módulo de garantía y mantenimiento por marca y modelo (Loncin, Daytona, etc.)",
-          "Recordatorios automáticos de revisiones periódicas, cambio de aceite y servicios de taller",
-          "Avisos automáticos de cumpleaños, ofertas de accesorios/repuestos y programa de referidos",
-          "Panel de control centralizado con clientes, oportunidades de venta y vencimientos"
+          {
+            nombre: "Agente de WhatsApp 24/7 con selección de cantón",
+            descripcion:
+              "Saluda de inmediato, muestra catálogo y permite al usuario elegir su cantón con botones simples para canalizar la consulta.",
+            icono: "whatsapp",
+          },
+          {
+            nombre: "CRM comercial con ficha automática",
+            descripcion:
+              "Crea expedientes por cliente con registro de consultas, moto de interés, historial de chat y forma de pago (contado o crédito).",
+            icono: "file",
+          },
+          {
+            nombre: "Enrutamiento inteligente a 5 sucursales",
+            descripcion:
+              "Derivación al asesor de Terminal, 10 de Agosto, Vilcabamba, Palanda o Saraguro con expediente listo para el cierre.",
+            icono: "layers",
+          },
+          {
+            nombre: "Sistema de alertas por demoras (>2 horas)",
+            descripcion:
+              "Notificación de aviso si una conversación asignada no es respondida a tiempo para salvaguardar la venta.",
+            icono: "shield",
+          },
+          {
+            nombre: "Módulo postventa: cambios de aceite y garantías",
+            descripcion:
+              "Avisos automáticos al comprador para su primer cambio de aceite y revisiones periódicas programadas por marca.",
+            icono: "rocket",
+          },
+          {
+            nombre: "Automatización de cumpleaños y promociones",
+            descripcion:
+              "Felicitaciones personalizadas con beneficios de taller y campañas de renovación de unidad a los 12 y 24 meses.",
+            icono: "sparkles",
+          },
         ],
         nota_especial:
-          "El agente atiende de inmediato fuera de horario de oficina y entrega el cliente listo para firmar o coordinar entrega.",
+          "Toda la base de contactos y conversaciones es propiedad 100% exclusiva de Motos y Motos. Incluye entrenamiento práctico al equipo de ventas.",
         detalles_pie: [
-          "🤖 <strong>Atención 24/7:</strong> Respuestas inmediatas y cotizaciones automáticas",
-          "🛠️ <strong>Taller Activo:</strong> Clientes que llegan a mantenimiento sin llamarlos",
-          "👥 <strong>Fidelización:</strong> Seguimiento postventa que asegura la recompra"
+          "🛡️ <strong>Propiedad de datos:</strong> Base centralizada exclusiva de la empresa",
+          "⚙️ <strong>Capacitación:</strong> Entrenamiento a asesores para atender expedientes",
+          "📈 <strong>Fidelización:</strong> Clientes que regresan al taller en automático",
         ],
       },
       {
         numero: "03",
-        etiqueta_tiempo: "COMPONENTE 03 · CONTINUIDAD",
-        nombre: "Mantenimiento técnico anual",
-        eslogan: "\"Que el sistema siga funcionando, protegido y al día.\"",
-        precio: "$290 / año",
-        precio_subtitulo: "servicio anual · mantenimiento de la web y del CRM",
+        etiqueta_tiempo: "COMPONENTE 03 · CONTINUIDAD Y SOPORTE ANUAL",
+        nombre: "Mantenimiento Técnico, Seguridad y Actualizaciones",
+        eslogan:
+          '"Garantía de que su infraestructura digital permanezca rápida, protegida y operativa todos los días del año."',
+        precio: "$290 USD / año",
+        precio_subtitulo: "Servicio anual a partir del segundo año · Sin contratos de permanencia",
         descripcion:
-          "Mantenimiento continuo de la página web, del CRM y de los flujos de fidelización: actualizaciones de software, respaldos periódicos de la base de datos, seguridad informática y soporte técnico prioritario ante cualquier eventualidad. No incluye la creación de páginas o módulos nuevos.",
+          "Cobertura técnica continua para asegurar el funcionamiento óptimo del catálogo web, el CRM y la conectividad de WhatsApp ante actualizaciones de software.",
         entregables: [
-          "Monitoreo continuo de disponibilidad del sitio y del agente de WhatsApp",
-          "Respaldos automáticos de la base de clientes y fichas de venta",
-          "Actualizaciones de seguridad y parches técnicos preventivos",
+          "Monitoreo continuo de disponibilidad del sitio y de la conectividad de WhatsApp",
+          "Respaldos periódicos cifrados de la base de datos de clientes e historiales",
+          "Actualizaciones de seguridad y parches técnicos preventivos en servidor",
           "Soporte técnico directo vía WhatsApp para el equipo administrativo",
-          "Resolución prioritaria de incidencias técnicas operativas"
+          "Resolución prioritaria de incidencias técnicas en horarios comerciales",
         ],
         nota_especial:
-          "Garantiza que la información de los clientes esté siempre respaldada y que el agente de WhatsApp opere sin interrupciones.",
+          "Facturación anual transparente sin renovaciones automáticas forzadas.",
         detalles_pie: [
-          "🛡️ <strong>Seguridad:</strong> Base de datos protegida y respaldos periódicos",
-          "🔄 <strong>Actualizaciones:</strong> Sistema al día con las últimas mejoras técnicas",
-          "📞 <strong>Soporte:</strong> Asistencia directa sin tickets burocráticos"
+          "🔒 <strong>Seguridad:</strong> Respaldos periódicos cifrados fuera del servidor",
+          "📞 <strong>Soporte directo:</strong> Atención ágil por WhatsApp sin tickets lentos",
+          "📋 <strong>Flexibilidad:</strong> Renovación anual transparente",
+        ],
+      },
+      {
+        numero: "04",
+        etiqueta_tiempo: "FASE 2 (UPSELL ESTRATÉGICO) · POSICIONAMIENTO Y REINGENIERÍA",
+        nombre: "Reingeniería Digital y Posicionamiento Nacional (SEO Google + Visibilidad IA)",
+        eslogan:
+          '"Posicionar a Motos y Motos como referente comercial y captar compradores a nivel nacional."',
+        precio: "$3.500 USD",
+        precio_subtitulo: "Inversión · Programa estratégico de reingeniería y posicionamiento tras el MVP",
+        descripcion:
+          "Reingeniería digital avanzada orientada a la expansión de mercado: optimización profunda de arquitectura web para posicionamiento en los primeros lugares de Google y en motores de Inteligencia Artificial (ChatGPT, Perplexity) para búsquedas de modelos específicos de motocicletas en todo el Ecuador.",
+        entregables: [
+          {
+            nombre: "Estrategia de posicionamiento SEO nacional en Google",
+            descripcion:
+              "Investigación de palabras clave y arquitectura web para aparecer primero en búsquedas de motos y marcas a nivel nacional.",
+            icono: "rocket",
+          },
+          {
+            nombre: "Visibilidad en motores de Inteligencia Artificial",
+            descripcion:
+              "Optimización estructurada para que modelos de IA (ChatGPT, Perplexity, Gemini) recomienden a Motos y Motos ante consultas de compra.",
+            icono: "sparkles",
+          },
+          {
+            nombre: "Reingeniería de páginas por modelo y marca",
+            descripcion:
+              "Páginas de aterrizaje optimizadas para conversión rápida y captación de prospectos de alto interés comercial.",
+            icono: "layers",
+          },
+          {
+            nombre: "Estrategia de contenido y autoridad digital",
+            descripcion:
+              "Estructura técnica para convertir la web en la referencia de consulta de motocicletas en el sur y a nivel nacional.",
+            icono: "shield",
+          },
+        ],
+        nota_especial:
+          "Programa de crecimiento comercial independiente para escalar la captación de clientes sin necesidad de inversión en locales físicos.",
+        detalles_pie: [
+          "📍 <strong>SEO Nacional:</strong> Posicionamiento orgánico en Google para todo Ecuador",
+          "🤖 <strong>Visibilidad IA:</strong> Recomendados en ChatGPT y buscadores conversacionales",
+          "📈 <strong>Reingeniería:</strong> Enfoque 100% en captación y autoridad comercial",
         ],
       },
     ],
     participantes: {
-      titulo: "Lo que el Sistema le Devuelve al Negocio",
+      titulo: "Garantías y desactivación de riesgos operativos",
       subtitulo:
-        "Atender consultas repetidas consume horas todos los días. Un colaborador con salario básico cuesta cerca de $8.000 al año con beneficios. Si el agente absorbe entre el 70% y el 80% de su tiempo de atención, el ahorro estimado supera los $5.000 anuales en una sola persona, que queda libre para cerrar ventas.",
+        "La plataforma está diseñada para sumar al negocio sin alterar su ritmo de trabajo diario ni incomodar al equipo.",
       grupos: [
         {
-          rol: "01. Ahorro de Tiempo",
-          subtitulo: "Atención automatizada 24/7",
+          rol: "Convivencia con su sistema contable actual",
+          subtitulo: "No reemplaza su software de facturación ni inventarios",
           beneficios: [
-            "Respuesta inmediata a consultas frecuentes.",
-            "Atención a cualquier hora, incluso fuera del horario del local.",
-            "Modelos y precios enviados sin intervención del equipo.",
-            "Menos mensajes repetidos para los asesores comerciales.",
-            "Registro de datos sin digitar nada manualmente.",
-            "Traspaso al asesor con todo el contexto de la conversación.",
-            "Más tiempo para cerrar ventas y menos para tareas operativas.",
-            "Atención simultánea a varios clientes sin filas de espera.",
-            "Seguimiento automático a quien dejó una consulta pendiente.",
-            "Ahorro estimado superior a $5.000 al año en un colaborador."
+            "Funciona como una capa comercial externa que administra imágenes y relación con clientes.",
+            "Nutre de información al negocio sin alterar la contabilidad fiscal ni los registros SRI.",
+            "Resuelve la falta de fotografías y fichas visuales del sistema tradicional.",
+            "Integrable a futuro si deciden sincronizar inventarios de manera directa.",
           ],
         },
         {
-          rol: "02. Recompra y Fidelización",
-          subtitulo: "Clientes que vuelven al local y taller",
+          rol: "Aliado del equipo de ventas y de redes sociales",
+          subtitulo: "Asume el trabajo repetitivo para que ellos cobren más comisiones",
           beneficios: [
-            "Recordatorio automático antes de cada revisión periódica.",
-            "Aviso oportuno para el cambio de aceite según kilometraje.",
-            "Seguimiento estricto de la garantía según las reglas de cada marca.",
-            "Saludo y oferta especial en la fecha de cumpleaños del cliente.",
-            "Ofertas segmentadas de accesorios y repuestos para su moto específica.",
-            "Programa de referidos para que recomienden a sus conocidos.",
-            "Clientes que llegan al taller sin que el personal tenga que llamarlos.",
-            "Base de datos organizada para campañas dirigidas por WhatsApp.",
-            "Aviso preventivo a clientes que llevan meses sin volver.",
-            "Base de contactos lista para ofrecer la renovación de su moto."
+            "No sustituye el trabajo de los asesores ni de la persona encargada de redes ($600).",
+            "Elimina el desgaste de contestar precios o preguntar manualmente de qué ciudad escriben.",
+            "Entrega a los vendedores un prospecto filtrado y calificado listo para el cierre.",
+            "Permite a los asesores concentrarse en atender bien y aumentar sus ventas.",
           ],
         },
         {
-          rol: "03. Control y Seguimiento",
-          subtitulo: "Información clara para tomar decisiones",
+          rol: "Propiedad total y control de la información",
+          subtitulo: "La base de datos es un activo exclusivo de la empresa",
           beneficios: [
-            "Ficha individual de cada cliente con su historial completo.",
-            "Registro de la moto consultada y la moto finalmente comprada.",
-            "Visualización clara del estado de cada oportunidad de venta.",
-            "Control de tareas y cotizaciones pendientes por cada asesor.",
-            "Calendario de revisiones y garantías próximas a vencer.",
-            "Listado de clientes que llevan tiempo sin visitar el local.",
-            "Identificación del origen de cada consulta (web, recomendación, local).",
-            "Reporte de ventas cerradas por el agente virtual y por los asesores.",
-            "Panel de consulta en la nube disponible en cualquier momento.",
-            "Respaldo automático y seguro de toda la información comercial."
+            "Toda la cartera de clientes, chats y fechas de compra pertenecen a Motos y Motos.",
+            "Los contactos ya no quedan dispersos en teléfonos privados de empleados.",
+            "Si un asesor sale de la empresa, la relación y el historial se quedan en el negocio.",
+            "Exportación completa de datos en cualquier momento en formatos estándar.",
+          ],
+        },
+        {
+          rol: "Escalabilidad modular para nuevas sucursales",
+          subtitulo: "Arquitectura flexible preparada para crecer",
+          beneficios: [
+            "Capacidad para incorporar nuevos cantones o sucursales sin rehacer el sistema.",
+            "Posibilidad de ampliar el catálogo a nuevas líneas de productos en cualquier etapa.",
+            "Adaptabilidad a futuras necesidades comerciales y promociones de temporada.",
+            "Soporte estable para alto volumen de consultas simultáneas.",
           ],
         },
       ],
     },
     ir_mas_alla: {
-      titulo: "Ejemplo Práctico: De un Mensaje por WhatsApp a una Relación de Años",
-      subtitulo: "Caso de Uso y Aplicación en Motos y Motos",
+      titulo: "Ejemplo práctico: de un mensaje un sábado por la noche a un cliente de años",
+      subtitulo: "Caso de uso real en la región",
       parrafos: [
-        "Imaginemos a un cliente que escribe un sábado por la noche preguntando por una moto Loncin o Daytona. El sistema une la atención, el registro, la venta y el seguimiento en cinco momentos clave:",
-        `<div class="space-y-3 my-2 pl-1">
-          <p><strong>01. Consulta:</strong> El agente responde al instante, muestra modelos, precios y financiamiento, registra su nombre y su interés, y puede incluso pre-cerrar la venta ahí mismo.</p>
-          <p><strong>02. Traspaso:</strong> Si el cliente prefiere hablar con una persona, el lunes a primera hora el asesor retoma la conversación con todo el contexto a la vista.</p>
-          <p><strong>03. Compra:</strong> Quedan registrados la moto adquirida, la fecha de entrega, la forma de pago y el kilometraje inicial.</p>
-          <p><strong>04. Primera revisión:</strong> Al mes (o kilometraje programado) recibe el recordatorio y llega al taller puntualmente sin que nadie tenga que llamarlo.</p>
-          <p><strong>05. Fidelización:</strong> Recibe un saludo en su cumpleaños con una oferta en accesorios o cascos, y recomienda a un amigo que ingresa al sistema desde su primer mensaje.</p>
-        </div>`,
-        "Así, la venta no termina con la entrega de las llaves: deja una relación mejor atendida, una próxima visita agendada y una recompra asegurada en repuestos, taller o su siguiente moto."
+        "Imaginemos un sábado a las 8:30 PM. Un cliente en Valladolid busca una motocicleta Loncin o Daytona y escribe al WhatsApp de Motos y Motos. El asistente responde al instante, le presenta el catálogo digital y el usuario selecciona su cantón con un solo botón.",
+        "Al identificar la zona sur, el sistema crea la ficha en el CRM y asigna el expediente al asesor de la sucursal de Palanda. El lunes a primera hora, el vendedor retoma la conversación conociendo la moto exacta y la forma de pago, cerrando la venta sin hacerle repetir preguntas.",
+        "Dos meses después, la plataforma le envía un aviso automático recordándole su primer cambio de aceite de garantía, asegurando que acuda al taller de la empresa y consolidando una relación comercial a largo plazo.",
       ],
     },
     modalidades: {
-      titulo: "Inversión y Modalidad de Contratación",
-      subtitulo: "Cada componente se contrata por separado según la prioridad del negocio",
+      titulo: "Estructura de inversión y plan de contratación",
+      subtitulo: "Implementación modular por componentes de valor",
       opciones: [
         {
-          nombre: "Sitio web con catálogo administrable",
+          nombre: "Componente 01: Catálogo Digital de Vehículos",
           descripcion:
-            "Catálogo por marca y modelo, contacto directo a WhatsApp, panel administrativo, analítica de consultas y preparación para posicionamiento en Google (SEO).",
-          precio: "Desde $1.000",
-          detalle_precio: "Inversión única de implementación"
+            "Vitrina web de hasta 200 motos con fichas técnicas, fotos de las 8 marcas, botones a WhatsApp y panel de administración autónomo.",
+          precio: "$1.300 USD",
+          detalle_precio: "Inversión única · 50% al inicio y 50% contra entrega probada (45 días)",
         },
         {
-          nombre: "CRM automático, agente de ventas y fidelización",
+          nombre: "Componente 02: CRM, Agente WhatsApp y Postventa",
           descripcion:
-            "Registro automático desde WhatsApp, agente de ventas 24/7, control de garantías y mantenimiento por marca, recordatorios activos, referidos y panel de control.",
-          precio: "Desde $2.500",
-          detalle_precio: "Inversión única de implementación"
+            "Agente 24/7 con selección de cantón, enrutamiento a 5 sucursales, alertas por demoras de 2 horas y recordatorios automáticos de taller y cumpleaños.",
+          precio: "$2.500 USD",
+          detalle_precio: "Inversión única · Pagos vinculados a hitos de avance",
         },
         {
-          nombre: "Mantenimiento técnico anual",
+          nombre: "Componente 03: Mantenimiento Técnico y Soporte",
           descripcion:
-            "Actualizaciones de software, respaldos de base de datos, seguridad y soporte técnico continuo del sitio web y del CRM.",
-          precio: "$290 / año",
-          detalle_precio: "Servicio anual de mantenimiento y soporte"
-        }
+            "Actualizaciones de software, respaldos periódicos cifrados, seguridad y soporte directo vía WhatsApp para garantizar continuidad operativa.",
+          precio: "$290 USD / año",
+          detalle_precio: "Servicio anual a partir del segundo año",
+        },
+        {
+          nombre: "Fase 2 (Upsell): Reingeniería y Posicionamiento SEO + IA",
+          descripcion:
+            "Reingeniería digital para posicionamiento orgánico en Google a nivel nacional y visibilidad estructurada en motores de Inteligencia Artificial (ChatGPT, Perplexity).",
+          precio: "$3.500 USD",
+          detalle_precio: "Programa estratégico de expansión de mercado tras el MVP",
+        },
       ],
     },
     cierre: {
-      titulo: "Un Sistema al Servicio de las Ventas de Motos y Motos",
+      titulo: "Las tecnologías valen por la tranquilidad que devuelven al dueño",
       frase_bisagra:
-        "Que cada cliente deje una relación mejor atendida, una próxima visita agendada y una venta que se repita.",
+        "Las tecnologías no valen por la complejidad de su código, sino por la tranquilidad que devuelven al dueño y la disciplina comercial que le imponen al negocio.",
       texto: `
         <p class="text-base text-slate-700 font-light mb-4">
           Estimada <strong>Sra. Marcela Guzmán</strong> y equipo de <strong>Motos y Motos</strong>:
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
-          La propuesta no plantea tecnología como un fin. Plantea conectar la atención de WhatsApp con el trabajo comercial del negocio: <strong>atender cada consulta, conservar la memoria de cada cliente, dar continuidad a las revisiones y garantías, y tener una base a la cual venderle muchas veces</strong>.
+          Esta propuesta está diseñada para resolver el cuello de botella que hoy frena el crecimiento: <strong>evitar que la gerencia dedique horas a transferir mensajes manualmente, garantizar que cada prospecto sea atendido a tiempo por la sucursal correcta y activar el taller como una fuente constante de ingresos recurrentes</strong>.
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
-          La decisión no consiste en escoger quién arma una página o un chat. Consiste en definir cómo Motos y Motos gestionará la información y las relaciones que se convierten en ventas repetidas a lo largo de los años.
-        </p>
-        <p class="text-base text-slate-700 font-light mb-4">
-          Propongo revisar juntos el alcance, definir las reglas de garantía y mantenimiento de cada marca y elegir el primer grupo de clientes para el piloto operativo.
+          No venimos a cambiar lo que ya funciona ni a complicar a los vendedores. Venimos a darles una herramienta que les ahorra trabajo repetitivo y les entrega clientes listos para cerrar.
         </p>
         <div class="mt-6 pt-6 border-t border-slate-200">
-          <p class="font-outfit text-sm font-bold text-slate-900 mb-1">Puesta en marcha recomendada en 4 fases:</p>
-          <ol class="space-y-1.5 text-sm text-slate-600 list-decimal pl-5">
-            <li><strong>Fase 01. Alinear el alcance:</strong> Validar el catálogo de marcas, las reglas de garantía por modelo, los mensajes de recordatorio y los datos que se registran.</li>
-            <li><strong>Fase 02. Construir y configurar:</strong> Desarrollar el sitio, el CRM, el agente y las automatizaciones de WhatsApp.</li>
-            <li><strong>Fase 03. Probar con un piloto:</strong> Usar un grupo de clientes reales para verificar el registro, los recordatorios y el traspaso al asesor.</li>
-            <li><strong>Fase 04. Ajustar y capacitar:</strong> Corregir hallazgos, capacitar al equipo de Motos y Motos y acordar el procedimiento operativo.</li>
+          <p class="font-outfit text-sm font-bold text-slate-900 mb-2">Puesta en marcha acordada para el MVP (Fase 1):</p>
+          <ol class="space-y-2 text-sm text-slate-600 list-decimal pl-5">
+            <li><strong>Recepción del material de catálogo:</strong> Carga de especificaciones y fotos de las 8 marcas (hasta 200 modelos).</li>
+            <li><strong>Configuración del enrutamiento por sucursal:</strong> Definición de números y asesores de Loja 10 de Agosto, Terminal, Vilcabamba, Palanda y Saraguro.</li>
+            <li><strong>Demostración funcional en 45 días:</strong> Validación práctica del recorrido completo de consulta, asignación y alertas.</li>
+            <li><strong>Capacitación al equipo y lanzamiento:</strong> Entrenamiento al personal para atender expedientes y activación de las reglas de garantía.</li>
           </ol>
         </div>
       `,
       bloque_derecha: {
-        titulo: "Continuidad Operativa y Garantías",
-        subtitulo: "La implementación parte de la forma en que Motos y Motos ya atiende",
+        titulo: "Compromiso de ejecución con Motos y Motos",
+        subtitulo: "Seguridad y continuidad para su red comercial",
         cards: [
           {
-            titulo: "Canales y Dominio Existentes",
-            texto: "Se trabajará con los números de WhatsApp y los canales que el negocio ya utiliza. No se cambiará nada sin necesidad técnica justificada y aprobación previa."
+            titulo: "Convivencia con canales actuales",
+            texto:
+              "Se trabaja sobre la línea y números que la empresa ya tiene acreditados, asegurando que no se pierda ningún contacto histórico.",
           },
           {
-            titulo: "Demostraciones Reales y Flujos Validados",
-            texto: "Cada flujo (consulta, registro, recordatorio y traspaso) se demuestra y se aprueba en funcionamiento real antes de ponerse en marcha definitiva."
+            titulo: "Alertas de control para no perder ventas",
+            texto:
+              "Monitoreo de tiempos con avisos si una consulta tarda más de 2 horas sin atención, evitando que compren en la competencia.",
           },
           {
-            titulo: "Privacidad y Reglas Operativas Claras",
-            texto: "Los datos de los clientes son de Motos y Motos. Se manejan con bases de datos seguras, respaldos automáticos y estricta protección de datos personales."
-          }
-        ]
+            titulo: "Trazabilidad de taller y garantías",
+            texto:
+              "Secuencias automáticas que aseguran que el cliente vuelva a realizar sus cambios de aceite y revisiones a tiempo.",
+          },
+        ],
       },
       mapa_url: "https://maps.app.goo.gl/jdZgBYatRApSHLnTA",
       mapa_embed_url:
         "https://maps.google.com/maps?q=-4.0008611,-79.199&hl=es&z=18&t=&ie=UTF8&iwloc=B&output=embed",
-      cta_texto: "Coordinar una sesión de trabajo por WhatsApp",
+      cta_texto: "Coordinar inicio del proyecto por WhatsApp",
       cta_url:
-        "https://wa.me/593963410409?text=Estimado+Ing.+C%C3%A9sar+Reyes%2C+he+revisado+la+propuesta+para+Motos+y+Motos+y+me+gustar%C3%ADa+coordinar+una+sesi%C3%B3n+de+trabajo.",
+        "https://wa.me/593984180497?text=Estimado%20Ing.%20C%C3%A9sar%20Reyes%2C%20he%20revisado%20la%20propuesta%20actualizada%20para%20Motos%20y%20Motos%20y%20me%20gustar%C3%ADa%20coordinar%20el%20inicio%20del%20MVP.",
       pie_texto:
-        "Propuesta institucional confidencial · César Reyes Jaramillo · Loja, Ecuador",
+        "Propuesta comercial ejecutiva confidencial · Ing. César Reyes Jaramillo · Loja, Ecuador",
       frase_final:
-        "Cada contacto queda registrado. Cada cliente recibe seguimiento. <span>Cada venta abre la siguiente.</span>",
+        "Quedo a su entera disposición para revisar los detalles operativos, validar el catálogo inicial de marcas y <span>dar inicio al MVP de Motos y Motos.</span>",
     },
-    validez: "Propuesta confidencial · Validez comercial de referencia: 30 días · Octubre de 2026",
+    validez: "Propuesta comercial ejecutiva · Vigencia 30 días · Noviembre de 2026",
   };
 
   return <CotizacionViewer data={data} />;

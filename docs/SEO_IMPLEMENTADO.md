@@ -684,3 +684,28 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
 | `public/images/og-mayra-castillo.jpg` | **Creado** — OG image 1200×630px Baseline JPEG, 40.6 KB |
 | `public/images/mayra-castillo-fondo-movil.jpg` | **Creado** — Fondo hero móvil JPG Baseline, 26.2 KB |
 | `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
+
+---
+
+## Actualización de Cotización Privada: Motos y Motos (2026-11-04)
+
+### ¿Qué se implementó?
+- Actualización completa de la propuesta en `/cotizaciones/motos-y-motos` dirigida a la **Sra. Marcela Guzmán — Motos y Motos**.
+- **Enfoque Estratégico**: Centralización de la red comercial para sus 5 sucursales (Loja 10 de Agosto, Terminal, Vilcabamba, Palanda y Saraguro), terminando con el cuello de botella del dueño atendiendo y derivando chats manualmente.
+- **Flujo de Asignación**: Selección simple de cantón/ciudad mediante botones interactivos en WhatsApp (sin pedir ubicaciones extrañas de GPS ni mapa) para derivar directamente al vendedor local más cercano.
+- **Control y Postventa**: Alertas de seguimiento ante demoras mayores a 2 horas, automatización de garantías y cambios de aceite por marca (Daytona, Loncin, Factory, KTM, Suzuki) y felicitaciones en cumpleaños.
+- **Estructura de Componentes**:
+  - **Componente 01 (MVP Base)**: $1.300 USD — Catálogo web de hasta 200 modelos con fotos y fichas de las 8 marcas (50% anticipo / 50% entrega a 45 días).
+  - **Componente 02 (MVP Base)**: $2.500 USD — CRM comercial, agente WhatsApp 24/7 y postventa.
+  - **Componente 03**: $290 USD/año — Mantenimiento técnico, seguridad y soporte anual.
+  - **Fase 2 (Upsell Estratégico)**: $3.500 USD — Reingeniería digital y Posicionamiento Nacional (SEO Google + Visibilidad en IA).
+- **Garantías y Desactivación de Miedos**: Convivencia pacífica con el software contable (no lo reemplaza), aliado de los vendedores y del encargado de redes ($600).
+- **Imagen OG**: `og-motos-y-motos.jpg` convertida y asegurada en **Baseline JPEG** estricto, con directivas `robots: { index: false, follow: true, nocache: true }`.
+
+### Archivos modificados
+
+| Archivo | Acción |
+|---|---|
+| `app/cotizaciones/motos-y-motos/page.tsx` | **Modificado** — Actualización integral de contenidos, etapas y flujos |
+| `public/images/og-motos-y-motos.jpg` | **Modificado** — Estandarizada a Baseline JPEG |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
