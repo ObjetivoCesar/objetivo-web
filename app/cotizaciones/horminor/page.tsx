@@ -2,13 +2,13 @@ import CotizacionViewer from "@/components/CotizacionViewer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Propuesta Sistema Comercial Integral — Horminor · El Coca",
+  title: "Sistema de Captación Comercial Multiprovincial — Horminor · Amazonía Norte",
   description:
-    "Sistema de captación, atención y fidelización comercial para Horminor: presencia local en Google, asistente WhatsApp 24/7 que cotiza y hace seguimiento, y CRM con la cartera de constructores activos en Orellana.",
+    "Sistema de Captación Comercial y Posicionamiento Multiprovincial para Horminor (Orellana, Sucumbíos y Amazonía Norte): cotizaciones automáticas 24/7 vía WhatsApp API oficial, CRM comercial y presencia regional en Google.",
   openGraph: {
-    title: "Sistema Comercial Integral — Horminor × César Reyes",
+    title: "Sistema Comercial Multiprovincial — Horminor × César Reyes",
     description:
-      "Propuesta para Julio — Horminor: captación SEO local, asistente de ventas WhatsApp 24/7 y CRM de constructores en El Coca, Orellana.",
+      "Propuesta para Julio Villavicencio — Horminor: captación de obras y contratistas en Orellana, Sucumbíos y Amazonía Norte, cotizador 24/7 y CRM propio.",
     url: "https://www.cesarreyesjaramillo.com/cotizaciones/horminor",
     siteName: "César Reyes Jaramillo",
     type: "website",
@@ -17,15 +17,15 @@ export const metadata: Metadata = {
         url: "https://www.cesarreyesjaramillo.com/images/og-horminor.jpg",
         width: 1200,
         height: 630,
-        alt: "Horminor — Sistema Integral de Captación y Gestión Comercial",
+        alt: "Horminor — Sistema de Captación Comercial Multiprovincial",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sistema Comercial Integral — Horminor × César Reyes",
+    title: "Sistema Comercial Multiprovincial — Horminor × César Reyes",
     description:
-      "Captación SEO local, asistente WhatsApp 24/7 y CRM de constructores para Horminor, El Coca, Orellana.",
+      "Captación regional en Google, cotizador WhatsApp 24/7 y CRM de constructores para Horminor en Orellana y Sucumbíos.",
     images: ["https://www.cesarreyesjaramillo.com/images/og-horminor.jpg"],
   },
   robots: {
@@ -40,14 +40,15 @@ export default function HorminorCotizacionPage() {
     id: "horminor",
     og_image_url: "https://www.cesarreyesjaramillo.com/images/og-horminor.jpg",
     portada: {
-      etiqueta: "Horminor · El Coca, Orellana · Noviembre 2026",
-      titulo_principal: "Sistema Integral de Captación y Gestión Comercial para",
-      titulo_destacado: "Horminor.",
+      etiqueta: "Horminor · Amazonía Norte · Noviembre 2026",
+      titulo_principal: "De planta local a referente industrial regional",
+      titulo_destacado:
+        "Sistema de Captación Comercial y Posicionamiento Multiprovincial para Horminor (Orellana, Sucumbíos y Amazonía Norte)",
       subtitulo:
-        "Estar primero cuando un constructor busca hormigón en El Coca. Atender y cotizar 24/7 sin depender de tu disponibilidad. Mantener una relación activa con tu cartera de constructores.",
-      preparado_para: "Julio Villavicencio — Gerente General, Horminor",
+        "Infraestructura digital para captar obras y contratistas en múltiples provincias, cotizar 24/7 vía WhatsApp y centralizar la cartera de constructores en un CRM propio.",
+      preparado_para: "Julio Villavicencio — Gerente General, Horminor (El Coca, Orellana)",
       preparado_por: "Ing. César Reyes Jaramillo",
-      fecha: "4 de noviembre de 2026",
+      fecha: "Noviembre de 2026",
       url_logo_cliente: "/images/og-horminor.jpg",
       imagen_url: "/images/og-horminor.jpg",
       url_fondo: "/images/og-horminor.jpg",
@@ -59,54 +60,55 @@ export default function HorminorCotizacionPage() {
       subtitulo: "Prueba de interacción entre el WhatsApp con nuestro sistema",
     },
     introduccion: {
-      titulo: "El momento que vive Horminor",
+      titulo:
+        "La obra no la gana la planta más cercana, sino quien aparece primero en Google y cotiza al instante.",
       parrafos: [
-        "En El Coca, el pedido lo gana quien aparece primero en Google y responde más rápido. Hoy Horminor depende de que Julio esté disponible para atender, cotizar y hacer seguimiento — y eso tiene un techo.",
-        "Esta propuesta elimina ese techo: presencia digital activa, atención inmediata 24/7 y una cartera de constructores que se gestiona sola.",
+        "En Orellana y Sucumbíos, ingenieros y contratistas buscan hormigón en toda la región. Hoy la atención de Horminor depende del teléfono personal de Julio, frenando la captación fuera de horario y en zonas petroleras clave.",
+        "Depender de personal administrativo manual cuesta más de $8.000 al año y deja los contactos dispersos en celulares privados. Esta propuesta implementa un cotizador inteligente 24/7 en WhatsApp oficial (API de Meta) y un CRM comercial propio para dominar la región, liberando a Julio para cerrar contratos de gran volumen.",
       ],
     },
     como_funciona: {
-      titulo: "Desde que buscan hormigón hasta que cierran el pedido",
+      titulo: "Flujo comercial: de la búsqueda a la fundición",
       pasos: [
         {
-          momento: "01. Búsqueda → Horminor aparece",
+          momento: "01. Búsqueda regional en Google",
           descripcion:
-            "Constructor busca «hormigón El Coca» en Google. Encuentra la ficha de Horminor con fotos, horarios, reseñas y botón de WhatsApp directo.",
+            "El contratista busca hormigón en Orellana o Sucumbíos y encuentra a Horminor en primeros lugares con ficha optimizada y enlace directo a WhatsApp.",
         },
         {
-          momento: "02. Primer contacto inmediato",
+          momento: "02. Ubicación, resistencia y volumen",
           descripcion:
-            "El cliente escribe por WhatsApp o desde el sitio web. El asistente responde de inmediato con precios de referencia, resistencias disponibles y tiempos de entrega estimados.",
+            "El asistente atiende al instante 24/7, identifica cantón/obra, volumen requerido y resistencia en PSI necesaria.",
         },
         {
-          momento: "03. Clasificación del prospecto",
+          momento: "03. Clasificación de contratistas",
           descripcion:
-            "El sistema distingue entre constructor habitual, obra nueva o cliente ocasional, y adapta la respuesta según el volumen potencial y la urgencia del pedido.",
+            "Distingue automáticamente entre empresas constructoras habituales, contratistas petroleros o clientes particulares.",
         },
         {
-          momento: "04. Proforma automática",
+          momento: "04. Proformas automáticas",
           descripcion:
-            "Para pedidos estándar, el asistente genera una proforma inicial con especificaciones básicas y la envía directamente al cliente sin intervención manual.",
+            "Genera y envía cotizaciones inmediatas para pedidos estándar con especificaciones de mezcla sin intervención manual.",
         },
         {
-          momento: "05. Pase a Julio o al equipo",
+          momento: "05. Pase directo a Julio para volumen",
           descripcion:
-            "Para negociaciones de volumen o condiciones especiales, el asistente escala con todo el historial de la conversación para que Julio o su equipo cierren la venta.",
+            "Requerimientos industriales o condiciones especiales pasan directo al teléfono de Julio con expediente completo para el cierre.",
         },
         {
-          momento: "06. Registro en CRM",
+          momento: "06. Cartera propia en CRM",
           descripcion:
-            "Cada contacto queda registrado: empresa, obra, volumen estimado, fecha y estado. La cartera de constructores se construye sola desde el primer mensaje.",
+            "Cada contacto y cotización se registra en la base de datos de Horminor, consolidando la red de constructores como activo de la empresa.",
         },
         {
-          momento: "07. Seguimiento y recompra",
+          momento: "07. Recordatorios de fundición",
           descripcion:
-            "Recordatorios automáticos antes de que terminen obras activas, seguimiento de constructores sin actividad reciente y avisos de nuevas mezclas o promociones.",
+            "Alertas programadas antes de concluir fases de obra para asegurar el siguiente vaciado de hormigón con Horminor.",
         },
         {
-          momento: "08. Tablero comercial",
+          momento: "08. Tablero de control regional",
           descripcion:
-            "Julio ve en tiempo real: constructores activos, oportunidades abiertas, volumen en negociación y zonas de mayor demanda para tomar decisiones con datos.",
+            "Supervisión en tiempo real de oportunidades por provincia, volumen cotizado y efectividad de canales comerciales.",
         },
       ],
     },
@@ -115,203 +117,326 @@ export default function HorminorCotizacionPage() {
       filas: [
         {
           antes:
-            "Un constructor busca hormigón en Google y no encuentra a Horminor — llama a Hormix o a quien aparece primero.",
+            "Visibilidad limitada a recomendaciones en El Coca; contratistas de otras zonas no encuentran a Horminor.",
           despues:
-            "Horminor aparece primero con ficha completa, reseñas y botón de WhatsApp directo. El primer contacto lo gana Horminor.",
+            "Posicionamiento destacado en Google para búsquedas de hormigón en Orellana, Sucumbíos y áreas industriales.",
         },
         {
           antes:
-            "Julio tiene que atender mensajes, dar precios, hacer proformas y hacer seguimiento personalmente — sin poder desconectarse.",
+            "Cotizaciones dependientes del teléfono de Julio; consultas nocturnas o de fin de semana sin respuesta.",
           despues:
-            "El asistente cotiza, responde y registra 24/7. Julio recibe solo los cierres de volumen que necesitan negociación directa.",
+            "Asistente WhatsApp 24/7 que informa resistencias (PSI), toma ubicación de obra y emite proformas al instante.",
         },
         {
           antes:
-            "No hay registro ordenado de constructores: se desconoce quién compró, cuándo fue el último pedido ni quién está en obra activa.",
+            "Contactos de ~100 constructores dispersos en celulares personales sin historial ni seguimiento de obras.",
           despues:
-            "CRM con la cartera completa de constructores: historial, obras activas, volumen y recordatorios automáticos de seguimiento.",
+            "CRM centralizado que registra empresa, proyecto, provincia, volumen y fechas clave de recompra.",
+        },
+        {
+          antes:
+            "Julio atrapado en la operativa de dar precios de referencia en lugar de cerrar contratos grandes.",
+          despues:
+            "Recepción de expedientes cualificados de alto volumen y visualización en tiempo real del mapa de ventas.",
         },
       ],
     },
     etapas: [
       {
         numero: "01",
-        etiqueta_tiempo: "FASE 1 · IMPLEMENTACIÓN Y PUESTA EN MARCHA",
-        nombre: "CRM + Asistente WhatsApp + Captación Local",
+        etiqueta_tiempo: "COMPONENTE 01 (MVP BASE) · ATENCIÓN Y CAPTACIÓN REGIONAL",
+        nombre: "CRM Comercial, Asistente WhatsApp API y Captación Regional",
         eslogan:
-          '"Una cartera de constructores a la que puedas venderle muchas veces, sin que eso dependa de tu disponibilidad."',
-        precio: "Desde US$ 2.500",
-        precio_subtitulo: "Inversión única · CRM, Agente y Captación Local",
+          '"Una cartera de constructores regional a la que le vendes de forma recurrente, sin depender de tu disponibilidad diaria."',
+        precio: "$2.500 USD",
+        precio_subtitulo: "Inversión única de implementación · Esquema 50% inicio / 50% entrega",
         descripcion:
-          "Puesta en marcha del asistente de ventas en WhatsApp (API oficial de Meta), presencia local optimizada en Google y CRM comercial que se arma solo desde el primer contacto. Incluye proformas automáticas, seguimiento de constructores activos, traspaso con historial a Julio o su equipo y panel de control comercial.",
+          "Infraestructura comercial clave para Horminor. Conecta la API oficial de Meta (WhatsApp Business Platform) con un asistente capacitado para cotizar hormigón por zona, captación optimizada en Google para Orellana y Sucumbíos, y un CRM propio.",
         entregables: [
           {
-            nombre: "CRM comercial automático",
+            nombre: "Asistente de ventas WhatsApp Business Platform 24/7",
             descripcion:
-              "Se arma solo desde el primer chat: registra empresa, obra, volumen estimado, fecha y estado de cada interacción en base de datos propia de Horminor.",
-            icono: "file",
-          },
-          {
-            nombre: "Asistente de ventas WhatsApp 24/7",
-            descripcion:
-              "Atiende, informa precios de referencia, resistencias disponibles y tiempos de entrega — día y noche vía WhatsApp Business Platform oficial.",
+              "Atiende en canal verificado oficial con respuestas sobre resistencias (PSI), tiempos de despacho y cobertura geográfica.",
             icono: "whatsapp",
           },
           {
-            nombre: "Traspaso con historial completo",
+            nombre: "Generación automática de proformas estándar",
             descripcion:
-              "Bandeja de atención donde Julio o su equipo retoma cualquier conversación con todo el contexto: empresa, pedido y lo conversado.",
+              "Calcula y emite cotizaciones inmediatas según volumen y ubicación de obra sin requerir intervención manual.",
+            icono: "file",
+          },
+          {
+            nombre: "CRM comercial automático multiprovincial",
+            descripcion:
+              "Construye automáticamente la base de datos de constructores organizados por cantón y provincia (Orellana y Sucumbíos).",
             icono: "layers",
           },
           {
-            nombre: "Seguimiento y recordatorios de recompra",
+            nombre: "Traspaso con historial para cierres de volumen",
             descripcion:
-              "Avisos automáticos a constructores con obras activas, seguimiento de prospectos sin respuesta y recordatorios de fin de obra para nuevo pedido.",
+              "Bandeja de atención directa donde Julio retoma negociaciones de alto volumen con todo el expediente previo listo.",
             icono: "rocket",
           },
           {
-            nombre: "Presencia local en Google",
+            nombre: "Presencia regional en Google Business Profile",
             descripcion:
-              "Ficha de Google Business Profile optimizada con horarios, fotos, servicios y gestión de reseñas para aparecer primero en búsquedas locales de hormigón en Orellana.",
+              "Fichas optimizadas con fotos, resistencias y servicios para captar búsquedas de hormigón en Orellana y Sucumbíos.",
             icono: "sparkles",
           },
           {
-            nombre: "Panel de control comercial",
+            nombre: "Panel de control directivo con métricas regionales",
             descripcion:
-              "Dashboard con constructores activos, oportunidades abiertas, volumen en negociación y zonas de demanda — en entorno 100% propio de Horminor.",
+              "Dashboard con oportunidades abiertas, zonas de mayor demanda, volumen cotizado y efectividad de canales.",
             icono: "shield",
           },
         ],
         nota_especial:
-          "Mantenimiento técnico anual opcional: US$ 290/año (actualizaciones de seguridad, monitoreo de disponibilidad, respaldos periódicos y soporte técnico directo vía WhatsApp). Consumo de WhatsApp (Meta): facturado directo a Meta.",
+          "Datos 100% en propiedad exclusiva de Horminor. API oficial de Meta verificada sin riesgo de bloqueo. Esquema de pago: 50% al inicio y 50% contra entrega probada.",
         detalles_pie: [
-          "🏗️ <strong>Datos comerciales:</strong> 100% en entorno y propiedad de Horminor",
-          "📱 <strong>WhatsApp Oficial:</strong> API Meta verificada — sin conexiones no autorizadas",
-          "📍 <strong>Captación local:</strong> Optimizado para búsquedas en El Coca y Orellana",
+          "🛡️ <strong>Propiedad de datos:</strong> Base centralizada exclusiva de Horminor",
+          "📱 <strong>WhatsApp Oficial:</strong> API de Meta verificada sin riesgo de suspensión",
+          "💳 <strong>Modalidad de pago:</strong> 50% anticipo / 50% contra entrega probada",
         ],
       },
       {
         numero: "02",
-        etiqueta_tiempo: "FASE 2 · PRESENCIA WEB PROFESIONAL",
-        nombre: "Sitio Web Comercial — hasta 8 páginas",
+        etiqueta_tiempo: "COMPONENTE 02 (FASE 2 / ANEXO ESTRATÉGICO) · VITRINA MULTIPROVINCIAL",
+        nombre: "Sitio Web Comercial con SEO Multiprovincial",
         eslogan:
-          '"Tu empresa visible en internet — no solo en el recuerdo de quien ya te conoce."',
-        precio: "US$ 500",
-        precio_subtitulo: "Inversión única · Sitio web hasta 8 páginas",
+          '"Tu empresa visible con imagen corporativa de alto nivel en todo el norte amazónico."',
+        precio: "$500 USD",
+        precio_subtitulo: "Inversión única · Sitio web corporativo hasta 8 páginas",
         descripcion:
-          "Sitio web profesional de hasta 8 páginas para Horminor: quiénes somos, productos y resistencias disponibles, zona de cobertura, contacto y formulario directo a WhatsApp. Integrado con el CRM y el asistente de Fase 1 para que cada visita al sitio se convierta en una conversación.",
+          "Desarrollo del sitio web corporativo de hasta 8 páginas con arquitectura orientada a posicionar los servicios de Horminor en múltiples provincias y captar grandes contratistas petroleros.",
         entregables: [
-          "Sitio web profesional de hasta 8 páginas (inicio, productos, cobertura, contacto, etc.)",
-          "Catálogo de mezclas y resistencias disponibles con especificaciones técnicas",
-          "Integración directa con CRM y asistente WhatsApp de Fase 1",
-          "Formulario de contacto que llega al asistente y registra en el CRM",
-          "Diseño adaptado a móvil y escritorio — optimizado para carga rápida",
-          "Dominio y hosting configurado en entorno de Horminor",
+          {
+            nombre: "Portal web corporativo de hasta 8 secciones",
+            descripcion:
+              "Diseño industrial optimizado para teléfonos móviles y carga rápida en zonas de conexión limitada.",
+            icono: "rocket",
+          },
+          {
+            nombre: "Páginas optimizadas para SEO por cantones clave",
+            descripcion:
+              "Estructura técnica para posicionamiento en El Coca, Shushufindi, Joya de los Sachas y Lago Agrio.",
+            icono: "sparkles",
+          },
+          {
+            nombre: "Catálogo técnico de mezclas y resistencias (PSI)",
+            descripcion:
+              "Presentación de tipos de hormigón, aditivos, servicios de bombeo y fichas técnicas descargables.",
+            icono: "layers",
+          },
+          {
+            nombre: "Infraestructura de planta y certificaciones",
+            descripcion:
+              "Sección institucional con fotografías de silos, mixers, laboratorio de calidad y respaldo técnico.",
+            icono: "shield",
+          },
+          {
+            nombre: "Formularios directos conectados al CRM",
+            descripcion:
+              "Formularios de cotización en línea que ingresan automáticamente al asistente de WhatsApp y al CRM.",
+            icono: "whatsapp",
+          },
         ],
         nota_especial:
-          "No incluye tienda online ni pasarela de pagos — el cierre de ventas ocurre por WhatsApp con el asistente de Fase 1.",
+          "Plazo de desarrollo: 30 días tras recibir insumos técnicos. Garantía técnica de 12 meses sobre el código. Ejecución independiente previa confirmación de Julio.",
         detalles_pie: [
-          "🌐 <strong>Hasta 8 páginas:</strong> Inicio, productos, cobertura, contacto y más",
-          "🔗 <strong>Integrado:</strong> Conectado al CRM y asistente desde el primer día",
-          "📱 <strong>Responsive:</strong> Optimizado para móvil y escritorio",
+          "⏱️ <strong>Plazo de entrega:</strong> 30 días tras entrega de insumos",
+          "🛠️ <strong>Garantía:</strong> 12 meses de cobertura sobre el código",
+          "🤝 <strong>Independiente:</strong> Ejecución tras consolidar el MVP",
         ],
       },
       {
         numero: "03",
-        etiqueta_tiempo: "FASE 3 · POSICIONAMIENTO Y REDES SOCIALES",
-        nombre: "SEO + Publicaciones Google + Facebook & Instagram",
+        etiqueta_tiempo: "COMPONENTE 03 (FASE 3 / ANEXO ESTRATÉGICO) · POSICIONAMIENTO CONTINUO",
+        nombre: "Posicionamiento SEO Continuo y Redes Sociales",
         eslogan:
-          '"Que cuando busquen hormigón en El Coca, Horminor aparezca primero — todos los meses."',
-        precio: "US$ 250/mes",
-        precio_subtitulo: "Servicio mensual · SEO + Redes Sociales FB & IG",
+          '"Que cuando busquen hormigón en Orellana o Sucumbíos, Horminor aparezca siempre en primer lugar."',
+        precio: "$250 USD / mes",
+        precio_subtitulo: "Servicio mensual · SEO B2B + Redes Sociales FB & IG",
         descripcion:
-          "Posicionamiento continuo en Google con investigación de palabras clave, publicaciones mensuales en Google Business Profile y gestión de redes sociales en Facebook e Instagram. Cada mes Horminor aparece más arriba en las búsquedas locales y construye presencia de marca activa frente a constructores y empresas de la zona.",
+          "Servicio mensual de posicionamiento orgánico (SEO) y gestión de contenidos en Facebook e Instagram para sostener el liderazgo industrial frente a competidores locales.",
         entregables: [
-          "Investigación mensual de palabras clave: búsquedas de hormigón en Orellana y zonas de influencia",
-          "Publicaciones en Google Business Profile (noticias, fotos, ofertas, actualizaciones)",
-          "Gestión de Facebook e Instagram: contenido mensual, publicaciones y respuesta a comentarios",
-          "Reporte mensual de posicionamiento: posiciones en Google, visitas y alcance en redes",
-          "Gestión y respuesta a reseñas de Google para mantener reputación activa",
-          "Estrategia de contenido orientada a constructores, contratistas y empresas de obras",
+          {
+            nombre: "SEO mensual para construcción e infraestructura regional",
+            descripcion:
+              "Optimización continua de palabras clave enfocadas en contratistas, obras civiles y sector petrolero.",
+            icono: "rocket",
+          },
+          {
+            nombre: "Publicación de contenidos industriales en FB e IG",
+            descripcion:
+              "Gestión de presencia de marca con publicaciones técnicas, proyectos fundidos y actividad de planta.",
+            icono: "sparkles",
+          },
+          {
+            nombre: "Gestión y actualización de reseñas en Google",
+            descripcion:
+              "Monitoreo de reputación y respuesta a comentarios en la ficha regional de Google Business Profile.",
+            icono: "shield",
+          },
+          {
+            nombre: "Reportes mensuales de rendimiento y conversiones",
+            descripcion:
+              "Informe transparente con posiciones en Google, visitas recibidas y prospectos captados.",
+            icono: "file",
+          },
         ],
         nota_especial:
-          "El posicionamiento orgánico es acumulativo: los primeros 3 meses sientan la base; a partir del cuarto mes los resultados son visibles y consistentes.",
+          "Contratación mensual sin permanencia forzada. Enfoque exclusivo en captación de constructores B2B con informes transparentes.",
         detalles_pie: [
-          "📍 <strong>SEO local:</strong> Palabras clave de hormigón en El Coca y Orellana",
-          "📲 <strong>Redes sociales:</strong> Facebook e Instagram activos cada mes",
-          "📊 <strong>Reporte mensual:</strong> Transparencia total de resultados",
+          "📈 <strong>Sin permanencia:</strong> Flexibilidad de renovación mensual",
+          "🎯 <strong>Enfoque B2B:</strong> Orientado a contratistas e ingenieros",
+          "📊 <strong>Métricas claras:</strong> Reporte periódico de posiciones y prospectos",
+        ],
+      },
+      {
+        numero: "04",
+        etiqueta_tiempo: "COMPONENTE 04 · CONTINUIDAD Y SOPORTE ANUAL",
+        nombre: "Mantenimiento Técnico y Soporte Anual",
+        eslogan:
+          '"Infraestructura comercial protegida, respaldada y operativa sin interrupciones."',
+        precio: "$290 USD / año",
+        precio_subtitulo: "Servicio anual a partir del mes 13 · Soporte preventivo y correctivo",
+        descripcion:
+          "Cobertura técnica anual a partir del segundo año para garantizar el funcionamiento continuo de los servidores, actualizaciones de la API de Meta y copias de seguridad de la cartera.",
+        entregables: [
+          {
+            nombre: "Monitoreo continuo y conectividad de WhatsApp",
+            descripcion:
+              "Supervisión de disponibilidad y actualización de conectores con WhatsApp Business Platform.",
+            icono: "whatsapp",
+          },
+          {
+            nombre: "Respaldos periódicos cifrados de la base de clientes",
+            descripcion:
+              "Copias de seguridad automáticas de toda la cartera comercial e historial de cotizaciones.",
+            icono: "shield",
+          },
+          {
+            nombre: "Actualizaciones de seguridad en servidores",
+            descripcion:
+              "Parches de seguridad y mantenimiento de infraestructura para prevenir caídas de servicio.",
+            icono: "layers",
+          },
+          {
+            nombre: "Soporte técnico directo vía WhatsApp",
+            descripcion:
+              "Atención preferencial y directa con el equipo técnico ante cualquier consulta o incidencia.",
+            icono: "rocket",
+          },
+        ],
+        nota_especial:
+          "Encriptación y resguardo seguro de información. Atención directa con el equipo del Ing. César Reyes Jaramillo. Renovación anual a partir del mes 13.",
+        detalles_pie: [
+          "🔒 <strong>Seguridad:</strong> Encriptación y resguardo seguro de información",
+          "📲 <strong>Soporte directo:</strong> Atención prioritaria sin intermediarios",
+          "📋 <strong>Renovación:</strong> Facturación anual a partir del mes 13",
         ],
       },
     ],
     participantes: {
       titulo: "Por qué funciona para Horminor",
       subtitulo:
-        "Un sistema diseñado para el mercado industrial y de construcción — no adaptado de otro rubro.",
+        "Infraestructura diseñada para el sector industrial y de construcción de la Amazonía Norte.",
       grupos: [
         {
-          rol: "Datos comerciales 100% de Horminor",
-          subtitulo: "La cartera de constructores es un activo, no un contacto en el celular",
+          rol: "01. Propiedad total de la cartera",
+          subtitulo: "Activo exclusivo de la empresa",
           beneficios: [
-            "CRM, cuentas y código en el entorno de Horminor — no en servidores de terceros.",
-            "Datos exportables en formatos estándar en cualquier momento.",
-            "Posibilidad de migración a servidores propios en el futuro.",
-            "Custodia del código con cláusulas de liberación ante incumplimiento del soporte.",
+            "La base de datos de constructores de Orellana y Sucumbíos pertenece 100% a Horminor.",
+            "Historial de proformas y chats centralizados; nada queda en teléfonos privados de empleados.",
+            "Exportación completa de datos en formatos estándar en cualquier momento.",
           ],
         },
         {
-          rol: "Velocidad de respuesta como ventaja competitiva",
-          subtitulo: "El pedido lo gana quien responde primero",
+          rol: "02. Estabilidad con WhatsApp API Oficial",
+          subtitulo: "Canal corporativo verificado por Meta",
           beneficios: [
-            "Respuesta inmediata 24/7 — el asistente no descansa ni los fines de semana.",
-            "Proformas automáticas para pedidos estándar sin esperar a Julio.",
-            "Clasificación inteligente: Julio recibe solo las negociaciones que requieren su criterio.",
-            "Historial completo de cada conversación para retomar sin repetir preguntas.",
+            "Conexión oficial autorizada sin riesgo de suspensiones o bloqueos de línea.",
+            "Horminor factura directamente sus consumos a Meta con total transparencia.",
+            "Bandeja compartida para atención simultánea en momentos de alta demanda.",
           ],
         },
         {
-          rol: "Captación antes de que se igualen los competidores",
-          subtitulo: "La ventana de oportunidad es hoy",
+          rol: "03. Julio libre para cerrar contratos",
+          subtitulo: "Enfoque en clientes de gran envergadura",
           beneficios: [
-            "Hormix y Hormigonera Orellana no tienen este sistema todavía.",
-            "Primero en Google + primero en responder = primero en la cabeza del constructor.",
-            "Reseñas y reputación digital construidas desde el inicio, no cuando el mercado ya se saturó.",
-            "Cada mes sin presencia digital es terreno cedido a quienes sí la tienen.",
+            "El asistente absorbe cotizaciones repetitivas y precios de referencia.",
+            "Julio y su equipo se enfocan en logística y cierres de gran volumen.",
+            "Historial previo completo en cada chat para no hacer repetir al contratista.",
           ],
         },
         {
-          rol: "API oficial de WhatsApp Business Platform",
-          subtitulo: "Sin riesgo de bloqueo ni conexiones no autorizadas",
+          rol: "04. Escalabilidad regional",
+          subtitulo: "Arquitectura flexible preparada para crecer",
           beneficios: [
-            "Cuenta verificada de Horminor — sin riesgo de bloqueo por apps no oficiales.",
-            "Horminor factura sus consumos directamente a Meta.",
-            "Número propio de la empresa: no depende del celular personal de Julio.",
-            "Bandeja compartida: Julio y su equipo ven y atienden desde el mismo número.",
+            "Integración de nuevos cantones o acopios sin necesidad de rehacer el sistema.",
+            "Soporte para incorporar nuevas fórmulas de hormigón y servicios de bombeo.",
+            "Preparado para absorber picos de cotización durante licitaciones o megaproyectos.",
           ],
         },
       ],
     },
     ir_mas_alla: {
       titulo: "Plazos, requisitos y condiciones generales",
-      subtitulo: "Próximos pasos",
+      subtitulo: "Próximos pasos para el inicio del proyecto",
       parrafos: [
-        "La Fase 1 se entrega en un mes. Para arrancar se necesita en los primeros cinco días hábiles: documentación para verificación de Meta, listado de precios y resistencias de referencia, zona de cobertura de despacho y contacto técnico.",
-        "La propuesta es confidencial para evaluación interna. Las condiciones finales (SLA, licencias, exclusividad, custodia de código) se formalizan en contrato.",
+        "El Componente 01 (MVP Base) se entrega en 30 días tras la entrega de requisitos iniciales: documentación para verificación de Meta, tabla de resistencias (PSI), precios de referencia por zona y contacto técnico.",
+        "Un sistema comercial bien construido no reemplaza al gerente: le devuelve el tiempo para hacer lo que solo él puede hacer — cerrar contratos.",
+        "La propuesta es confidencial para evaluación interna de Horminor. Las condiciones finales (SLA, licencias y soporte) se formalizan en contrato de servicios.",
+      ],
+    },
+    modalidades: {
+      titulo: "Estructura de inversión y plan de contratación",
+      subtitulo: "Implementación modular por componentes de valor",
+      opciones: [
+        {
+          nombre: "Componente 01 (MVP Base): CRM, Asistente WhatsApp y Captación Regional",
+          descripcion:
+            "Asistente WhatsApp 24/7 con API oficial de Meta, proformas automáticas, CRM comercial multiprovincial y presencia regional en Google.",
+          precio: "$2.500 USD",
+          detalle_precio: "Inversión única · 50% al inicio y 50% contra entrega probada",
+        },
+        {
+          nombre: "Componente 02 (Fase 2): Sitio Web Comercial SEO Multiprovincial",
+          descripcion:
+            "Sitio web de hasta 8 páginas con catálogo de mezclas (PSI), páginas SEO por cantón (El Coca, Shushufindi, Lago Agrio) y formularios conectados al CRM.",
+          precio: "$500 USD",
+          detalle_precio: "Inversión única · Plazo de 30 días tras insumos técnicos",
+        },
+        {
+          nombre: "Componente 03 (Fase 3): Posicionamiento SEO Continuo y Redes B2B",
+          descripcion:
+            "Posicionamiento SEO mensual enfocado en construcción e infraestructura regional, y gestión de contenidos en Facebook e Instagram.",
+          precio: "$250 USD / mes",
+          detalle_precio: "Servicio mensual sin permanencia forzada",
+        },
+        {
+          nombre: "Componente 04: Mantenimiento Técnico y Soporte Anual",
+          descripcion:
+            "Monitoreo de API de Meta, respaldos periódicos cifrados, actualizaciones de seguridad y soporte técnico directo vía WhatsApp.",
+          precio: "$290 USD / año",
+          detalle_precio: "Servicio anual a partir del mes 13",
+        },
       ],
     },
     cierre: {
       titulo: "Reunión de 30 minutos para revisar impresiones",
       frase_bisagra:
-        "Antes de la reunión, puedes probar el asistente desde tu celular y ver cómo responde un prospecto real.",
+        "Un sistema comercial bien construido no reemplaza al gerente: le devuelve el tiempo para hacer lo que solo él puede hacer — cerrar contratos.",
       texto: `
         <p class="text-base text-slate-700 font-light mb-4">
-          Estimado <strong>Julio Villavicencio</strong>: proponemos una sesión de 30 minutos para revisar sus impresiones del demo, responder preguntas y definir los criterios de aceptación de la Fase 1.
+          Estimado <strong>Julio Villavicencio</strong>: proponemos una sesión de 30 minutos para revisar sus impresiones del demo, definir la cobertura geográfica inicial y acordar los criterios de aceptación del MVP.
         </p>
         <div class="my-5 p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30">
           <p class="font-outfit text-sm uppercase tracking-wider text-slate-900 font-bold mb-2">
             📲 Demo activo por 15 días
           </p>
           <p class="text-sm text-slate-700 font-light leading-relaxed mb-4">
-            El entorno de prueba usa datos de muestra. Puedes enviar cualquier mensaje como si fueras un constructor buscando hormigón.
+            El entorno de prueba utiliza datos de muestra. Puedes interactuar como si fueras un contratista solicitando volumen de hormigón y cotizaciones para una obra.
           </p>
           <div style="margin-bottom:16px;">
             <a 
@@ -337,48 +462,47 @@ export default function HorminorCotizacionPage() {
           Agenda de la reunión:
         </p>
         <ul class="space-y-2 text-sm text-slate-600 list-disc pl-5">
-          <li>Impresiones del demo en WhatsApp.</li>
-          <li>Zona de cobertura y precios de referencia para configurar el asistente.</li>
-          <li>Documentación para verificación de API oficial con Meta.</li>
+          <li>Validación del asistente de WhatsApp y flujo de proformas.</li>
+          <li>Zonas de cobertura de despacho y precios de referencia (Orellana y Sucumbíos).</li>
+          <li>Documentación para verificación de la cuenta oficial con Meta.</li>
           <li>Métricas clave del tablero comercial inicial.</li>
-          <li>Cronograma técnico de implementación.</li>
+          <li>Cronograma técnico de implementación del MVP.</li>
         </ul>
       `,
       bloque_derecha: {
         titulo: "Compromiso con Horminor",
-        subtitulo: "Infraestructura comercial para el mercado de construcción en Orellana",
+        subtitulo: "Infraestructura comercial para liderar la Amazonía Norte",
         cards: [
           {
-            titulo: "Un trabajador digital que no descansa",
+            titulo: "Atención comercial regional 24/7",
             texto:
-              "El asistente atiende y cotiza 24/7, incluso los domingos a las 11 PM cuando un constructor está planificando la semana.",
+              "El asistente cotiza y atiende a contratistas a cualquier hora, asegurando que ninguna obra se pierda por demoras.",
           },
           {
-            titulo: "La cartera como activo comercial",
+            titulo: "La cartera de clientes como activo",
             texto:
-              "100 constructores en el CRM no es una lista de contactos: es inteligencia comercial — quién compra, cuándo y cuánto.",
+              "Consolidación de contratistas de Orellana y Sucumbíos en un CRM propio con trazabilidad de volumen y proyectos.",
           },
           {
-            titulo: "Aprovechar antes de que se igualen",
+            titulo: "Liderazgo antes de que se igualen",
             texto:
-              "El mercado de hormigón en Orellana aún no tiene este nivel de infraestructura digital. La ventana para liderar es hoy.",
+              "Posicionamiento en los primeros lugares de Google en la región antes de que las plantas competidoras modernicen su captación.",
           },
         ],
       },
       mapa_url: "https://maps.app.goo.gl/4z9Qc5CJZ5kZ5kZ5A",
       mapa_embed_url:
         "https://maps.google.com/maps?q=El+Coca+Orellana+Ecuador&hl=es&z=14&t=&ie=UTF8&iwloc=B&output=embed",
-      cta_texto: "Coordinar reunión por WhatsApp",
+      cta_texto: "Coordinar inicio del MVP por WhatsApp",
       cta_url:
-        "https://wa.me/593984180497?text=Estimado%20Ing.%20C%C3%A9sar%20Reyes%2C%20he%20revisado%20la%20propuesta%20para%20Horminor%20y%20me%20gustar%C3%ADa%20coordinar%20la%20reuni%C3%B3n%20de%2030%20minutos.",
+        "https://wa.me/593984180497?text=Estimado%20Ing.%20C%C3%A9sar%20Reyes%2C%20he%20revisado%20la%20propuesta%20regional%20para%20Horminor%20y%20me%20gustar%C3%ADa%20coordinar%20el%20inicio%20de%20la%20Fase%201.",
       pie_texto:
-        "Documento confidencial — evaluación interna · Vigencia 15 días desde su emisión.",
+        "Propuesta comercial confidencial · Ing. César Reyes Jaramillo · Orellana y Sucumbíos",
       frase_final:
-        "Un sistema comercial bien construido no reemplaza al gerente: <span>le devuelve el tiempo para hacer lo que solo él puede hacer — cerrar contratos.</span>",
+        "Quedo a su entera disposición para revisar los criterios de aceptación del MVP, definir la cobertura geográfica inicial y <span>dar comienzo a la Fase 1.</span>",
     },
-    validez: "Propuesta comercial · Noviembre 2026 · Vigencia 15 días",
+    validez: "Propuesta comercial regional · Noviembre 2026 · Vigencia 15 días",
   };
 
   return <CotizacionViewer data={data} />;
 }
-

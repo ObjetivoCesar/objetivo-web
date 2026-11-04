@@ -709,3 +709,27 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
 | `app/cotizaciones/motos-y-motos/page.tsx` | **Modificado** — Actualización integral de contenidos, etapas y flujos |
 | `public/images/og-motos-y-motos.jpg` | **Modificado** — Estandarizada a Baseline JPEG |
 | `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
+
+---
+
+## Actualización de Cotización Privada: Horminor — Enfoque Regional Multiprovincial (2026-11-04)
+
+### ¿Qué se implementó?
+- Actualización de la propuesta en `/cotizaciones/horminor` dirigida a **Julio Villavicencio — Gerente General, Horminor (El Coca, Orellana)**.
+- **Enfoque Regional**: De planta local a referente industrial regional (Orellana, Sucumbíos y Amazonía Norte). Captación para constructoras e industria petrolera.
+- **Flujo Operativo (8 pasos)**: Posicionamiento en Google para Orellana y Sucumbíos, consulta de ubicación y resistencia (PSI), proformas automáticas para volumen estándar, pase a Julio para cierres industriales y CRM con cartera de constructores por provincia.
+- **Estructura de Componentes**:
+  - **Componente 01 (MVP Base)**: $2.500 USD — CRM Comercial, Asistente WhatsApp API y Captación Regional (50% anticipo / 50% entrega).
+  - **Componente 02 (Fase 2 / Anexo Estratégico)**: $500 USD — Sitio Web Comercial con SEO Multiprovincial (hasta 8 páginas, El Coca, Shushufindi, Lago Agrio).
+  - **Componente 03 (Fase 3 / Anexo Estratégico)**: $250 USD / mes — Posicionamiento SEO Continuo y Redes B2B (Facebook e Instagram).
+  - **Componente 04**: $290 USD / año — Mantenimiento Técnico, Seguridad y Soporte Anual (a partir del mes 13).
+- **Imagen OG**: `og-horminor.jpg` mantenida en Baseline JPEG estricto (125 KB) con directivas `robots: { index: false, follow: true, nocache: true }`.
+
+### Archivos creados/modificados
+
+| Archivo | Acción |
+|---|---|
+| `app/cotizaciones/horminor/page.tsx` | **Modificado** — Actualización con enfoque multiprovincial y 4 componentes |
+| `public/images/og-horminor.jpg` | **Existente** — OG image 1200×630px Baseline JPEG |
+| `public/images/horminor-fondo-movil.jpg` | **Existente** — Fondo hero móvil JPG Baseline |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
