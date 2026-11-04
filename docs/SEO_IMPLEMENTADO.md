@@ -660,3 +660,27 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
 
 
 
+
+---
+
+## Creación de Cotización Privada: Mayra Castillo (2026-11-04)
+
+### ¿Qué se implementó?
+- Nueva página de propuesta privada en `/cotizaciones/mayra-castillo` dirigida a **Mayra Castillo — Estudio Contable**.
+- Propuesta: **Sistema Automatizado de Gestión Contable** — Asistente WhatsApp 24/7 en número de oficina, expediente digital por cliente (bóveda digital de documentos/claves SRI/IESS/Supercias), guardado y envío automático sin intermediación de Mayra, proyecciones de Impuesto a la Renta, plantilla para Notas a Estados Financieros (Abril), módulo de cobranza persistente y reporte de cartera para su esposo.
+- Fases y Precios:
+  - **Fase 1**: "Desde US$ 2.500" (Frontend + Backend + Asistente WhatsApp 24/7 + Bóveda Digital + Flujos Contables + Cobranzas con reporte al esposo, en cuotas cómodas mientras recupera cartera).
+  - **Fase 2**: Página web con catálogo oficial de servicios y tarifas claras (**Incluido**).
+- OG/Hero WhatsApp:
+  - Imagen OG `public/images/og-mayra-castillo.jpg`: 1200×630px, JPG Baseline estricto, 40.6 KB (< 300 KB), URL absoluta HTTPS.
+  - Fondo móvil `public/images/mayra-castillo-fondo-movil.jpg`: vertical original, JPG Baseline, 26.2 KB.
+- `robots: { index: false, follow: true, nocache: true }` — cumple estrictamente AGENTS.md para asegurar previsualización en WhatsApp y Meta crawlers.
+
+### Archivos creados/modificados
+
+| Archivo | Acción |
+|---|---|
+| `app/cotizaciones/mayra-castillo/page.tsx` | **Creado** — Página de propuesta para Mayra Castillo |
+| `public/images/og-mayra-castillo.jpg` | **Creado** — OG image 1200×630px Baseline JPEG, 40.6 KB |
+| `public/images/mayra-castillo-fondo-movil.jpg` | **Creado** — Fondo hero móvil JPG Baseline, 26.2 KB |
+| `docs/SEO_IMPLEMENTADO.md` | **Modificado** — Registro histórico según AGENTS.md |
