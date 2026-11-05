@@ -4,11 +4,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Propuesta de Sistema Integral — Motos y Motos",
   description:
-    "De cada consulta a una atención organizada y un seguimiento comercial continuo: catálogo digital de hasta 200 motos, agente de WhatsApp con derivación a 5 sucursales, CRM y postventa.",
+    "De cada consulta a una atención organizada y un seguimiento comercial continuo: catálogo digital de hasta 200 motos, agente de WhatsApp con atención directa, CRM y postventa.",
   openGraph: {
     title: "Sistema Integral de Ventas y Fidelización — Motos y Motos × César Reyes",
     description:
-      "Plataforma modular para centralizar consultas, derivar por sucursal más cercana y automatizar mantenimientos y garantías en Loja, Saraguro, Vilcabamba y Palanda.",
+      "Plataforma modular para centralizar consultas, brindar atención inmediata y automatizar mantenimientos y garantías en Loja.",
     url: "https://www.cesarreyesjaramillo.com/cotizaciones/motos-y-motos",
     siteName: "César Reyes Jaramillo",
     type: "website",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sistema Integral de Ventas y Fidelización — Motos y Motos",
     description:
-      "Catálogo digital de vehículos, enrutamiento a sucursales por WhatsApp y CRM de postventa.",
+      "Catálogo digital de vehículos, atención por WhatsApp y CRM de postventa.",
     images: ["https://www.cesarreyesjaramillo.com/images/og-motos-y-motos.jpg"],
   },
   robots: {
@@ -46,7 +46,7 @@ export default function MotosYMotosCotizacionPage() {
       titulo_principal: "De cada consulta a una atención organizada y un",
       titulo_destacado: "seguimiento comercial continuo.",
       subtitulo:
-        "Plataforma modular diseñada para transformar cada consulta de WhatsApp en un cliente registrado, automatizar la postventa en sus 5 sucursales, facilitar la gestión comercial y liberar tiempo para actividades de mayor valor.",
+        "Plataforma modular diseñada para transformar cada consulta de WhatsApp en un cliente registrado, automatizar la postventa de la empresa, facilitar la gestión comercial y liberar tiempo para actividades de mayor valor.",
       preparado_para: "Sra. Marcela Guzmán — Motos y Motos",
       preparado_por: "Ing. César Augusto Reyes Jaramillo · Estrategia y Sistemas",
       fecha: "Loja, Ecuador · Noviembre de 2026",
@@ -66,7 +66,7 @@ export default function MotosYMotosCotizacionPage() {
       parrafos: [
         "Durante más de dos décadas, Motos y Motos ha liderado el mercado con múltiples sucursales en Loja, Vilcabamba, Palanda y Saraguro. La atención comercial se ha desarrollado a través de los distintos canales y la experiencia de su equipo. Como se concluyó en la reunión, proponemos iniciar con un MVP listo y funcional para la venta de motos, y a partir de ese núcleo extender ordenadamente la plataforma hacia el resto de líneas comerciales y las demás sucursales.",
         "Este sistema trabajará las 24 horas del día, los 7 días de la semana, lo que equivale a la capacidad de un equipo de 3 personas respondiendo y filtrando consultas de forma permanente. Con esta disponibilidad continua, la empresa ganará una notable eficiencia operativa y potenciará sus ventas en remoto, asegurando que ningún cliente interesado quede sin atención sin importar la hora o el cantón desde el que escriba.",
-        "Un sistema contable tradicional administra la facturación, pero no la relación comercial ni las fotos de catálogo. Si los contactos se quedan en los celulares personales de los vendedores, el negocio pierde la memoria comercial, olvida los cambios de aceite y regala la recompra de repuestos y accesorios a la competencia. La estrategia para este MVP digitaliza la línea principal (~160 a 200 modelos de Daytona, Loncin, Factory, KTM, Suzuki), permite automatizar la postventa en sus 5 sucursales y entrega clientes interesados directamente al asesor más cercano.",
+        "Un sistema contable tradicional administra la facturación, pero no la relación comercial ni las fotos de catálogo. Si los contactos se quedan en los celulares personales de los vendedores, el negocio pierde la memoria comercial, olvida los cambios de aceite y regala la recompra de repuestos y accesorios a la competencia. La estrategia para este MVP digitaliza la línea principal (~160 a 200 modelos de Daytona, Loncin, Factory, KTM, Suzuki), permite automatizar la postventa de la empresa y entrega clientes interesados directamente al equipo de ventas.",
       ],
     },
     como_funciona: {
@@ -83,9 +83,9 @@ export default function MotosYMotosCotizacionPage() {
             "Mediante una selección sencilla de ciudad o cantón, sin necesidad de compartir la ubicación GPS (a través de botones directos en WhatsApp o lista desplegable), el cliente indica desde dónde escribe (Loja, Vilcabamba, Saraguro, Palanda, etc.).",
         },
         {
-          momento: "03. Enrutamiento directo al asesor de sucursal",
+          momento: "03. Enrutamiento directo al asesor comercial",
           descripcion:
-            "El sistema asigna la conversación al vendedor del local más cercano con la ficha lista (nombre, cantón y moto consultada) para que continúe la atención con toda la información necesaria.",
+            "El sistema asigna la conversación al vendedor con la ficha lista (nombre, cantón y moto consultada) para que continúe la atención con toda la información necesaria.",
         },
         {
           momento: "04. Alerta de seguimiento por demoras",
@@ -164,9 +164,9 @@ export default function MotosYMotosCotizacionPage() {
             icono: "whatsapp",
           },
           {
-            nombre: "Módulo de sucursales y geolocalización básica",
+            nombre: "Módulo de ubicación y geolocalización",
             descripcion:
-              "Datos de contacto, horarios y mapa de los locales (Loja 10 de Agosto, Terminal, Vilcabamba, Palanda y Saraguro).",
+              "Datos de contacto, horarios y mapa de la sucursal de Motos y Motos en Loja.",
             icono: "sparkles",
           },
           {
@@ -214,9 +214,9 @@ export default function MotosYMotosCotizacionPage() {
             icono: "file",
           },
           {
-            nombre: "Enrutamiento inteligente a 5 sucursales",
+            nombre: "Enrutamiento comercial inmediato",
             descripcion:
-              "Derivación al asesor de Terminal, 10 de Agosto, Vilcabamba, Palanda o Saraguro con expediente listo para el cierre.",
+              "Derivación al asesor de ventas con expediente completo listo para dar continuidad a la atención.",
             icono: "layers",
           },
           {
@@ -324,7 +324,7 @@ export default function MotosYMotosCotizacionPage() {
       subtitulo: "Caso de uso real en la región",
       parrafos: [
         "Imaginemos un sábado a las 8:30 PM. Un cliente en Valladolid busca una motocicleta Loncin o Daytona y escribe al WhatsApp de Motos y Motos. El asistente responde al instante, le presenta el catálogo digital y el usuario selecciona su cantón con un solo botón.",
-        "Al identificar la zona sur, el sistema crea la ficha en el CRM y asigna el expediente al asesor de la sucursal de Palanda. El lunes a primera hora, el vendedor retoma la conversación conociendo la moto exacta y la forma de pago, cerrando la venta sin hacerle repetir preguntas.",
+        "Al identificar la consulta, el sistema crea la ficha en el CRM y asigna el expediente al asesor de ventas. El lunes a primera hora, el vendedor retoma la conversación conociendo la moto exacta y la forma de pago, cerrando la venta sin hacerle repetir preguntas.",
         "Dos meses después, la plataforma le envía un aviso automático recordándole su primer cambio de aceite de garantía, asegurando que acuda al taller de la empresa y consolidando una relación comercial a largo plazo.",
       ],
     },
@@ -342,7 +342,7 @@ export default function MotosYMotosCotizacionPage() {
         {
           nombre: "Componente 02: Plataforma de Atención, CRM y Postventa",
           descripcion:
-            "Agente 24/7 con selección sencilla de cantón, enrutamiento a 5 sucursales, alertas por demoras de 2 horas y recordatorios automáticos de taller y cumpleaños.",
+            "Agente 24/7 con selección sencilla de cantón, enrutamiento a asesores, alertas por demoras de 2 horas y recordatorios automáticos de taller y cumpleaños.",
           precio: "$2.500 USD",
           detalle_precio: "Inversión única · Pagos vinculados a hitos de avance",
         },
@@ -364,7 +364,7 @@ export default function MotosYMotosCotizacionPage() {
           Estimada <strong>Sra. Marcela Guzmán</strong> y equipo de <strong>Motos y Motos</strong>:
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
-          Esta propuesta representa <strong>una oportunidad para agilizar la atención entre sucursales y fortalecer el seguimiento comercial: facilitar que cada consulta llegue al asesor correspondiente y reciba seguimiento oportuno, y activar el taller como una fuente constante de atención y fidelización</strong>.
+          Esta propuesta representa <strong>una oportunidad para agilizar la atención comercial y fortalecer el seguimiento: facilitar que cada consulta llegue al asesor correspondiente y reciba seguimiento oportuno, y activar el taller como una fuente constante de atención y fidelización</strong>.
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
           No venimos a cambiar lo que ya funciona ni a complicar a los vendedores. Venimos a darles una herramienta que apoya su gestión diaria y les entrega consultas con información previa para facilitar la atención del vendedor.
@@ -373,7 +373,7 @@ export default function MotosYMotosCotizacionPage() {
           <p class="font-outfit text-sm font-bold text-slate-900 mb-2">Puesta en marcha acordada para el MVP (Fase 1):</p>
           <ol class="space-y-2 text-sm text-slate-600 list-decimal pl-5">
             <li><strong>Recepción del material de catálogo:</strong> Carga de especificaciones y fotos de las 8 marcas (hasta 200 modelos).</li>
-            <li><strong>Configuración del enrutamiento por sucursal:</strong> Definición de números y asesores de Loja 10 de Agosto, Terminal, Vilcabamba, Palanda y Saraguro.</li>
+            <li><strong>Configuración del canal de WhatsApp y atención:</strong> Definición de números y asesores comerciales para la atención y seguimiento.</li>
             <li><strong>Demostración funcional en 45 días:</strong> Validación práctica del recorrido completo de consulta, asignación y alertas.</li>
             <li><strong>Capacitación al equipo y lanzamiento:</strong> Capacitar al equipo para gestionar conversaciones y registros de clientes y activación de las reglas de garantía.</li>
           </ol>

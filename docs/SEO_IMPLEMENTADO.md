@@ -852,3 +852,24 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
   - Reafirmación del acuerdo de reunión en la introducción: *"Como se concluyó en la reunión, proponemos iniciar con un MVP listo y funcional para la venta de motos, y a partir de ese núcleo extender ordenadamente la plataforma hacia el resto de líneas comerciales y las demás sucursales"*.
   - Incorporación del argumento de valor y rentabilidad: *"Este sistema trabajará las 24 horas del día, los 7 días de la semana, lo que equivale a la capacidad de un equipo de 3 personas respondiendo y filtrando consultas de forma permanente. Con esta disponibilidad continua, la empresa ganará una notable eficiencia operativa y potenciará sus ventas en remoto..."*.
   - Ratificación del beneficio de *"automatizar la postventa en sus 5 sucursales"* en subtítulo y cuerpo comercial.
+
+### Ajuste a 1 Sucursal para MVP: Motos y Motos (5 de Noviembre de 2026)
+- **Archivo modificado**: `app/cotizaciones/motos-y-motos/page.tsx`
+- **Cambios realizados**:
+  - Eliminación de todas las referencias a *"5 sucursales"* en metadatos, subtítulo, componentes de entregables, modalidades y cierre.
+  - Ajustado el alcance del MVP para enfocarse en **1 sucursal principal** (con capacidad de escalabilidad futura hacia nuevas sucursales según se acordó en reunión).
+
+### Ajuste Consolidado a 1 Sucursal para MVP: Motos y Motos (5 de Noviembre de 2026)
+- **Archivo modificado**: `app/cotizaciones/motos-y-motos/page.tsx`
+- **Cambios realizados**:
+  - Eliminadas todas las menciones a *"5 sucursales"* y derivaciones dispersas por locales en el MVP.
+  - La atención por WhatsApp y el CRM se concentran en el equipo comercial de la sucursal principal en Loja.
+  - Se mantiene la arquitectura preparada para que en fases posteriores pueda extenderse al resto de sucursales según el crecimiento del negocio.
+
+### Actualización de Entregables Mensuales: CCEATI (5 de Noviembre de 2026)
+- **Archivo modificado**: `app/cotizaciones/camara/page.tsx`
+- **Cambios realizados**:
+  - Actualizado el volumen mensual de contenidos del Componente 02 a:
+    - **6 Artículos o noticias mensuales para la web** (anteriormente 2).
+    - **18 Publicaciones mensuales en cada red social** (anteriormente 8).
+  - Reflejado tanto en la tarjeta de entregables como en el resumen de modalidades de inversión.

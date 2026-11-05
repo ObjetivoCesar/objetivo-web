@@ -195,13 +195,13 @@ export default function CamaraCotizacionPage() {
           "Servicio continuo de gestión digital donde transformamos las actividades y reuniones de CCEATI en contenido profesional. Integra la actualización constante del portal web, la redacción de artículos optimizados para búsquedas de comercio exterior (Ecuador–EAU) y el diseño y publicación periódica en redes sociales.",
         entregables: [
           {
-            nombre: "2 Artículos o noticias mensuales para la web",
+            nombre: "6 Artículos o noticias mensuales para la web",
             descripcion:
               "Redacción y publicación de noticias oficiales sobre eventos, convenios y análisis de oportunidades de mercado.",
             icono: "file",
           },
           {
-            nombre: "8 Publicaciones mensuales para redes sociales",
+            nombre: "18 Publicaciones mensuales en cada red social",
             descripcion:
               "Diseño de piezas gráficas profesionales con textos adaptados para las plataformas oficiales de la Cámara.",
             icono: "sparkles",
@@ -300,7 +300,7 @@ export default function CamaraCotizacionPage() {
         {
           nombre: "Componente 02: Administración Web y Comunicación Digital",
           descripcion:
-            "2 artículos mensuales para la web, 8 publicaciones en redes sociales, actualización de agenda, estrategia SEO y reporte mensual de resultados.",
+            "6 artículos mensuales para la web, 18 publicaciones en cada red social, actualización de agenda, estrategia SEO y reporte mensual de resultados.",
           precio: "US$ 500 / mes",
           detalle_precio: "Servicio mensual recurrente (posibilidad de 1er mes sin costo por contratación)",
         },
