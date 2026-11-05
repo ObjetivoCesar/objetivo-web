@@ -845,3 +845,10 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
   - Se incluyó la cláusula de beneficio de contratación: *posibilidad de incluir el primer mes de gestión digital sin costo adicional*.
   - Delimitación clara del alcance operativo: validación previa obligatoria por la Dirección Ejecutiva, excluyendo coberturas presenciales, video cinematográfico o pauta pagada sin costo extra.
   - Corrección de directiva de robots para WhatsApp/Meta: configurado estrictamente en `robots: { index: false, follow: true, nocache: true }`.
+
+### Actualización Estratégica: Motos y Motos (5 de Noviembre de 2026)
+- **Archivo modificado**: `app/cotizaciones/motos-y-motos/page.tsx`
+- **Cambios realizados**:
+  - Reafirmación del acuerdo de reunión en la introducción: *"Como se concluyó en la reunión, proponemos iniciar con un MVP listo y funcional para la venta de motos, y a partir de ese núcleo extender ordenadamente la plataforma hacia el resto de líneas comerciales y las demás sucursales"*.
+  - Incorporación del argumento de valor y rentabilidad: *"Este sistema trabajará las 24 horas del día, los 7 días de la semana, lo que equivale a la capacidad de un equipo de 3 personas respondiendo y filtrando consultas de forma permanente. Con esta disponibilidad continua, la empresa ganará una notable eficiencia operativa y potenciará sus ventas en remoto..."*.
+  - Ratificación del beneficio de *"automatizar la postventa en sus 5 sucursales"* en subtítulo y cuerpo comercial.
