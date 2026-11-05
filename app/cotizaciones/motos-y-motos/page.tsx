@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Propuesta de Sistema Integral — Motos y Motos",
   description:
-    "Del caos de mensajes dispersos a una red comercial centralizada: catálogo digital de hasta 200 motos, agente de WhatsApp con derivación a 5 sucursales, CRM y postventa activa.",
+    "De cada consulta a una atención organizada y un seguimiento comercial continuo: catálogo digital de hasta 200 motos, agente de WhatsApp con derivación a 5 sucursales, CRM y postventa.",
   openGraph: {
     title: "Sistema Integral de Ventas y Fidelización — Motos y Motos × César Reyes",
     description:
@@ -43,10 +43,10 @@ export default function MotosYMotosCotizacionPage() {
     og_image_url: "https://www.cesarreyesjaramillo.com/images/og-motos-y-motos.jpg",
     portada: {
       etiqueta: "Propuesta Comercial Ejecutiva · Noviembre de 2026",
-      titulo_principal: "Del caos de mensajes dispersos a una",
-      titulo_destacado: "red comercial centralizada.",
+      titulo_principal: "De cada consulta a una atención organizada y un",
+      titulo_destacado: "seguimiento comercial continuo.",
       subtitulo:
-        "Plataforma modular diseñada para transformar cada consulta de WhatsApp en un cliente registrado, automatizar la postventa en sus 5 sucursales y proteger el tiempo de la gerencia.",
+        "Plataforma modular diseñada para transformar cada consulta de WhatsApp en un cliente registrado, automatizar la postventa en sus 5 sucursales, facilitar la gestión comercial y liberar tiempo para actividades de mayor valor.",
       preparado_para: "Sra. Marcela Guzmán — Motos y Motos",
       preparado_por: "Ing. César Augusto Reyes Jaramillo · Estrategia y Sistemas",
       fecha: "Loja, Ecuador · Noviembre de 2026",
@@ -64,9 +64,9 @@ export default function MotosYMotosCotizacionPage() {
       titulo:
         "El activo más valioso de un directivo es su tiempo: vender una moto debe ser el inicio de una relación recurrente, no una carga operativa manual",
       parrafos: [
-        "Durante más de dos décadas, Motos y Motos ha liderado el mercado con múltiples sucursales en Loja, Vilcabamba, Palanda y Saraguro. Sin embargo, la atención comercial ha dependido históricamente de respuestas manuales y teléfonos dispersos. Filtrar a mano de qué cantón escribe cada cliente o transferir chats a ciegas satura a la gerencia y genera fugas de ventas cuando un interesado no recibe respuesta inmediata.",
+        "Durante más de dos décadas, Motos y Motos ha liderado el mercado con múltiples sucursales en Loja, Vilcabamba, Palanda y Saraguro. La atención comercial se ha desarrollado a través de los distintos canales y la experiencia de su equipo. Coordinar las consultas entre sucursales representa una oportunidad para agilizar la atención y dar continuidad a cada oportunidad comercial cuando un interesado solicita información.",
         "Un sistema contable tradicional administra la facturación, pero no la relación comercial ni fotos de catálogo. Si los contactos se quedan en los celulares personales de los vendedores, el negocio pierde la memoria comercial, olvida los cambios de aceite y regala la recompra de repuestos y accesorios a la competencia.",
-        "La estrategia para este MVP se enfoca en resultados rápidos sin entorpecer la operación: digitalizar la línea principal (~160 a 200 modelos de Daytona, Loncin, Factory, KTM, Suzuki), centralizar las consultas en WhatsApp y entregar prospectos con ciudad y modelo identificado directamente al asesor de la sucursal más cercana.",
+        "La estrategia para este MVP se enfoca en resultados rápidos sin entorpecer la operación: digitalizar la línea principal (~160 a 200 modelos de Daytona, Loncin, Factory, KTM, Suzuki), centralizar las consultas en WhatsApp y entregar clientes interesados con ciudad y modelo identificado directamente al asesor de la sucursal más cercana.",
       ],
     },
     como_funciona: {
@@ -80,17 +80,17 @@ export default function MotosYMotosCotizacionPage() {
         {
           momento: "02. Selección simple de ciudad o cantón",
           descripcion:
-            "Mediante botones directos en WhatsApp (o lista desplegable), el cliente indica desde dónde escribe (Loja, Vilcabamba, Saraguro, Palanda, etc.). Sin pedir ubicaciones raras ni GPS.",
+            "Mediante una selección sencilla de ciudad o cantón, sin necesidad de compartir la ubicación GPS (a través de botones directos en WhatsApp o lista desplegable), el cliente indica desde dónde escribe (Loja, Vilcabamba, Saraguro, Palanda, etc.).",
         },
         {
           momento: "03. Enrutamiento directo al asesor de sucursal",
           descripcion:
-            "El sistema asigna la conversación al vendedor del local más cercano con la ficha lista (nombre, cantón y moto consultada) para que entre directo a cerrar.",
+            "El sistema asigna la conversación al vendedor del local más cercano con la ficha lista (nombre, cantón y moto consultada) para que continúe la atención con toda la información necesaria.",
         },
         {
           momento: "04. Alerta de seguimiento por demoras",
           descripcion:
-            "Si un asesor tarda más de 2 horas en atender a un prospecto caliente, el sistema emite una alerta interna para evitar que el cliente cotice y compre en otra ciudad.",
+            "Si un asesor tarda más de 2 horas en atender a un cliente interesado, el sistema emite una alerta interna para facilitar una respuesta oportuna y dar continuidad a la consulta.",
         },
         {
           momento: "05. Activación de garantías y taller",
@@ -98,7 +98,7 @@ export default function MotosYMotosCotizacionPage() {
             "Al facturar la moto, la plataforma agenda las revisiones según la marca. El cliente recibe recordatorios automáticos por WhatsApp para su primer cambio de aceite y chequeos periódicos.",
         },
         {
-          momento: "06. Fidelización y recompra activa",
+          momento: "06. Fidelización y nuevas oportunidades de compra",
           descripcion:
             "Felicitaciones automáticas en cumpleaños con beneficios de taller y campañas preventivas a los 12 y 24 meses para repuestos, accesorios o la renovación de su moto.",
         },
@@ -109,25 +109,25 @@ export default function MotosYMotosCotizacionPage() {
       filas: [
         {
           antes:
-            "La gerencia atiende llamadas y mensajes personales preguntando manualmente de qué ciudad escriben para derivarlos uno por uno.",
+            "Las consultas llegan desde distintas ciudades y requieren ser dirigidas a la sucursal correspondiente.",
           despues:
             "El asistente saluda 24/7, el cliente elige su cantón con un botón y el chat pasa enrutado y limpio al vendedor correspondiente en segundos.",
         },
         {
           antes:
-            "Respuestas demoradas en celulares personales de los asesores, sin registro directivo de cuántos clientes se atendieron ni cuánto tardaron.",
+            "La atención y el seguimiento se realizan desde los canales de cada asesor, con información que puede consultarse de manera independiente.",
           despues:
-            "Monitoreo de tiempos de atención con alertas ante demoras de más de 2 horas, asegurando que ningún lead caliente se enfríe.",
+            "Monitoreo de tiempos de atención con alertas ante demoras de más de 2 horas, facilitando el seguimiento oportuno de cada cliente interesado.",
         },
         {
           antes:
-            "Garantías y revisiones de taller libradas a la suerte de que el cliente recuerde cuándo le toca el mantenimiento.",
+            "Los recordatorios de mantenimiento suelen depender de que el cliente tenga presente las fechas correspondientes.",
           despues:
             "Avisos automáticos por kilometraje y tiempo programados según los estándares de cada marca (Daytona, Loncin, KTM, Suzuki).",
         },
         {
           antes:
-            "Contactos e historiales dispersos en agendas privadas de los vendedores, expuestos a perderse si un colaborador rota.",
+            "La información de clientes y su historial pueden encontrarse en distintos registros del equipo.",
           despues:
             "CRM centralizado propiedad de Motos y Motos con el historial de compras, mantenimientos y preferencias de cada cliente.",
         },
@@ -193,13 +193,13 @@ export default function MotosYMotosCotizacionPage() {
       {
         numero: "02",
         etiqueta_tiempo: "COMPONENTE 02 (MVP BASE) · CRM, ASISTENTE Y POSTVENTA",
-        nombre: "Motor Comercial de Inteligencia, CRM y Gestión de Postventa",
+        nombre: "Plataforma de Atención, CRM y Gestión de Postventa",
         eslogan:
-          '"Una base de datos centralizada a la que se le puede vender vehículos, repuestos y mantenimientos de forma recurrente."',
+          '"Una base de clientes organizada para mantener el contacto y ofrecer vehículos, repuestos y mantenimientos según sus necesidades."',
         precio: "$2.500 USD",
         precio_subtitulo: "Inversión única de implementación · Pagos vinculados a hitos de avance",
         descripcion:
-          "Núcleo de automatización que conecta las conversaciones de WhatsApp con la gestión comercial del negocio. Cualifica prospectos, asigna chats a vendedores por cantón y ejecuta secuencias automáticas de fidelización y postventa.",
+          "Núcleo de automatización que conecta las conversaciones de WhatsApp con la gestión comercial del negocio. Cualifica consultas, asigna chats a vendedores por cantón y ejecuta secuencias automáticas de fidelización y postventa.",
         entregables: [
           {
             nombre: "Agente de WhatsApp 24/7 con selección de cantón",
@@ -251,7 +251,7 @@ export default function MotosYMotosCotizacionPage() {
         etiqueta_tiempo: "COMPONENTE 03 · CONTINUIDAD Y SOPORTE ANUAL",
         nombre: "Mantenimiento Técnico, Seguridad y Actualizaciones",
         eslogan:
-          '"Garantía de que su infraestructura digital permanezca rápida, protegida y operativa todos los días del año."',
+          '"Servicio de mantenimiento para conservar la plataforma actualizada, protegida y operativa todos los días del año."',
         precio: "$290 USD / año",
         precio_subtitulo: "Servicio anual a partir del segundo año · Sin contratos de permanencia",
         descripcion:
@@ -273,14 +273,14 @@ export default function MotosYMotosCotizacionPage() {
       },
       {
         numero: "04",
-        etiqueta_tiempo: "FASE 2 (UPSELL ESTRATÉGICO) · POSICIONAMIENTO Y REINGENIERÍA",
-        nombre: "Reingeniería Digital y Posicionamiento Nacional (SEO Google + Visibilidad IA)",
+        etiqueta_tiempo: "FASE 2 (ETAPA COMPLEMENTARIA) · POSICIONAMIENTO Y MEJORA DIGITAL",
+        nombre: "Mejora de la presencia digital y Posicionamiento Nacional (SEO Google + Visibilidad IA)",
         eslogan:
           '"Posicionar a Motos y Motos como referente comercial y captar compradores a nivel nacional."',
         precio: "$3.500 USD",
-        precio_subtitulo: "Inversión · Programa estratégico de reingeniería y posicionamiento tras el MVP",
+        precio_subtitulo: "Inversión · Programa estratégico de mejora de presencia digital y posicionamiento tras el MVP",
         descripcion:
-          "Reingeniería digital avanzada orientada a la expansión de mercado: optimización profunda de arquitectura web para posicionamiento en los primeros lugares de Google y en motores de Inteligencia Artificial (ChatGPT, Perplexity) para búsquedas de modelos específicos de motocicletas en todo el Ecuador.",
+          "Mejora de la presencia digital orientada a la expansión de mercado: optimización profunda de arquitectura web para posicionamiento en los primeros lugares de Google y en motores de Inteligencia Artificial (ChatGPT, Perplexity) para búsquedas de modelos específicos de motocicletas en todo el Ecuador.",
         entregables: [
           {
             nombre: "Estrategia de posicionamiento SEO nacional en Google",
@@ -295,9 +295,9 @@ export default function MotosYMotosCotizacionPage() {
             icono: "sparkles",
           },
           {
-            nombre: "Reingeniería de páginas por modelo y marca",
+            nombre: "Páginas optimizadas por modelo y marca",
             descripcion:
-              "Páginas de aterrizaje optimizadas para conversión rápida y captación de prospectos de alto interés comercial.",
+              "Páginas de aterrizaje optimizadas para conversión rápida y captación de clientes de alto interés comercial.",
             icono: "layers",
           },
           {
@@ -312,14 +312,14 @@ export default function MotosYMotosCotizacionPage() {
         detalles_pie: [
           "📍 <strong>SEO Nacional:</strong> Posicionamiento orgánico en Google para todo Ecuador",
           "🤖 <strong>Visibilidad IA:</strong> Recomendados en ChatGPT y buscadores conversacionales",
-          "📈 <strong>Reingeniería:</strong> Enfoque 100% en captación y autoridad comercial",
+          "📈 <strong>Presencia digital:</strong> Enfoque 100% en captación y autoridad comercial",
         ],
       },
     ],
     participantes: {
-      titulo: "Garantías y desactivación de riesgos operativos",
+      titulo: "Continuidad y coordinación de la operación comercial",
       subtitulo:
-        "La plataforma está diseñada para sumar al negocio sin alterar su ritmo de trabajo diario ni incomodar al equipo.",
+        "La plataforma está diseñada para sumar al negocio mediante una integración gradual con la dinámica actual del equipo.",
       grupos: [
         {
           rol: "Convivencia con su sistema contable actual",
@@ -333,11 +333,11 @@ export default function MotosYMotosCotizacionPage() {
         },
         {
           rol: "Aliado del equipo de ventas y de redes sociales",
-          subtitulo: "Asume el trabajo repetitivo para que ellos cobren más comisiones",
+          subtitulo: "Apoya al equipo con consultas frecuentes y seguimiento, para que pueda dedicar más tiempo a asesorar y concretar ventas",
           beneficios: [
             "No sustituye el trabajo de los asesores ni de la persona encargada de redes ($600).",
             "Elimina el desgaste de contestar precios o preguntar manualmente de qué ciudad escriben.",
-            "Entrega a los vendedores un prospecto filtrado y calificado listo para el cierre.",
+            "Entrega a los vendedores un cliente interesado con datos y modelo listo para dar continuidad a la atención.",
             "Permite a los asesores concentrarse en atender bien y aumentar sus ventas.",
           ],
         },
@@ -384,23 +384,23 @@ export default function MotosYMotosCotizacionPage() {
           detalle_precio: "Inversión única · 50% al inicio y 50% contra entrega probada (45 días)",
         },
         {
-          nombre: "Componente 02: CRM, Agente WhatsApp y Postventa",
+          nombre: "Componente 02: Plataforma de Atención, CRM y Postventa",
           descripcion:
-            "Agente 24/7 con selección de cantón, enrutamiento a 5 sucursales, alertas por demoras de 2 horas y recordatorios automáticos de taller y cumpleaños.",
+            "Agente 24/7 con selección sencilla de cantón, enrutamiento a 5 sucursales, alertas por demoras de 2 horas y recordatorios automáticos de taller y cumpleaños.",
           precio: "$2.500 USD",
           detalle_precio: "Inversión única · Pagos vinculados a hitos de avance",
         },
         {
           nombre: "Componente 03: Mantenimiento Técnico y Soporte",
           descripcion:
-            "Actualizaciones de software, respaldos periódicos cifrados, seguridad y soporte directo vía WhatsApp para garantizar continuidad operativa.",
+            "Servicio de mantenimiento para conservar la plataforma actualizada, respaldos periódicos cifrados, seguridad y soporte directo vía WhatsApp.",
           precio: "$290 USD / año",
           detalle_precio: "Servicio anual a partir del segundo año",
         },
         {
-          nombre: "Fase 2 (Upsell): Reingeniería y Posicionamiento SEO + IA",
+          nombre: "Fase 2 (Etapa complementaria): Mejora digital y Posicionamiento SEO + IA",
           descripcion:
-            "Reingeniería digital para posicionamiento orgánico en Google a nivel nacional y visibilidad estructurada en motores de Inteligencia Artificial (ChatGPT, Perplexity).",
+            "Mejora de la presencia digital para posicionamiento orgánico en Google a nivel nacional y visibilidad estructurada en motores de Inteligencia Artificial (ChatGPT, Perplexity).",
           precio: "$3.500 USD",
           detalle_precio: "Programa estratégico de expansión de mercado tras el MVP",
         },
@@ -409,16 +409,16 @@ export default function MotosYMotosCotizacionPage() {
     cierre: {
       titulo: "Las tecnologías valen por la tranquilidad que devuelven al dueño",
       frase_bisagra:
-        "Las tecnologías no valen por la complejidad de su código, sino por la tranquilidad que devuelven al dueño y la disciplina comercial que le imponen al negocio.",
+        "Las tecnologías no valen por la complejidad de su código, sino por la tranquilidad que devuelven al dueño y la organización y continuidad que aportan al trabajo comercial.",
       texto: `
         <p class="text-base text-slate-700 font-light mb-4">
           Estimada <strong>Sra. Marcela Guzmán</strong> y equipo de <strong>Motos y Motos</strong>:
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
-          Esta propuesta está diseñada para resolver el cuello de botella que hoy frena el crecimiento: <strong>evitar que la gerencia dedique horas a transferir mensajes manualmente, garantizar que cada prospecto sea atendido a tiempo por la sucursal correcta y activar el taller como una fuente constante de ingresos recurrentes</strong>.
+          Esta propuesta representa <strong>una oportunidad para agilizar la atención entre sucursales y fortalecer el seguimiento comercial: facilitar que cada consulta llegue al asesor correspondiente y reciba seguimiento oportuno, y activar el taller como una fuente constante de atención y fidelización</strong>.
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
-          No venimos a cambiar lo que ya funciona ni a complicar a los vendedores. Venimos a darles una herramienta que les ahorra trabajo repetitivo y les entrega clientes listos para cerrar.
+          No venimos a cambiar lo que ya funciona ni a complicar a los vendedores. Venimos a darles una herramienta que apoya su gestión diaria y les entrega consultas con información previa para facilitar la atención del vendedor.
         </p>
         <div class="mt-6 pt-6 border-t border-slate-200">
           <p class="font-outfit text-sm font-bold text-slate-900 mb-2">Puesta en marcha acordada para el MVP (Fase 1):</p>
@@ -426,7 +426,7 @@ export default function MotosYMotosCotizacionPage() {
             <li><strong>Recepción del material de catálogo:</strong> Carga de especificaciones y fotos de las 8 marcas (hasta 200 modelos).</li>
             <li><strong>Configuración del enrutamiento por sucursal:</strong> Definición de números y asesores de Loja 10 de Agosto, Terminal, Vilcabamba, Palanda y Saraguro.</li>
             <li><strong>Demostración funcional en 45 días:</strong> Validación práctica del recorrido completo de consulta, asignación y alertas.</li>
-            <li><strong>Capacitación al equipo y lanzamiento:</strong> Entrenamiento al personal para atender expedientes y activación de las reglas de garantía.</li>
+            <li><strong>Capacitación al equipo y lanzamiento:</strong> Capacitar al equipo para gestionar conversaciones y registros de clientes y activación de las reglas de garantía.</li>
           </ol>
         </div>
       `,
@@ -437,17 +437,17 @@ export default function MotosYMotosCotizacionPage() {
           {
             titulo: "Convivencia con canales actuales",
             texto:
-              "Se trabaja sobre la línea y números que la empresa ya tiene acreditados, asegurando que no se pierda ningún contacto histórico.",
+              "Se trabaja sobre la línea y números que la empresa ya tiene acreditados, facilitando la conservación y continuidad de los contactos y la información existente.",
           },
           {
-            titulo: "Alertas de control para no perder ventas",
+            titulo: "Alertas para dar seguimiento oportuno a las consultas",
             texto:
-              "Monitoreo de tiempos con avisos si una consulta tarda más de 2 horas sin atención, evitando que compren en la competencia.",
+              "Monitoreo de tiempos con avisos si una consulta tarda más de 2 horas sin atención, facilitando una respuesta oportuna y continua.",
           },
           {
             titulo: "Trazabilidad de taller y garantías",
             texto:
-              "Secuencias automáticas que aseguran que el cliente vuelva a realizar sus cambios de aceite y revisiones a tiempo.",
+              "Secuencias automáticas que recuerdan al cliente realizar sus cambios de aceite y revisiones a tiempo.",
           },
         ],
       },

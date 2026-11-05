@@ -796,3 +796,31 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
   - `public/images/og-alma-lojana.jpg` (1200x630px, 113.3 KB, JPEG Baseline, relación de aspecto exacta para Open Graph y WhatsApp).
   - `public/images/alma-lojana-fondo-movil.jpg` (576x1024px, 90.4 KB, JPEG Baseline para visualización móvil).
 - **Detalle**: Se reemplazaron las imágenes anteriores por las nuevas versiones del camión de encomiendas de Alma Lojana, respetando estrictamente las normas de peso (< 300KB) y compresión baseline sin escaneo progresivo para previsualización instantánea.
+
+### Corrección de Tono y Comunicación Comercial: Motos y Motos (5 de Noviembre de 2026)
+- **Archivo modificado**: `app/cotizaciones/motos-y-motos/page.tsx`
+- **Cambios realizados**:
+  - Reemplazo completo de expresiones técnicas o de tono crítico hacia la gestión actual por un enfoque constructivo de potenciamiento comercial.
+  - Portada: *"De cada consulta a una atención organizada y un seguimiento comercial continuo"* y *"facilitar la gestión comercial y liberar tiempo para actividades de mayor valor"*.
+  - Introducción: Reconocimiento a la experiencia del equipo y presentación de la coordinación entre sucursales como una oportunidad de agilidad y continuidad.
+  - Pasos y Comparativa: Selección sencilla de cantón sin GPS, derivación con información previa, seguimiento a clientes interesados y recordatorios programados de mantenimiento.
+  - Componentes: Nombre actualizado a *"Plataforma de Atención, CRM y Gestión de Postventa"* y *"Servicio de mantenimiento para conservar la plataforma actualizada, protegida y operativa"*; Fase 2 como *"Etapa complementaria de mejora de presencia digital y posicionamiento"*.
+  - Participantes y Cierre: Enfoque de integración gradual con la dinámica del equipo, apoyo con consultas frecuentes y capacitación para gestionar conversaciones y registros.
+
+### Reestructuración a Sistema Integral de Gestión Empresarial (ERP): Transportes Alma Lojana (5 de Noviembre de 2026)
+- **Archivo modificado**: `app/cotizaciones/alma-lojana/page.tsx`
+- **Cambios realizados**:
+  - Reenfoque estratégico total: se transformó de dos fases fraccionadas a una **solución única e integral (ERP)** que conecta toda la empresa (8 módulos funcionales conectados).
+  - Portada renovada: *"Toda la empresa conectada en un solo sistema integral. Gestión de encomiendas, transporte, clientes, contabilidad y control financiero"*.
+  - Cómo funciona ampliado a los 8 pasos de la cadena de valor conectada (Ventanilla -> Guía/QR -> Asignación de unidad -> Llegada a destino -> Notificación WhatsApp -> Cobro/Liquidación de caja -> Alimentación contable -> Panel Gerencial).
+  - Incorporación detallada de los 8 módulos: Administración general, Encomiendas, Transporte y bodegas, WhatsApp, Caja y liquidaciones, Contabilidad y administración financiera, Control de gastos y rentabilidad por ruta, y Panel de control para Gerencia.
+  - Precio unificado: **US$ 12.000** (inversión única integral), eliminando la fragmentación de US$ 8.000 y US$ 4.000 que invitaba a compras parciales. Mantenimiento presentado por separado a US$ 100/mes.
+  - Metadatos Open Graph, Twitter y robots actualizados manteniendo `{ index: false, follow: true, nocache: true }`.
+
+### Consolidación de Etapa Ejecutiva Única: Transportes Alma Lojana (5 de Noviembre de 2026)
+- **Archivo modificado**: `app/cotizaciones/alma-lojana/page.tsx`
+- **Cambios realizados**:
+  - En la sección *"Estructura Ejecutiva / Las etapas propuestas"*, se unificó la presentación en una **sola tarjeta ejecutiva integral (Etapa 01)**.
+  - Se estableció el valor único y definitivo de **US$ 12.000**.
+  - Se incorporaron los **8 módulos funcionales completos** como entregables dentro de este único ecosistema (Administración general, Gestión de encomiendas, Transporte y recorridos, WhatsApp al cliente, Caja y liquidaciones, Contabilidad, Control de gastos y rentabilidad por ruta, y Panel directivo para Gerencia).
+  - Se enfatizó el concepto de plataforma única conectada en tiempo real.

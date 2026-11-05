@@ -2,13 +2,13 @@ import CotizacionViewer from "@/components/CotizacionViewer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sistema de Gestión y Control de Encomiendas — Transportes Alma Lojana",
+  title: "Sistema Integral de Gestión Empresarial — Transportes Alma Lojana",
   description:
-    "Registro de paquetes, seguimiento de recorridos, control de entregas y liquidación de valores entre agencias para Transportes Alma Lojana.",
+    "Toda la empresa conectada en un solo sistema: gestión de encomiendas, transporte, clientes, contabilidad y control financiero para Transportes Alma Lojana.",
   openGraph: {
-    title: "Sistema de Gestión y Control de Encomiendas — Transportes Alma Lojana × César Reyes",
+    title: "Sistema Integral de Gestión Empresarial — Transportes Alma Lojana × César Reyes",
     description:
-      "Registro de paquetes, seguimiento de recorridos, control de entregas y liquidación de valores entre agencias. Más información, menos incertidumbre en cada recorrido.",
+      "Una sola plataforma. Ocho áreas de trabajo conectadas: encomiendas, agencias, flota, clientes, caja, contabilidad, costos y supervisión gerencial.",
     url: "https://www.cesarreyesjaramillo.com/cotizaciones/alma-lojana",
     siteName: "César Reyes Jaramillo",
     type: "website",
@@ -17,15 +17,15 @@ export const metadata: Metadata = {
         url: "https://www.cesarreyesjaramillo.com/images/og-alma-lojana.jpg",
         width: 1200,
         height: 630,
-        alt: "Transportes Alma Lojana — Sistema de Gestión y Control de Encomiendas",
+        alt: "Transportes Alma Lojana — Sistema Integral de Gestión Empresarial",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sistema de Gestión y Control de Encomiendas — Transportes Alma Lojana",
+    title: "Sistema Integral de Gestión Empresarial — Transportes Alma Lojana",
     description:
-      "Control físico de paquetes y liquidación de valores entre agencias para Transportes Alma Lojana.",
+      "Gestión de encomiendas, transporte, clientes, contabilidad y control financiero para Transportes Alma Lojana.",
     images: ["https://www.cesarreyesjaramillo.com/images/og-alma-lojana.jpg"],
   },
   robots: {
@@ -40,11 +40,11 @@ export default function AlmaLojanaCotizacionPage() {
     id: "alma-lojana",
     og_image_url: "https://www.cesarreyesjaramillo.com/images/og-alma-lojana.jpg",
     portada: {
-      etiqueta: "Transportes Alma Lojana · Encomiendas · Noviembre 2026",
-      titulo_principal: "Sistema de Gestión y Control de Encomiendas",
-      titulo_destacado: "Transportes Alma Lojana.",
+      etiqueta: "Transportes Alma Lojana · Propuesta Institucional · Noviembre 2026",
+      titulo_principal: "Toda la empresa conectada en un",
+      titulo_destacado: "solo sistema integral.",
       subtitulo:
-        "Registro de paquetes, seguimiento de recorridos, control de entregas y liquidación de valores entre agencias. Una solución diseñada para organizar el trabajo de ventanillas, bodegas y conductores, y ofrecer a Gerencia una visión clara de las operaciones.",
+        "Gestión de encomiendas, transporte, clientes, contabilidad y control financiero. Una plataforma desarrollada para organizar el trabajo de cada agencia, conectar las operaciones y ofrecer a Gerencia información clara sobre el funcionamiento de toda la empresa.",
       preparado_para: "Gerencia General y Asamblea Directiva — Transportes Alma Lojana",
       preparado_por: "Ing. César Reyes Jaramillo",
       fecha: "Noviembre de 2026",
@@ -59,36 +59,56 @@ export default function AlmaLojanaCotizacionPage() {
       subtitulo: "Prueba de escaneo, asignación a unidades y notificaciones por WhatsApp",
     },
     introduccion: {
-      titulo: "Más control sobre las encomiendas y las operaciones de cada agencia",
+      titulo: "Una sola plataforma. Ocho áreas de trabajo conectadas.",
       parrafos: [
-        "Transportes Alma Lojana conecta diariamente a sus clientes a través de sus agencias y rutas de transporte entre ciudades. Cada encomienda que ingresa representa una operación que debe registrarse, trasladarse, recibirse y entregarse correctamente.",
-        "Cuando estos procesos dependen de guías físicas, registros manuales y confirmaciones verbales entre agencias, resulta más difícil conocer qué paquetes fueron despachados, cuáles llegaron a su destino y qué valores están pendientes de liquidación.",
-        "La propuesta consiste en implementar un sistema que permita registrar cada encomienda desde su recepción, generar una etiqueta con código QR y llevar un registro de sus movimientos durante el recorrido. Los paquetes se organizan en listas digitales asignadas a cada unidad y conductor, permitiendo verificar mediante escaneos cuáles fueron cargados y cuáles llegaron a cada agencia.",
-        "Adicionalmente, la plataforma permite registrar los valores cobrados en origen, los envíos que deben cobrarse al destinatario y los servicios pendientes de pago por parte de clientes corporativos, facilitando la revisión de las operaciones y las liquidaciones de cada agencia desde un panel de control.",
+        "Un sistema integral permite administrar Transportes Alma Lojana desde un mismo lugar, conectando sus encomiendas, agencias, vehículos, clientes, ingresos, gastos, cuentas pendientes y resultados económicos. Lo que sucede en una parte de la empresa queda registrado de forma inmediata y disponible para todas las demás áreas que necesitan esa información.",
+        "Imaginemos la operación diaria: un cliente entrega una encomienda en Loja; el sistema registra el envío, calcula la tarifa según parámetros oficiales, genera el comprobante con código QR y asigna el paquete a una unidad. Al salir el vehículo, queda registrado con exactitud qué carga lleva. Al llegar a la agencia de destino, se confirma la recepción mediante escaneo y el destinatario recibe automáticamente un aviso por WhatsApp.",
+        "Si el envío es flete por cobrar, el valor queda registrado como pendiente. Al cobrarse, se actualiza la operación y se incorpora al movimiento de caja de la agencia. Al finalizar el día, Gerencia puede consultar los ingresos, los gastos registrados, los saldos pendientes y el rendimiento económico de cada ruta.",
+        "No son programas dispersos ni hojas de cálculo desconectadas: es una sola operación empresarial sincronizada en tiempo real para respaldar el trabajo de ventanillas, bodegas, conductores, administración y directiva.",
       ],
     },
     como_funciona: {
-      titulo: "Cómo funciona en el día a día del transporte",
+      titulo: "Una operación, toda la información conectada",
       pasos: [
         {
-          momento: "01. Registro de encomiendas e impresión de etiquetas QR",
+          momento: "01. El cliente entrega una encomienda",
           descripcion:
-            "Cuando el cliente entrega un paquete en ventanilla, se registran los datos de remitente, destinatario, peso y dimensiones. El sistema calcula la tarifa según los parámetros establecidos y genera una etiqueta con código QR único para identificar la encomienda en todo su trayecto.",
+            "En ventanilla se registra remitente, destinatario, origen, destino, peso y dimensiones, calculando la tarifa según las reglas oficiales de la empresa.",
         },
         {
-          momento: "02. Organización de paquetes por unidad y conductor",
+          momento: "02. Se genera la guía y el código QR",
           descripcion:
-            "Antes de salir a ruta, los paquetes se organizan en una lista digital asociada a la unidad y al conductor responsable. Mediante el escaneo de los códigos QR se verifica y registra la carga que sube al vehículo, asegurando el control de lo que sale de cada agencia.",
+            "La operación queda registrada de inmediato en la base central y se emite la etiqueta autoadhesiva con QR único para identificar el bulto en todo su trayecto.",
         },
         {
-          momento: "03. Registro de llegada y entrega en cada agencia",
+          momento: "03. El paquete se asigna a una unidad",
           descripcion:
-            "Al llegar a la agencia de destino, el personal escanea los códigos QR de los paquetes recibidos. El sistema verifica que correspondan al destino y actualiza el estado. Una vez confirmada la llegada, el destinatario recibe automáticamente una notificación por WhatsApp indicándole que su paquete está disponible para retiro.",
+            "La carga se organiza por destino en listas digitales asociadas al vehículo y al conductor responsable mediante escaneo de verificación al subir a la unidad.",
         },
         {
-          momento: "04. Control de ingresos y liquidaciones por agencia",
+          momento: "04. La encomienda llega a destino",
           descripcion:
-            "Cada operación queda clasificada según su modalidad de pago: cobrado en origen, flete por cobrar al destinatario o crédito corporativo. Gerencia puede consultar los movimientos diarios, revisar los valores registrados por cada punto de atención y dar seguimiento a las cuentas pendientes.",
+            "El personal de la agencia de destino escanea el paquete recibido, confirmando formalmente su ingreso a bodega y su disponibilidad para entrega.",
+        },
+        {
+          momento: "05. El cliente recibe una notificación",
+          descripcion:
+            "WhatsApp notifica automáticamente al destinatario en el instante exacto en que su paquete llega y queda listo para retiro, sin necesidad de llamadas.",
+        },
+        {
+          momento: "06. Se registra el cobro o liquidación",
+          descripcion:
+            "El sistema actualiza el estado según la modalidad de pago (contado en origen, flete en destino o crédito) e incorpora el valor al movimiento de caja de la agencia.",
+        },
+        {
+          momento: "07. La información alimenta los reportes",
+          descripcion:
+            "Todos los movimientos operativos nutren en tiempo real los registros administrativos, la contabilidad, el control de gastos y la conciliación bancaria.",
+        },
+        {
+          momento: "08. Gerencia consulta los resultados",
+          descripcion:
+            "Desde un panel centralizado, los directivos supervisan en vivo los ingresos, gastos registrados, cuentas por cobrar y la rentabilidad por agencia y por ruta.",
         },
       ],
     },
@@ -103,117 +123,91 @@ export default function AlmaLojanaCotizacionPage() {
         },
         {
           antes:
-            "La carga que sale en cada unidad se verifica principalmente de forma visual o mediante confirmaciones verbales.",
+            "La carga que sale en cada unidad se verifica visualmente o con guías de papel expuestas a pérdidas o confusiones.",
           despues:
-            "Cada paquete se identifica con un código QR único y queda registrado digitalmente al momento de cargarlo en la unidad y recibirlo en agencia.",
+            "Cada bulto se identifica con un código QR único y queda registrado digitalmente al cargarse al vehículo y al recibirse en cada agencia.",
         },
         {
           antes:
-            "Las liquidaciones y los envíos al cobro requieren revisiones manuales al finalizar la jornada laboral.",
+            "Liquidaciones y cuadres de caja requieren revisiones manuales al final de la jornada con demoras y riesgos de descuadre.",
           despues:
-            "Los movimientos quedan centralizados para consultar en tiempo real ingresos, valores pendientes y resúmenes de liquidación por agencia.",
+            "Los movimientos de caja, fletes por cobrar y cuentas corrientes se consolidan al instante con reportes de liquidación por agencia.",
         },
         {
           antes:
-            "Los clientes deben llamar o acercarse a preguntar si su encomienda ya llegó a la terminal o agencia.",
+            "Los costos de combustible, mantenimiento y gastos operativos se manejan dispersos, dificultando conocer la utilidad real por ruta.",
           despues:
-            "El sistema envía automáticamente un aviso por WhatsApp al destinatario en cuanto se registra la llegada del paquete a su agencia.",
+            "Control centralizado de gastos por vehículo y agencia, permitiendo analizar la rentabilidad real de cada recorrido y sucursal.",
         },
       ],
     },
     etapas: [
       {
         numero: "01",
-        etiqueta_tiempo: "FASE 1 · CONTROL FÍSICO DE ENCOMIENDAS",
-        nombre: "Sistema de registro y seguimiento de encomiendas",
+        etiqueta_tiempo: "SISTEMA INTEGRAL DE GESTIÓN EMPRESARIAL · 8 MÓDULOS CONECTADOS",
+        nombre: "Plataforma Integral de Transporte, Encomiendas, Contabilidad y Finanzas",
         eslogan:
-          '"Saber exactamente qué paquete ingresó, en qué unidad viaja, quién lo recibió y cuándo llegó a destino."',
-        precio: "US$ 8.000",
-        precio_subtitulo: "Inversión de implementación · Control operativo y seguimiento de encomiendas",
+          '"Una sola plataforma para toda la empresa: lo que sucede en ruta y ventanilla alimenta al instante la caja, la contabilidad y el control gerencial."',
+        precio: "US$ 12.000",
+        precio_subtitulo: "Inversión única integral · Desarrollo, implementación y capacitación",
         descripcion:
-          "Plataforma operativa para ventanillas, bodegas y conductores. Permite registrar paquetes, estandarizar el cálculo de tarifas, imprimir etiquetas con código QR único, organizar la carga por unidad y conductor en listas digitales, y registrar los movimientos de recepción y entrega en cada agencia. Incluye asistente para notificaciones automáticas de llegada por WhatsApp.",
+          "Ecosistema empresarial unificado diseñado a la medida de Transportes Alma Lojana. Conecta sus 8 áreas de trabajo en una sola base de datos centralizada: administración de agencias y flota, recepción y seguimiento de encomiendas con QR, organización de transporte, WhatsApp transaccional al cliente, arqueos de caja, contabilidad formal, control de costos por vehículo/ruta y panel directivo para Gerencia.",
         entregables: [
           {
-            nombre: "Registro en ventanilla y cálculo automático de tarifas",
+            nombre: "01. Administración general de la empresa",
             descripcion:
-              "Módulo para registrar remitente, destinatario, peso y dimensiones, calculando la tarifa según las reglas oficiales de la empresa.",
+              "Gestión de agencias, usuarios, roles, perfiles de acceso, vehículos, conductores, catálogo de rutas, tarifas oficiales y auditoría de actividades.",
             icono: "file",
           },
           {
-            nombre: "Generación e impresión de etiquetas con código QR",
+            nombre: "02. Gestión de encomiendas y ventanilla",
             descripcion:
-              "Emisión de etiquetas autoadhesivas con código QR único para identificar cada paquete a lo largo de todo el recorrido.",
+              "Registro de remitentes y destinatarios, cálculo tarifario automatizado, guías de recepción, etiquetas con código QR único y búsqueda histórica.",
             icono: "sparkles",
           },
           {
-            nombre: "Organización de carga por unidad y conductor",
+            nombre: "03. Transporte, bodegas y recorridos",
             descripcion:
-              "Lista digital de paquetes asignados a cada vehículo, registrando mediante escaneo la carga que recibe y transporta cada conductor.",
+              "Listas de carga por vehículo y conductor, escaneo en despacho, transferencias en agencias intermedias y confirmación de entrega formal.",
             icono: "layers",
           },
           {
-            nombre: "Registro de llegada y verificación en agencias",
+            nombre: "04. Atención y notificaciones por WhatsApp",
             descripcion:
-              "Confirmación de recepción en bodegas y agencias de destino mediante lectura de QR, registrando la entrega formal al cliente.",
-            icono: "shield",
-          },
-          {
-            nombre: "Avisos automáticos de llegada por WhatsApp",
-            descripcion:
-              "Notificación directa al teléfono del destinatario en el momento exacto en que su paquete es recibido y queda listo para retiro.",
+              "Avisos automáticos al destinatario cuando el paquete llega a la agencia de destino listo para retiro, sin demoras ni llamadas telefónicas.",
             icono: "whatsapp",
           },
-        ],
-        nota_especial:
-          "Incluye configuración de agencias, rutas habituales, parámetros de tarifas y capacitación práctica al personal de ventanilla, bodega y conductores.",
-        detalles_pie: [
-          "📦 <strong>Control de carga:</strong> Identificación precisa de cada bulto con QR",
-          "📲 <strong>WhatsApp al cliente:</strong> Notificación automática de retiro sin llamadas",
-          "👥 <strong>Capacitación:</strong> Entrenamiento práctico para todo el equipo operativo",
-        ],
-      },
-      {
-        numero: "02",
-        etiqueta_tiempo: "FASE 2 · CONTROL ECONÓMICO Y LIQUIDACIONES",
-        nombre: "Sistema de control de ingresos y liquidaciones por agencia",
-        eslogan:
-          '"Claridad total en los valores cobrados en origen, los envíos por cobrar y las cuentas de cada agencia."',
-        precio: "US$ 4.000",
-        precio_subtitulo: "Inversión de implementación · Gestión de ingresos y liquidaciones por agencia",
-        descripcion:
-          "Módulo administrativo y financiero diseñado para organizar y consolidar la información económica generada por el transporte de encomiendas. Permite registrar modalidades de cobro (pagado en origen, por cobrar en destino y crédito corporativo), generar resúmenes de caja por agencia, conciliar liquidaciones diarias y emitir reportes de control interno para la empresa.",
-        entregables: [
           {
-            nombre: "Registro por modalidades de pago",
+            nombre: "05. Caja, cobros y liquidaciones",
             descripcion:
-              "Control diferenciado de paquetes pagados de contado en origen, envíos con cobro al destinatario y cuentas corrientes de clientes corporativos.",
+              "Control de encomiendas pagadas en origen, fletes por cobrar en destino, créditos corporativos, apertura/cierre de caja y liquidación entre agencias.",
             icono: "file",
           },
           {
-            nombre: "Resumen diario de caja y liquidación por agencia",
+            nombre: "06. Contabilidad y finanzas de la empresa",
             descripcion:
-              "Consolidación de valores ingresados por punto de atención según los movimientos registrados, facilitando el cuadre de caja al cierre de turno.",
-            icono: "layers",
-          },
-          {
-            nombre: "Seguimiento de fletes por cobrar y créditos pendientes",
-            descripcion:
-              "Monitoreo de encomiendas entregadas pendientes de cobro y saldos acumulados de clientes corporativos que pagan periódicamente.",
+              "Plan de cuentas, libro diario/mayor, registro de compras y ventas, cuentas por cobrar/pagar, conciliación de bancos y reportes de balance.",
             icono: "shield",
           },
           {
-            nombre: "Panel de control y reportes para Gerencia",
+            nombre: "07. Control de gastos y rentabilidad por ruta",
             descripcion:
-              "Visualización general de la operación comercial y exportación de reportes detallados para facilitar la revisión directiva y el control interno de la empresa.",
+              "Registro de costos operativos por vehículo y agencia (combustible, mantenimiento), analizando la rentabilidad real de cada recorrido.",
+            icono: "layers",
+          },
+          {
+            nombre: "08. Panel de control y reportes para Gerencia",
+            descripcion:
+              "Supervisión centralizada en vivo: volumen de carga, ingresos diarios, saldos pendientes, gastos y reportes históricos para toma de decisiones.",
             icono: "rocket",
           },
         ],
         nota_especial:
-          "La plataforma organiza y centraliza el control de todos los ingresos y movimientos económicos generados por las encomiendas, funcionando como el sistema principal de registro y liquidación financiera de la empresa.",
+          "Solución completa 'llave en mano'. Incluye parametrización de rutas y tarifas, creación de perfiles por usuario, migración de catálogos iniciales, pruebas en vivo y capacitación práctica para ventanillas, bodegas, choferes y personal administrativo.",
         detalles_pie: [
-          "💵 <strong>Transparencia:</strong> Registro exacto de valores cobrados y pendientes",
-          "📊 <strong>Control financiero:</strong> Resumen diario de liquidaciones y arqueo por agencia",
-          "🏢 <strong>Visión directiva:</strong> Supervisión centralizada de todas las agencias",
+          "🌐 <strong>Ecosistema único:</strong> 8 áreas de la empresa comunicadas en tiempo real",
+          "💵 <strong>Inversión definitiva:</strong> US$ 12.000 todo incluido sin compras fragmentadas",
+          "👥 <strong>Capacitación integral:</strong> Entrenamiento práctico para todo el equipo humano",
         ],
       },
     ],
@@ -229,7 +223,7 @@ export default function AlmaLojanaCotizacionPage() {
             "Visión centralizada de cuántos paquetes se mueven diariamente por ruta y por agencia.",
             "Control sobre los valores cobrados en origen, pendientes de cobro y créditos corporativos.",
             "Información respaldada para revisar las liquidaciones diarias de cada agencia.",
-            "Generación de reportes de ingresos y movimientos para la administración financiera de la empresa.",
+            "Reportes automáticos de balance, ingresos, gastos y rentabilidad real por vehículo y ruta.",
           ],
         },
         {
@@ -265,38 +259,31 @@ export default function AlmaLojanaCotizacionPage() {
       ],
     },
     ir_mas_alla: {
-      titulo: "Plazos, puesta en marcha y acompañamiento",
-      subtitulo: "Coordinación técnica paso a paso",
+      titulo: "Hoja de ruta e implementación coordinada",
+      subtitulo: "Etapas de trabajo estructuradas sin compras por separado",
       parrafos: [
-        "La implementación completa de las dos fases se coordina en un plazo estimado de 30 a 45 días, iniciando con la parametrización de rutas, agencias y tarifas, y concluyendo con la capacitación práctica en ventanillas y bodegas.",
-        "La inversión inicial total de ambas fases suma US$ 12.000 (Fase 1: US$ 8.000 + Fase 2: US$ 4.000), cubriendo el desarrollo, configuración de servidores, puesta a punto y entrenamiento al personal.",
-        "Se contempla el acompañamiento para validar los procedimientos ante situaciones excepcionales de ruta (paquetes con datos incompletos, reenvíos o entregas especiales) y asegurar la continuidad operativa en cada punto de atención.",
+        "El proyecto se ejecuta como una sola implementación integral coordinada en cinco etapas progresivas: 1) Organización inicial (procesos, agencias, rutas y tarifas), 2) Operación de encomiendas (recepción, QR, despacho y WhatsApp), 3) Administración y finanzas (caja, liquidaciones, gastos y contabilidad), 4) Integración y reportes gerenciales, y 5) Pruebas piloto, capacitación al personal y salida a producción.",
+        "La inversión total del sistema asciende a US$ 12.000, integrando el desarrollo y puesta en marcha de los ocho módulos funcionales, configuración de servidores de alta disponibilidad, perfiles de seguridad, entrenamiento práctico a todo el personal y acompañamiento en vivo durante el lanzamiento.",
+        "El mantenimiento y soporte continuo se contrata por separado a un valor preferencial de US$ 100 mensuales, garantizando monitoreo técnico 24/7, parches de seguridad, copias de respaldo y soporte técnico a las agencias.",
       ],
     },
     modalidades: {
-      titulo: "Estructura de inversión y servicios",
-      subtitulo: "Solución integral para el control físico y económico de encomiendas",
+      titulo: "Estructura de inversión: Sistema Integral",
+      subtitulo: "Una sola plataforma integral. Ocho áreas conectadas sin compras fragmentadas.",
       opciones: [
         {
-          nombre: "Fase 1: Sistema de registro y seguimiento de encomiendas",
+          nombre: "Sistema Integral de Gestión Empresarial (8 Módulos Conectados)",
           descripcion:
-            "Registro de paquetes, tarifas automáticas, etiquetas QR, organización de carga por unidad y conductor, control de llegada en agencias y notificaciones por WhatsApp.",
-          precio: "US$ 8.000",
-          detalle_precio: "Inversión única de implementación operativa",
-        },
-        {
-          nombre: "Fase 2: Sistema de control de ingresos y liquidaciones",
-          descripcion:
-            "Control de modalidades de pago (origen, destino, crédito), resúmenes de caja por agencia, seguimiento de saldos pendientes y panel directivo con reportes de liquidación.",
-          precio: "US$ 4.000",
-          detalle_precio: "Inversión única de implementación administrativa y financiera",
+            "Solución completa que unifica Administración General, Gestión de Encomiendas, Transporte y Bodegas, WhatsApp Transaccional, Caja y Cobros, Contabilidad y Finanzas, Gastos y Rentabilidad por Ruta, y Panel Directivo para Gerencia. Incluye parametrización, pruebas, migración de catálogos y capacitación a agencias.",
+          precio: "US$ 12.000",
+          detalle_precio: "Inversión única de implementación integral de la plataforma",
         },
         {
           nombre: "Mantenimiento técnico, soporte y actualizaciones",
           descripcion:
-            "Monitoreo continuo del sistema web, copias de seguridad de la base de datos, seguridad del servidor, soporte técnico ante incidencias y parches de actualización.",
+            "Monitoreo continuo del sistema web, copias de seguridad de la base de datos, seguridad del servidor, soporte técnico ante incidencias y parches de actualización periódicos.",
           precio: "US$ 100 / mes",
-          detalle_precio: "Servicio mensual opcional a partir del segundo mes",
+          detalle_precio: "Servicio mensual independiente a partir del segundo mes",
         },
       ],
     },
@@ -312,20 +299,20 @@ export default function AlmaLojanaCotizacionPage() {
           Imaginemos una jornada con un volumen importante de encomiendas que salen desde Loja hacia las distintas agencias de la ruta.
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
-          En el proceso tradicional, conocer si todos los paquetes fueron cargados, cuáles llegaron a destino y qué valores deben cobrarse puede exigir llamadas telefónicas, revisión de guías en papel y consultas entre responsables.
+          En el proceso tradicional, conocer si todos los paquetes fueron cargados, cuáles llegaron a destino y qué valores deben cobrarse exige llamadas telefónicas, revisión de guías en papel y consultas entre responsables.
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
-          Con el nuevo sistema, cada paquete se registra al ingresar, recibe su identificación con código QR y queda asociado a una unidad y a un conductor. Al cargarlo y recibirlo en cada agencia, se registra su movimiento en el sistema. La información queda disponible para consultar qué ha ocurrido con cada encomienda y facilitar el seguimiento de toda la operación.
+          Con el <strong>Sistema Integral de Gestión Empresarial</strong>, cada paquete se registra al ingresar, recibe su código QR y queda asociado a una unidad y a un conductor. Al cargarlo y recibirlo en cada agencia, su movimiento queda registrado en tiempo real.
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
-          Al mismo tiempo, los valores cobrados en ventanilla, los fletes pendientes por cobrar y los servicios a crédito se consolidan para que Gerencia pueda revisar los resultados de cada agencia con claridad.
+          Al mismo tiempo, los valores cobrados en ventanilla, los fletes pendientes de cobro en destino y los gastos operativos de vehículos y agencias se consolidan automáticamente en los libros contables y en el panel gerencial.
         </p>
         <div class="my-5 p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30">
           <p class="font-outfit text-sm uppercase tracking-wider text-slate-900 font-bold mb-2">
             📲 Demostración práctica del flujo
           </p>
           <p class="text-sm text-slate-700 font-light leading-relaxed mb-4">
-            Podemos coordinar una demostración funcional para que la directiva observe cómo se registra una encomienda, cómo se lee el código QR y cómo se visualiza el control de ingresos.
+            Podemos coordinar una demostración funcional para que la directiva observe cómo se registra una encomienda, cómo se lee el código QR y cómo se visualiza el control de ingresos y liquidaciones.
           </p>
           <div style="margin-bottom:16px;">
             <a 
@@ -354,8 +341,8 @@ export default function AlmaLojanaCotizacionPage() {
           <li>Revisión del flujo de ventanilla: registro de paquetes e impresión de etiquetas con código QR.</li>
           <li>Validación del procedimiento de asignación de carga a conductores y unidades.</li>
           <li>Definición de agencias, rutas y parámetros de tarifas por peso y volumen.</li>
-          <li>Estructura de reportes requeridos por Gerencia para el control financiero y arqueos.</li>
-          <li>Cronograma de capacitación para operadores de ventanilla, bodegueros y choferes.</li>
+          <li>Estructura de reportes requeridos por Gerencia para el control financiero, gastos por vehículo y arqueos.</li>
+          <li>Cronograma de capacitación para operadores de ventanilla, bodegueros, choferes y personal administrativo.</li>
         </ul>
       `,
       bloque_derecha: {
@@ -384,15 +371,14 @@ export default function AlmaLojanaCotizacionPage() {
         "https://maps.google.com/maps?q=Calle+Sucre+207-41+Loja+Ecuador&hl=es&z=18&t=&ie=UTF8&iwloc=B&output=embed",
       cta_texto: "Coordinar presentación de la propuesta por WhatsApp",
       cta_url:
-        "https://wa.me/593984180497?text=Estimado%20Ing.%20C%C3%A9sar%20Reyes%2C%20he%20revisado%20la%20propuesta%20para%20Transportes%20Alma%20Lojana%20y%20me%20gustar%C3%ADa%20coordinar%20una%20reuni%C3%B3n%20de%20presentaci%C3%B3n.",
+        "https://wa.me/593984180497?text=Estimado%20Ing.%20C%C3%A9sar%20Reyes%2C%20he%20revisado%20la%20propuesta%20integral%20para%20Transportes%20Alma%20Lojana%20y%20me%20gustar%C3%ADa%20coordinar%20una%20reuni%C3%B3n%20de%20presentaci%C3%B3n.",
       pie_texto:
         "Propuesta institucional confidencial · Ing. César Reyes Jaramillo · Loja, Ecuador",
       frase_final:
-        "El propósito es que cada encomienda tenga un recorrido registrado y que <span>cada operación tenga un respaldo consultable para la empresa.</span>",
+        "El propósito es que toda la empresa esté conectada en una sola plataforma y que <span>cada operación tenga un respaldo consultable e inmediato para la directiva.</span>",
     },
-    validez: "Propuesta institucional · Noviembre 2026 · Vigencia 30 días",
+    validez: "Propuesta institucional integral · Noviembre 2026 · Vigencia 30 días",
   };
 
   return <CotizacionViewer data={data} />;
 }
-
