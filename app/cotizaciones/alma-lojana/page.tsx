@@ -311,18 +311,9 @@ export default function AlmaLojanaCotizacionPage() {
           <p class="font-outfit text-sm uppercase tracking-wider text-slate-900 font-bold mb-2">
             📲 Demostración práctica del flujo
           </p>
-          <p class="text-sm text-slate-700 font-light leading-relaxed mb-4">
-            Podemos coordinar una demostración funcional para que la directiva observe cómo se registra una encomienda, cómo se lee el código QR y cómo se visualiza el control de ingresos y liquidaciones.
+          <p class="text-sm text-slate-700 font-light leading-relaxed">
+            Podemos coordinar una demostración funcional para que la directiva observe en vivo cómo se registra una encomienda, cómo se lee el código QR y cómo se visualiza el control de ingresos y liquidaciones.
           </p>
-          <div style="max-width:300px;margin:16px auto 0;aspect-ratio:9/16;border-radius:16px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.15);background:#000;">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/dUU30uuBDvw?rel=0&modestbranding=1&playsinline=1"
-              title="Demostración Móvil WhatsApp"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              style="width:100%;height:100%;border:0;"
-            ></iframe>
-          </div>
         </div>
         <p class="font-outfit text-sm uppercase tracking-wider text-slate-900 font-bold mb-3">
           Puntos clave a coordinar en la sesión de presentación:

@@ -873,3 +873,8 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
     - **6 Artículos o noticias mensuales para la web** (anteriormente 2).
     - **18 Publicaciones mensuales en cada red social** (anteriormente 8).
   - Reflejado tanto en la tarjeta de entregables como en el resumen de modalidades de inversión.
+
+### Limpieza de Demo en Alma Lojana (5 de Noviembre de 2026)
+- **Archivo modificado**: `app/cotizaciones/alma-lojana/page.tsx`
+- **Cambio realizado**:
+  - Eliminado por completo el contenedor e iframe del video short de YouTube (`dUU30uuBDvw`), dejando la tarjeta de demostración limpia con la invitación directa a coordinar la presentación funcional.
