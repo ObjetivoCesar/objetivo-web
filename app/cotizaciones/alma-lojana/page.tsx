@@ -45,7 +45,7 @@ export default function AlmaLojanaCotizacionPage() {
       titulo_destacado: "solo sistema integral.",
       subtitulo:
         "Gestión de encomiendas, transporte, clientes, contabilidad y control financiero. Una plataforma desarrollada para organizar el trabajo de cada agencia, conectar las operaciones y ofrecer a Gerencia información clara sobre el funcionamiento de toda la empresa.",
-      preparado_para: "Gerencia General y Asamblea Directiva — Transportes Alma Lojana",
+      preparado_para: "Sr. Wilman Maigua — Presidente, Cooperativa de Transporte Alma Lojana",
       preparado_por: "Ing. César Reyes Jaramillo",
       fecha: "Noviembre de 2026",
       url_logo_cliente: "/images/og-alma-lojana.jpg",
@@ -293,7 +293,7 @@ export default function AlmaLojanaCotizacionPage() {
         "La tecnología no reemplaza la experiencia del personal ni el conocimiento de quienes operan las rutas: les proporciona herramientas para trabajar con mayor orden, reducir las revisiones manuales y tener información confiable para tomar decisiones.",
       texto: `
         <p class="text-base text-slate-700 font-light mb-4">
-          Estimada <strong>Gerencia General y Asamblea Directiva</strong> de <strong>Transportes Alma Lojana</strong>:
+          Estimado <strong>Sr. Wilman Maigua</strong>, Presidente de <strong>Cooperativa de Transporte Alma Lojana</strong>, y equipo directivo:
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
           Imaginemos una jornada con un volumen importante de encomiendas que salen desde Loja hacia las distintas agencias de la ruta.
@@ -314,16 +314,6 @@ export default function AlmaLojanaCotizacionPage() {
           <p class="text-sm text-slate-700 font-light leading-relaxed mb-4">
             Podemos coordinar una demostración funcional para que la directiva observe cómo se registra una encomienda, cómo se lee el código QR y cómo se visualiza el control de ingresos y liquidaciones.
           </p>
-          <div style="margin-bottom:16px;">
-            <a 
-              href="https://wa.me/593963425323?text=San_agustin_demo"
-              target="_blank"
-              rel="noopener noreferrer"
-              style="display:inline-flex;align-items:center;gap:8px;background:#16a34a;color:white;padding:10px 20px;border-radius:12px;font-size:13px;font-weight:700;text-decoration:none;"
-            >
-              👉 Ver demo en WhatsApp
-            </a>
-          </div>
           <div style="max-width:300px;margin:16px auto 0;aspect-ratio:9/16;border-radius:16px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.15);background:#000;">
             <iframe
               src="https://www.youtube-nocookie.com/embed/dUU30uuBDvw?rel=0&modestbranding=1&playsinline=1"

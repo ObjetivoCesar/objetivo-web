@@ -2,13 +2,13 @@ import CotizacionViewer from "@/components/CotizacionViewer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Propuesta de Infraestructura Institucional — CCEATI",
+  title: "Propuesta de Página Web y Comunicación Digital — CCEATI",
   description:
-    "Infraestructura digital integrada para la Cámara Ecuatoriana Emiratos Árabes Unidos de Comercio, Industrias y Turismo (CCEATI), dirigida a la Ing. Marianella Alvarado y al Ing. Agustín Ontaneda: memoria institucional, trazabilidad y resultados medibles.",
+    "Desarrollo de página web institucional y servicio mensual de administración web, posicionamiento y comunicación digital para la Cámara Ecuatoriana Emiratos Árabes Unidos de Comercio, Industrias y Turismo (CCEATI).",
   openGraph: {
-    title: "Infraestructura Digital Institucional — CCEATI × César Reyes",
+    title: "Página Web y Comunicación Digital — CCEATI × César Reyes",
     description:
-      "Propuesta para la Ing. Marianella Alvarado (Directora Ejecutiva) y el Ing. Agustín Ontaneda (Presidente Ejecutivo): Web Institucional, CRM, Continuidad y Motor de Contenidos.",
+      "Propuesta para la Ing. Marianella Alvarado y el Ing. Agustín Ontaneda: Desarrollo de portal institucional (US$ 1.000) y Administración web, posicionamiento y redes sociales (US$ 500 / mes).",
     url: "https://www.cesarreyesjaramillo.com/cotizaciones/camara",
     siteName: "César Reyes Jaramillo",
     type: "website",
@@ -17,20 +17,21 @@ export const metadata: Metadata = {
         url: "https://www.cesarreyesjaramillo.com/images/og-camara.jpg",
         width: 1200,
         height: 630,
-        alt: "Propuesta de Infraestructura Institucional — CCEATI",
+        alt: "Propuesta de Página Web y Comunicación Digital — CCEATI",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Infraestructura Digital Institucional — CCEATI",
+    title: "Página Web y Comunicación Digital — CCEATI",
     description:
-      "La infraestructura digital para impulsar el comercio, atraer inversiones y conectar mercados entre Ecuador y los Emiratos Árabes Unidos.",
+      "Portal institucional dinámico y servicio mensual de administración web, contenidos y redes para la CCEATI.",
     images: ["https://www.cesarreyesjaramillo.com/images/og-camara.jpg"],
   },
   robots: {
     index: false,
-    follow: false,
+    follow: true,
+    nocache: true,
   },
 };
 
@@ -39,14 +40,14 @@ export default function CamaraCotizacionPage() {
     id: "camara",
     og_image_url: "https://www.cesarreyesjaramillo.com/images/og-camara.jpg",
     portada: {
-      etiqueta: "Propuesta institucional · Octubre de 2026",
-      titulo_principal: "La infraestructura digital para impulsar el comercio,",
-      titulo_destacado: "atraer inversiones y conectar mercados.",
+      etiqueta: "Propuesta Institucional · Noviembre de 2026",
+      titulo_principal: "Página web institucional y comunicación",
+      titulo_destacado: "digital continua para la CCEATI.",
       subtitulo:
-        "Una plataforma conectada para transformar la presencia digital, los eventos y las relaciones institucionales de la CCEATI en oportunidades comerciales con seguimiento y resultados medibles entre Ecuador y los Emiratos Árabes Unidos.",
-      preparado_para: "Ing. Marianella Alvarado, Directora Ejecutiva · Ing. Agustín Ontaneda, Presidente Ejecutivo de la CCEATI",
-      preparado_por: "Ing. César Augusto Reyes Jaramillo · Estrategia y Sistemas",
-      fecha: "Loja, Ecuador · Octubre de 2026",
+        "Una presencia digital activa para impulsar el intercambio comercial, atraer inversiones y posicionar las actividades institucionales entre Ecuador y los Emiratos Árabes Unidos.",
+      preparado_para: "Ing. Marianella Alvarado, Directora Ejecutiva · Ing. Agustín Ontaneda, Presidente Ejecutivo — CCEATI",
+      preparado_por: "Ing. César Augusto Reyes Jaramillo · Estrategia y Comunicación Digital",
+      fecha: "Noviembre de 2026",
       url_logo_cliente: "",
       imagen_url: "/images/og-camara.jpg",
       url_fondo: "/images/og-camara.jpg",
@@ -58,312 +59,309 @@ export default function CamaraCotizacionPage() {
       subtitulo: "Visualice en minutos cómo los componentes del sistema convierten actividades en relaciones continuas y resultados medibles.",
     },
     introduccion: {
-      titulo: "Una relación comercial no termina cuando concluye una reunión",
+      titulo: "Una actividad institucional sigue generando valor mucho después de haber terminado",
       parrafos: [
-        "Una exposición, una visita técnica o una rueda de negocios puede abrir una oportunidad. Pero si las necesidades de los participantes quedan dispersas en listas, agendas y conversaciones, resulta difícil dar continuidad a los compromisos y demostrar qué resultados produjo la gestión.",
-        "La CCEATI necesita algo más que publicar sus actividades: requiere conectar la información institucional, los contactos que genera, el seguimiento posterior y la evidencia de sus avances.",
-        "La propuesta responde a esa necesidad con una infraestructura que acompaña el ciclo completo: atraer interés, registrar contactos, dar seguimiento y medir la gestión.",
-        "El propósito no es prometer exportaciones o inversiones. Es ofrecer a la Cámara mejores herramientas para identificar oportunidades, mantener relaciones activas y documentar avances verificables."
+        "Las reuniones, encuentros empresariales, ruedas de negocios y misiones de la Cámara representan hitos de gran valor para conectar a Ecuador con los Emiratos Árabes Unidos. Sin embargo, cuando estas actividades solo se difunden como fotos aisladas o quedan registradas únicamente en agendas privadas, su impacto en el tiempo se diluye rápidamente.",
+        "Nuestra propuesta no consiste simplemente en 'construir una web y abandonarla' ni en 'publicar por publicar en redes sociales'. Planteamos un modelo integral de dos componentes claros y complementarios: el desarrollo de la página web institucional (US$ 1.000) y un servicio mensual de administración web, posicionamiento y comunicación digital (US$ 500 / mes).",
+        "Lo valioso de este modelo es que cada acción institucional se aprovecha al máximo: una sola reunión o evento de la Cámara se transforma en una noticia oficial para el portal web, un artículo optimizado para responder a búsquedas en Google y varias publicaciones diseñadas específicamente para redes sociales.",
+        "De este modo, CCEATI no solo comunica lo que hace día a día, sino que construye progresivamente una biblioteca de referencia sobre comercio bilateral, oportunidades de exportación e inversiones entre ambos países.",
       ],
     },
     como_funciona: {
-      titulo: "Una infraestructura alineada con la misión de la CCEATI",
+      titulo: "Proceso mensual de trabajo: de la actividad a la visibilidad",
       pasos: [
         {
-          momento: "01. ATRAER — Información útil",
+          momento: "01. Recopilación de actividades",
           descripcion:
-            "Un portal que organiza oportunidades, proyectos, servicios, sectores productivos, publicaciones y actividades bilaterales para productores, exportadores, empresarios e inversionistas."
+            "La CCEATI comparte con nuestro equipo las reuniones, eventos, fotografías, videos, convocatorias y novedades generadas durante el período.",
         },
         {
-          momento: "02. REGISTRAR — Contactos con contexto",
+          momento: "02. Preparación de contenidos",
           descripcion:
-            "Una ficha por contacto o empresa, asociada con el evento, sus intereses, necesidades y el siguiente paso acordado mediante código QR."
+            "Redactamos noticias institucionales, artículos temáticos de comercio exterior, textos oficiales y copys adaptados para redes sociales.",
         },
         {
-          momento: "03. DAR CONTINUIDAD — Seguimiento activo",
+          momento: "03. Publicación en la página web",
           descripcion:
-            "Recordatorios, consultas de avance y alertas para que las solicitudes pendientes lleguen a una persona responsable y no se enfríen."
+            "Las noticias y artículos se publican en el sitio oficial, organizados por sectores y optimizados para ser indexados y consultados en Google.",
         },
         {
-          momento: "04. DEMOSTRAR — Avances documentados",
+          momento: "04. Difusión en redes sociales",
           descripcion:
-            "Indicadores de actividades, respuestas, compromisos y evolución de oportunidades según los datos registrados por el sistema."
-        }
+            "Diseñamos las piezas gráficas profesionales y difundimos las publicaciones en las redes acordadas con la imagen formal de la Cámara.",
+        },
+        {
+          momento: "05. Revisión y reporte de resultados",
+          descripcion:
+            "Evaluamos visitas al portal, alcance de publicaciones e interacciones para retroalimentar el plan editorial del siguiente mes.",
+        },
       ],
     },
     comparativa: {
-      titulo: "De tareas dispersas a relaciones documentadas",
+      titulo: "Antes y después en la presencia digital de CCEATI",
       filas: [
         {
-          antes: "Asistentes anotados en listas en papel, agendas personales o archivos desconectados tras cada evento.",
-          despues: "Registro digital por QR y ficha histórica asociada a la actividad, el interés y la empresa."
+          antes:
+            "Sitio web estático o desactualizado que da la impresión de inactividad institucional tras su entrega.",
+          despues:
+            "Página web viva y actualizada mes a mes con las últimas reuniones, eventos, convenios y proyectos de la Cámara.",
         },
         {
-          antes: "Acuerdos que pierden continuidad al pasar los días y no tienen responsable ni fecha de revisión.",
-          despues: "Próximos pasos, recordatorios, respuestas y alertas organizados para una intervención oportuna."
+          antes:
+            "Publicaciones esporádicas en redes sociales sin diseño coherente ni dirección editorial definida.",
+          despues:
+            "Estrategia de comunicación mensual coordinada con piezas gráficas formales y textos profesionales adaptados a cada red.",
         },
         {
-          antes: "Un portal que publica información, pero no conecta la consulta con el registro y el seguimiento.",
-          despues: "Información comercial, captación de contactos y seguimiento integrados en un flujo coherente."
+          antes:
+            "Invisibilidad en buscadores sobre temas clave de comercio bilateral entre Ecuador y Emiratos Árabes.",
+          despues:
+            "Artículos y biblioteca informativa optimizados para aparecer ante búsquedas de exportación, inversiones y cooperación bilateral.",
         },
         {
-          antes: "Dificultad para explicar con evidencias qué produjo una actividad institucional ante socios y autoridades.",
-          despues: "Indicadores de actividad, respuesta y evolución comercial documentados con criterios definidos."
-        }
+          antes:
+            "La Cámara asume internamente la carga operativa de redactar, diseñar y publicar contenidos digitales.",
+          despues:
+            "Un equipo externo dedicado que transforma el material de la Cámara en contenidos listos para validación y difusión.",
+        },
       ],
     },
     etapas: [
       {
         numero: "01",
-        etiqueta_tiempo: "COMPONENTE 01 · ATRACCIÓN",
-        nombre: "Sitio web institucional dinámico",
-        eslogan: "\"Atraer interés y convertir información en oportunidades de contacto.\"",
-        precio: "$1.000",
-        precio_subtitulo: "inversión única · portal administrable",
+        etiqueta_tiempo: "COMPONENTE 01 · IMPLEMENTACIÓN BASE (PROYECTO ÚNICO)",
+        nombre: "Desarrollo de Página Web Institucional CCEATI",
+        eslogan:
+          '"La vitrina oficial y el punto central de consulta de la Cámara entre Ecuador y Emiratos Árabes."',
+        precio: "$1.000 USD",
+        precio_subtitulo: "Pago único de desarrollo y puesta en funcionamiento",
         descripcion:
-          "El portal será la puerta de entrada digital de la Cámara: un sitio administrable para organizar información institucional y comercial, servicios para socios, sectores productivos, proyectos, eventos, publicaciones y oportunidades bilaterales. La arquitectura facilitará desarrollar contenidos que respondan a búsquedas concretas de productores, exportadores, empresarios e inversionistas.",
+          "Diseño y desarrollo del portal web institucional oficial de la CCEATI. Un sitio web moderno, rápido, completamente adaptable a celulares y administrable, diseñado para presentar la misión de la Cámara, sus directivos, servicios a socios, proyectos estratégicos, agenda de eventos y una sección de información comercial bilateral con fuentes estadísticas oficiales.",
         entregables: [
-          "Arquitectura de información institucional y comercial",
-          "Páginas dinámicas y publicaciones optimizadas",
-          "Panel administrativo para gestionar los contenidos con total autonomía",
-          "Sección de información comercial bilateral con estadísticas públicas (priorizando fuentes oficiales ecuatorianas, indicando fuente, periodo y fecha)",
-          "Estructura técnica preparada para posicionamiento orgánico en buscadores (SEO)",
-          "Configuración inicial de analítica web para medir el interés real de los visitantes",
-          "Demostración funcional en video del flujo de consulta e interacción"
+          {
+            nombre: "Arquitectura web y diseño institucional",
+            descripcion:
+              "Estructura formal y diplomática acorde a los estándares de cámaras binacionales de comercio y turismo.",
+            icono: "rocket",
+          },
+          {
+            nombre: "Panel administrativo autónomo",
+            descripcion:
+              "Gestor intuitivo para publicar noticias, actualizar eventos y modificar contenidos con total autonomía.",
+            icono: "file",
+          },
+          {
+            nombre: "Módulo de comercio bilateral y estadísticas",
+            descripcion:
+              "Sección informativa con datos de intercambio comercial citando fuentes oficiales ecuatorianas y emiratíes.",
+            icono: "shield",
+          },
+          {
+            nombre: "Estructura técnica optimizada para SEO",
+            descripcion:
+              "Configuración base de indexación, metadatos y arquitectura semántica para posicionar en motores de búsqueda.",
+            icono: "sparkles",
+          },
+          {
+            nombre: "Analítica web y métricas de visita",
+            descripcion:
+              "Medición de tráfico, páginas más visitadas y origen de los usuarios para monitorear el interés de empresarios.",
+            icono: "layers",
+          },
+          {
+            nombre: "Garantía técnica y puesta a punto",
+            descripcion:
+              "Instalación en servidor, configuración de certificados de seguridad HTTPS y verificación en navegadores.",
+            icono: "shield",
+          },
         ],
         nota_especial:
-          "La disponibilidad, el nivel de detalle y las posibilidades de actualización automatizada de las estadísticas dependerán de las capacidades técnicas de cada fuente oficial.",
+          "Proyecto con inicio y fecha de entrega definida. No incluye costos de dominio o hosting (se utiliza la infraestructura existente de la Cámara).",
         detalles_pie: [
-          "🌐 <strong>Enfoque:</strong> Información institucional, servicios y oportunidades bilaterales",
-          "📊 <strong>Transparencia:</strong> Estadísticas con fuente oficial y fecha de actualización",
-          "⚡ <strong>Autonomía:</strong> Panel administrativo intuitivo sin dependencia técnica"
+          "🌐 <strong>Portal Oficial:</strong> Presencia diplomática y comercial de alto nivel",
+          "📱 <strong>100% Responsivo:</strong> Visualización óptima en ordenadores y móviles",
+          "⚡ <strong>Autonomía:</strong> Gestor de contenidos sin dependencia técnica",
         ],
       },
       {
         numero: "02",
-        etiqueta_tiempo: "COMPONENTE 02 · REGISTRO",
-        nombre: "CRM institucional, registro QR y asistente de atención",
-        eslogan: "\"Convertir la participación en una memoria institucional organizada.\"",
-        precio: "$1.000",
-        precio_subtitulo: "inversión única · implementación con QR y asistente de atención",
+        etiqueta_tiempo: "COMPONENTE 02 · SERVICIO MENSUAL RECURRENTE",
+        nombre: "Administración Web, Posicionamiento y Redes Sociales",
+        eslogan:
+          '"Un equipo que mantiene viva la página, posiciona la Cámara en Google y comunica sus actividades en redes."',
+        precio: "$500 USD / mes",
+        precio_subtitulo: "Servicio mensual recurrente · Proceso editorial coordinado",
         descripcion:
-          "En eventos, exposiciones, reuniones o visitas técnicas, la Cámara podrá compartir un código QR para que los asistentes registren sus datos e intereses desde el teléfono. Cada registro quedará asociado con la actividad correspondiente para consultar el historial y reconocer intereses recurrentes por sector.",
+          "Servicio continuo de gestión digital donde transformamos las actividades y reuniones de CCEATI en contenido profesional. Integra la actualización constante del portal web, la redacción de artículos optimizados para búsquedas de comercio exterior (Ecuador–EAU) y el diseño y publicación periódica en redes sociales.",
         entregables: [
-          "Registro ágil por QR y fichas de contacto asociadas a cada actividad",
-          "Campos acordados con la CCEATI: empresa, cargo, sector o producto, objetivo, necesidad, apoyo requerido y próximo paso",
-          "Organización básica de oportunidades por sector, interés y siguiente paso",
-          "Historial centralizado de participaciones para dar continuidad a las relaciones institucionales y comerciales",
-          "Asistente de atención en el portal para responder preguntas frecuentes a partir de información validada por la Cámara",
-          "Derivación automática de consultas no cubiertas o con criterio comercial hacia el equipo humano",
-          "Métricas de captación y consulta de registros"
+          {
+            nombre: "2 Artículos o noticias mensuales para la web",
+            descripcion:
+              "Redacción y publicación de noticias oficiales sobre eventos, convenios y análisis de oportunidades de mercado.",
+            icono: "file",
+          },
+          {
+            nombre: "8 Publicaciones mensuales para redes sociales",
+            descripcion:
+              "Diseño de piezas gráficas profesionales con textos adaptados para las plataformas oficiales de la Cámara.",
+            icono: "sparkles",
+          },
+          {
+            nombre: "Actualización de agenda de eventos",
+            descripcion:
+              "Publicación oportuna de convocatorias, visitas técnicas, webinars y encuentros gremiales según el calendario recibido.",
+            icono: "layers",
+          },
+          {
+            nombre: "Construcción de biblioteca SEO en Google",
+            descripcion:
+              "Contenidos estructurados para captar búsquedas sobre relaciones comerciales, exportaciones e inversiones Ecuador–EAU.",
+            icono: "rocket",
+          },
+          {
+            nombre: "Flujo de validación institucional",
+            descripcion:
+              "Revisión y aprobación previa de cada texto y diseño por parte de la Dirección Ejecutiva antes de ser publicado.",
+            icono: "shield",
+          },
+          {
+            nombre: "Informe mensual de actividad digital",
+            descripcion:
+              "Reporte ejecutivo de publicaciones realizadas, visitas web, alcance en redes y recomendaciones para el mes siguiente.",
+            icono: "layers",
+          },
         ],
         nota_especial:
-          "Evita que la memoria gremial se disperse y permite al equipo disponer de información organizada para dar seguimiento a cada actor.",
+          "Beneficio de contratación: Posibilidad de incluir el primer mes de gestión digital sin costo adicional al contratar el desarrollo web.",
         detalles_pie: [
-          "📲 <strong>Registro:</strong> Captura inmediata con código QR desde el móvil",
-          "👥 <strong>Historial:</strong> Fichas de contacto vinculadas a cada actividad",
-          "🤖 <strong>Atención:</strong> Asistente de consultas frecuentes con derivación a equipo humano"
-        ],
-      },
-      {
-        numero: "03",
-        etiqueta_tiempo: "COMPONENTE 03 · CONTINUIDAD",
-        nombre: "Seguimiento, automatizaciones y alertas",
-        eslogan: "\"Evitar que los compromisos se enfríen después del evento.\"",
-        precio: "$1.500",
-        precio_subtitulo: "inversión única · automatizaciones, alertas y panel de gestión",
-        descripcion:
-          "Los contactos podrán seguir flujos definidos según el interés expresado y el siguiente paso acordado (por ejemplo, tras una visita técnica con productores de café: quién ofreció muestras, quién pidió ficha técnica y qué gestión debe ejecutar la Cámara). Envía consultas de seguimiento (ej. a los 15 días), registra respuestas y alerta al responsable cuando se requiere intervención humana.",
-        entregables: [
-          "Reglas de seguimiento definidas con la Cámara según el tipo de contacto",
-          "Recordatorios automatizados y registro sistemático de respuestas",
-          "Alertas de tareas y solicitudes pendientes para el responsable",
-          "Configuración de canales de comunicación de acuerdo con preferencias y autorizaciones de cada contacto",
-          "Panel de consulta de indicadores alimentado por los datos del sistema (sin costo adicional)",
-          "Demostración funcional de los flujos acordados en video"
-        ],
-        nota_especial:
-          "El panel de gestión funciona como una capa transversal de consulta de los datos del CRM y seguimiento; no constituye un módulo con precio independiente.",
-        detalles_pie: [
-          "⚡ <strong>Continuidad:</strong> Seguimiento automático de acuerdos sin sobrecargar al personal",
-          "🚨 <strong>Alertas:</strong> Avisos de tareas y solicitudes pendientes para el equipo directivo",
-          "📊 <strong>Panel Integrado:</strong> Capa de consulta directa sin costo adicional"
-        ],
-      },
-      {
-        numero: "04",
-        etiqueta_tiempo: "SERVICIO OPCIONAL · VISIBILIDAD",
-        nombre: "Posicionamiento web y transformación de actividades en contenidos",
-        eslogan: "\"Hacer que el trabajo de la Cámara siga generando valor después de cada actividad.\"",
-        precio: "$500 / mes",
-        precio_subtitulo: "servicio mensual opcional · producción y posicionamiento",
-        descripcion:
-          "Una persona autorizada entrega el audio, video y contexto de una presentación mediante un enlace de recepción. A partir del material se identifican las ideas principales y se preparan contenidos derivados para revisión institucional: artículos para el portal, publicaciones para redes y piezas audiovisuales breves, según el calendario acordado.",
-        entregables: [
-          "Recepción organizada de materiales y procesamiento editorial tras cada actividad",
-          "Artículos y piezas derivadas para el portal y redes según calendario mensual",
-          "Optimización de contenidos para motores de búsqueda (SEO) en comercio exterior",
-          "Flujo de revisión y validación institucional previa a la publicación",
-          "Seguimiento periódico del rendimiento, alcance e interacción",
-          "Acuerdo previo por escrito del volumen mensual incluido (material recibido, artículos, piezas y reportes; no producción ilimitada)"
-        ],
-        nota_especial:
-          "El objetivo no es publicar por publicar ni limitarse a administrar redes sociales: es construir una biblioteca de información útil y ampliar las posibilidades de que las empresas encuentren a la Cámara al investigar mercados.",
-        detalles_pie: [
-          "📈 <strong>Visibilidad:</strong> Posicionamiento en búsquedas sobre comercio exterior",
-          "🎬 <strong>Formatos:</strong> Artículos web, piezas para redes y cápsulas audiovisuales",
-          "🗓️ <strong>Independencia:</strong> Servicio mensual recurrente e independiente del software"
+          "✍️ <strong>Redacción & Diseño:</strong> Producción completa lista para aprobación",
+          "🔍 <strong>Biblioteca de Contenidos:</strong> Posicionamiento en temas bilaterales clave",
+          "📊 <strong>Reporte Ejecutivo:</strong> Informe mensual de resultados e interacción",
         ],
       },
     ],
     participantes: {
-      titulo: "Indicadores para Evaluar la Gestión",
+      titulo: "Biblioteca Temática y Áreas de Posicionamiento",
       subtitulo:
-        "Medir la actividad y documentar los avances: el panel organizará la información disponible para responder preguntas operativas y facilitar la evaluación institucional.",
+        "Ejes estratégicos de contenido para posicionar a la CCEATI como la fuente de consulta oficial de comercio bilateral.",
       grupos: [
         {
-          rol: "01. Actividad Realizada",
-          subtitulo: "Registro de la operatividad gremial",
+          rol: "Comercio Bilateral e Intercambio",
+          subtitulo: "Oportunidades de negocio y balanza comercial",
           beneficios: [
-            "Eventos ejecutados, asambleas, ruedas de negocio y visitas técnicas realizadas.",
-            "Participantes registrados formalmente en cada actividad mediante código QR.",
-            "Sectores productivos y empresas representadas en cada convocatoria."
+            "Relaciones comerciales y acuerdos de cooperación entre Ecuador y Emiratos Árabes Unidos.",
+            "Oportunidades de exportación para la oferta exportable ecuatoriana (agroindustria, café, cacao, frutas y pesca).",
+            "Trámites, certificaciones y requisitos habituales de acceso al mercado emiratí.",
+            "Información sobre aranceles, logística aérea y marítima hacia Oriente Medio.",
           ],
         },
         {
-          rol: "02. Respuesta y Continuidad",
-          subtitulo: "Seguimiento y compromisos activos",
+          rol: "Inversiones y Alianzas Estratégicas",
+          subtitulo: "Atracción de capitales y proyectos conjuntos",
           beneficios: [
-            "Contactos con seguimiento sistemático tras la actividad institucional.",
-            "Respuestas recibidas y registradas en el expediente del CRM.",
-            "Compromisos pendientes y próximos pasos asignados a los responsables."
+            "Encuentros bilaterales entre fondos de inversión, empresarios y autoridades de ambos países.",
+            "Presentación de proyectos estratégicos de desarrollo e infraestructura en Ecuador.",
+            "Ventajas competitivas del intercambio comercial directo con Dubai y Abu Dhabi.",
+            "Participación en foros económicos internacionales y misiones empresariales.",
           ],
         },
         {
-          rol: "03. Evolución de Oportunidades",
-          subtitulo: "Avances documentados con criterios definidos",
+          rol: "Vida Institucional y Actividades CCEATI",
+          subtitulo: "Memoria de gestión y servicios al socio",
           beneficios: [
-            "Solicitudes, reuniones y gestiones comerciales que avanzan de etapa.",
-            "Resultados validados por los responsables con criterios definidos por la Cámara.",
-            "Consultas y visitas al portal institucional según la analítica web disponible."
+            "Cobertura editorial de reuniones de Directorio, asambleas y visitas diplomáticas.",
+            "Convocatorias a ruedas de negocio, capacitaciones y eventos gremiales.",
+            "Beneficios exclusivos y vinculación para nuevos socios de la Cámara.",
+            "Resumen trimestral y anual de los avances alcanzados por la institución.",
           ],
         },
       ],
     },
     ir_mas_alla: {
-      titulo: "Ejemplo Práctico: De una Reunión con Productores a un Seguimiento Verificable",
-      subtitulo: "Caso de Uso y Aplicación en Misiones Internacionales",
+      titulo: "Alcance, responsabilidades y dinámica de trabajo",
+      subtitulo: "Claridad operativa para asegurar resultados de excelencia",
       parrafos: [
-        "Imaginemos una actividad con productores cafeteros y representantes de instituciones públicas. La infraestructura une el registro, los compromisos, la información y la revisión de avances en cinco momentos clave:",
-        `<div class="space-y-3 my-2 pl-1">
-          <p><strong>01. Identificar:</strong> Al inicio, los asistentes escanean el QR e indican empresa, producto, intereses y apoyo requerido.</p>
-          <p><strong>02. Organizar:</strong> Los registros quedan asociados con el evento y se agrupan por sector, interés y siguiente paso.</p>
-          <p><strong>03. Dar seguimiento:</strong> El flujo consulta avances, registra respuestas y asigna solicitudes que necesitan gestión humana.</p>
-          <p><strong>04. Extender el valor:</strong> El material de la presentación se procesa para preparar un artículo y contenidos derivados, sujetos a revisión institucional.</p>
-          <p><strong>05. Evaluar:</strong> Presidencia y Dirección Ejecutiva consultan participantes, intereses, respuestas y compromisos pendientes.</p>
-        </div>`,
-        "Así, la actividad no termina con una fotografía o una publicación: queda registrada, genera continuidad y deja información para evaluar la gestión.",
-        "<strong>Aplicación posible en una feria internacional:</strong> La misma lógica puede prepararse para una feria o misión comercial internacional (por ejemplo, Gulfood 2027 como referencia de planificación). Antes del evento, se organiza la información de la oferta ecuatoriana. Durante la actividad, se registran los contactos y sus intereses. Después, se priorizan las solicitudes, se coordina el envío de información o muestras y se documenta la evolución de cada oportunidad."
+        "Para garantizar un servicio fluido y ordenado, el equipo de Objetivo se encarga de estructurar, redactar, diseñar y publicar los contenidos, mientras que la Dirección Ejecutiva de CCEATI valida y aprueba el material institucional antes de su difusión pública.",
+        "La Cámara aporta la información base (reuniones agendadas, comunicados oficiales, fotos o videos tomados en sus eventos), y nosotros nos encargamos de convertir ese insumo en piezas comunicacionales de alto impacto tanto en la web como en redes.",
+        "Delimitación del servicio: El plan mensual no contempla cobertura presencial con camarógrafos en eventos, producción audiovisual cinematográfica, pauta publicitaria pagada en Meta/Google ni viajes, aspectos que pueden cotizarse de manera independiente bajo requerimiento puntual.",
       ],
     },
     modalidades: {
-      titulo: "Inversión y Modalidad de Contratación",
-      subtitulo: "Infraestructura tecnológica: implementación única y escenarios de referencia",
+      titulo: "Estructura de Inversión y Modalidades",
+      subtitulo: "Dos componentes complementarios para consolidar la presencia digital de CCEATI",
       opciones: [
         {
-          nombre: "Sitio web institucional dinámico",
+          nombre: "Componente 01: Página Web Institucional",
           descripcion:
-            "Arquitectura de información, páginas dinámicas, panel administrativo, sección comercial con fuentes oficiales, analítica y preparación SEO.",
-          precio: "$1.000",
-          detalle_precio: "Implementación única"
+            "Diseño y desarrollo del sitio web oficial dinámico, panel administrativo, sección de estadísticas comerciales y optimización base para buscadores.",
+          precio: "US$ 1.000",
+          detalle_precio: "Inversión única de desarrollo y puesta en marcha",
         },
         {
-          nombre: "CRM, registro QR y asistente de atención",
+          nombre: "Componente 02: Administración Web y Comunicación Digital",
           descripcion:
-            "Registro QR en actividades, fichas asociadas al evento, organización de oportunidades, asistente de preguntas frecuentes y derivación humana.",
-          precio: "$1.000",
-          detalle_precio: "Implementación única"
+            "2 artículos mensuales para la web, 8 publicaciones en redes sociales, actualización de agenda, estrategia SEO y reporte mensual de resultados.",
+          precio: "US$ 500 / mes",
+          detalle_precio: "Servicio mensual recurrente (posibilidad de 1er mes sin costo por contratación)",
         },
-        {
-          nombre: "Seguimiento, automatizaciones y alertas",
-          descripcion:
-            "Reglas de seguimiento, recordatorios, registro de respuestas, alertas de pendientes y panel de consulta integrado transversalmente.",
-          precio: "$1.500",
-          detalle_precio: "Implementación única"
-        },
-        {
-          nombre: "Total de Implementación Tecnológica",
-          descripcion:
-            "Desarrollo y puesta en marcha de los tres componentes de infraestructura, con configuración acordada y demostraciones funcionales aprobadas.",
-          precio: "$3.500",
-          detalle_precio: "Inversión única total de infraestructura"
-        },
-        {
-          nombre: "Posicionamiento web y contenidos (Opcional)",
-          descripcion:
-            "Servicio mensual recurrente e independiente del software. Procesamiento de audios/videos, artículos, redes y reportes según volumen pactado.",
-          precio: "$500 / mes",
-          detalle_precio: "Servicio mensual recurrente opcional"
-        }
       ],
     },
     cierre: {
-      titulo: "Una Infraestructura al Servicio de los Resultados Institucionales",
+      titulo: "Una comunicación digital profesional para una institución de alcance internacional",
       frase_bisagra:
-        "Que cada actividad deje una oportunidad mejor identificada, una relación mejor atendida y un resultado que pueda demostrarse.",
+        "Una Cámara activa merece una presencia digital que comunique con la misma formalidad, rigor y visión con la que se gestionan sus relaciones institucionales.",
       texto: `
         <p class="text-base text-slate-700 font-light mb-4">
           Estimados <strong>Ing. Marianella Alvarado e Ing. Agustín Ontaneda</strong>:
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
-          La propuesta no plantea tecnología como un fin. Plantea conectar la presencia digital de la CCEATI con su trabajo institucional: <strong>atraer consultas relevantes, conservar la memoria de los contactos, dar continuidad a los compromisos y disponer de información clara para evaluar los avances</strong>.
+          Esta propuesta está concebida para dotar a la <strong>CCEATI</strong> de un respaldo de comunicación constante y confiable: <strong>una página web formal que centralice la información institucional y un servicio mensual que mantenga vivas sus redes, posicione sus actividades en Google y construya una memoria institucional de valor para sus socios</strong>.
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
-          La decisión no consiste únicamente en escoger quién construye una página web. Consiste en definir cómo la Cámara gestionará la información, las relaciones y el seguimiento que pueden acercar a productores ecuatorianos, compradores, inversionistas y aliados estratégicos.
-        </p>
-        <p class="text-base text-slate-700 font-light mb-4">
-          Propongo revisar conjuntamente el alcance, priorizar los flujos iniciales y elegir la primera actividad para el piloto operativo. Con esa validación, será posible definir la secuencia de trabajo y formalizar los entregables.
+          No buscamos generar una carga de trabajo adicional para su equipo. Nuestro propósito es ser el brazo ejecutor que recibe la información de sus reuniones y la transforma en presencia digital estratégica, cuidando en todo momento la imagen y los estándares que exige una relación bilateral con los Emiratos Árabes Unidos.
         </p>
         <div class="mt-6 pt-6 border-t border-slate-200">
-          <p class="font-outfit text-sm font-bold text-slate-900 mb-1">Puesta en marcha recomendada en 4 fases:</p>
-          <ol class="space-y-1.5 text-sm text-slate-600 list-decimal pl-5">
-            <li><strong>Fase 01. Alinear el alcance:</strong> Validar páginas, fuentes, campos del QR, preguntas frecuentes e indicadores.</li>
-            <li><strong>Fase 02. Construir y configurar:</strong> Desarrollar el portal, conectar el CRM y configurar los flujos de seguimiento.</li>
-            <li><strong>Fase 03. Probar con un piloto:</strong> Usar una actividad real para verificar el registro, seguimiento y panel.</li>
-            <li><strong>Fase 04. Ajustar y transferir:</strong> Corregir hallazgos, capacitar a las personas responsables y acordar el procedimiento.</li>
+          <p class="font-outfit text-sm font-bold text-slate-900 mb-2">Cronograma de inicio y puesta en marcha:</p>
+          <ol class="space-y-2 text-sm text-slate-600 list-decimal pl-5">
+            <li><strong>Semana 1:</strong> Levantamiento de estructura, validación de secciones y recopilación de material gráfico inicial.</li>
+            <li><strong>Semanas 2–3:</strong> Desarrollo técnico del portal web y configuración del panel administrativo autónomo.</li>
+            <li><strong>Semana 4:</strong> Demostración funcional, ajustes finales, publicación oficial e inicio del primer mes de gestión digital.</li>
           </ol>
         </div>
       `,
       bloque_derecha: {
-        titulo: "Continuidad Operativa y Garantías",
-        subtitulo: "La implementación parte de la infraestructura que la Cámara ya utiliza",
+        titulo: "Compromiso de Trabajo con CCEATI",
+        subtitulo: "Continuidad, rigor editorial y respaldo institucional",
         cards: [
           {
-            titulo: "Hosting, Dominio y Correo Existente",
-            texto: "Se mantendrá el proveedor de confianza de la CCEATI. Se revisará compatibilidad y no se migrará el correo ni se cambiará el proveedor sin necesidad técnica justificada y aprobación previa."
+            titulo: "Infraestructura existente",
+            texto:
+              "Se trabaja sobre el hosting y dominio que la Cámara ya disponga, sin transferencias innecesarias de correos ni costos imprevistos.",
           },
           {
-            titulo: "Demostraciones Reales y Flujos Validados",
-            texto: "Cada módulo incluye demostración funcional para verificar en la práctica el registro, el seguimiento y el panel antes de la adopción formal."
+            titulo: "Validación previa",
+            texto:
+              "Ningún contenido, noticia o pieza gráfica se publica sin el visto bueno de la Dirección Ejecutiva de la Cámara.",
           },
           {
-            titulo: "Privacidad y Reglas Operativas Claras",
-            texto: "Configuración conforme a la normativa ecuatoriana de protección de datos personales, con finalidad de uso informada y canales autorizados validados."
-          }
-        ]
+            titulo: "Biblioteca temática bilateral",
+            texto:
+              "Cada publicación fortalece el posicionamiento orgánico en temas de comercio, inversiones y exportación Ecuador–EAU.",
+          },
+        ],
       },
       mapa_url: "https://maps.app.goo.gl/jdZgBYatRApSHLnTA",
       mapa_embed_url:
         "https://maps.google.com/maps?q=-4.0008611,-79.199&hl=es&z=18&t=&ie=UTF8&iwloc=B&output=embed",
-      cta_texto: "Coordinar una sesión de trabajo por WhatsApp",
+      cta_texto: "Coordinar inicio del proyecto por WhatsApp",
       cta_url:
-        "https://wa.me/593984180497?text=Estimado+Ing.+C%C3%A9sar+Reyes%2C+he+revisado+la+propuesta+de+Infraestructura+Digital+para+la+CCEATI+y+me+gustar%C3%ADa+coordinar+una+sesi%C3%B3n+de+trabajo.",
+        "https://wa.me/593984180497?text=Estimado%20Ing.%20C%C3%A9sar%20Reyes%2C%20he%20revisado%20la%20propuesta%20de%20P%C3%A1gina%20Web%20y%20Comunicaci%C3%B3n%20Digital%20para%20la%20CCEATI%20y%20me%20gustar%C3%ADa%20coordinar%20el%20inicio.",
       pie_texto:
         "Propuesta institucional confidencial · César Reyes Jaramillo · Loja, Ecuador",
       frase_final:
-        "Cada contacto deja información útil. Cada compromiso tiene seguimiento. <span>Cada actividad contribuye a demostrar resultados.</span>",
+        "El propósito es que cada actividad institucional se transforme en un activo de comunicación que <span>siga generando oportunidades de comercio e inversión en el tiempo.</span>",
     },
-    validez: "Propuesta institucional confidencial · Validez comercial de referencia: 30 días · Octubre de 2026",
+    validez: "Propuesta institucional · Noviembre 2026 · Validez comercial: 30 días",
   };
 
   return <CotizacionViewer data={data} />;

@@ -824,3 +824,24 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
   - Se estableció el valor único y definitivo de **US$ 12.000**.
   - Se incorporaron los **8 módulos funcionales completos** como entregables dentro de este único ecosistema (Administración general, Gestión de encomiendas, Transporte y recorridos, WhatsApp al cliente, Caja y liquidaciones, Contabilidad, Control de gastos y rentabilidad por ruta, y Panel directivo para Gerencia).
   - Se enfatizó el concepto de plataforma única conectada en tiempo real.
+
+### Ajustes en Motos y Motos y Alma Lojana (5 de Noviembre de 2026)
+- **Archivos modificados**:
+  - `app/cotizaciones/motos-y-motos/page.tsx`: Eliminado definitivamente el módulo opcional de Fase 2 (Mejora de presencia digital y Posicionamiento SEO + IA de $3.500 USD) tanto del listado de etapas como de la tabla de modalidades de inversión, conservando de forma coherente los 3 componentes del MVP (Catálogo Web, Plataforma CRM/WhatsApp/Postventa y Soporte Anual).
+  - `app/cotizaciones/alma-lojana/page.tsx`: Removido el botón externo `👉 Ver demo en WhatsApp` (enlace con texto de demo anterior), manteniendo de forma limpia el reproductor embebido vertical de demostración.
+
+### Actualización de Destinatario: Transportes Alma Lojana (5 de Noviembre de 2026)
+- **Archivo modificado**: `app/cotizaciones/alma-lojana/page.tsx`
+- **Cambios realizados**:
+  - `preparado_para`: Actualizado a **"Sr. Wilman Maigua — Presidente, Cooperativa de Transporte Alma Lojana"**.
+  - Saludo en carta de cierre: Personalizado para dirigirse al **Sr. Wilman Maigua, Presidente de Cooperativa de Transporte Alma Lojana, y equipo directivo**.
+
+### Actualización de Propuesta Comercial: Cámara CCEATI (5 de Noviembre de 2026)
+- **Archivo modificado**: `app/cotizaciones/camara/page.tsx`
+- **Cambios realizados**:
+  - Reestructuración completa del modelo comercial en dos componentes:
+    1. **Página Web Institucional CCEATI**: Inversión única de **US$ 1.000** (portal dinámico, administrable, optimizado para SEO, con estadísticas comerciales y analítica).
+    2. **Administración Web, Posicionamiento y Redes Sociales**: Servicio mensual recurrente de **US$ 500 / mes** (proceso de 5 pasos mensuales: recopilación, redacción de 2 artículos web, diseño de 8 publicaciones para redes, actualización de agenda, biblioteca temática SEO e informe ejecutivo de resultados).
+  - Se incluyó la cláusula de beneficio de contratación: *posibilidad de incluir el primer mes de gestión digital sin costo adicional*.
+  - Delimitación clara del alcance operativo: validación previa obligatoria por la Dirección Ejecutiva, excluyendo coberturas presenciales, video cinematográfico o pauta pagada sin costo extra.
+  - Corrección de directiva de robots para WhatsApp/Meta: configurado estrictamente en `robots: { index: false, follow: true, nocache: true }`.

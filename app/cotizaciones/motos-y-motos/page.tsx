@@ -271,50 +271,6 @@ export default function MotosYMotosCotizacionPage() {
           "📋 <strong>Flexibilidad:</strong> Renovación anual transparente",
         ],
       },
-      {
-        numero: "04",
-        etiqueta_tiempo: "FASE 2 (ETAPA COMPLEMENTARIA) · POSICIONAMIENTO Y MEJORA DIGITAL",
-        nombre: "Mejora de la presencia digital y Posicionamiento Nacional (SEO Google + Visibilidad IA)",
-        eslogan:
-          '"Posicionar a Motos y Motos como referente comercial y captar compradores a nivel nacional."',
-        precio: "$3.500 USD",
-        precio_subtitulo: "Inversión · Programa estratégico de mejora de presencia digital y posicionamiento tras el MVP",
-        descripcion:
-          "Mejora de la presencia digital orientada a la expansión de mercado: optimización profunda de arquitectura web para posicionamiento en los primeros lugares de Google y en motores de Inteligencia Artificial (ChatGPT, Perplexity) para búsquedas de modelos específicos de motocicletas en todo el Ecuador.",
-        entregables: [
-          {
-            nombre: "Estrategia de posicionamiento SEO nacional en Google",
-            descripcion:
-              "Investigación de palabras clave y arquitectura web para aparecer primero en búsquedas de motos y marcas a nivel nacional.",
-            icono: "rocket",
-          },
-          {
-            nombre: "Visibilidad en motores de Inteligencia Artificial",
-            descripcion:
-              "Optimización estructurada para que modelos de IA (ChatGPT, Perplexity, Gemini) recomienden a Motos y Motos ante consultas de compra.",
-            icono: "sparkles",
-          },
-          {
-            nombre: "Páginas optimizadas por modelo y marca",
-            descripcion:
-              "Páginas de aterrizaje optimizadas para conversión rápida y captación de clientes de alto interés comercial.",
-            icono: "layers",
-          },
-          {
-            nombre: "Estrategia de contenido y autoridad digital",
-            descripcion:
-              "Estructura técnica para convertir la web en la referencia de consulta de motocicletas en el sur y a nivel nacional.",
-            icono: "shield",
-          },
-        ],
-        nota_especial:
-          "Programa de crecimiento comercial independiente para escalar la captación de clientes sin necesidad de inversión en locales físicos.",
-        detalles_pie: [
-          "📍 <strong>SEO Nacional:</strong> Posicionamiento orgánico en Google para todo Ecuador",
-          "🤖 <strong>Visibilidad IA:</strong> Recomendados en ChatGPT y buscadores conversacionales",
-          "📈 <strong>Presencia digital:</strong> Enfoque 100% en captación y autoridad comercial",
-        ],
-      },
     ],
     participantes: {
       titulo: "Continuidad y coordinación de la operación comercial",
@@ -396,13 +352,6 @@ export default function MotosYMotosCotizacionPage() {
             "Servicio de mantenimiento para conservar la plataforma actualizada, respaldos periódicos cifrados, seguridad y soporte directo vía WhatsApp.",
           precio: "$290 USD / año",
           detalle_precio: "Servicio anual a partir del segundo año",
-        },
-        {
-          nombre: "Fase 2 (Etapa complementaria): Mejora digital y Posicionamiento SEO + IA",
-          descripcion:
-            "Mejora de la presencia digital para posicionamiento orgánico en Google a nivel nacional y visibilidad estructurada en motores de Inteligencia Artificial (ChatGPT, Perplexity).",
-          precio: "$3.500 USD",
-          detalle_precio: "Programa estratégico de expansión de mercado tras el MVP",
         },
       ],
     },
