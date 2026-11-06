@@ -45,7 +45,7 @@ export default function AlmaLojanaCotizacionPage() {
       titulo_destacado: "solo sistema integral.",
       subtitulo:
         "Gestión de encomiendas, transporte, clientes, contabilidad y control financiero. Una plataforma desarrollada para organizar el trabajo de cada agencia, conectar las operaciones y ofrecer a Gerencia información clara sobre el funcionamiento de toda la empresa.",
-      preparado_para: "Sr. Wilman Maigua — Presidente, Cooperativa de Transporte Alma Lojana",
+      preparado_para: "Sr. Wilman Maigua (Presidente) e Ing. Roberto Cárdenas (Gerente General) — Cooperativa de Transporte Alma Lojana",
       preparado_por: "Ing. César Reyes Jaramillo",
       fecha: "Noviembre de 2026",
       url_logo_cliente: "/images/og-alma-lojana.jpg",
@@ -293,7 +293,7 @@ export default function AlmaLojanaCotizacionPage() {
         "La tecnología no reemplaza la experiencia del personal ni el conocimiento de quienes operan las rutas: les proporciona herramientas para trabajar con mayor orden, reducir las revisiones manuales y tener información confiable para tomar decisiones.",
       texto: `
         <p class="text-base text-slate-700 font-light mb-4">
-          Estimado <strong>Sr. Wilman Maigua</strong>, Presidente de <strong>Cooperativa de Transporte Alma Lojana</strong>, y equipo directivo:
+          Estimados <strong>Sr. Wilman Maigua</strong> (Presidente), <strong>Ing. Roberto Cárdenas</strong> (Gerente General) y equipo directivo de <strong>Cooperativa de Transporte Alma Lojana</strong>:
         </p>
         <p class="text-base text-slate-700 font-light mb-4">
           Imaginemos una jornada con un volumen importante de encomiendas que salen desde Loja hacia las distintas agencias de la ruta.

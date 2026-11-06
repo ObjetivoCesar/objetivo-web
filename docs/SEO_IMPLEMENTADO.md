@@ -878,3 +878,9 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
 - **Archivo modificado**: `app/cotizaciones/alma-lojana/page.tsx`
 - **Cambio realizado**:
   - Eliminado por completo el contenedor e iframe del video short de YouTube (`dUU30uuBDvw`), dejando la tarjeta de demostración limpia con la invitación directa a coordinar la presentación funcional.
+
+### Actualización de Destinatarios Directivos: Transportes Alma Lojana (6 de Noviembre de 2026)
+- **Archivo modificado**: `app/cotizaciones/alma-lojana/page.tsx`
+- **Cambios realizados**:
+  - `preparado_para`: Actualizado a **"Sr. Wilman Maigua (Presidente) e Ing. Roberto Cárdenas (Gerente General) — Cooperativa de Transporte Alma Lojana"**.
+  - Saludo de carta ejecutiva de cierre: Personalizado para dirigirse a **Sr. Wilman Maigua (Presidente), Ing. Roberto Cárdenas (Gerente General) y equipo directivo de Cooperativa de Transporte Alma Lojana**.
