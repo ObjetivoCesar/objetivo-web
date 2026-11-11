@@ -50,6 +50,11 @@ export default function UnionCariamangaCotizacionPage() {
       url_fondo:
         "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=2000",
     },
+    video_destacado: {
+      url: "https://www.youtube.com/watch?v=x9oUHpzAUTQ",
+      titulo: "Demostración de Control Operativo y Trazabilidad",
+      subtitulo: "Prueba de escaneo, asignación a unidades y notificaciones por WhatsApp",
+    },
     introduccion: {
       titulo:
         "El prestigio se defiende con evidencia, no diciendo «voy a averiguar». ",

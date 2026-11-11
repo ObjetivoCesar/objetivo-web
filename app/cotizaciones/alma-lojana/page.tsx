@@ -54,8 +54,8 @@ export default function AlmaLojanaCotizacionPage() {
       url_fondo_movil: "/images/alma-lojana-fondo-movil.jpg",
     },
     video_destacado: {
-      url: "https://www.youtube.com/watch?v=tlwQzPCvAM4",
-      titulo: "Demostración de Control Operativo",
+      url: "https://www.youtube.com/watch?v=x9oUHpzAUTQ",
+      titulo: "Demostración de Control Operativo y Trazabilidad",
       subtitulo: "Prueba de escaneo, asignación a unidades y notificaciones por WhatsApp",
     },
     introduccion: {

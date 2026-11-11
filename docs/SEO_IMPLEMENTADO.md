@@ -884,3 +884,10 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
 - **Cambios realizados**:
   - `preparado_para`: Actualizado a **"Sr. Wilman Maigua (Presidente) e Ing. Roberto Cárdenas (Gerente General) — Cooperativa de Transporte Alma Lojana"**.
   - Saludo de carta ejecutiva de cierre: Personalizado para dirigirse a **Sr. Wilman Maigua (Presidente), Ing. Roberto Cárdenas (Gerente General) y equipo directivo de Cooperativa de Transporte Alma Lojana**.
+
+### Actualización de Video de Demostración: Alma Lojana y Unión Cariamanga (11 de Noviembre de 2026)
+- **Archivos modificados**:
+  - `app/cotizaciones/alma-lojana/page.tsx`
+  - `app/cotizaciones/union-cariamanga/page.tsx`
+- **Cambios realizados**:
+  - Se configuró el nuevo video de demostración de trazabilidad operativa y escaneo (`https://www.youtube.com/watch?v=x9oUHpzAUTQ`) en la sección de video destacado inmediatamente posterior al Hero en ambas cotizaciones.
