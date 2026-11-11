@@ -891,3 +891,8 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
   - `app/cotizaciones/union-cariamanga/page.tsx`
 - **Cambios realizados**:
   - Se configuró el nuevo video de demostración de trazabilidad operativa y escaneo (`https://www.youtube.com/watch?v=x9oUHpzAUTQ`) en la sección de video destacado inmediatamente posterior al Hero en ambas cotizaciones.
+
+### Remoción de Video en Cotización: Unión Cariamanga (11 de Noviembre de 2026)
+- **Archivo modificado**: `app/cotizaciones/union-cariamanga/page.tsx`
+- **Cambio realizado**:
+  - Se eliminó el bloque `video_destacado` de la propuesta para mantener su estructura original directa desde el Hero hacia la Introducción.
