@@ -896,3 +896,19 @@ Nueva landing page comercial y estratégica para capturar las búsquedas de alto
 - **Archivo modificado**: `app/cotizaciones/union-cariamanga/page.tsx`
 - **Cambio realizado**:
   - Se eliminó el bloque `video_destacado` de la propuesta para mantener su estructura original directa desde el Hero hacia la Introducción.
+
+### Creación de Propuesta Técnica y Económica: Titanus Fitness (13 de Noviembre de 2026)
+- **Ruta de acceso**: `/cotizaciones/titanus`
+- **Archivo creado**: `app/cotizaciones/titanus/page.tsx`
+- **Activos creados**:
+  - `public/images/logo-titanus.webp` (logo oficial descargado de titanusfitness.com).
+  - `public/images/og-titanus.jpg` (imagen Open Graph de 1200x630 px, formato JPEG Baseline estricto, 19.4 KB < 300 KB).
+- **Detalle de la propuesta**:
+  - **Destinatarios**: Marco Minga y Toño — Dirección General (Sedes Centro, Sur y Jaguares).
+  - **Entrega inicial (USD 0,00)**: Sistema de Fidelización, pases de invitado digitales y códigos QR por sede para calificar personal (Viernes 13 de noviembre a las 16h00).
+  - **Módulo 1 (USD 2.500,00 + IVA)**: CRM, redes sociales (arranque inmediato lunes 16 de noviembre), marketing, analítica web y protección de datos personales con abogado (hasta 4 de diciembre).
+  - **Módulo 2 (USD 1.600,00 + IVA)**: Reingeniería de procesos, manuales de funciones y sentido de pertenencia en cancha (desde diciembre).
+  - **Módulo 3 (USD 2.500,00 + IVA)**: Sistema administrativo, contable, facturación electrónica SRI, utilidades y asistente gerencial 'El Cerebro' (enero a marzo).
+  - **Módulo 4 (Por cotizar)**: Finalización e integración de App de rutinas previa auditoría de código existente.
+  - **Total Módulos Definidos**: USD 6.600,00 + IVA (25% anticipo: USD 1.650,00 + IVA, 75% contra entrega).
+  - **Cumplimiento SEO/WhatsApp**: Directiva estricta `robots: { index: false, follow: true, nocache: true }` y Open Graph JPEG Baseline.
